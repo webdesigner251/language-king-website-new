@@ -78,9 +78,9 @@ const Contact = () => {
   return (
 
     <>
-      <section className="md:pt-[4.630em] pt-[6.614em] sm:mt-[-7.937em] mt-[-5.291em]">
+      <section className="md:pt-[4.630em] pt-[6.614em] lg:mt-[-80px] mt-[-120px]">
         <div className="custom-container mx-auto px-4 sm:px-[2.116em] w-full relative z-10">
-          <div className=" lg:pt-[6.614em] sm:pt-[70px] pt-[60px] sm:pb-[3.571em]">
+          <div className=" lg:pt-[6.614em] pt-[120px] sm:pb-[3.571em]">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
                 <h2 class="lg:text-[3.438em] sm:text-[42px] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
@@ -94,7 +94,7 @@ const Contact = () => {
                   <GetInTouch />
                 </div>
                 <div className="lg:my-[4.376em] my-[50px]">
-                  <h3 className="text-white font-bold md:text-[1.587em] sm:text-xl text-lg">
+                  <h3 className="text-white font-bold md:text-[1.587sem] sm:text-xl text-lg">
                     Why Language King?
                   </h3>
                   <ul className="mt-[2.292em] sm:ps-[1.094em] gap-5 md:max-w-[45.635em]">

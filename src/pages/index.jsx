@@ -124,36 +124,36 @@ const Home = () => {
 
   return (
     <>
-      <section className="banner-wrapper min-h-[110vh] sm:pt-[270px] pt-[450px] sm:pb-[100px] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
+      <section className="banner-wrapper min-h-[110vh] sm:pt-[17.857em] pt-[450px] sm:pb-[6.614em] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
         <img
           src={HomeBanner}
           alt="HomeBanner"
           className="scale-[1.1] absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full z-10 relative ">
-          <div className="max-w-[830px]">
-            <div className="flex flex-col 2xl:gap-6 gap-3">
-              <h2 className="text-gradient-primary font-bold 2xl:text-[32px] text-2xl">
+        <div className="custom-container mx-auto py-0 sm:px-[2.116em] px-4  w-full z-10 relative ">
+          <div className="lg:max-w-[830px] max-w-full">
+            <div className="flex flex-col gap-3">
+              <h2 className="text-gradient-primary font-bold md:text-[2.116em] text-2xl">
                 # Australia’s No.1
               </h2>
-              <h1 className="font-inter font-bold main-heading 2xl:mt-2 mt-0 text-white">
+              <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] text-[36px] text-white">
                 PTE, IELTS & NAATI CCL Coaching Institute
               </h1>
-              <p className="md:text-lg text-base font-light max-w-[600px] text-white/75">
+              <p className="md:text-lg text-base font-light md:max-w-[39.683em] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
             </div>
-            <div className="mt-[48px] flex sm:flex-nowrap flex-wrap sm:gap-[31px] gap-[16px] max-w-[600px]">
+            <div className="md:mt-[3.175em] mt-[40px] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] max-w-[600px]">
               <Link
                 to="/home2"
-                className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-primary text-black px-3 sm:py-3 py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-xl text-lg relative z-10"
+                className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-primary text-black px-[0.794em] sm:py-[0.794em] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-xl text-lg relative z-10"
               >
                 Get-a Callback
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white px-3 sm:py-3 py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all duration-300 ease hover:bg-white/10"
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white px-[0.794em] sm:py-[0.794em] py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all duration-300 ease hover:bg-white/10"
               >
                 <svg
                   width="20"
