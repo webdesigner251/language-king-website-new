@@ -151,19 +151,19 @@ const PhoneInput = ({
     >
       {/* Country flag selector */}
       <div
-        className={`flex items-center md:px-[1.058em] px-3 py-2 cursor-pointer sm:w-24 w-18 justify-between border-r ${flagwrapper}`}
+        className={`flex items-center md:px-[1.058em] px-3 py-2 cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[72px] shrink-0 grow-0 w-18 justify-between border-r ${flagwrapper}`}
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         <img
           src={selectedCountry.flag}
           alt={selectedCountry.code}
-          className="sm:w-8 sm:h-5 w-6 h-4"
+          className="md:w-[2.116em] md:h-[1.323em] w-6 h-4"
         />
         {/* <svg className="ml-1 w-3 h-3" fill="black" viewBox="0 0 24 24">
           <path d="M7 10l5 5 5-5z" />
         </svg> */}
         <svg
-          className="sm:ml-4 ml-1 w-[12px] h-[16px]"
+          className="md:ml-[1.058em] ml-1 w-[12px] grow-0 shrink-0 basis-[12px] h-[16px]"
           width="450"
           height="258"
           viewBox="0 0 450 258"
@@ -189,7 +189,7 @@ const PhoneInput = ({
         placeholder="412 345 678"
         value={phoneNumber}
         onChange={handlePhoneNumberChange}
-        className={`flex-1 placeholder:text-[#919191] outline-none ${inputClassName}`}
+        className={`md:flex-1 basis-[100% - 72px] shrink-0 grow-0  placeholder:text-[#919191] outline-none ${inputClassName}`}
       />
 
       {/* Dropdown */}
@@ -202,7 +202,7 @@ const PhoneInput = ({
             <li
               key={country.code}
               onClick={() => handleSelect(country)}
-              className="flex items-center gap-2 md:px-[1.058em] md:py-[0.794em] px-[16px] py-[8px] bg-white hover:bg-[#F2F2F2] text-[1.058em] leading-normal"
+              className="flex items-center gap-2 md:px-[1.058em] md:py-[0.794em] px-[16px] py-[8px] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] text-sm leading-normal"
             >
               <div className="flex items-center gap-4">
                 <img

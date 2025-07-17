@@ -83,7 +83,7 @@ const Contact = () => {
           <div className=" lg:pt-[6.614em] sm:pt-[70px] pt-[60px] sm:pb-[3.571em]">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
-                <h2 class="lg:text-[3.438em] sm:text-[42px] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full md:max-w-[340px]">
+                <h2 class="lg:text-[3.438em] sm:text-[42px] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
                 <p className="relative text-[#B7B7B7] md:text-[1.190em] text-base max-w-[600px] my-3">
@@ -204,7 +204,7 @@ const Contact = () => {
                   <div key={idx} className="mb-[1.058em] text-[1.190em]">
                     <h3 className="text-white font-bold">{faq.question}</h3>
                     <p
-                      className="pt-1 text-[#cacaca] text-base font-normal leading-[1.587em]"
+                      className="pt-1 text-[#cacaca] md:text-[1.058em] text-base font-normal leading-[1.587em]"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
                     />
                   </div>
