@@ -78,9 +78,9 @@ const Contact = () => {
   return (
 
     <>
-      <section className="md:pt-[4.630em] pt-[6.614em] lg:mt-[-80px] mt-[-120px]">
+      <section className="md:pt-[70px] pt-[100px] sm:mt-[-120px] mt-[-80px]">
         <div className="custom-container mx-auto px-4 sm:px-[2.116em] w-full relative z-10">
-          <div className=" lg:pt-[6.614em] pt-[120px] sm:pb-[3.571em]">
+          <div className=" md:pt-[100px] sm:pt-[70px] pt-[60px] sm:pb-[54px] ">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
                 <h2 class="lg:text-[3.438em] sm:text-[42px] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
@@ -94,11 +94,11 @@ const Contact = () => {
                   <GetInTouch />
                 </div>
                 <div className="lg:my-[4.376em] my-[50px]">
-                  <h3 className="text-white font-bold md:text-[1.587sem] sm:text-xl text-lg">
+                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-lg leading-[32px]">
                     Why Language King?
                   </h3>
                   <ul className="mt-[2.292em] sm:ps-[1.094em] gap-5 md:max-w-[45.635em]">
-                    <li className="flex items-start sm:leading-[1.303em] leading-[1.4] md:text-[1.042em] text-sm text-[#ACACAC] gap-[2.084em] pb-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] gap-[2.084em] pb-3">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -107,7 +107,7 @@ const Contact = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start sm:leading-[1.303em] leading-[1.4] md:text-[1.042em] text-sm text-[#ACACAC] gap-[2.084em] py-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] gap-[2.084em] py-3">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -117,7 +117,7 @@ const Contact = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start sm:leading-[1.303em] leading-[1.4] md:text-[1.042em] text-sm text-[#ACACAC] gap-[2.084em] py-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] gap-[2.084em] py-3">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -127,7 +127,7 @@ const Contact = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start sm:leading-[1.303em] leading-[1.4] md:text-[1.042em] text-sm text-[#ACACAC] gap-[2.084em] pt-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] gap-[2.084em] pt-3">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -145,7 +145,7 @@ const Contact = () => {
                     alt="PinkQuote"
                     className="md:-mt-[80px] -mt-[60px] sm:w-[3.230em] w-8"
                   />
-                  <p className="lg:text-[1.511em] md:text-[1.323em] text-lg text-white">
+                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[32px] text-lg text-white">
                     Language King is perfect for new or struggling students,
                     offering expert feedback and guidance to help achieve
                     desired scores.
@@ -201,10 +201,10 @@ const Contact = () => {
 
               <div className="mt-[1.587em]">
                 {faqs.map((faq, idx) => (
-                  <div key={idx} className="mb-[1.058em] text-[1.190em]">
-                    <h3 className="text-white font-bold">{faq.question}</h3>
+                  <div key={idx} className="mb-[16px]">
+                    <h3 className="text-white font-bold text-[1.1904761905em]">{faq.question}</h3>
                     <p
-                      className="pt-1 text-[#cacaca] md:text-[1.058em] text-base font-normal leading-[1.587em]"
+                      className="pt-1 text-[#cacaca] md:text-[1.0582010582em] text-base font-normal leading-[24px]"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
                     />
                   </div>

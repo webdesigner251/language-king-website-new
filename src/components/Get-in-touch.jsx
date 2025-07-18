@@ -213,7 +213,7 @@ const GetInTouch = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, [e.target.name]: e.target.value })
                 }
-                className="border-1 border-[#949AA5] rounded-md bg-white md:py-[0.794em] py-[12px] sm:px-[1.1903em] px-[18px] md:text-[1.1903em] text-[16px]"
+                className="border-1 border-[#949AA5] rounded-md bg-white py-[0.7936507937em] sm:px-[1.1904761905em] px-4 md:text-[1.1903em] text-[16px]"
               />
             </div>
 
@@ -274,7 +274,7 @@ const GetInTouch = () => {
           </form>
         </div>
       ) : (
-        <div className="bg-[#121211] rounded-[1.042em] px-[1.354em] pt-[1.653em] pb-[2.183em] shadow-[0_0_44px_5px_rgba(255,176,193,0.7)]">
+        <div className="bg-[#121211] rounded-[1.042em] px-[1.3227513228em] py-[1.5873015873em] shadow-[0_0_44px_5px_rgba(255,176,193,0.7)]">
           <ContactThankyou />
         </div>
       )}
