@@ -86,7 +86,7 @@ const MainHeader = () => {
                 <li className="text-center inline-flex items-center">
                   <Link
                     to="/contact"
-                    className={`relative inline-flex items-center justify-center 2xl:px-[22px] 2xl:py-[12.8px] px-[15px] py-[9px] font-bold 2xl:text-[18px] text-[16px] transition-all duration-300 header-btn min-w-[180px] z-10 ${
+                    className={`relative inline-flex items-center justify-center sm:px-[22px] sm:py-[12.8px] px-[15px] py-[9px] font-bold 2xl:text-[1.1904761905em] text-[1.0582010582em] transition-all duration-300 header-btn min-w-[180px] z-10 ${
                       isSticky
                         ? "primary-btn bg-gradient-primary text-black border-none"
                         : "text-white border border-white/25 hover:border-white bg-black"

@@ -213,7 +213,7 @@ const GetInTouch = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, [e.target.name]: e.target.value })
                 }
-                className="border-1 border-[#949AA5] rounded-md bg-white py-[0.7936507937em] sm:px-[1.1904761905em] px-4 md:text-[1.1903em] text-[16px]"
+                className="border-1 border-[#949AA5] rounded-md bg-white md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 
@@ -231,7 +231,7 @@ const GetInTouch = () => {
                 errors={{}} // no validation errors
                 flagwrapper="border-[#949AA5]"
                 wrapperClassName="w-full border-1 rounded-md bg-white border-[#949AA5]"
-                inputClassName="md:py-[0.794em] py-[12px] sm:px-[1.1903em] px-[18px] md:text-[1.1903em] text-[16px]"
+                inputClassName="md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 
@@ -249,7 +249,7 @@ const GetInTouch = () => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={null}
-                buttonClassName="bg-white rounded-md border-1 md:py-[0.794em] py-[12px] sm:px-[1.1903em] px-[18px] md:text-[1.1903em] text-[16px]"
+                buttonClassName="border-1 border-[#949AA5] rounded-md bg-white md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 
@@ -267,7 +267,7 @@ const GetInTouch = () => {
             <button
               type="button"
               onClick={() => setIsSubmitted(true)}
-              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-[#E42552] text-white px-3 md:py-[1.058em] py-4 w-full font-bold md:text-[1.1903em] text-base relative z-10 mt-[1.058em] rounded-md"
+              className="text-center primary-btn bg-[#E42552] text-white px-[9.5em] md:py-[1.058em] py-4 w-full font-bold md:text-[1.1903em] text-base relative z-10 mt-[1.058em] rounded-md"
             >
               Get In Touch
             </button>

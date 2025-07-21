@@ -139,13 +139,13 @@ const Contact = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex sm:gap-5 gap-3 md:max-w-[46.296em]">
+                <div className="flex items-start sm:gap-5 gap-3 md:max-w-[46.296em]">
                   <img
                     src={PinkQuote}
                     alt="PinkQuote"
-                    className="md:-mt-[80px] -mt-[60px] sm:w-[3.230em] w-8"
+                    className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
                   />
-                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[32px] text-lg text-white">
+                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[1.33] text-lg text-white">
                     Language King is perfect for new or struggling students,
                     offering expert feedback and guidance to help achieve
                     desired scores.
