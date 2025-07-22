@@ -131,15 +131,15 @@ const Home = () => {
           className="scale-[1.1] absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
         <div className="custom-container mx-auto py-0 sm:px-[2.116em] px-4  w-full z-10 relative ">
-          <div className="lg:max-w-[830px] max-w-full">
-            <div className="flex flex-col gap-3">
-              <h2 className="text-gradient-primary font-bold md:text-[2.116em] text-2xl">
+          <div className="lg:max-w-[54.8941798942em] max-w-full">
+            <div className="flex flex-col 2xl:gap-6 gap-3">
+              <h2 className="text-gradient-primary font-bold 2xl:text-[2.1164021164em] text-[1.5873015873em] leading-[1.3333]">
                 # Australia’s No.1
               </h2>
-              <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] text-[36px] text-white">
+              <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] leading-[1.12] text-[36px] text-white">
                 PTE, IELTS & NAATI CCL Coaching Institute
               </h1>
-              <p className="md:text-lg text-base font-light md:max-w-[39.683em] text-white/75">
+              <p className="md:text-lg text-base font-light md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
@@ -147,13 +147,13 @@ const Home = () => {
             <div className="md:mt-[3.175em] mt-[40px] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] max-w-[600px]">
               <Link
                 to="/home2"
-                className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-primary text-black px-[0.794em] sm:py-[0.794em] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-xl text-lg relative z-10"
+                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
               >
                 Get-a Callback
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white px-[0.794em] sm:py-[0.794em] py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all duration-300 ease hover:bg-white/10"
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
               >
                 <svg
                   width="20"
@@ -187,10 +187,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mb-8 lg:scroll-mt-[90px]" id="courses">
+      <section className="mb-8 lg:scroll-mt-[78px]" id="courses">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] z-50 border-t border-[#252525]">
           <div className="">
-            <h2 className="text-white font-bold sm:text-[26.39px] text-lg relative  inline-block z-10 sm:my-[38px] mt-[30px] mb-[20px] stroke-heading">
+            <h2 className="text-white font-bold sm:text-[1.7453703704em] text-lg relative  inline-block z-10 sm:my-[38px] mt-[30px] mb-[20px] stroke-heading">
               Our Courses
             </h2>
           </div>
@@ -211,7 +211,7 @@ const Home = () => {
                 <h2 className="text-[#52D34E] [text-shadow:0px_5px_0px_#000000] font-bold md:text-[24px] inline-block sm:text-2xl text-lg">
                   NAATI CCL Fast Track Course
                 </h2>
-                <h2 className="font-bold xl:text-[40px] md:text-[32px] sm:text-[30px] text-2xl text-white xl:leading-[2.8rem] leading-[1.2] my-[12px]">
+                <h2 className="font-bold xl:text-[2.6455026455em] md:text-[2.1164021164em] sm:text-[30px] text-2xl text-white xl:leading-[2.8rem] leading-[1.2] my-[12px]">
                   Need to clear the test in 3 days, we’ve got you covered!
                 </h2>
                 <p className="md:text-xl lg:text-lg text-base font-light max-w-[800px] text-white/75 mb-0">
@@ -281,7 +281,7 @@ const Home = () => {
                 </div>
                 <div className="pt-[12px] flex lg:flex-nowrap flex-wrap lg:gap-[31px] gap-[16px] lg:max-w-[800px]">
                   <Link
-                    onClick={openPopup}
+                    to="/pte-masterclass"
                     className="primary-btn bg-gradient-secondary leading-[28px] inline-flex justify-center items-center text-center text-white px-3 sm:py-3 py-[14px] lg:w-[50%] w-full font-semibold sm:text-xl text-lg relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)]"
                   >
                     Take the Course
@@ -313,10 +313,10 @@ const Home = () => {
                   Crack PTE in 1 attempt
                 </h2>
                 <p className="md:text-xl lg:text-lg text-base font-light max-w-[800px] text-white/75 mb-0">
-                  Learn exactly what students did to achieve their desired band.
-                  This book explains the exam structure, target scores, key
-                  tasks to focus on, and the 7-day strategy you need to follow
-                  to go from 5 to 8 each as quickly as possible.
+                  Learn exactly what students did to achieve their desired
+                  band. This book explains the exam structure, target scores,
+                  key tasks to focus on, and the 7-day strategy you need to
+                  follow to go from 5 to 8 each as quickly as possible.
                 </p>
                 <div className="sm:flex items-center gap-3 my-[12px] hidden">
                   <img
@@ -330,12 +330,12 @@ const Home = () => {
                   </h3>
                 </div>
                 <div className="pt-[12px] flex lg:flex-nowrap flex-wrap lg:gap-[31px] gap-[16px] lg:max-w-[800px]">
-                  <Link
-                    to="/free-e-book"
+                  <a
+                    href="#"
                     className="primary-btn bg-gradient-dark leading-[28px] inline-flex justify-center items-center text-center text-white px-3 sm:py-3 py-[14px] lg:w-[50%] w-full font-semibold sm:text-xl text-lg relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)]"
                   >
                     Free E-Book
-                  </Link>
+                  </a>
                   <a
                     href="#"
                     className="text-center bg-transparent border-[1.5px] border-white/20 inline-flex justify-center items-center text-white px-3 sm:py-3 py-[14px] lg:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all z-10 duration-300 ease hover:bg-white/10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)]"

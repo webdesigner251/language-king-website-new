@@ -151,7 +151,7 @@ const PhoneInput = ({
     >
       {/* Country flag selector */}
       <div
-        className={`flex items-center md:px-[1.058em] px-3 py-2 cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[72px] shrink-0 grow-0 w-18 justify-between border-r ${flagwrapper}`}
+        className={`flex items-center md:px-[1.058em] px-3 py-2 cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[72px] shrink-0 grow-0 justify-between border-r ${flagwrapper}`}
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         <img
@@ -159,9 +159,6 @@ const PhoneInput = ({
           alt={selectedCountry.code}
           className="md:w-[2.116em] md:h-[1.323em] w-6 h-4"
         />
-        {/* <svg className="ml-1 w-3 h-3" fill="black" viewBox="0 0 24 24">
-          <path d="M7 10l5 5 5-5z" />
-        </svg> */}
         <svg
           className="md:ml-[1.058em] ml-1 w-[12px] grow-0 shrink-0 basis-[12px] h-[16px]"
           width="450"
@@ -189,7 +186,7 @@ const PhoneInput = ({
         placeholder="412 345 678"
         value={phoneNumber}
         onChange={handlePhoneNumberChange}
-        className={`md:flex-1 basis-[100% - 72px] shrink-0 grow-0  placeholder:text-[#919191] outline-none ${inputClassName}`}
+        className={`flex-1 min-w-0 placeholder:text-[#919191] outline-none ${inputClassName}`}
       />
 
       {/* Dropdown */}

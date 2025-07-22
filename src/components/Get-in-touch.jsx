@@ -267,7 +267,7 @@ const GetInTouch = () => {
             <button
               type="button"
               onClick={() => setIsSubmitted(true)}
-              className="text-center primary-btn bg-[#E42552] text-white px-[9.5em] md:py-[1.058em] py-4 w-full font-bold md:text-[1.1903em] text-base relative z-10 mt-[1.058em] rounded-md"
+              className="text-center primary-btn bg-[#E42552] text-white sm:px-[9.5em] px-[3.53em] md:py-[1.058em] py-4 w-full font-bold md:text-[1.1903em] text-base relative z-10 mt-[1.058em] rounded-md"
             >
               Get In Touch
             </button>
