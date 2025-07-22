@@ -202,9 +202,9 @@ const Contact = () => {
               <div className="mt-[1.587em]">
                 {faqs.map((faq, idx) => (
                   <div key={idx} className="mb-[16px]">
-                    <h3 className="text-white font-bold text-[1.1904761905em]">{faq.question}</h3>
+                    <h3 className="text-white font-bold text-[1.1904761905em] leading-[1.55555]">{faq.question}</h3>
                     <p
-                      className="pt-1 text-[#cacaca] md:text-[1.0582010582em] text-base font-normal leading-[24px]"
+                      className="pt-1 text-[#cacaca] md:text-[1.0582010582em] text-base font-normal leading-[1.5]"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}
                     />
                   </div>
