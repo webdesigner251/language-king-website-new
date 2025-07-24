@@ -192,7 +192,7 @@ const Home = () => {
               <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] leading-[1.12] text-[36px] text-white">
                 PTE, IELTS & NAATI CCL Coaching Institute
               </h1>
-              <p className="md:text-lg text-base font-light md:max-w-[600px] text-white/75">
+              <p className="md:text-[1.1904761905em] md:leading-[1.5555555] text-base font-light md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
@@ -206,11 +206,10 @@ const Home = () => {
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold md:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold relative z-10 "
               >
                 <svg
-                  width="20"
-                  height="20"
+                className="w-[1.3227513228em] h-[1.3227513228em]"
                   viewBox="0 0 22 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +232,8 @@ const Home = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                Watch FREE Lessons
+                <span className="md:text-[1.3227513228em] text-lg leading-[1.2]">Watch FREE Lessons</span>
+                
               </Link>
             </div>
           </div>
