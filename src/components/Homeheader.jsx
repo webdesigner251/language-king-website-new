@@ -26,7 +26,7 @@ const HomeHeader = () => {
 
   return (
     <header
-      className={`text-white sm:py-[2.116em] py-[2.116em] z-50  ${
+      className={`text-white xl:py-[2.116em] py-[32px] z-50  ${
         isSticky
           ? "lg:sticky lg:top-0 lg:bg-black lg:shadow-md active-header"
           : "bg-transparent relative"

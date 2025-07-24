@@ -156,14 +156,12 @@ section {
 
 /* Header Start */
 
-
 @media (max-width: 1280px) {
   .desktop-logo {
-    height: 140px;
-    top: -60px;
+    height: 140px !important;
+    top: -60px !important;
   }
 }
-
 
 header.active-header .desktop-logo,
 .desktop-logo {
@@ -194,8 +192,8 @@ header.active-header {
   }
 
   header.active-header .desktop-logo {
-    height: 80px;
-    top: -37px;
+    height: 80px !important;
+    top: -37px !important;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -259,14 +257,13 @@ header {
   position: absolute;
   width: 100%;
   height: 5px;
-  bottom: 0px;
+  bottom: 21%;
   background: linear-gradient(90deg, #FD4F2B 0%, #D7FF53 100%);
   left: 0;
   right: 0;
   z-index: -1;
-  top: 27px;
+  top: auto;
 }
-
 
 .ribbon {
   width: 240px;
@@ -435,7 +432,7 @@ header {
 .middle-border::before {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 1.5px;
   height: 100%;
   left: 50%;
   top: 0;
@@ -490,7 +487,6 @@ header {
   header.active-header .desktop-logo,
   .desktop-logo {
     left: -26%;
-    /* top: -60px; */
   }
 }
 
@@ -544,7 +540,7 @@ header {
   header.active-header .desktop-logo,
   .desktop-logo {
     transform: scale(1.2);
-    top: -60px;
+    top: -60px !important;
     left: -21%;
   }
 
