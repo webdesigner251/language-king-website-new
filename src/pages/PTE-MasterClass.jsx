@@ -270,16 +270,7 @@ const PTEMasterClass = () => {
   return (
     <>
       <div className="bg-black/20 relative h-full">
-        <section className="sm:pt-[270px] pt-[450px] sm:pb-[100px] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
-
-          {/* <div className="sm:w-[66%] w-full top-0 right-0 lg:h-[75%] sm:h-[66%] h-[50%] absolute">
-            <img
-              src={PTEBanner} 
-              alt="HomeBanner"
-              className=" w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
-            />
-            <div className="course-banner-gradient absolute w-full h-full top-0 left-0 right-0 bottom-0"></div>
-          </div> */}
+        <section className="sm:pt-[17.8571428571em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
           <div className="2xl:w-[66%] w-full 2xl:h-[75%] sm:h-full h-[50%] top-0 right-0 bottom-0 absolute">
             <img
               src={PTEBanner}
@@ -288,30 +279,30 @@ const PTEMasterClass = () => {
             />
             <div className="course-banner-gradient absolute w-full h-full top-0 left-0 right-0 bottom-0"></div>
           </div>
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full relative z-10">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
             <div className="grid lg:grid-cols-2 items-end">
               <div className="">
-                <div className="flex flex-col 2xl:gap-4 gap-3">
-                  <h2 className="text-[#0A8AF2] font-bold 2xl:text-[28px] text-2xl">
+                <div className="flex flex-col 2xl:gap-[1.0582010582em] sm:gap-[0.7936507937em] gap-3">
+                  <h2 className="text-[#0A8AF2] font-bold 2xl:text-[1.8229166667em] md:text-[1.5873015873em] text-2xl">
                     PTE MasterClass
                   </h2>
-                  <h1 className="font-inter font-bold main-heading 2xl:mt-2 mt-0 text-white">
+                  <h1 className="font-inter font-bold text-[4.0211640212em] leading-[1.11] 2xl:mt-2 mt-0 text-white">
                     Missed your score! <br />
                     Clear in 2 weeks
                   </h1>
-                  <p className="md:text-lg sm:text-xl text-base font-normal max-w-[660px] text-white/75">
+                  <p className="md:text-[1.1904761905em] md:leading-[1.555] sm:text-xl text-base font-normal max-w-[660px] text-white/75">
                     This is literally the best advice that I give every student.
                     My strategies will teach you how to get 90 in each module.
                     I’ve helped students out for 5+ years as a super-friendly
                     teacher to get their desired score, now it’s your turn.
                   </p>
-                  <div className="flex items-center gap-3 my-[12px]">
+                  <div className="flex items-center gap-3 my-[0.7936507937em]">
                     <img
                       src={avatar}
                       alt="avatar"
-                      className="w-[50px] h-[50px] rounded-full border-4 border-white/10"
+                      className="sm:w-[3.3068783069em] sm:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
                     />
-                    <h3 className="sm:text-lg text-base font-light text-white/60">
+                    <h3 className="sm:text-[1.1904761905em] text-base font-light text-white/60">
                       Taught by{" "}
                       <span className="text-white font-size: font-semibold">
                         Abhishek
@@ -319,16 +310,16 @@ const PTEMasterClass = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="sm:mt-[38px] mt-3 flex sm:flex-nowrap flex-wrap sm:gap-[31px] gap-[16px] lg:max-w-[600px] md:max-w-[82%]">
+                <div className="sm:mt-[2.5132275132em] mt-3 flex sm:flex-nowrap flex-wrap sm:gap-[2.0502645503em] gap-[16px] lg:max-w-[39.6825396825em] md:max-w-[82%]">
                   <a
                     href="#"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white px-3 sm:py-3 py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg relative z-10"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white sm:px-3 px-[0.6em] sm:py-3 py-[0.7em] sm:w-[50%] w-full font-semibold sm:text-[1.3227513228em] sm:leading-[1.31] text-lg relative z-10"
                   >
                     Take the Course
                   </a>
                   <a
                     href="#"
-                    className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-[#111] border-[1.5px] border-[#333434] text-white px-3 sm:py-3 py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all duration-300 ease hover:bg-[#111]/80"
+                    className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-[#111] border-[1.5px] border-[#333434] text-white sm:px-3 px-[0.6em] sm:py-3 py-[0.7em] sm:w-[50%] w-full font-semibold sm:text-[1.3227513228em] sm:leading-[1.31] text-lg transition-all duration-300 ease hover:bg-[#111]/80"
                   >
                     <svg
                       width="21"
@@ -383,7 +374,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="">
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex justify-between items-center relative">
               {/* <hr className="border-[#252525] sm:w-auto w-[20%]" /> */}
               <div className="text-center w-auto mx-auto z-10 relative bg-[#0c0c0c]/80 px-3">
@@ -402,7 +393,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="py-[80px]">
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[32px] sm:gap-y-[58px] gap-[42px]">
               <h2 className="text-gradient-secondary font-bold sm:text-[30px] text-2xl sm:leading-[36px] leading-[32px] inline-block 2xl:max-w-[350px] lg:max-w-[300px]">
                 This course covers all 20 tasks with easy to understand video
@@ -459,7 +450,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="">
-          <div className="custom-container mx-auto px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex lg:flex-nowrap flex-wrap items-center lg:py-[100px] py-[70px] border-y-2 border-[#252525] sm:gap-[50px] gap-[35px]">
               <div className="lg:w-[79%] tab-content">
                 <img
@@ -514,7 +505,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="pt-[80px] pb-[40px]">
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[32px] sm:gap-y-[58px] gap-[42px]">
               <div>
                 <h2 className="text-gradient-Bluedark font-semibold sm:text-[30px] text-2xl sm:leading-[36px] leading-[32px] inline-block 2xl:max-w-[410px] lg:max-w-[300px] mb-[30px]">
@@ -607,7 +598,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="pb-[90px]">
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
             <h3 className="text-white font-semibold text-2xl mb-[40px]">
               + AB has worked with most diverse students in the world like:
             </h3>
@@ -642,7 +633,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="video-wrapper">
-          <div className="custom-container mx-auto px-4 sm:px-[32px] w-full">
+          <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex lg:flex-nowrap flex-wrap items-center lg:py-[80px] py-[70px] mb-[70px] border-y-2 border-[#252525] sm:gap-[25px] gap-[35px]">
               <div className="lg:w-[77%] w-full tab-content relative">
                 {!showVideo ? (
@@ -729,7 +720,7 @@ const PTEMasterClass = () => {
           </div>
         </section>
 
-        <section className="custom-container sm:px-[32px] px-4">
+        <section className="custom-container sm:px-[2.1164021164em] px-4">
           <div className="pb-[80px] border-y-2 border-[#252525]">
             <div className="mx-auto 2xl:px-[135px] md:px-[100px] sm:px-[50px] px-4 w-full bg-[#FFDD74] pb-[30px]">
               <div className="sm:pt-[52px] pt-[12px]">
@@ -776,7 +767,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section className="mb-8 pt-[58px] lg:scroll-mt-[90px]" id="courses">
-          <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] z-50">
+          <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] z-50">
             <div className="pb-[30px]">
               <h2 className="sm:text-3xl text-2xl leading-[1.2] font-semibold text-white text-left">
                 Check out some other courses

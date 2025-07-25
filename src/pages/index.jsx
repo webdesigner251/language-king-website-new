@@ -271,14 +271,14 @@ const Home = () => {
                 {/* Content */}
                 <div className="lg:py-[16px]">
                   <h2
-                    className={`${course.textClass} font-bold inline-block lg:text-[1.5873015873em] sm:text-[2.34375em] text-lg`}
+                    className={`${course.textClass} font-bold inline-block lg:text-[1.5873015873em] sm:leading-[1.333] sm:text-[2.34375em] text-lg`}
                   >
                     {course.title}
                   </h2>
-                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] text-2xl text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
+                  <h2 className="font-bold lg:text-[2.6455026455em] md:leading-[1.12] md:text-[3.125em] sm:text-[3.9113428944em] text-2xl text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
                     {course.subtitle}
                   </h2>
-                  <p className="lg:text-[1.1904761905em] sm:text-[1.953125em] text-base font-light max-w-[800px] text-white/75 mb-0">
+                  <p className="lg:text-[1.1904761905em] sm:text-[1.953125em] sm:leading-[1.555] text-base font-light max-w-[800px] text-white/75 mb-0">
                     {course.desc}
                   </p>
 
@@ -522,7 +522,7 @@ const Home = () => {
                 <h2 className="font-bold text-white lg:text-[2.6455026455em] text-3xl mt-[32px]">
                   What’s covered in class:
                 </h2>
-                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[42px] gap-7 ">
+                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[2.7777777778em] gap-[1.8518518519em] ">
                   <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
@@ -576,10 +576,10 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] pb-5">
+                <h2 className="font-bold lg:text-[2.7777777778em] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] pb-[0.4761904762em]">
                   Book a FREE Trial Class
                 </h2>
-                <p className="font-normal text-white/75 lg:text-[1.455026455em] sm:text-xl text-base pt-7">
+                <p className="font-normal text-white/75 lg:text-[1.455026455em] sm:text-xl text-base pt-[1.2727272727em]">
                   Please fill out the below form. Our team will be in touch shortly.
                 </p>
                 <div className="sm:pt-6 pt-4">
