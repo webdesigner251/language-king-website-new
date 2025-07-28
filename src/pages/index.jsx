@@ -300,21 +300,21 @@ const Home = () => {
                     {course.btn1Link ? (
                       <Link
                         to={course.btn1Link}
-                        className={`inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer transition-all duration-300 ease ${course.btnClass}`}
                       >
                         {course.btn1Text}
                       </Link>
                     ) : (
                       <a
                         onClick={openPopup}
-                        className={`inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease cursor-pointer ${course.btnClass}`}
                       >
                         {course.btn1Text}
                       </a>
                     )}
                     <Link
                       to={course.btn2Link}
-                      className="bg-transparent border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)]"
+                      className=" bg-transparent hover:bg-white/10 border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease"
                     >
                       {course.btn2Text}
                     </Link>
@@ -323,7 +323,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
