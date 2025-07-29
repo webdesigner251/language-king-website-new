@@ -309,7 +309,7 @@ const PTEMasterClass = () => {
 
   return (
     <>
-      <div className="bg-black/20 relative h-full">
+      <div className="bg-gradient-to-b from-black/20 to-transparent relative h-full">
         <section className="lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
           <div className="2xl:w-[66%] w-full 2xl:h-[75%] sm:h-full h-[50%] top-0 right-0 bottom-0 absolute">
             <img
@@ -330,7 +330,7 @@ const PTEMasterClass = () => {
                     Missed your score! <br />
                     Clear in 2 weeks
                   </h1>
-                  <p className="md:text-[1.1904761905em] md:leading-[1.556] sm:text-xl text-base font-normal max-w-[660px] text-white/75">
+                  <p className="md:text-[1.1904761905em] md:leading-[1.556] sm:text-xl text-base font-normal md:max-w-[36.6666666667em] text-white/75">
                     This is literally the best advice that I give every student.
                     My strategies will teach you how to get 90 in each module.
                     I’ve helped students out for 5+ years as a super-friendly
@@ -531,19 +531,18 @@ const PTEMasterClass = () => {
                           className="sm:w-[1.3227513228em] w-4"
                         />
                         <span
-                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-sm cursor-pointer transition-all duration-300 ease-in-out ${
-                            activeTab === tab
-                              ? "text-white"
-                              : "text-white/60 group-hover:text-white"
-                          }`}
+                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-sm cursor-pointer transition-all duration-300 ease-in-out ${activeTab === tab
+                            ? "text-white"
+                            : "text-white/60 group-hover:text-white"
+                            }`}
                         >
                           {tab === "band8"
                             ? "Band 8"
                             : tab === "band7"
-                            ? "Band 7"
-                            : tab === "band65"
-                            ? "Band 6.5"
-                            : "And others!"}
+                              ? "Band 7"
+                              : tab === "band65"
+                                ? "Band 6.5"
+                                : "And others!"}
                         </span>
                       </button>
                     </li>
@@ -748,7 +747,7 @@ const PTEMasterClass = () => {
               </div>
 
               <div className="lg:w-[28%] w-full">
-                <div className="lg:max-w-[345px] flex flex-col gap-y-[1.2566137566em] items-start">
+                <div className="lg:max-w-[22.8174603175em] flex flex-col gap-y-[1.2566137566em] items-start">
                   <h2 className="text-gradient-Bluedark font-bold lg:text-[2.380952381em] sm:text-[2.9296875em] text-2xl sm:leading-[1.2] leading-[32px]">
                     Try a Free Lesson Real Quick
                   </h2>
@@ -777,10 +776,10 @@ const PTEMasterClass = () => {
           <div className="sm:pb-[5.291005291em] pb-[80px] border-y-2 border-[#252525]">
             <div className="mx-auto 2xl:px-[8.9285714286em] md:px-[6.6137566138em] sm:px-[3.3068783069em] px-4 w-full bg-[#FFDD74] pb-[1.9841269841em]">
               <div className="sm:pt-[3.4391534392em] pt-[12px]">
-                <h2 className="text-black 2xl:text-[2.6455026455em] md:text-[3.1746031746em] text-[28px] leading-normal sm:font-bold font-extrabold">
+                <h2 className="text-black lg:text-[3.1746031746em] md:text-[3.1746031746em] text-[28px] leading-normal sm:font-bold font-extrabold">
                   Support{" "}
                 </h2>
-                <p className="text-black xl:text-[2.9100529101em] md:text-[1.9841269841em] text-[28px] leading-7 font-normal mt-2">
+                <p className="text-black lg:text-[2.9100529101em] md:text-[1.9841269841em] text-[28px] leading-7 font-normal mt-2">
                   In Every Possible Way
                 </p>
               </div>
@@ -802,7 +801,7 @@ const PTEMasterClass = () => {
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="rounded-[0.6613756614em] sm:mb-[1.8518518519em] md:mb-[1.0582010582em] mb-4 w-full"
+                          className="rounded-[0.6613756614em] md:mb-[1.0582010582em] mb-4 w-full"
                         />
                         <h4 className="text-black text-2xl md:text-[1.9841269841em] md:leading-[1.2] font-bold mb-[0.2666666667em]">
                           {item.title}
@@ -820,7 +819,7 @@ const PTEMasterClass = () => {
         </section>
 
         <section
-          className="mb-8 sm:pt-[3.835978836em] pt-[58px] lg:scroll-mt-[90px]"
+          className="sm:pt-[3.835978836em] pt-[58px] lg:scroll-mt-[90px]"
           id="courses"
         >
           <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] z-50">

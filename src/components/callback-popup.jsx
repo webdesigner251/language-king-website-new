@@ -54,29 +54,29 @@ const CallbackForm = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#121212] 2xl:p-6 px-[28px] py-[18px] w-full sm:max-w-xl max-w-[90%] relative max-h-[95%] sm:h-auto overflow-y-auto"
+        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full sm:max-w-[38.0952380952em] max-w-[90%] relative max-h-[95%] sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] pb-[18px]">
-          <h2 className="text-white 2xl:text-[30px] md:text-[28px] text-2xl font-bold">
+        <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] pb-[1.1904761905em]">
+          <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] text-2xl font-bold">
             Get-a-Callback
           </h2>
           <button
             onClick={onClose}
-            className="flex items-center justify-center sm:p-3 p-2 sm:w-[47px] sm:h-[47px]  w-[30px] h-[30px]  bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer shadow-[0px_4px_0px_#000000] text-white"
+            className="flex items-center justify-center sm:p-[0.7936507937em] p-2 sm:w-[3.1084656085em] sm:h-[3.1084656085em] w-[30px] h-[30px] bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer shadow-[0px_4px_0px_#000000] text-white"
           >
-            <img src={CloseIcon} alt="CloseIcon" className="w-7 h-7" />
+            <img src={CloseIcon} alt="CloseIcon" className="sm:w-[1.8518518519em] sm:h-[1.8518518519em] w-7 h-7" />
           </button>
         </div>
-        <p className="font-normal text-white/75 2xl:text-xl md:text-lg leading-[24px] sm:text-base text-sm pt-6">
+        <p className="font-normal text-white/75 2xl:text-[1.3227513228em] md:text-[1.1904761905em] leading-[1.4] sm:text-base text-sm pt-[1.2em]">
           Please fill out the below form. Our team will be in touch shortly.
         </p>
-        <div className="sm:pt-6 pt-4">
-          <form onSubmit={handleSubmit}>
+        <div className="sm:pt-[1.5873015873em] pt-4">
+          <form onSubmit={handleSubmit} className="">
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="name"
-                className="text-white font-semibold 2xl:text-lg text-base mb-[6px]"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
               >
                 Full Name*
               </label>
@@ -86,7 +86,7 @@ const CallbackForm = ({ onClose }) => {
                 placeholder="Your first & last name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`placeholder:text-[#919191] bg-white py-[13px] sm:px-[24px] px-4 sm:text-lg text-base ${errors.name ? "border-red-500 border" : "border-[#949AA5] border-0"
+                className={`placeholder:text-[#919191] bg-white py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base ${errors.name ? "border-red-500 border" : "border-[#949AA5] border-0"
                   }`}
               />
 
@@ -114,7 +114,7 @@ const CallbackForm = ({ onClose }) => {
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="phone"
-                className="text-white font-semibold 2xl:text-lg text-base mb-[6px] block"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
               >
                 Phone Number*
               </label>
@@ -123,14 +123,14 @@ const CallbackForm = ({ onClose }) => {
                 setFormData={setFormData}
                 errors={errors}
                 wrapperClassName="border-0"
-                inputClassName="w-full rounded-[0px] py-[13px] sm:px-[24px] px-4"
+                inputClassName="w-full rounded-[0px] py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base"
               />
             </div>
 
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="course"
-                className="text-white font-semibold 2xl:text-lg text-base mb-[6px]"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
               >
                 Course Interested in*
               </label>
@@ -141,7 +141,7 @@ const CallbackForm = ({ onClose }) => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={errors.course}
-                buttonClassName="bg-white py-[13px] sm:px-[24px] px-4"
+                buttonClassName="bg-white py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base"
                 listClassName="rounded-[0px]"
               />
 
@@ -166,7 +166,7 @@ const CallbackForm = ({ onClose }) => {
               )}
             </div>
 
-            <span className="font-normal text-[#949AA4] text-sm leading-[1.2] py-[10px] block">
+            <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] text-sm py-[0.7142857143em] block">
               Your information will be used to consider and fulfill your request
               and will be handled pursuant to our{" "}
               <a href="#" className="underline">
@@ -176,7 +176,7 @@ const CallbackForm = ({ onClose }) => {
 
             <button
               type="submit"
-              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-3 py-4 w-full font-bold 2xl:text-xl text-lg relative z-10 mt-3 mb-3"
+              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white md:px-[0.6em] md:py-[0.8em] px-3 py-4  w-full font-bold 2xl:text-[1.3227513228em] md:text-[1.1904761905em] text-lg leading-[1.734] relative z-10 mt-[0.6em] mb-[0.6em]"
             >
               Get In Touch
             </button>
