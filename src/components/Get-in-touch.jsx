@@ -213,7 +213,7 @@ const GetInTouch = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, [e.target.name]: e.target.value })
                 }
-                className="border-1 border-[#949AA5] rounded-md bg-white md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                className="border-1 border-[#949AA5] rounded-md bg-white md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 
@@ -231,7 +231,7 @@ const GetInTouch = () => {
                 errors={{}} // no validation errors
                 flagwrapper="border-[#949AA5]"
                 wrapperClassName="w-full border-1 rounded-md bg-white border-[#949AA5]"
-                inputClassName="md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                inputClassName="md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 
@@ -249,7 +249,7 @@ const GetInTouch = () => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={null}
-                buttonClassName="border-1 border-[#949AA5] rounded-md bg-white md:py-[clamp(12px, 1.25em, 18px)] py-[12px] sm:px-[clamp(12px,1.125em,18px)] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                buttonClassName="border-1 border-[#949AA5] rounded-md bg-white md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
               />
             </div>
 

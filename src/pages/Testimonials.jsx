@@ -84,40 +84,40 @@ const slidesData = [
 const Testimonials = () => {
   return (
     <>
-      <section className="md:pt-[220px] pt-[180px] md:pb-[77px] pb-8 mt-[-120px]">
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full relative z-10">
-          <div className="grid items-start lg:grid-cols-2 xl:gap-[120px] gap-[90px]">
+      <section className="md:pt-[14.5502645503em] pt-[180px] md:pb-[5.0925925926em] pb-8 mt-[-7.9365079365em]">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
+          <div className="grid items-start lg:grid-cols-2 xl:gap-[7.9365079365em] gap-[5.9523809524em]">
             <div>
-              <div className="2xl:max-w-[590px] xl:max-w-[525px] lg:max-w-[440px]">
-                <h1 className="font-inter font-bold 2xl:text-[62px] xl:text-[55px] lg:text-[46px] md:text-[42px] text-[38px] leading-[normal] inline-block 2xl:mt-2 mt-0 text-white">
+              <div className="2xl:max-w-[39.0211640212em] xl:max-w-[34.7222222222em] lg:max-w-[34.96875em]">
+                <h1 className="font-inter font-bold lg:text-[3.6375661376em] md:text-[4.1015625em] text-[38px] leading-[normal] inline-block 2xl:mt-2 mt-0 text-white">
                   Why Students Love Learning With Us
                 </h1>
 
-                <div className="lg:hidden aspect-16/9 block w-full py-[50px]">
+                <div className="lg:hidden aspect-16/9 block w-full py-[3.3068783069em]">
                   <VideoPlayer
                     videoSrc={Video1}
                     thumbnail={PlaceholerImage}
-                    wrapperClassName="rounded-[10px] h-auto"
-                    videoClassName="rounded-[10px] h-auto"
-                    thumbnailClassName="rounded-[10px] h-auto"
+                    wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
+                    videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
+                    thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
                   />
                 </div>
-                <hr className="border-1 border-y-[#252525] my-[40px] lg:block hidden border-max-width" />
+                <hr className="border-1 border-y-[#252525] my-[2.6455026455em] lg:block hidden border-max-width" />
               </div>
-              <div className="relative ps-[30px] text-[#B7B7B7] md:text-lg sm:text-base text-sm lg:max-w-[600px]">
-                <img src={QuoteIcon} alt="QuoteIcon" className=" -ml-7" />
+              <div className="relative ps-[1.6666666667em] text-[#B7B7B7] lg:text-[1.1904761905em] sm:text-base text-sm lg:max-w-[33.3333333333em] leading-[1.56]">
+                <img src={QuoteIcon} alt="QuoteIcon" className="-ml-[1.5555555556em]" />
                 When I started my journey I really thought that it would be
                 impossible for me to clear he test due to my background.
                 xxxxxxxxxxxxx
               </div>
-              <div className="flex sm:gap-5 gap-4 items-center mt-[50px]">
+              <div className="flex sm:gap-[1.3227513228em] gap-4 items-center mt-[3.3068783069em]">
                 <img
                   src={Mainavatar}
                   alt="Mainavatar"
-                  className="sm:w-[61px] w-[52px] rounded-[8px]"
+                  className="sm:w-[4.0343915344em] w-[52px] rounded-[8px]"
                 />
-                <div className="sm:text-lg text-base">
-                  <span className="text-white me-[9px]">Natalia &#9679;</span>
+                <div className="sm:text-[1.1904761905em] text-base">
+                  <span className="text-white me-[0.5em]">Natalia &#9679;</span>
                   <span className="text-white/40 uppercase">
                     PTE & NAATI CCL
                   </span>
@@ -128,24 +128,25 @@ const Testimonials = () => {
               <VideoPlayer
                 videoSrc={Video1}
                 thumbnail={PlaceholerImage}
-                wrapperClassName="rounded-[10px] h-full"
-                videoClassName="rounded-[10px] h-full"
-                thumbnailClassName="rounded-[10px] h-full"
+                wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="sm:py-[30px] pt-[25px]">
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[16px]">
-            <h2 className="sm:text-3xl text-[22px] leading-normal font-bold text-white text-left">
+      <section className="sm:py-[1.9841269841em] pt-[25px]">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[1.0582010582em]">
+            <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
               PTE Hall of Fame
             </h2>
             <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev w-10 h-10 p-[15px] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-prev md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
+                  className="md:w-[0.7936507937em]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -161,8 +162,9 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next w-10 h-10 p-[15px] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
+                  className="md:w-[0.7936507937em]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -180,7 +182,7 @@ const Testimonials = () => {
               </button>
             </div>
           </div>
-          <div className="sm:py-[28px] pt-[24px]">
+          <div className="sm:py-[1.8518518519em] pt-[24px]">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -198,34 +200,34 @@ const Testimonials = () => {
                 <SwiperSlide key={item.id}>
                   <div>
                     <div className="relative">
-                      <div className="rounded-[10px] w-full aspect-3/2 h-auto object-cover object-center relative z-10">
+                      <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
                         <VideoPlayer
                           videoSrc={item.video}
                           thumbnail={item.image}
-                          wrapperClassName="rounded-[10px] h-full"
-                          videoClassName="rounded-[10px] object-contain h-full"
-                          thumbnailClassName="rounded-[10px] h-full"
+                          wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                          videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
+                          thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                         />
                       </div>
-                      {/* <div className="absolute inset-0 bg-black opacity-35 rounded-[10px]"></div> */}
+                      {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="truncate text-white md:text-xl sm:text-lg text-base my-2">
+                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-base my-[0.4em]">
                       {item.title}
                     </p>
-                    <div className="flex sm:gap-5 gap-4 sm:items-end items-center mt-[20px]">
+                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center mt-[1.3227513228em]">
                       <div className="relative">
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="sm:w-5 w-4 sm:h-5 h-4 rounded-sm absolute -top-1 -right-1 z-0"
+                          className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
                         />
                         <img
                           src={item.avatar}
                           alt="avatar"
-                          className="sm:w-[61px] w-[52px] rounded-[8px] border-2 border-[#D66D11]"
+                          className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
                         />
                       </div>
-                      <div className="text-base sm:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] text-base sm:text-center text-start flex flex-col">
                         <span className="text-white/40 uppercase">
                           {item.name}
                         </span>
@@ -243,14 +245,15 @@ const Testimonials = () => {
       </section>
 
       <section className="sm:py-[30px] pt-[25px]">
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[16px]">
-            <h2 className="sm:text-3xl text-[22px] leading-normal font-bold text-white text-left">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[1.0582010582em]">
+            <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
               NAATI CCL Results
             </h2>
             <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev-new w-10 h-10 p-[15px] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-prev md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
+                  className="md:w-[0.7936507937em]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -266,8 +269,9 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next-new w-10 h-10 p-[15px] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
+                  className="md:w-[0.7936507937em]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -285,7 +289,7 @@ const Testimonials = () => {
               </button>
             </div>
           </div>
-          <div className="sm:py-[28px] pt-[24px]">
+          <div className="sm:py-[1.8518518519em] pt-[24px]">
             <Swiper
               modules={[Navigation]}
               navigation={{
@@ -303,33 +307,34 @@ const Testimonials = () => {
                 <SwiperSlide key={item.id}>
                   <div>
                     <div className="relative">
-                      <div className="rounded-[10px] w-full aspect-3/2 h-auto object-cover object-center relative z-10">
+                      <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
                         <VideoPlayer
                           videoSrc={item.video}
                           thumbnail={item.image}
-                          wrapperClassName="rounded-[10px] h-full"
-                          videoClassName="rounded-[10px] object-contain h-full"
-                          thumbnailClassName="rounded-[10px] h-full"
+                          wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                          videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
+                          thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                         />
                       </div>
+                      {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="truncate text-white md:text-xl sm:text-lg text-base my-2">
+                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-base my-[0.4em]">
                       {item.title}
                     </p>
-                    <div className="flex sm:gap-5 gap-4 sm:items-end items-center mt-[20px]">
+                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center mt-[1.3227513228em]">
                       <div className="relative">
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="sm:w-5 w-4 sm:h-5 h-4 rounded-sm absolute -top-1 -right-1 z-0"
+                          className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
                         />
                         <img
                           src={item.avatar}
                           alt="avatar"
-                          className="sm:w-[61px] w-[52px] rounded-[8px] border-2 border-[#D66D11]"
+                          className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
                         />
                       </div>
-                      <div className="text-base sm:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] text-base sm:text-center text-start flex flex-col">
                         <span className="text-white/40 uppercase">
                           {item.name}
                         </span>
@@ -346,27 +351,27 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <section className="pt-[30px] sm:pb-0 pb-[30px]">
-        <div className="custom-container mx-auto  px-4 sm:px-[32px] w-full relative z-10">
-          <div className="sm:border-y border-t border-[#252525] md:pt-[100px] sm:pt-[70px] pt-[60px] sm:pb-[54px]">
-            <div className="flex md:flex-nowrap justify-between flex-wrap lg:gap-[50px] gap-[30px]">
-              <div className="2xl:w-[60%] lg:w-[55%] md:w-[50%] w-full">
-                <h2 class="lg:text-[52px] sm:text-[42px] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full md:max-w-[340px]">
+      <section className="sm:pt-[1.9841269841em] pt-[30px] sm:pb-0 pb-[1.9841269841em]">
+        <div className="custom-container mx-auto  px-4 sm:px-[2.1164021164em] w-full relative z-10">
+          <div className="border-t border-[#252525] md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em]">
+            <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
+              <div className="md:w-[50%] w-full">
+                <h2 class="lg:text-[3.4391534392em] sm:text-[4.1015625em] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
-                <p className="relative text-[#B7B7B7] text-lg max-w-[600px] my-3">
+                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] leading-[1.556] text-base max-w-[33.3333333333em] my-[0.6666666667em]">
                   Contact us on xxxxxxxxx/ xxxxxxxxx
                 </p>
                 {/* Mobile Form */}
                 <div className="md:hidden block pt-3">
                   <GetInTouch />
                 </div>
-                <div className="lg:my-[60px] my-[50px]">
-                  <h3 className="text-white font-bold md:text-2xl sm:text-xl text-lg">
+                <div className="lg:my-[3.9682539683em] my-[50px]">
+                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-lg leading-[32px]">
                     Why Language King?
                   </h3>
-                  <ul className="mt-5 sm:ps-5 gap-5 max-w-[690px]">
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-base text-sm text-[#ACACAC] sm:gap-7 gap-4 py-3">
+                  <ul className="mt-[1.3227513228em] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -375,7 +380,7 @@ const Testimonials = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-base text-sm text-[#ACACAC] sm:gap-7 gap-4 py-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -385,7 +390,7 @@ const Testimonials = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-base text-sm text-[#ACACAC] sm:gap-7 gap-4 py-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -395,7 +400,7 @@ const Testimonials = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-base text-sm text-[#ACACAC] sm:gap-7 gap-4 py-3">
+                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -407,13 +412,13 @@ const Testimonials = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex sm:gap-5 gap-3 max-w-[700px]">
+                <div className="flex items-start sm:gap-5 gap-3 md:max-w-[46.296em]">
                   <img
                     src={PinkQuote}
                     alt="PinkQuote"
-                    className="-mt-[80px] sm:w-[50px] w-8"
+                    className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
                   />
-                  <p className="lg:text-2xl sm:text-xl text-base text-white">
+                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[1.333333] text-lg text-white">
                     Language King is perfect for new or struggling students,
                     offering expert feedback and guidance to help achieve
                     desired scores.
@@ -421,7 +426,7 @@ const Testimonials = () => {
                 </div>
               </div>
               {/* Desktop Form */}
-              <div className="lg:w-[532px] md:w-[50%] w-full md:block hidden">
+              <div className="lg:w-[35.219em] md:w-[50%] w-full md:block hidden">
                 <GetInTouch />
               </div>
             </div>
