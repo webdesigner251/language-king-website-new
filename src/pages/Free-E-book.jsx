@@ -145,52 +145,52 @@ const FreeEBook = () => {
 
   return (
     <>
-      <div className="bg-black w-full h-[120px] mt-[-120px]">
+      <div className="bg-black w-full h-[7.9365079365em] mt-[-7.9365079365em]">
 
       </div>
-      <section className="2xl:pt-[80px] sm:pt-[70px] pt-[60px] sm:pb-[60px] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
+      <section className="2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
         <div className="sm:bg-transparent bg-gradient-FadetoBlack h-full w-full absolute top-0 z-10 lg:hidden block"></div>
         <img
           src={BannerBg}
           alt="BannerBg"
           className="absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full z-10 relative">
-          <div className="flex 2xl:gap-x-[100px] xl:gap-x-[100px] gap-x-[140px] sm:flex-nowrap flex-wrap">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full z-10 relative">
+          <div className="flex lg:gap-x-[6.6137566138em] gap-x-[140px] sm:flex-nowrap flex-wrap">
             <div className="sm:w-[20%] w-full flex flex-col justify-between">
               <img
                 src={NewTipsImage}
                 alt="NewTipsImage"
-                className="h-auto xl:max-w-[250px] max-w-[200px] -mt-[20px] sm:mx-0 mx-auto"
+                className="h-auto xl:max-w-[16.5343915344em]  md:max-w-[13.2275132275em] max-w-[200px] -mt-[20px] sm:mx-0 mx-auto"
               />
-              <span className="uppercase font-semibold text-white/50 sm:block hidden">
+              <span className="uppercase md:text-[1.0582010582em] text-base font-semibold text-white/50 sm:block hidden">
                 LEARN FROM THE EXPERT + MORE:
               </span>
-              <div className="sm:flex items-center gap-3 mt-[32px] hidden">
+              <div className="sm:flex items-center gap-3 mt-[2.1164021164em] hidden">
                 <img
                   src={avatar}
                   alt="avatar"
-                  className="w-[50px] h-[50px] rounded-full border-4 border-white/10"
+                  className="sm:w-[3.3068783069em] sm:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
                 />
                 <div>
-                  <span className="text-white text-lg font-semibold">
+                  <span className="text-white md:text-[1.1904761905em] text-lg font-semibold">
                     Abhishek
                   </span>
-                  <h3 className="text-base font-light text-white/60 leading-[1.2]">
+                  <h3 className="md:text-[1.0582010582em] text-base font-light text-white/60 leading-[1.2]">
                     PTE Master Trainer
                   </h3>
                 </div>
               </div>
             </div>
             <div className="sm:w-[80%]">
-              <div className="flex flex-col justify-between gap-y-[50px] h-full">
-                <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[30px]">
+              <div className="flex flex-col justify-between gap-y-[3.3068783069em] h-full">
+                <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[1.9841269841em]">
                   <div className="lg:max-w-[70%] max-w-full">
-                    <h1 className="text-white main-heading font-bold">
+                    <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.102] 2xl:mt-2 mt-0 text-white">
                       PTE Reading Blanks{" "}
                       <span className="text-[#F1CD5A] block">Free E-book</span>
                     </h1>
-                    <p className="font-light md:text-lg sm:leading-[28px] leading-[22px] sm:text-base max-w-[800px] text-sm text-white mt-3">
+                    <p className="font-light md:text-[1.1904761905em] leading-[1.55555555] sm:text-base max-w-[800px] text-sm text-white mt-3">
                       Learn how to solve PTE Reading Blanks with confidence,
                       master linkers, starters, and connectors, test your skills
                       with an interactive quiz, and boost your score
@@ -198,11 +198,11 @@ const FreeEBook = () => {
                     </p>
                   </div>
                   <div className="lg:max-w-[30%] max-w-full lg:block hidden">
-                    <h2 className="text-white xl:text-lg text-base font-bold my-[25px]">
+                    <h2 className="text-white xl:text-[1.1904761905em] text-base font-bold my-[1.3888888889em]">
                       YOU’LL LEARN HOW TO:
                     </h2>
                     <ul className="">
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-base text-sm text-white sm:gap-7 gap-4 py-2">
+                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
                         <img
                           src={CheckmarkYellow}
                           alt="CheckmarkYellow"
@@ -210,7 +210,7 @@ const FreeEBook = () => {
                         />
                         Attempt R&W blanks
                       </li>
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-base text-sm text-white sm:gap-7 gap-4 py-2">
+                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
                         <img
                           src={CheckmarkYellow}
                           alt="CheckmarkYellow"
@@ -218,7 +218,7 @@ const FreeEBook = () => {
                         />
                         Difference b/w linkers, <br /> starters and connectors
                       </li>
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-base text-sm text-white sm:gap-7 gap-4 py-2">
+                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
                         <img
                           src={CheckmarkYellow}
                           alt="CheckmarkYellow"
@@ -229,23 +229,23 @@ const FreeEBook = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="lg:max-w-[70%] max-w-full flex lg:flex-nowrap flex-wrap items-center sm:justify-start justify-center lg:gap-[40px] sm:gap-7 gap-4 sm:order-0 -order-1 ">
+                <div className="lg:max-w-[70%] max-w-full flex lg:flex-nowrap flex-wrap items-center sm:justify-start justify-center lg:gap-[2.6455026455em] sm:gap-7 gap-4 sm:order-0 -order-1 ">
                   <div className="relative rounded-lg sm:w-auto w-full ">
                     <a
                       href="#"
-                      className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black px-3 sm:py-3 py-[14px] font-normal  sm:text-xl text-lg relative z-10 sm:min-w-[242px] sm:w-auto w-full rounded-lg "
+                      className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] sm:py-[0.6em] py-[14px] font-normal sm:text-[1.3227513228em] text-lg leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
                       Start 7-Day Trial
                     </a>
                   </div>
-                  <div>
-                    <h4 className="text-[#F1CD5A] text-lg font-semibold sm:text-start text-center">
+                  <div className="flex flex-col justify-between">
+                    <h4 className="text-[#F1CD5A] text-[1.1904761905em] leading-[1.55555555] font-semibold sm:text-start text-center">
                       Save $33 by using AI Portal{" "}
                       <span className="sm:inline hidden">
                         + Prediction File + 6 Books
                       </span>
                     </h4>
-                    <span className="uppercase font-semibold text-white/50 text-[13px] mt-[5px] sm:inline hidden">
+                    <span className="uppercase font-semibold text-white/50 md:text-[0.8597883598em] leading-[1] text-sm mt-[0.3846153846em] sm:inline hidden">
                       See below
                     </span>
                   </div>
@@ -296,7 +296,7 @@ const FreeEBook = () => {
           alt="BGgradient"
           className="w-full h-full object-cover absolute top-0 left-0 right-0"
         />
-        <div className="custom-container mx-auto sm:py-[64px] py-[40px] px-4 sm:px-[32px] w-full z-10 relative ">
+        <div className="custom-container mx-auto sm:py-[64px] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative ">
           <div className="flex lg:flex-nowrap flex-wrap 2xl:gap-[150px] lg:gap-[80px] gap-[40px]">
             {/* Desktop Box */}
             <div className="lg:w-[60%] w-full sm:inline hidden">
@@ -653,7 +653,7 @@ const FreeEBook = () => {
         </div>
 
         <div className="border-y border-[#707070] relative z-10">
-          <div className="custom-container mx-auto md:py-[100px] sm:py-[70px] py-[40px] px-4 sm:px-[32px] w-full z-10 relative">
+          <div className="custom-container mx-auto md:py-[100px] sm:py-[70px] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative">
             <h2 className="font-inter font-normal main-heading 2xl:mt-2 mt-0 text-white text-center sm:mb-10 mb-5">
               FAQ
             </h2>
