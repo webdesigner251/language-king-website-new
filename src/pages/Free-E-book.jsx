@@ -186,7 +186,7 @@ const FreeEBook = () => {
               <div className="flex flex-col justify-between gap-y-[3.3068783069em] h-full">
                 <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[1.9841269841em]">
                   <div className="lg:max-w-[70%] max-w-full">
-                    <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.102] 2xl:mt-2 mt-0 text-white">
+                    <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.1022] 2xl:mt-2 mt-0 text-white">
                       PTE Reading Blanks{" "}
                       <span className="text-[#F1CD5A] block">Free E-book</span>
                     </h1>
@@ -198,7 +198,7 @@ const FreeEBook = () => {
                     </p>
                   </div>
                   <div className="lg:max-w-[30%] max-w-full lg:block hidden">
-                    <h2 className="text-white xl:text-[1.1904761905em] text-base font-bold my-[1.3888888889em]">
+                    <h2 className="text-white xl:text-[1.1904761905em] leading-[1.556] text-base font-bold my-[1.3888888889em]">
                       YOU’LL LEARN HOW TO:
                     </h2>
                     <ul className="">
@@ -238,48 +238,48 @@ const FreeEBook = () => {
                       Start 7-Day Trial
                     </a>
                   </div>
-                  <div className="flex flex-col justify-between">
+                  <div>
                     <h4 className="text-[#F1CD5A] text-[1.1904761905em] leading-[1.55555555] font-semibold sm:text-start text-center">
                       Save $33 by using AI Portal{" "}
                       <span className="sm:inline hidden">
                         + Prediction File + 6 Books
                       </span>
                     </h4>
-                    <span className="uppercase font-semibold text-white/50 md:text-[0.8597883598em] leading-[1] text-sm mt-[0.3846153846em] sm:inline hidden">
+                    <span className="uppercase font-semibold text-white/50 text-[0.8597883598em] mt-[0.3846153846em] leading-[1.462] sm:inline hidden">
                       See below
                     </span>
                   </div>
                 </div>
                 <div className="flex flex-col justify-between">
-                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-[25px ] items-end sm:gap-0 gap-[20px]">
+                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[1.3227513228em]">
                     <div className="sm:w-[25%] w-full">
-                      <span className="text-white md:text-lg sm:text-base text-sm font-semibold">
+                      <span className="text-white md:text-[1.1904761905em] sm:text-base text-sm font-semibold">
                         Other Books
                       </span>
-                      <h3 className="sm:text-base text-sm font-light text-white/60 leading-[1.2]">
+                      <h3 className="sm:text-[1.0582010582em] text-sm font-light text-white/60 leading-[1.2]">
                         PTE Study Material
                       </h3>
                     </div>
-                    <div className="sm:w-[75%] w-full sm:grid grid-cols-4 flex justify-between gap-[20px]">
+                    <div className="sm:w-[75%] w-full sm:grid grid-cols-4 flex justify-between gap-[1.3227513228em]">
                       <img
                         src={Book1}
                         alt="Book1"
-                        className="w-auto h-[61px] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
                       <img
                         src={Book2}
                         alt="Book2"
-                        className="w-auto h-[61px] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
                       <img
                         src={Book3}
                         alt="Book3"
-                        className="w-auto h-[61px] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
                       <img
                         src={Book4}
                         alt="Book4"
-                        className="w-auto h-[61px] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
                     </div>
                   </div>
@@ -296,29 +296,29 @@ const FreeEBook = () => {
           alt="BGgradient"
           className="w-full h-full object-cover absolute top-0 left-0 right-0"
         />
-        <div className="custom-container mx-auto sm:py-[64px] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative ">
-          <div className="flex lg:flex-nowrap flex-wrap 2xl:gap-[150px] lg:gap-[80px] gap-[40px]">
+        <div className="custom-container mx-auto sm:py-[4.2328042328em] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative ">
+          <div className="flex lg:flex-nowrap flex-wrap 2xl:gap-[9.9206349206em] lg:gap-[5.291005291em] gap-[2.6455026455em]">
             {/* Desktop Box */}
             <div className="lg:w-[60%] w-full sm:inline hidden">
               <div
                 onClick={() => setSelectedBox("ebook")}
-                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[33px]  rounded-[10px] ${selectedBox === "ebook"
+                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${selectedBox === "ebook"
                   ? "border-[#F18C2D]"
                   : "border-[#1B1B1B]"
                   }`}
               >
                 {/* E-Book Box content here */}
-                <div className=" xl:py-[34px] py-8 xl:px-[38px] px-6 flex items-center justify-between">
+                <div className="xl:py-[2.2486772487em] sm:py-[2.1164021164em] py-8 sm:px-[2.5132275132em] px-6 flex items-center justify-between">
                   <div>
-                    <h3 className="text-white font-bold lg:text-[36px] text-[32px] leading-[42px] mb-1">
+                    <h3 className="text-white font-bold lg:text-[2.380952381em] sm:text-[2.1164021164em] text-3xl leading-[1.167] mb-[0.1111111111em]">
                       E-Book Only
                     </h3>
-                    <span className="text-[#B8B8B8] font-normal text-xl">
+                    <span className="text-[#B8B8B8] font-normal lg:text-[1.3227513228em] leading-[1.4] text-lg">
                       Get 7-days Free Trial
                     </span>
                   </div>
-                  <div className="flex 2xl:gap-[45px] gap-[32px]">
-                    <h4 className="text-[#00FEFC] 2xl:text-[42px] xl:text-[36px] text-[30px] font-bold ">
+                  <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px">
+                    <h4 className="text-[#00FEFC] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-3xl leading-[1.5] font-bold ">
                       $0.99
                     </h4>
                   </div>
@@ -334,7 +334,7 @@ const FreeEBook = () => {
               >
                 {/* AI Portal Box content here */}
                 <div className=" ">
-                  <div className="flex xl:p-[32px] p-6 xl:gap-[42px] gap-[28px] border-b-2 border-white border-dashed">
+                  <div className="flex xl:p-[2.1164021164em] sm:p-[1.5873015873em] p-6 xl:gap-[2.7777777778em] sm:gap-[1.8518518519em] gap-[28px] border-b-2 border-white border-dashed">
                     <img
                       src={Rectangle}
                       alt="Rectangle"
@@ -342,44 +342,44 @@ const FreeEBook = () => {
                     />
                     <div className="w-3xl:w-[70%] w-[68%] flex flex-col justify-between">
                       <div>
-                        <h3 className="text-[#F3F2F3] lg:text-[36px] text-[32px] leading-[42px] font-bold">
+                        <h3 className="text-[#F3F2F3] lg:text-[2.380952381em] sm:text-[2.1164021164em] text-[32px] leading-[1.167] font-bold">
                           6 Month AI Portal
                         </h3>
-                        <ul className="text-xl text-[#B8B8B8] font-normal mt-1">
-                          <li className="py-[2px]">- 10 Full Mock Tests</li>
-                          <li className="py-[2px]">- 20 Sectional Tests</li>
-                          <li className="py-[2px]">- 5000+ Exam Questions</li>
-                          <li className="py-[2px]">- 5 Books Included</li>
+                        <ul className="sm:text-[1.3227513228em] text-lg leading-[1.4] text-[#B8B8B8] font-normal mt-[0.2em]">
+                          <li className="py-[0.1em]">- 10 Full Mock Tests</li>
+                          <li className="py-[0.1em]">- 20 Sectional Tests</li>
+                          <li className="py-[0.1em]">- 5000+ Exam Questions</li>
+                          <li className="py-[0.1em]">- 5 Books Included</li>
                         </ul>
                       </div>
-                      <div className="flex justify-end items-center 2xl:gap-[60px] gap-[30px] mt-[25px]">
-                        <h4 className="text-[#B0B0B0] 2xl:text-[42px] xl:text-[36px] text-[30px] font-bold line-through">
+                      <div className="flex justify-end items-center 2xl:gap-[3.9682539683em] sm:gap-[1.9841269841em] gap-[30px] mt-[1.6534391534em]">
+                        <h4 className="text-[#B0B0B0] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px] font-bold line-through">
                           $129
                         </h4>
-                        <div className="flex items-center gap-[45px] justify-between">
-                          <h4 className="text-[#F0AB0F] 2xl:text-[42px] xl:text-[36px] text-[30px] font-bold ">
+                        <div className="flex items-center gap-[2.9761904762em] justify-between">
+                          <h4 className="text-[#F0AB0F] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px] font-bold ">
                             $99
                           </h4>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="p-[32px]">
-                    <div className="flex justify-between  items-center md:gap-[42px] gap-[28px]">
+                  <div className="p-[2.1164021164em]">
+                    <div className="flex justify-between items-center md:gap-[2.7777777778em] gap-[1.8518518519em]">
                       <div>
-                        <h3 className="text-white font-bold sm:text-[38px] text-[32px] leading-[1.2]">
+                        <h3 className="text-white font-bold sm:text-[2.5132275132em] text-[2.1164021164em] leading-[1.2]">
                           + Prediction File{" "}
                         </h3>
-                        <span className="text-[#B8B8B8] font-normal 2xl:text-xl xl:text-lg text-base">
+                        <span className="text-[#B8B8B8] font-normal 2xl:text-[1.3227513228em] xl:text-[1.1904761905em] text-base">
                           Get monthly updates for 6 months
                         </span>
                       </div>
-                      <div className="flex 2xl:gap-[45px] gap-[32px] items-center">
-                        <button className="flex items-center gap-3 bg-[#45595A] rounded-[10px] px-4 py-2 text-white font-semibold text-lg cursor-pointer">
+                      <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px] items-center">
+                        <button className="flex items-center gap-[0.6666666667em] bg-[#45595A] rounded-[0.5555555556em] sm:px-4 px-[0.8888888889em] sm:py-2 py-[0.4444444444em] text-white font-semibold text-[1.1904761905em] leading-[1.5555555] cursor-pointer">
                           Add
-                          <img src={Plus} alt="plus-icon" className="h-5" />
+                          <img src={Plus} alt="plus-icon" className="h-[1.1111111111em]" />
                         </button>
-                        <h4 className="text-[#00FEFC] 2xl:text-[42px] xl:text-[36px] text-[30px] font-bold ">
+                        <h4 className="text-[#00FEFC] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px]  font-bold ">
                           + $9
                         </h4>
                       </div>
@@ -389,50 +389,50 @@ const FreeEBook = () => {
               </div>
             </div>
             <div className="lg:w-[40%] w-full">
-              <div className="bg-[#1B1B1B] xl:p-[42px] sm:p-8 px-4 py-6 rounded-[10px]">
+              <div className="bg-[#1B1B1B] xl:p-[2.7777777778em] sm:p-[2.1164021164em] px-4 py-[1.5873015873em] rounded-[0.6613756614em]">
                 <div className="sm:block hidden">
-                  <div className="flex justify-between gap-4">
-                    <h4 className="font-semibold text-white xl:text-xl text-lg">
+                  <div className="flex justify-between gap-[1.0582010582em]">
+                    <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
                       6 Month AI Portal
                     </h4>
                     <div className="">
-                      <span className="text-[#B0B0B0] font-bold xl:text-xl leading-[32px] text-lg me-8">
+                      <span className="text-[#B0B0B0] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg me-8">
                         $129
                       </span>
-                      <span className="text-[#F0AB0F] font-bold xl:text-xl leading-[32px] text-lg">
+                      <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
                         $99
                       </span>
                     </div>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <h4 className="font-semibold text-white xl:text-xl text-lg">
+                    <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
                       Prediction File
                     </h4>
                     <div className="">
-                      <span className="text-[#F0AB0F] font-bold xl:text-xl leading-[32px] text-lg">
+                      <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
                         $9
                       </span>
                     </div>
                   </div>
-                  <hr className="border-[#3D3D3D] my-[30px]" />
-                  <div className="max-w-[400px]">
-                    <div className="flex justify-between gap-4 items-center">
+                  <hr className="border-[#3D3D3D] my-[1.9841269841em]" />
+                  <div className="max-w-[26.455026455em]">
+                    <div className="flex justify-between gap-[1.0582010582em] items-center">
                       <div className="w-auto flex-auto">
-                        <h4 className="font-semibold text-white xl:text-xl text-lg inline">
+                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
                           Your total:{" "}
                         </h4>
-                        <span className="text-[#B0B0B0] line-through font-bold xl:text-xl text-lg ps-4">
+                        <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
                           $152
                         </span>
                       </div>
-                      <span className="text-[#F0AB0F] font-medium xl:text-xl text-lg">
+                      <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
                         Saving $33!
                       </span>
                     </div>
-                    <h4 className="text-[#B0B0B0] font-bold xl:text-[72px] text-6xl leading-[1.1]">
+                    <h4 className="text-[#B0B0B0] font-bold xl:text-[4.7619047619em] text-[3.9682539683em] leading-[1.1]">
                       $119
                     </h4>
-                    <span className="text-[#B0B0B0] font-bold text-base">
+                    <span className="text-[#B0B0B0] font-bold text-[1.0582010582em] sm:text-base">
                       (GST Included)
                     </span>
                   </div>
@@ -519,14 +519,14 @@ const FreeEBook = () => {
                     </div>
                   </div>
                 </div>
-                <form className="sm:pt-6 pt-4">
-                  <div className="flex flex-col mb-4">
+                <form className="sm:pt-[1.5873015873em] pt-4">
+                  <div className="flex flex-col mb-[1.0582010582em]">
                     <input
                       type="text"
                       name="name"
                       id=""
                       placeholder="Full Name"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[16px] px-[24px] 2xl:text-lg text-base"
+                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
                   <div className="flex flex-col mb-4">
@@ -535,7 +535,7 @@ const FreeEBook = () => {
                       name="email"
                       id=""
                       placeholder="Email Address"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[16px] px-[24px] 2xl:text-lg text-base"
+                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
                   <div className="flex flex-col mb-4">
@@ -544,7 +544,7 @@ const FreeEBook = () => {
                       name="tel"
                       id=""
                       placeholder="Mobile number e.g: 0444786999"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[16px] px-[24px] 2xl:text-lg text-base"
+                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
                   <div className="flex flex-col mb-4">
@@ -553,21 +553,21 @@ const FreeEBook = () => {
                       name="ccn"
                       id=""
                       placeholder="Card Number "
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[16px] px-[24px] 2xl:text-lg text-base"
+                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
-                  <span className="font-normal text-[#949AA4] md:text-base sm:text-sm text-xs sm:py-3  block">
+                  <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] sm:text-sm text-xs sm:py-3  block">
                     Secure Checkout Powered by
                     <a href="#" className="underline">
                       Stripe
                     </a>
                   </span>
 
-                  <hr className="border-[#3D3D3D] mt-3 sm:mb-[30px] mb-4" />
+                  <hr className="border-[#3D3D3D] mt-[0.7936507937em] sm:mb-[1.9841269841em] mb-4" />
                   <Link
                     // type="submit"
                     to="/ebook-submit"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-3 py-4 w-full font-bold sm:text-xl text-lg relative z-10 rounded-sm"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] px-3 py-4 w-full font-bold sm:text-[1.3227513228em] text-[1.1904761905em] relative z-10 leading-[1.4] rounded-sm"
                   >
                     Buy Now - $119
                   </Link>
@@ -653,31 +653,31 @@ const FreeEBook = () => {
         </div>
 
         <div className="border-y border-[#707070] relative z-10">
-          <div className="custom-container mx-auto md:py-[100px] sm:py-[70px] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative">
-            <h2 className="font-inter font-normal main-heading 2xl:mt-2 mt-0 text-white text-center sm:mb-10 mb-5">
+          <div className="custom-container mx-auto md:py-[6.6137566138em] sm:py-[4.6296296296em] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative">
+            <h2 className="font-inter font-normal md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.11] 2xl:mt-[0.1315789474em] mt-0 text-white text-center sm:mb-[0.6578947368em] mb-5">
               FAQ
             </h2>
-            <div className="max-w-4xl mx-auto sm:p-6">
+            <div className="md:max-w-[59.2592592593em] mx-auto sm:p-[1.5873015873em]">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`py-4 ${index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
+                  className={`py-4 md:py-[1.0582010582em] ${index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
                     }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="flex justify-between items-center w-full text-left gap-4"
+                    className="flex justify-between items-center w-full text-left gap-[1.0582010582em]"
                   >
-                    <span className="md:text-[22px] sm:text-xl text-lg font-bold leading-[28px] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
+                    <span className="md:text-[1.455026455em] sm:text-[1.3227513228em] text-lg font-bold leading-[1.273] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
                       {faq.question}
                     </span>
-                    <span className="w-[28px] sm:w-[35px] basis-[28px] sm:basis-[35px] flex items-center justify-center">
+                    <span className="w-[28px] sm:w-[2.3148148148em] basis-[28px] sm:basis-[2.3148148148em] flex items-center justify-center">
                       {openIndex === index ? <MinusIcon /> : <PlusIcon />}
                     </span>
                   </button>
 
                   {openIndex === index && faq.answer && (
-                    <div className="sm:mt-4 mt-2 md:text-lg sm:text-lg font-medium text-base text-white/50 max-w-[93%]">
+                    <div className="sm:mt-[0.8888888889em] mt-2 md:text-[1.1904761905em] sm:text-[1.0582010582em] leading-[1.556] font-medium text-base text-white/50 max-w-[93%]">
                       {faq.answer}
                     </div>
                   )}
