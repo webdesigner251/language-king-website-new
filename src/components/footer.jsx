@@ -9,6 +9,7 @@ import Email from "../assets/icons/email.svg";
 import Phone from "../assets/icons/call.svg";
 import Map from "../assets/icons/map.svg";
 import Calender from "../assets/icons/calender.svg";
+import { Link } from "react-router-dom";
 
 // import { ReactComponent as Logo } from "./assets/google.svg";
 
@@ -73,20 +74,19 @@ const Footer = () => {
                     </h4>
                     <ul className="flex flex-col sm:gap-[0.9920634921em] gap-[14px]">
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="/Terms-of-Use"
                           className="flex items-center gap-4 text-[#919191] font-semibold lg:text-[1.0582010582em] text-base transition-all duration-300 ease hover:text-white/80"
                         >
                           Terms of Use
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link to="/privacy-policy"
                           className="flex items-center gap-4 text-[#919191] font-semibold lg:text-[1.0582010582em] text-base transition-all duration-300 ease hover:text-white/80"
                         >
                           Privacy Policy
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a
