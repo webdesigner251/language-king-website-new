@@ -31,7 +31,7 @@ function App() {
       <main className="relative h-full">
         <div className="bg-noise-pattern absolute inset-0"></div>
         <Routes>
-          <Route path="/language-king-website-new" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/pte-masterclass" element={<PteMasterClass />} />
           <Route path="/naaticcl" element={<NAATICCL />} />
           <Route path="/testimonials" element={<Testimonials />} />
