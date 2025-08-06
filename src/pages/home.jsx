@@ -34,10 +34,11 @@ import checklist from "../assets/icons/checkmark.svg";
 import video from "../assets/videos/placeholder-video.mp4";
 import VideoModal from "../components/videoModal";
 import CallbackForm from "../components/callback-popup";
-import Video1 from "../assets/videos/VID-20250605-WA0001.mp4";
-import Video2 from "../assets/videos/VID-20250605-WA0002.mp4";
-import Video3 from "../assets/videos/VID-20250605-WA0003.mp4";
-import Video4 from "../assets/videos/VID-20250605-WA0004.mp4";
+import Video1 from "../assets/videos/placeholder-video.mp4";
+import Video2 from "../assets/videos/placeholder-video.mp4";
+import Video3 from "../assets/videos/placeholder-video.mp4";
+import Video4 from "../assets/videos/placeholder-video.mp4";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 const testimonials = [
   {
@@ -126,7 +127,7 @@ const Home = () => {
     <>
       <section className="banner-wrapper min-h-[110vh] sm:pt-[270px] pt-[450px] sm:pb-[100px] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
         {/* <section className="banner-wrapper sm:pt-[320px] pt-[400px] sm:pb-[200px] pb-[40px] min-h-[100vh] mt-[-150px] relative flex items-center overflow-hidden"></section> */}
-        <img
+        <ImageWithToggle
           src={HomeBanner}
           alt="HomeBanner"
           className="scale-[1.1] absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
@@ -202,7 +203,7 @@ const Home = () => {
               </div>
 
               <div className="overflow-hidden relative z-0 max-h-[450px]">
-                <img
+                <ImageWithToggle
                   src={CourseImg1}
                   alt="CourseImg1"
                   className="w-full h-full object-cover transition-all duration-300 ease group-hover:scale-[1.05]"
@@ -221,7 +222,7 @@ const Home = () => {
                   and do whatever it takes to clear it.
                 </p>
                 <div className="sm:flex items-center gap-3 my-[12px] hidden">
-                  <img
+                  <ImageWithToggle
                     src={avatar}
                     alt="avatar"
                     className="w-[50px] h-[50px] rounded-full border-4 border-white/10"
@@ -250,7 +251,7 @@ const Home = () => {
 
             <div className="course-drop-shadow bg-course-blue-bg hover:bg-course-blue-hover-bg border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 gap-[38px] transition-all duration-300 ease group px-4 sm:px-6 py-4 sm:py-6 relative">
               <div className="overflow-hidden relative z-0 max-h-[450px]">
-                <img
+                <ImageWithToggle
                   src={CourseImg2}
                   alt="CourseIm21"
                   className="w-full h-full object-cover transition-all duration-300 ease group-hover:scale-[1.05]"
@@ -270,7 +271,7 @@ const Home = () => {
                   teacher to get their desired score, now it’s your turn.
                 </p>
                 <div className="sm:flex items-center gap-3 my-[12px] hidden">
-                  <img
+                  <ImageWithToggle
                     src={avatar}
                     alt="avatar"
                     className="w-[50px] h-[50px] rounded-full border-4 border-white/10"
@@ -299,7 +300,7 @@ const Home = () => {
 
             <div className="course-drop-shadow bg-course-black-bg hover:bg-course-black-hover-bg border-[1.5px] border-[#333434] grid items-center lg:grid-cols-2 gap-[38px] transition-all duration-300 ease group px-4 sm:px-6 py-4 sm:py-6 relative">
               <div className="overflow-hidden relative z-0 max-h-[450px]">
-                <img
+                <ImageWithToggle
                   src={CourseImg3}
                   alt="CourseImg3"
                   className="w-full h-full object-cover transition-all duration-300 ease group-hover:scale-[1.05]"
@@ -320,7 +321,7 @@ const Home = () => {
                   to go from 5 to 8 each as quickly as possible.
                 </p>
                 <div className="sm:flex items-center gap-3 my-[12px] hidden">
-                  <img
+                  <ImageWithToggle
                     src={avatar}
                     alt="avatar"
                     className="w-[50px] h-[50px] rounded-full border-4 border-white/10"
@@ -371,7 +372,7 @@ const Home = () => {
                           setIsModalOpen(true);
                         }}
                       >
-                        <img
+                        <ImageWithToggle
                           src={item.thumbnail}
                           alt={item.title}
                           className="w-full h-full object-cover"
@@ -419,7 +420,7 @@ const Home = () => {
             </h2>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around gap-x-[20px] gap-y-[60px]">
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon1}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -430,7 +431,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon2}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -441,7 +442,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon3}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -454,7 +455,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon4}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -465,7 +466,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon5}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -476,7 +477,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon6}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -487,7 +488,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="text-center">
-                <img
+                <ImageWithToggle
                   src={Icon7}
                   alt="Icon"
                   className="mx-auto sm:mb-[25px] mb-6 sm:max-w-[88px] max-w-[78px]"
@@ -523,7 +524,7 @@ const Home = () => {
               </div>
               <TestimonialCarousel testimonials={testimonials} />
             </div>
-            <img
+            <ImageWithToggle
               src={GrainIMG}
               alt="GrainIMG"
               className="absolute top-0  w-full h-full left-0 right-0 z-0 object-cover"
@@ -537,7 +538,7 @@ const Home = () => {
           <div className="bg-[#121212] px-4 py-6 sm:px-[32px] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
             <div className="flex md:flex-nowrap flex-wrap gap-[130px] items-stretch justify-between middle-border">
               <div className="md:block hidden md:w-[50%] w-full">
-                <img
+                <ImageWithToggle
                   src={personImage}
                   alt="personImage"
                   className="w-full rounded-[11px]"

@@ -357,6 +357,24 @@ header {
   background: linear-gradient(90deg, rgb(13 13 13), transparent 20%), linear-gradient(transparent 80%, rgb(13 13 13));
 }
 
+.main-banner-gradient {
+  background: linear-gradient(90deg, rgb(13 13 13), transparent 60%), linear-gradient(transparent 60%, rgb(13 13 13));
+}
+
+.banner-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+
 .hover-full-rounded-btn.primary-btn::before {
   border-radius: 50px;
 }

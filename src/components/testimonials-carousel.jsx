@@ -1,6 +1,7 @@
 import VideoPlayer from "./videoPlayer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import ImageWithToggle from "./ImageWithToggle";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,7 +59,7 @@ const TestimonialCarousel = ({ testimonials }) => {
             </div>
             <div className="2xl:pt-[64px] md:pt-[52px] sm:pt-[42px] pt-8 border-t border-[#3D3D3D] flex flex-col 2xl:gap-y-[58px] md:gap-y-[42px] gap-7">
               <div className="flex items-center 2xl:gap-[33px] gap-[20px]">
-                <img
+                <ImageWithToggle
                   src={item.avatar}
                   alt="Avatar"
                   className="lg:w-[4.7619047619em] lg:h-[4.7619047619em] w-[62px] h-[62px] rounded-full object-cover"

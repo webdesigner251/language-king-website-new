@@ -7,13 +7,13 @@ import Book1 from "../assets/ebook/book1.png";
 import Book2 from "../assets/ebook/book2.png";
 import Book3 from "../assets/ebook/book3.png";
 import Book4 from "../assets/ebook/book4.png";
-// import video from "../assets/videos/placeholder-video.mp4";
 import BGgradient from "../assets/ebook/gradient.png";
 import Rectangle from "../assets/ebook/rectangle.png";
 import Plus from "../assets/icons/plus.svg";
 
 import checkmark from "../assets/icons/green-checkmark.svg";
 import EmailIcon from "../assets/icons/green-email-icon.svg";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 const faqs = [
   {

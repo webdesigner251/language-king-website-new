@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 
 // import checkmark from "../assets/icons/green-checkmark.svg";
 // import EmailIcon from "../assets/icons/green-email-icon.svg";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 const faqs = [
   {
@@ -145,12 +146,12 @@ const FreeEBook = () => {
 
   return (
     <>
-      <div className="bg-black w-full h-[7.9365079365em] mt-[-7.9365079365em]">
+      {/* black space for header */}
+      <div className="bg-black w-full h-[7.9365079365em] mt-[-7.9365079365em]"></div>
 
-      </div>
-      <section className="2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
+      <section className="banner-wrapper 2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
         <div className="sm:bg-transparent bg-gradient-FadetoBlack h-full w-full absolute top-0 z-10 lg:hidden block"></div>
-        <img
+        <ImageWithToggle
           src={BannerBg}
           alt="BannerBg"
           className="absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
@@ -167,7 +168,7 @@ const FreeEBook = () => {
                 LEARN FROM THE EXPERT + MORE:
               </span>
               <div className="sm:flex items-center gap-3 mt-[2.1164021164em] hidden">
-                <img
+                <ImageWithToggle
                   src={avatar}
                   alt="avatar"
                   className="sm:w-[3.3068783069em] sm:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
@@ -261,22 +262,22 @@ const FreeEBook = () => {
                       </h3>
                     </div>
                     <div className="sm:w-[75%] w-full sm:grid grid-cols-4 flex justify-between gap-[1.3227513228em]">
-                      <img
+                      <ImageWithToggle
                         src={Book1}
                         alt="Book1"
                         className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
-                      <img
+                      <ImageWithToggle
                         src={Book2}
                         alt="Book2"
                         className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
-                      <img
+                      <ImageWithToggle
                         src={Book3}
                         alt="Book3"
                         className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
                       />
-                      <img
+                      <ImageWithToggle
                         src={Book4}
                         alt="Book4"
                         className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
@@ -288,6 +289,7 @@ const FreeEBook = () => {
             </div>
           </div>
         </div>
+        <div className="main-banner-gradient absolute w-full h-full top-0 left-0 right-0 bottom-0"></div>
       </section>
 
       <section className="relative">
@@ -578,7 +580,7 @@ const FreeEBook = () => {
           {/* 
           <div className="max-w-[550px] mx-auto bg-black rounded-xl px-7 py-7">
             <div className="text-center">
-              <img
+              <ImageWithToggle
                 src={checkmark}
                 alt="checkmark"
                 className="mx-auto sm:w-[60px] w-[50px] mb-2 h-auto zoom-pulse"
@@ -638,7 +640,7 @@ const FreeEBook = () => {
 
                 <div className="grid grid-cols-1 sm:gap-6 gap-4 mt-7 text-start">
                   <div className="flex items-start sm:gap-7 gap-5  text-white font-medium leading-normal xl:text-xl sm:text-lg text-base">
-                    <img
+                    <ImageWithToggle
                       src={EmailIcon}
                       alt="checklist"
                       className="sm:w-[32px] w-[28px] sm:h-[32px] h-[28px] mt-1"

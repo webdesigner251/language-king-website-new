@@ -73,6 +73,7 @@ import TiktokIcon from "../assets/icons/tiktok-dark.svg";
 import facebookIconLight from "../assets/icons/facebook-icon-light.svg";
 import InstaIconLight from "../assets/icons/instagram-icon-light.svg";
 import TiktokIconLight from "../assets/icons/tiktok-icon-light.svg";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 const NAATICCL = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -311,7 +312,7 @@ const NAATICCL = () => {
       <div className="bg-gradient-to-b from-black/20 to-transparent relative h-full">
         <section className="lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
           <div className="2xl:w-[66%] w-full 2xl:h-[75%] sm:h-full h-[50%] top-0 right-0 bottom-0 absolute">
-            <img
+            <ImageWithToggle
               src={PTEBanner}
               alt="HomeBanner"
               className=" w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
@@ -336,7 +337,7 @@ const NAATICCL = () => {
                     basis, and do whatever it takes to clear it.{" "}
                   </p>
                   <div className="flex items-center gap-3 my-[0.7936507937em]">
-                    <img
+                    <ImageWithToggle
                       src={avatar}
                       alt="avatar"
                       className="md:w-[3.3068783069em] md:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
@@ -478,7 +479,7 @@ const NAATICCL = () => {
                       {course.title}
                     </span>
                   </div>
-                  <img
+                  <ImageWithToggle
                     src={course.image}
                     alt={`Image of ${course.title}`}
                     className="w-full h-auto object-contain"
@@ -496,7 +497,7 @@ const NAATICCL = () => {
           <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex lg:flex-nowrap flex-wrap items-center lg:py-[6.6137566138em] py-[70px] border-y-2 border-[#252525] sm:gap-[3.3068783069em] gap-[35px]">
               <div className="lg:w-[77%] tab-content">
-                <img
+                <ImageWithToggle
                   src={tabImages[activeTab]}
                   alt="PTE Response"
                   className="w-full h-auto animate-fade-in"
@@ -635,7 +636,7 @@ const NAATICCL = () => {
                       {course.title}
                     </span>
                   </div>
-                  <img
+                  <ImageWithToggle
                     src={course.image}
                     alt={`Image of ${course.title}`}
                     className="w-full h-auto object-contain"
@@ -663,7 +664,7 @@ const NAATICCL = () => {
                       alt={student.country}
                       className="sm:w-[1.3227513228em] sm:h-[1.3227513228em] w-5 h-5 rounded-sm absolute top-0 right-0 z-0"
                     />
-                    <img
+                    <ImageWithToggle
                       src={student.image}
                       alt={student.name}
                       className="w-full h-full rounded-full object-cover"
@@ -694,7 +695,7 @@ const NAATICCL = () => {
                       onClick={() => setShowVideo(true)}
                       className="cursor-pointer"
                     >
-                      <img
+                      <ImageWithToggle
                         src={freeLesson}
                         alt="PTE Response"
                         className="w-full h-auto animate-fade-in"
@@ -798,7 +799,7 @@ const NAATICCL = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[3.3068783069em] gap-10 sm:pt-[3.9682539683em] sm:pb-[5.9523809524em] py-[50px]">
                     {row.map((item, index) => (
                       <div key={index}>
-                        <img
+                        <ImageWithToggle
                           src={item.image}
                           alt={item.title}
                           className="rounded-[0.6613756614em] md:mb-[1.8518518519em] mb-4 w-full"
@@ -842,7 +843,7 @@ const NAATICCL = () => {
 
                   {/* Course Image */}
                   <div className="overflow-hidden relative z-0 max-h-[450px]">
-                    <img
+                    <ImageWithToggle
                       src={course.image}
                       alt={`Course ${index + 1}`}
                       className="w-full h-full object-cover transition-all duration-300 ease group-hover:scale-[1.05]"
@@ -865,7 +866,7 @@ const NAATICCL = () => {
 
                     {/* Avatar */}
                     <div className="sm:flex items-center gap-3 my-[12px] hidden">
-                      <img
+                      <ImageWithToggle
                         src={course.avatar}
                         alt="avatar"
                         className="lg:w-[3.3068783069em] lg:h-[3.3068783069em] w-[4.8828125em] h-[4.8828125em] rounded-full border-4 border-white/10"

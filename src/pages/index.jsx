@@ -34,10 +34,11 @@ import checklist from "../assets/icons/checkmark.svg";
 import video from "../assets/videos/placeholder-video.mp4";
 import VideoModal from "../components/videoModal";
 import CallbackForm from "../components/callback-popup";
-import Video1 from "../assets/videos/VID-20250605-WA0001.mp4";
-import Video2 from "../assets/videos/VID-20250605-WA0002.mp4";
-import Video3 from "../assets/videos/VID-20250605-WA0003.mp4";
-import Video4 from "../assets/videos/VID-20250605-WA0004.mp4";
+import Video1 from "../assets/videos/placeholder-video.mp4";
+import Video2 from "../assets/videos/placeholder-video.mp4";
+import Video3 from "../assets/videos/placeholder-video.mp4";
+import Video4 from "../assets/videos/placeholder-video.mp4";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 const testimonials = [
   {
@@ -177,8 +178,8 @@ const Home = () => {
 
   return (
     <>
-      <section className="banner-wrapper min-h-[110vh] sm:pt-[17.857em] pt-[450px] sm:pb-[6.614em] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
-        <img
+      <section className="banner-wrapper  min-h-[110vh] sm:pt-[17.857em] pt-[450px] sm:pb-[6.614em] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
+        <ImageWithToggle
           src={HomeBanner}
           alt="HomeBanner"
           className="scale-[1.1] absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
@@ -238,6 +239,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="main-banner-gradient absolute w-full h-full top-0 left-0 right-0 bottom-0"></div>
+        {/* <div className="bg-gradient-to-b from-black/40 to-transparent top-0 left-0 right-0 bottom-0"></div> */}
       </section>
 
       <section className="mb-8 lg:scroll-mt-[90px]" id="courses">
@@ -261,7 +264,7 @@ const Home = () => {
 
                 {/* Course Image */}
                 <div className="overflow-hidden relative z-0 max-h-[450px]">
-                  <img
+                  <ImageWithToggle
                     src={course.image}
                     alt={`Course ${index + 1}`}
                     className="w-full h-full object-cover transition-all duration-300 ease group-hover:scale-[1.05]"
@@ -284,7 +287,7 @@ const Home = () => {
 
                   {/* Avatar */}
                   <div className="sm:flex items-center gap-3 my-[12px] hidden">
-                    <img
+                    <ImageWithToggle
                       src={course.avatar}
                       alt="avatar"
                       className="lg:w-[3.3068783069em] lg:h-[3.3068783069em] w-[4.8828125em] h-[4.8828125em] rounded-full border-4 border-white/10"
@@ -347,7 +350,7 @@ const Home = () => {
                           setIsModalOpen(true);
                         }}
                       >
-                        <img
+                        <ImageWithToggle
                           src={item.thumbnail}
                           alt={item.title}
                           className="w-full h-full object-cover"
@@ -513,7 +516,7 @@ const Home = () => {
           <div className="bg-[#121212] px-4 py-6 sm:px-[2.1164021164em] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
             <div className="flex md:flex-nowrap flex-wrap gap-[8.5978835979em] items-stretch justify-between middle-border">
               <div className="md:block hidden md:w-[50%] w-full">
-                <img
+                <ImageWithToggle
                   src={personImage}
                   alt="personImage"
                   className="w-full rounded-[11px]"

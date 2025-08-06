@@ -5,7 +5,6 @@ import Logo from "../assets/Logo.svg";
 import LogoMenu from "../assets/logo-menu.svg";
 import MenuIcon from "../assets/menu.svg"; // Custom menu icon
 import CloseIcon from "../assets/close.svg"; // Custom close icon
-
 const MainHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 

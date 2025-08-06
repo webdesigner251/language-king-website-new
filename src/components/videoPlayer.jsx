@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImageWithToggle from "./ImageWithToggle";
 
 const VideoPlayer = ({
   videoSrc,
@@ -27,7 +28,7 @@ const VideoPlayer = ({
           className="relative w-full h-full cursor-pointer group"
           onClick={() => setIsPlaying(true)}
         >
-          <img
+          <ImageWithToggle
             src={thumbnail}
             alt="Video thumbnail"
             className={`w-full onject-cover ${thumbnailClassName}`}

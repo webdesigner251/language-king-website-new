@@ -6,16 +6,16 @@ import Avatarnew from "../assets/avatar6.png";
 import CheckmarkGray from "../assets/icons/checkmark-gray.svg";
 import PinkQuote from "../assets/icons/pink-quote.svg";
 import VideoPlayer from "../components/videoPlayer";
-// import video from "../assets/videos/placeholder-video.mp4";
-import Video1 from "../assets/videos/VID-20250605-WA0001.mp4";
-import Video2 from "../assets/videos/VID-20250605-WA0002.mp4";
-import Video3 from "../assets/videos/VID-20250605-WA0003.mp4";
-import Video4 from "../assets/videos/VID-20250605-WA0004.mp4";
+import Video1 from "../assets/videos/placeholder-video.mp4";
+import Video2 from "../assets/videos/placeholder-video.mp4";
+import Video3 from "../assets/videos/placeholder-video.mp4";
+import Video4 from "../assets/videos/placeholder-video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import GetInTouch from "../components/Get-in-touch";
+import ImageWithToggle from "../components/ImageWithToggle";
 
 // Testimonials slides Data array
 const slidesData = [
@@ -111,7 +111,7 @@ const Testimonials = () => {
                 xxxxxxxxxxxxx
               </div>
               <div className="flex sm:gap-[1.3227513228em] gap-4 items-center mt-[3.3068783069em]">
-                <img
+                <ImageWithToggle
                   src={Mainavatar}
                   alt="Mainavatar"
                   className="sm:w-[4.0343915344em] w-[52px] rounded-[8px]"
@@ -221,7 +221,7 @@ const Testimonials = () => {
                           alt="flag"
                           className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
                         />
-                        <img
+                        <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
                           className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
@@ -328,7 +328,7 @@ const Testimonials = () => {
                           alt="flag"
                           className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
                         />
-                        <img
+                        <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
                           className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
