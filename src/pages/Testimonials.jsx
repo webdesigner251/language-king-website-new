@@ -246,7 +246,7 @@ const Testimonials = () => {
 
       <section className="sm:py-[30px] pt-[25px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[1.0582010582em]">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] py-[16px]">
             <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
               NAATI CCL Results
             </h2>
