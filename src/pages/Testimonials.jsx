@@ -84,7 +84,7 @@ const slidesData = [
 const Testimonials = () => {
   return (
     <>
-      <section className="md:pt-[14.5502645503em] pt-[180px] md:pb-[5.0925925926em] pb-8 mt-[-7.9365079365em]">
+      <section className="md:pt-[14.5502645503em] pt-[180px] md:pb-[5.0925925926em] pb-8 md:mt-[-7.9365079365em] mt-[-120px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
           <div className="grid items-start lg:grid-cols-2 xl:gap-[7.9365079365em] gap-[5.9523809524em]">
             <div>
@@ -93,7 +93,7 @@ const Testimonials = () => {
                   Why Students Love Learning With Us
                 </h1>
 
-                <div className="lg:hidden aspect-16/9 block w-full py-[3.3068783069em]">
+                <div className="lg:hidden aspect-16/9 block w-full py-[50px]">
                   <VideoPlayer
                     videoSrc={Video1}
                     thumbnail={PlaceholerImage}
@@ -110,13 +110,13 @@ const Testimonials = () => {
                 impossible for me to clear he test due to my background.
                 xxxxxxxxxxxxx
               </div>
-              <div className="flex sm:gap-[1.3227513228em] gap-4 items-center mt-[3.3068783069em]">
+              <div className="flex sm:gap-[1.3227513228em] gap-4 items-center sm:mt-[3.3068783069em] mt-[50px]">
                 <ImageWithToggle
                   src={Mainavatar}
                   alt="Mainavatar"
-                  className="sm:w-[4.0343915344em] w-[52px] rounded-[8px]"
+                  className="md:w-[4.0343915344em] md:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover rounded-[8px]"
                 />
-                <div className="sm:text-[1.1904761905em] text-base">
+                <div className="md:text-[1.1904761905em] text-base">
                   <span className="text-white me-[0.5em]">Natalia &#9679;</span>
                   <span className="text-white/40 uppercase">
                     PTE & NAATI CCL
@@ -139,14 +139,14 @@ const Testimonials = () => {
 
       <section className="sm:py-[1.9841269841em] pt-[25px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] py-[1.0582010582em]">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] py-[16px]">
             <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
               PTE Hall of Fame
             </h2>
             <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-prev w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
-                  className="md:w-[0.7936507937em]"
+                  className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -162,9 +162,9 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
-                  className="md:w-[0.7936507937em]"
+                  className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -211,27 +211,27 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-base my-[0.4em]">
+                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] my-2">
                       {item.title}
                     </p>
-                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center mt-[1.3227513228em]">
+                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[20px]">
                       <div className="relative">
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
+                          className="md:w-[1.3227513228em] w-4 md:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
                         />
                         <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
-                          className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
+                          className="md:w-[4.0343915344em] md:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         />
                       </div>
-                      <div className="md:text-[1.0582010582em] text-base sm:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] text-base md:text-center text-start flex flex-col">
                         <span className="text-white/40 uppercase">
                           {item.name}
                         </span>
-                        <span className="text-white text-sm block">
+                        <span className="text-white md:text-[0.9259259259em] text-sm block">
                           {item.tag}
                         </span>
                       </div>
@@ -251,9 +251,9 @@ const Testimonials = () => {
               NAATI CCL Results
             </h2>
             <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-prev w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
-                  className="md:w-[0.7936507937em]"
+                  className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -269,9 +269,9 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next md:w-10 md:h-10 w-[2.6455026455em] h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
-                  className="md:w-[0.7936507937em]"
+                  className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
                   height="20"
                   viewBox="0 0 12 20"
@@ -321,7 +321,7 @@ const Testimonials = () => {
                     <p className="truncate text-white md:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-base my-[0.4em]">
                       {item.title}
                     </p>
-                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center mt-[1.3227513228em]">
+                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center md:mt-[1.3227513228em] mt-[20px]">
                       <div className="relative">
                         <img
                           src={item.flag}
@@ -331,14 +331,14 @@ const Testimonials = () => {
                         <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
-                          className="sm:w-[4.0343915344em] w-[52px] rounded-[0.5291005291em] border-2 border-[#D66D11]"
+                          className="sm:w-[4.0343915344em] sm:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         />
                       </div>
                       <div className="md:text-[1.0582010582em] text-base sm:text-center text-start flex flex-col">
                         <span className="text-white/40 uppercase">
                           {item.name}
                         </span>
-                        <span className="text-white text-sm block">
+                        <span className="text-white md:text-[0.9259259259em] text-xs block">
                           {item.tag}
                         </span>
                       </div>
@@ -370,8 +370,8 @@ const Testimonials = () => {
                   <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-lg leading-[32px]">
                     Why Language King?
                   </h3>
-                  <ul className="mt-[1.3227513228em] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                  <ul className="md:mt-[1.3227513228em] mt-[20px] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -380,7 +380,7 @@ const Testimonials = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -390,7 +390,7 @@ const Testimonials = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -400,7 +400,7 @@ const Testimonials = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"

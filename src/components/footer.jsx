@@ -16,9 +16,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-noise-pattern pt-[2.1164021164em]">
+      <footer className="bg-noise-pattern sm:pt-[2.1164021164em] pt-[32px]">
         <div className="custom-container mx-auto py-0 px-0 sm:px-[2.1164021164em]">
-          <div className="border border-[#333434] mb-[2.5132275132em] sm:border-x-1 border-x-0">
+          <div className="border border-[#333434] sm:mb-[2.5132275132em] mb-[38px] sm:border-x-1 border-x-0">
             <div className="bg-[#1A1A1A] sm:py-[1.455026455em] sm:px-[2.5132275132em] p-4 border-b border-[#333434]">
               <div className="flex xl:flex-nowrap flex-wrap sm:gap-[2.1164021164em] gap-[33px]">
                 <div className="w-full flex lg:flex-nowrap flex-wrap justify-between sm:gap-[2.1164021164em] gap-[33px]">
@@ -214,7 +214,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="bg-[#2E2D2D] rounded-full w-[32px] h-[32px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
+                          className="bg-[#2E2D2D] rounded-full w-[42px] h-[42px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
                         >
                           <svg
                             className="w-auto h-full"
@@ -235,7 +235,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="bg-[#2E2D2D] rounded-full w-[32px] h-[32px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
+                          className="bg-[#2E2D2D] rounded-full w-[42px] h-[42px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
                         >
                           <svg
                             className="w-auto h-full"
@@ -265,7 +265,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="bg-[#2E2D2D] rounded-full w-[32px] h-[32px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
+                          className="bg-[#2E2D2D] rounded-full w-[42px] h-[42px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
                         >
                           <svg
                             className="w-auto h-full"
@@ -285,7 +285,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="bg-[#2E2D2D] rounded-full w-[32px] h-[32px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
+                          className="bg-[#2E2D2D] rounded-full w-[42px] h-[42px] flex items-center justify-center p-2 transition-all ease duration-300 group hover:bg-white"
                         >
                           <svg
                             className="w-auto h-full"
@@ -319,8 +319,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className=" flex items-center sm:justify-between justify-center sm:py-[1.1904761905em] sm:px-[2.5132275132em] p-4">
-              <span className="font-medium lg:text-[1.0582010582em] text-base sm:text-start text-center text-white [text-shadow:0_0_16px_rgba(255,255,255,0.77)]">
+            <div className=" flex items-center sm:justify-between justify-center md:py-[1.1904761905em] sm:px-[2.5132275132em] p-4">
+              <span className="font-medium md:text-[1.0582010582em] text-base sm:text-start text-center text-white [text-shadow:0_0_16px_rgba(255,255,255,0.77)]">
                 Copyright @ 2025 Language King
               </span>
 

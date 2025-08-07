@@ -532,63 +532,75 @@ const Home2 = () => {
       </section>
 
       <section>
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px]">
-          <div className="bg-[#121212] px-4 py-6 sm:px-[32px] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
-            <div className="flex md:flex-nowrap flex-wrap gap-[70px] items-stretch justify-content-between">
-              <div className="md:block hidden md:w-[47.50%]">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
+          <div className="bg-[#121212] px-4 py-6 sm:px-[2.1164021164em] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
+            <div className="flex md:flex-nowrap flex-wrap gap-[8.5978835979em] items-stretch justify-between middle-border">
+              <div className="md:block hidden md:w-[50%] w-full">
                 <ImageWithToggle
                   src={personImage}
                   alt="personImage"
-                  className="w-full rounded-[11px]"
+                  className="w-full rounded-[11px] md:h-[21.164021164em] h-full object-fit-cover"
                 />
-                <h2 className="font-bold text-white lg:text-[40px] text-3xl mt-[32px]">
+                <h2 className="font-bold text-white lg:text-[2.6455026455em] text-3xl mt-[32px]">
                   What’s covered in class:
                 </h2>
-                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[42px] gap-7 ">
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[2.7777777778em] gap-[1.8518518519em] ">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Basic Introduction
+                    <span className="lg:text-[1.455026455em] text-xl">
+                      Basic Introduction
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Test Format & Overview
+                    <span className="lg:text-[1.455026455em] text-xl">
+                      Test Format & Overview
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Level of English
+                    <span className="lg:text-[1.455026455em] text-xl">
+                      Level of English
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Scorecard Analysis
+                    <span className="lg:text-[1.455026455em] text-xl">
+                      Scorecard Analysis
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    And more!
+                    <span className="lg:text-[1.455026455em] text-xl">
+                      And more!
+                    </span>
                   </div>
                 </div>
               </div>
-              <div className="md:border-s-3 md:w-[51.50%] border-[#2A2A2A] lg:ps-[70px] md:ps-[70px]">
-                <Thankyou />
+              <div className="md:w-[50%] w-full">
+                <div className="sm:pt-6 pt-4">
+                  <Thankyou />
+                </div>
               </div>
             </div>
           </div>

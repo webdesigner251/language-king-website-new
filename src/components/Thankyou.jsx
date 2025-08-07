@@ -11,67 +11,62 @@ const Thankyou = () => {
         <img
           src={checkmark}
           alt="checkmark"
-          // className="mx-auto sm:w-[53px] w-[50px] mb-2 h-auto zoom-pulse"
-          className="mx-auto sm:w-[60px] w-[50px] mb-2 h-auto zoom-pulse"
+          className="mx-auto sm:w-[3.505em] w-[50px] mb-2 h-auto zoom-pulse"
         />
-        {/* <h2 className="font-bold 2xl:text-[42px] md:text-[34px] text-3xl text-center text-[#00C360]"> */}
-        <h2 className="font-bold lg:text-[42px] sm:text-4xl text-3xl text-center text-gradient-OrangeRed py-2">
+        <h2 className="font-bold 2xl:text-[2.778em] md:text-[2.249em] text-3xl text-center text-gradient-OrangeRed">
           Thank You!
         </h2>
-
-        {/* <h3 className="font-medium sm:text-lg text-base text-white"> */}
-        <h3 className="font-medium sm:text-xl text-base text-white">
+        <h3 className="font-medium sm:text-[1.1904761905em] text-base text-white">
           We’ve received your information.
         </h3>
 
-        <div className="bg-[#252525] rounded-[17px] sm:pt-4 sm:px-6 sm:pb-6 p-4 mt-6">
+        <div className="bg-[#252525] rounded-[1.124em] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em] p-4 mt-[1.587em]">
           <div className="inline-flex items-center justify-center">
-            {/* <h3 className="font-bold xl:text-[32px] md:text-[30px] text-2xl inline mx-auto tracking-[1px] relative  text-white border-text text-center"> */}
-            <h3 className="font-bold xl:text-[34px] md:text-[30px] text-2xl inline mx-auto tracking-[1px] relative  text-white border-text text-center">
+            <h3 className="font-bold xl:text-[2.1164021164em] md:text-[1.984em] text-2xl inline mx-auto tracking-[1px] relative text-white border-text text-center">
               What Happens Next?
             </h3>
           </div>
 
-          {/* <div className="grid grid-cols-1 sm:gap-5 gap-4 mt-7 text-start">
-            <div className="flex items-start sm:gap-6 gap-5 text-white font-medium 2xl:text-lg text-base 2xl:leading-[24px] leading-[22px]"> */}
-          <div className="grid grid-cols-1 sm:gap-6 gap-4 mt-7 text-start">
-            <div className="flex items-start sm:gap-7 gap-5  text-white font-medium leading-normal xl:text-xl sm:text-lg text-base">
+          <div className="grid grid-cols-1 sm:gap-[1.323em] gap-4 md:mt-[1.852em] mt-7 text-start">
+            <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
               <img
                 src={CallIcon}
                 alt="checklist"
-                className="sm:w-[32px] w-[28px] sm:h-[32px] h-[28px] mt-1"
+                className="sm:w-[2.1164021164em] w-[28px] sm:h-[2.1164021164em] h-[28px] mt-1"
               />
-              We’ll call you within 24 hours to discuss available time slots and
-              book your preferred schedule.
+              We’ll call you within 24 hours to discuss your preferred course, target score, and learning needs.
             </div>
-            <div className="flex items-start sm:gap-7 gap-5 text-white font-medium leading-normal xl:text-xl sm:text-lg text-base">
+            <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
               <img
                 src={MemberIcon}
                 alt="checklist"
-                className="sm:w-[32px] w-[28px] sm:h-[32px] h-[28px] mt-1"
+                className="sm:w-[2.1164021164em] w-[28px] sm:h-[2.1164021164em] h-[28px] mt-1"
               />
-              Our team will review your course interest and prepare your
-              personalized trial class.
+              Our team will review your course interest and create a personalized plan tailored to your goals.
             </div>
-            <div className="bg-[#121212] rounded-2xl p-3  w-full mx-auto flex flex-col justify-center">
-              <h4 className="font-bold xl:text-[30px] lg:text-[22px] md:text-[20px] text-xl text-white mx-auto pb-4 text-center">
+
+            <div className="bg-[#121212] rounded-2xl md:p-[0.794em] p-3 w-full mx-auto flex flex-col justify-center">
+              <h4 className="font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-xl text-white  mx-auto pb-[0.6669em] text-center">
                 Need immediate assistance?{" "}
               </h4>
 
-              <ul className="flex flex-col gap-[18px] max-w-auto mx-auto">
+              <ul className="flex flex-col gap-[1.0582010582em] max-w-auto mx-auto">
                 <li>
                   <a
                     href="tel:+61488876999"
-                    className="flex items-center gap-4 text-white font-semibold sm:text-lg text-sm"
+                    className="flex items-center gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
                   >
-                    <img src={PhoneICon} className="w-10" />
+                    <img src={PhoneICon} className="w-[2.646em]" />
                     +61 488 877 999 &nbsp; / &nbsp; +61 444 876 555
                   </a>
                 </li>
                 <li>
-                  <div className="flex gap-4 text-white font-semibold sm:text-lg text-sm">
-                    <div className="w-10 h-full flex justify-center items-start">
-                      <img src={CalenderIcon} className="w-7" />
+                  <a
+                    href="tel:+61488876999"
+                    className="flex items-start gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
+                  >
+                    <div className="w-[2.646em] flex items-center justify-center">
+                      <img src={CalenderIcon} className="w-[1.852em]" />
                     </div>
                     <span>
                       10 A.M to 7 P.M <br />
@@ -79,7 +74,7 @@ const Thankyou = () => {
                         (Mon - Sun | Melbourne Time)
                       </span>
                     </span>
-                  </div>
+                  </a>
                 </li>
               </ul>
             </div>

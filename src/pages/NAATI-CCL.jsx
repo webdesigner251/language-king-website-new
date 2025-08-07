@@ -310,7 +310,7 @@ const NAATICCL = () => {
   return (
     <>
       <div className="bg-gradient-to-b from-black/20 to-transparent relative h-full">
-        <section className="lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
+        <section className="course-banner lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
           <div className="2xl:w-[66%] w-full 2xl:h-[75%] sm:h-full h-[50%] top-0 right-0 bottom-0 absolute">
             <ImageWithToggle
               src={PTEBanner}
@@ -362,7 +362,7 @@ const NAATICCL = () => {
                     className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-[#111] border-[1.5px] border-[#333434] text-white md:px-3 px-[0.6em] md:py-3 py-[0.7em] md:w-[50%] w-full font-semibold md:text-[1.3227513228em] md:leading-[1.4] text-lg transition-all duration-300 ease hover:bg-[#111]/80"
                   >
                     <svg
-                      className="w-[1.05em] h-[1.15em]"
+                      className="md:w-[1.05em] md:h-[1.15em] w-[20px] h-[20px]"
                       width="21"
                       height="23"
                       viewBox="0 0 21 23"
@@ -496,7 +496,7 @@ const NAATICCL = () => {
         <section className="">
           <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex lg:flex-nowrap flex-wrap items-center lg:py-[6.6137566138em] py-[70px] border-y-2 border-[#252525] sm:gap-[3.3068783069em] gap-[35px]">
-              <div className="lg:w-[77%] tab-content">
+              <div className="lg:w-[77%] w-full tab-content">
                 <ImageWithToggle
                   src={tabImages[activeTab]}
                   alt="PTE Response"
@@ -658,11 +658,11 @@ const NAATICCL = () => {
             <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-16 gap-x-[20px] sm:gap-x-[1.455026455em] 2xl:gap-x-[2.1164021164em]  sm:gap-y-[2.9761904762em] gap-[45px]">
               {students.map((student, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="sm:w-[4.2328042328em] sm:h-[4.2328042328em] w-16 h-16 relative">
+                  <div className="md:w-[4.2328042328em] md:h-[4.2328042328em] w-16 h-16 relative">
                     <img
                       src={student.flag}
                       alt={student.country}
-                      className="sm:w-[1.3227513228em] sm:h-[1.3227513228em] w-5 h-5 rounded-sm absolute top-0 right-0 z-0"
+                      className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5 rounded-sm absolute top-0 right-0 z-0"
                     />
                     <ImageWithToggle
                       src={student.image}
@@ -671,11 +671,11 @@ const NAATICCL = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center mt-[0.7936507937em] text-center">
-                    <p className="2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base leading-[1.3] text-white mb-0">
+                  <div className="flex flex-col items-center md:mt-[0.7936507937em] mt-3   text-center">
+                    <p className="2xl:text-[1.1904761905em] md:text-[1.0582010582em] text-base leading-[1.3] text-white mb-0">
                       {student.name}
                     </p>
-                    <span className="sm:text-[0.9259259259em] text-sm mt-[0.2142857143em] font-light text-[#FFED00]">
+                    <span className="md:text-[0.9259259259em] text-sm md:mt-[0.2142857143em] mt-[3px] font-light text-[#FFED00]">
                       {student.country}
                     </span>
                   </div>
@@ -748,7 +748,7 @@ const NAATICCL = () => {
               </div>
 
               <div className="lg:w-[28%] w-full ">
-                <div className="lg:max-w-[22.8174603175em] flex flex-col gap-y-[1.2566137566em] items-start">
+                <div className="lg:max-w-[22.8174603175em] flex flex-col sm:gap-y-[1.2566137566em] gap-y-[19px] items-start">
                   <h2 className="text-[#52D34E] font-bold lg:text-[2.380952381em] sm:text-[2.9296875em] text-2xl sm:leading-[1.2] leading-[32px]">
                     Try a Free Lesson Real Quick
                   </h2>
@@ -763,7 +763,7 @@ const NAATICCL = () => {
                   </p>
                   <a
                     href="#"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-GreenBtn text-white sm:px-[2.5em] px-5 sm:py-[0.775em] py-[14px] font-semibold leading-[1.2] sm:text-[1.3227513228em] text-xl relative z-10 lg:w-full w-auto"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-GreenBtn text-white sm:px-[2.5em] px-5 sm:py-[0.775em] py-[14px] font-semibold leading-[1.2] sm:text-[1.3227513228em] text-xl relative z-10 lg:w-full sm:w-auto w-full"
                   >
                     Take the Course
                   </a>

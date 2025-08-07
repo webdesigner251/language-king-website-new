@@ -99,7 +99,7 @@ const Contact = () => {
                     Why Language King?
                   </h3>
                   <ul className="mt-[1.3227513228em] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -108,7 +108,7 @@ const Contact = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -118,7 +118,7 @@ const Contact = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -128,7 +128,7 @@ const Contact = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start sm:leading-[1.2] leading-[1.4] sm:text-[1.0582010582em] text-sm text-[#ACACAC] sm:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -279,7 +279,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-redBlack md:hidden pt-[50px] -mb-[40px] ">
+      <section className="bg-gradient-redBlack md:hidden pt-[50px] sm:-mb-[2.1164021164em] -mb-[32px]">
         <ImageWithToggle
           src={ContactMobileImage}
           alt="contactMobile"

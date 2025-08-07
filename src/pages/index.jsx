@@ -210,7 +210,7 @@ const Home = () => {
                 className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold relative z-10 "
               >
                 <svg
-                className="w-[1.3227513228em] h-[1.3227513228em]"
+                className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
                   viewBox="0 0 22 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -396,7 +396,7 @@ const Home = () => {
             <h2 className="lg:text-[2.7777777778em] sm:text-[2.6455026455em] text-[32px] leading-[1.2] font-bold text-white text-left">
               What’s included in every Course
             </h2>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around gap-x-[1.3227513228em] gap-y-[3.9682539683em]">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around sm:gap-x-[1.3227513228em] gap-x-[20px] sm:gap-y-[3.9682539683em] gap-y-[60px]">
               <div className="text-center">
                 <img
                   src={Icon1}
@@ -494,7 +494,7 @@ const Home = () => {
                 <div className="flex items-center justify-end">
                   <Link
                     to="/testimonials"
-                    className="bg-black2 sm:px-[1.9841269841em] sm:py-[0.7936507937em] p-[9px] text-center rounded-[6px] text-white sm:text-[1.1904761905em] text-base leading-[1.32] font-semibold "
+                    className="bg-black2 sm:px-[1.9841269841em] sm:py-[0.7936507937em] p-[9px] text-center rounded-[6px] text-white sm:text-[1.1904761905em] text-base leading-[1.32] font-semibold sm:min-w-[auto] min-w-[100px]"
                   >
                     View all
                   </Link>
@@ -519,7 +519,7 @@ const Home = () => {
                 <ImageWithToggle
                   src={personImage}
                   alt="personImage"
-                  className="w-full rounded-[11px]"
+                  className="w-full rounded-[11px] md:h-[26.455026455em] h-full object-fit-cover"
                 />
                 <h2 className="font-bold text-white lg:text-[2.6455026455em] text-3xl mt-[32px]">
                   What’s covered in class:
@@ -578,10 +578,10 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] pb-[0.4761904762em]">
+                <h2 className="font-bold lg:text-[2.7777777778em] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[20px]">
                   Book a FREE Trial Class
                 </h2>
-                <p className="font-normal text-white/75 lg:text-[1.455026455em] sm:text-xl text-base pt-[1.2727272727em]">
+                <p className="font-normal text-white/75 lg:text-[1.455026455em] sm:text-xl text-base sm:pt-[1.2727272727em] pt-[28px]">
                   Please fill out the below form. Our team will be in touch shortly.
                 </p>
                 <div className="sm:pt-6 pt-4">

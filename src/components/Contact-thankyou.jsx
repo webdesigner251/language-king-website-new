@@ -5,7 +5,7 @@ import PhoneICon from "../assets/icons/landline-phone.svg";
 import CalenderIcon from "../assets/icons/calender-icon.svg";
 
 const ContactThankyou = () => {
-  return (
+  return ( 
     <>
       <div className="text-center">
         <img

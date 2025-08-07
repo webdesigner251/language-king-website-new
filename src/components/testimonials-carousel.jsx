@@ -31,7 +31,7 @@ const TestimonialCarousel = ({ testimonials }) => {
     >
       {testimonials.map((item, i) => (
         <SwiperSlide className="h-auto-swiper" key={i}>
-          <div className="flex flex-col justify-between h-full sm:gap-2 gap-y-[3.3068783069em]">
+          <div className="flex flex-col justify-between h-full lg:gap-y-[3.3068783069em] gap-y-[50px]">
             <div>
               {/* <div className="aspect-3/2 relative w-full h-auto overflow-hidden rounded-[10px] mb-[24px]">
                 <VideoPlayer
@@ -53,7 +53,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                 />
               </div>
               <p
-                className="text-paraGray font-light sm:text-[1.1904761905em] text-base leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
+                className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[2xl] text-lg leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
                 dangerouslySetInnerHTML={{ __html: item.text }}
               ></p>
             </div>
@@ -65,10 +65,10 @@ const TestimonialCarousel = ({ testimonials }) => {
                   className="lg:w-[4.7619047619em] lg:h-[4.7619047619em] w-[62px] h-[62px] rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] text-[22px] 2xl:mb-2 mb-1">
+                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] text-lg 2xl:mb-2 mb-1">
                     {item.name}
                   </h4>
-                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em]  lg:text-base text-base">
+                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em] lg:text-[1.0582010582em] text-base">
                     {item.subtitle}
                   </span>
                 </div>
@@ -88,7 +88,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                       src={item.starIcon}
                       alt="star"
                       key={idx}
-                      className="sm:w-[1.455026455em] w-5 h-auto me-1"
+                      className="md:w-[1.455026455em] w-5 h-auto me-1"
                     />
                   ))}
                 </div>

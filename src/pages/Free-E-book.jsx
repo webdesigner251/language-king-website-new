@@ -147,8 +147,7 @@ const FreeEBook = () => {
   return (
     <>
       {/* black space for header */}
-      <div className="bg-black w-full h-[7.9365079365em] mt-[-7.9365079365em]"></div>
-
+      <div className="bg-black w-full lg:h-[7.9365079365em] h-[120px] lg:mt-[-7.9365079365em] mt-[-120px]"></div>
       <section className="banner-wrapper 2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
         <div className="sm:bg-transparent bg-gradient-FadetoBlack h-full w-full absolute top-0 z-10 lg:hidden block"></div>
         <ImageWithToggle
@@ -157,7 +156,7 @@ const FreeEBook = () => {
           className="absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full z-10 relative">
-          <div className="flex lg:gap-x-[6.6137566138em] gap-x-[140px] sm:flex-nowrap flex-wrap">
+          <div className="flex lg:gap-x-[6.6137566138em] sm:gap-x-[13.671875em] gap-x-[140px] sm:flex-nowrap flex-wrap">
             <div className="sm:w-[20%] w-full flex flex-col justify-between">
               <img
                 src={NewTipsImage}
@@ -174,17 +173,17 @@ const FreeEBook = () => {
                   className="sm:w-[3.3068783069em] sm:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
                 />
                 <div>
-                  <span className="text-white md:text-[1.1904761905em] text-lg font-semibold">
+                  <span className="text-white sm:text-[1.1904761905em] text-lg font-semibold">
                     Abhishek
                   </span>
-                  <h3 className="md:text-[1.0582010582em] text-base font-light text-white/60 leading-[1.2]">
+                  <h3 className="sm:text-[1.0582010582em] text-base font-light text-white/60 leading-[1.2]">
                     PTE Master Trainer
                   </h3>
                 </div>
               </div>
             </div>
             <div className="sm:w-[80%]">
-              <div className="flex flex-col justify-between gap-y-[3.3068783069em] h-full">
+              <div className="flex flex-col justify-between sm:gap-y-[3.3068783069em] gap-y-[50px] h-full">
                 <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[1.9841269841em]">
                   <div className="lg:max-w-[70%] max-w-full">
                     <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.1022] 2xl:mt-2 mt-0 text-white">
@@ -240,7 +239,7 @@ const FreeEBook = () => {
                     </a>
                   </div>
                   <div>
-                    <h4 className="text-[#F1CD5A] text-[1.1904761905em] leading-[1.55555555] font-semibold sm:text-start text-center">
+                    <h4 className="text-[#F1CD5A] sm:text-[1.1904761905em] text-base leading-[1.55555555] font-semibold sm:text-start text-center">
                       Save $33 by using AI Portal{" "}
                       <span className="sm:inline hidden">
                         + Prediction File + 6 Books
@@ -252,9 +251,9 @@ const FreeEBook = () => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between">
-                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[1.3227513228em]">
+                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[20px]">
                     <div className="sm:w-[25%] w-full">
-                      <span className="text-white md:text-[1.1904761905em] sm:text-base text-sm font-semibold">
+                      <span className="text-white sm:text-[1.1904761905em] sm:text-base text-sm font-semibold">
                         Other Books
                       </span>
                       <h3 className="sm:text-[1.0582010582em] text-sm font-light text-white/60 leading-[1.2]">
@@ -265,22 +264,22 @@ const FreeEBook = () => {
                       <ImageWithToggle
                         src={Book1}
                         alt="Book1"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
                       />
                       <ImageWithToggle
                         src={Book2}
                         alt="Book2"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
                       />
                       <ImageWithToggle
                         src={Book3}
                         alt="Book3"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
                       />
                       <ImageWithToggle
                         src={Book4}
                         alt="Book4"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] max-w-[3.3068783069em]"
+                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
                       />
                     </div>
                   </div>
@@ -391,7 +390,7 @@ const FreeEBook = () => {
               </div>
             </div>
             <div className="lg:w-[40%] w-full">
-              <div className="bg-[#1B1B1B] xl:p-[2.7777777778em] sm:p-[2.1164021164em] px-4 py-[1.5873015873em] rounded-[0.6613756614em]">
+              <div className="bg-[#1B1B1B] xl:p-[2.7777777778em] sm:p-[2.1164021164em] px-4 sm:py-[1.5873015873em] py-6 rounded-[0.6613756614em]">
                 <div className="sm:block hidden">
                   <div className="flex justify-between gap-[1.0582010582em]">
                     <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
@@ -522,7 +521,7 @@ const FreeEBook = () => {
                   </div>
                 </div>
                 <form className="sm:pt-[1.5873015873em] pt-4">
-                  <div className="flex flex-col mb-[1.0582010582em]">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
                     <input
                       type="text"
                       name="name"
@@ -531,7 +530,7 @@ const FreeEBook = () => {
                       className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
-                  <div className="flex flex-col mb-4">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
                     <input
                       type="email"
                       name="email"
@@ -540,7 +539,7 @@ const FreeEBook = () => {
                       className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
-                  <div className="flex flex-col mb-4">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
                     <input
                       type="tel"
                       name="tel"
@@ -549,7 +548,7 @@ const FreeEBook = () => {
                       className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
                     />
                   </div>
-                  <div className="flex flex-col mb-4">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
                     <input
                       type="tel"
                       name="ccn"
@@ -565,11 +564,11 @@ const FreeEBook = () => {
                     </a>
                   </span>
 
-                  <hr className="border-[#3D3D3D] mt-[0.7936507937em] sm:mb-[1.9841269841em] mb-4" />
+                  <hr className="border-[#3D3D3D] sm:mt-[0.7936507937em] mt-3 sm:mb-[1.9841269841em] mb-4" />
                   <Link
                     // type="submit"
                     to="/ebook-submit"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] px-3 py-4 w-full font-bold sm:text-[1.3227513228em] text-[1.1904761905em] relative z-10 leading-[1.4] rounded-sm"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] px-3 py-4 w-full font-bold sm:text-[1.3227513228em] text-base relative z-10 leading-[1.4] rounded-sm"
                   >
                     Buy Now - $119
                   </Link>
@@ -654,7 +653,7 @@ const FreeEBook = () => {
           </div> */}
         </div>
 
-        <div className="border-y border-[#707070] relative z-10">
+        <div className="border-y border-[#707070] relative z-10 sm:mb-[0] mb-[-32px]">
           <div className="custom-container mx-auto md:py-[6.6137566138em] sm:py-[4.6296296296em] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative">
             <h2 className="font-inter font-normal md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.11] 2xl:mt-[0.1315789474em] mt-0 text-white text-center sm:mb-[0.6578947368em] mb-5">
               FAQ
@@ -670,7 +669,7 @@ const FreeEBook = () => {
                     onClick={() => toggleFAQ(index)}
                     className="flex justify-between items-center w-full text-left gap-[1.0582010582em]"
                   >
-                    <span className="md:text-[1.455026455em] sm:text-[1.3227513228em] text-lg font-bold leading-[1.273] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
+                    <span className="md:text-[1.455026455em] sm:text-[1.3227513228em] text-lg font-bold sm:leading-[1.273] leading-[1.55555555] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
                       {faq.question}
                     </span>
                     <span className="w-[28px] sm:w-[2.3148148148em] basis-[28px] sm:basis-[2.3148148148em] flex items-center justify-center">

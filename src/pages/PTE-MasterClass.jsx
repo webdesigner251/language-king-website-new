@@ -311,7 +311,7 @@ const PTEMasterClass = () => {
   return (
     <>
       <div className="bg-gradient-to-b from-black/20 to-transparent relative h-full">
-        <section className="lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
+        <section className="course-banner lg:pt-[17.8571428571em] sm:pt-[26.3671875em] pt-[450px] sm:pb-[6.6137566138em] pb-[60px] mt-[-150px] relative flex flex-column justify-center items-center">
           <div className="2xl:w-[66%] w-full 2xl:h-[75%] sm:h-full h-[50%] top-0 right-0 bottom-0 absolute">
             <ImageWithToggle
               src={PTEBanner}
@@ -498,7 +498,7 @@ const PTEMasterClass = () => {
         <section className="">
           <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex lg:flex-nowrap flex-wrap items-center lg:py-[6.6137566138em] py-[70px] border-y-2 border-[#252525] sm:gap-[3.3068783069em] gap-[35px]">
-              <div className="lg:w-[79%] tab-content">
+              <div className="lg:w-[79%] w-full tab-content">
                 <ImageWithToggle
                   src={tabImages[activeTab]}
                   alt="PTE Response"
@@ -506,7 +506,7 @@ const PTEMasterClass = () => {
                 />
               </div>
 
-              <div className="lg:w-[26%] flex flex-col gap-y-[1.2566137566em]">
+              <div className="lg:w-[26%] w-full flex flex-col sm:gap-y-[1.2566137566em] gap-[19px]">
                 <h2 className="text-gradient-Bluedark font-bold lg:text-[1.9841269841em] sm:text-[2.9296875em] text-2xl sm:leading-[1.2] leading-[32px] lg:max-w-[320px]">
                   Watch AB grade students’ responses and give Feedback
                 </h2>
@@ -658,11 +658,11 @@ const PTEMasterClass = () => {
             <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-16 gap-x-[20px] sm:gap-x-[1.455026455em] 2xl:gap-x-[2.1164021164em]  sm:gap-y-[2.9761904762em] gap-[45px]">
               {students.map((student, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="sm:w-[4.2328042328em] sm:h-[4.2328042328em] w-16 h-16 relative">
+                  <div className="md:w-[4.2328042328em] md:h-[4.2328042328em] w-16 h-16 relative">
                     <img
                       src={student.flag}
                       alt={student.country}
-                      className="sm:w-[1.3227513228em] sm:h-[1.3227513228em] w-5 h-5 rounded-sm absolute top-0 right-0 z-0"
+                      className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5 rounded-sm absolute top-0 right-0 z-0"
                     />
                     <ImageWithToggle
                       src={student.image}
@@ -671,11 +671,11 @@ const PTEMasterClass = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col items-center mt-[0.7936507937em] text-center">
-                    <p className="2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base leading-[1.3] text-white mb-0">
+                  <div className="flex flex-col items-center md:mt-[0.7936507937em] mt-3   text-center">
+                    <p className="2xl:text-[1.1904761905em] md:text-[1.0582010582em] text-base leading-[1.3] text-white mb-0">
                       {student.name}
                     </p>
-                    <span className="sm:text-[0.9259259259em] text-sm mt-[0.2142857143em] font-light text-[#FFED00]">
+                    <span className="md:text-[0.9259259259em] text-sm md:mt-[0.2142857143em] mt-[3px] font-light text-[#FFED00]">
                       {student.country}
                     </span>
                   </div>
@@ -748,7 +748,7 @@ const PTEMasterClass = () => {
               </div>
 
               <div className="lg:w-[28%] w-full">
-                <div className="lg:max-w-[22.8174603175em] flex flex-col gap-y-[1.2566137566em] items-start">
+                <div className="lg:max-w-[22.8174603175em] flex flex-col sm:gap-y-[1.2566137566em] gap-y-[]19px items-start">
                   <h2 className="text-gradient-Bluedark font-bold lg:text-[2.380952381em] sm:text-[2.9296875em] text-2xl sm:leading-[1.2] leading-[32px]">
                     Try a Free Lesson Real Quick
                   </h2>
@@ -763,7 +763,7 @@ const PTEMasterClass = () => {
                   </p>
                   <a
                     href="#"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white sm:px-[2.5em] px-5 sm:py-[0.775em] py-[14px] font-semibold leading-[1.2] sm:text-[1.3227513228em] text-xl relative z-10 lg:w-full w-auto"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white sm:px-[2.5em] px-5 sm:py-[0.775em] py-[14px] font-semibold leading-[1.2] sm:text-[1.3227513228em] text-xl relative z-10 lg:w-full sm:w-auto w-full"
                   >
                     Take the Course
                   </a>

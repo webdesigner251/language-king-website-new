@@ -26,11 +26,10 @@ const HomeHeader = () => {
 
   return (
     <header
-      className={`text-white xl:py-[2.116em] py-[32px] z-50  ${
-        isSticky
+      className={`text-white xl:py-[2.116em] py-[32px] z-50  ${isSticky
           ? "lg:sticky lg:top-0 lg:bg-black lg:shadow-md active-header"
           : "bg-transparent relative"
-      }`}
+        }`}
     >
       <div className="custom-container mx-auto py-0 px-4 sm:px-[2.116em]">
         <div className="flex items-center justify-between relative">
@@ -70,7 +69,7 @@ const HomeHeader = () => {
                 <li className="text-center inline-flex items-center">
                   <a
                     href="#courses"
-                    className="text-white inline-flex items-center justify-center font-bold 2xl:text-[20px] text-[16px] border-b-2 border-transparent hover:border-white transition-all duration-300"
+                    className="text-white inline-flex items-center justify-center font-bold 2xl:text-[1.3227513228em] sm:text-[1.0582010582em] border-b-2 border-transparent hover:border-white transition-all duration-300"
                   >
                     Courses
                   </a>
@@ -78,15 +77,15 @@ const HomeHeader = () => {
                 <li className="text-center inline-flex items-center">
                   <Link
                     to="/testimonials"
-                    className="text-white inline-flex items-center justify-center font-bold 2xl:text-[20px] text-[16px] border-b-2 border-transparent hover:border-white transition-all duration-300"
+                    className="text-white inline-flex items-center justify-center font-bold 2xl:text-[1.3227513228em] sm:text-[1.0582010582em] border-b-2 border-transparent hover:border-white transition-all duration-300"
                   >
                     Testimonials
                   </Link>
                 </li>
                 <li className="text-center inline-flex items-center">
-                 <Link
+                  <Link
                     to="/contact"
-                    className={`px-4 py-2 text-base w-auto text-center focus:outline-none relative inline-flex items-center justify-center font-bold transition-all duration-300 header-btn z-10  min-w-[150px] ${isSticky
+                    className={`text-[1.0582010582em] px-[1em] py-[0.5em] text-base w-auto text-center focus:outline-none relative inline-flex items-center justify-center font-bold transition-all duration-300 z-10  min-w-[150px] ${isSticky
                       ? "primary-btn bg-gradient-primary text-black border-none "
                       : "text-white border border-white/25 hover:border-white bg-black"
                       } `}

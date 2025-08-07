@@ -63,7 +63,7 @@ const BookFreeTrail = () => {
             placeholder="Your first & last name"
             value={formData.name}
             onChange={handleChange}
-            className={`md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
+            className={`md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
               }`}
           />
 
@@ -118,7 +118,7 @@ const BookFreeTrail = () => {
               setFormData((prev) => ({ ...prev, course: value }))
             }
             error={errors.course}
-            buttonClassName="bg-white border-0 md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
+            buttonClassName="bg-white border-0 md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
             listClassName="rounded-[0px]"
           />
 

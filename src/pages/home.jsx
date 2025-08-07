@@ -125,41 +125,39 @@ const Home = () => {
 
   return (
     <>
-      <section className="banner-wrapper min-h-[110vh] sm:pt-[270px] pt-[450px] sm:pb-[100px] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
-        {/* <section className="banner-wrapper sm:pt-[320px] pt-[400px] sm:pb-[200px] pb-[40px] min-h-[100vh] mt-[-150px] relative flex items-center overflow-hidden"></section> */}
+      <section className="banner-wrapper  min-h-[110vh] sm:pt-[17.857em] pt-[450px] sm:pb-[6.614em] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
         <ImageWithToggle
           src={HomeBanner}
           alt="HomeBanner"
           className="scale-[1.1] absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px] w-full z-10 relative ">
-          <div className="max-w-[830px]">
+        <div className="custom-container mx-auto py-0 sm:px-[2.1164021164em] px-4  w-full z-10 relative ">
+          <div className="lg:max-w-[54.8941798942em] max-w-full">
             <div className="flex flex-col 2xl:gap-6 gap-3">
-              <h2 className="text-gradient-primary font-bold 2xl:text-[32px] text-2xl">
+              <h2 className="text-gradient-primary font-bold lg:text-[1.5873015873em] sm:text-[2.34375em] text-2xl leading-[1.3333]">
                 # Australia’s No.1
               </h2>
-              <h1 className="font-inter font-bold main-heading 2xl:mt-2 mt-0 text-white">
+              <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] leading-[1.12] text-[36px] text-white">
                 PTE, IELTS & NAATI CCL Coaching Institute
               </h1>
-              <p className="md:text-lg text-base font-light max-w-[600px] text-white/75">
+              <p className="md:text-[1.1904761905em] md:leading-[1.5555555] text-base font-light md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
             </div>
-            <div className="mt-[48px] flex sm:flex-nowrap flex-wrap sm:gap-[31px] gap-[16px] max-w-[600px]">
+            <div className="md:mt-[3.175em] mt-[40px] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
               <Link
                 to="/home2"
-                className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-primary text-black px-3 sm:py-3 py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold sm:text-xl text-lg relative z-10"
+                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold md:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
               >
                 Get-a Callback
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white px-3 sm:py-3 py-[14px] sm:w-[50%] w-full font-semibold sm:text-xl text-lg transition-all duration-300 ease hover:bg-white/10"
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold relative z-10 "
               >
                 <svg
-                  width="20"
-                  height="20"
+                  className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
                   viewBox="0 0 22 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -182,11 +180,14 @@ const Home = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                Watch FREE Lessons
+                <span className="md:text-[1.3227513228em] text-lg leading-[1.2]">Watch FREE Lessons</span>
+
               </Link>
             </div>
           </div>
         </div>
+        <div className="main-banner-gradient absolute w-full h-full top-0 left-0 right-0 bottom-0"></div>
+        {/* <div className="bg-gradient-to-b from-black/40 to-transparent top-0 left-0 right-0 bottom-0"></div> */}
       </section>
 
       <section className="mb-8 lg:scroll-mt-[90px]" id="courses">
@@ -415,7 +416,7 @@ const Home = () => {
       <section className="pb-8">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[32px]">
           <div className="bg-black1 flex flex-col sm:gap-[57px] gap-[42px] sm:leading-[auto] leading-[40px] border border-white/10 group md:px-[38px] sm:px-6 px-4 md:pt-[60px] md:pb-[85px] pt-6 pb-7  relative">
-              <h2 className="lg:text-[42px] sm:text-[40px] text-[32px] leading-[1.2] font-bold text-white text-left">
+            <h2 className="lg:text-[42px] sm:text-[40px] text-[32px] leading-[1.2] font-bold text-white text-left">
               What’s included in every Course
             </h2>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around gap-x-[20px] gap-y-[60px]">
@@ -524,7 +525,7 @@ const Home = () => {
               </div>
               <TestimonialCarousel testimonials={testimonials} />
             </div>
-            <ImageWithToggle
+            <img
               src={GrainIMG}
               alt="GrainIMG"
               className="absolute top-0  w-full h-full left-0 right-0 z-0 object-cover"
