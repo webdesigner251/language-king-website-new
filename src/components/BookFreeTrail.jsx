@@ -53,7 +53,7 @@ const BookFreeTrail = () => {
         <div className="flex flex-col mb-4">
           <label
             htmlFor="name"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] text-base mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[3.8888888889em] mb-[0.3333333333em]"
           >
             Full Name*
           </label>
@@ -63,7 +63,7 @@ const BookFreeTrail = () => {
             placeholder="Your first & last name"
             value={formData.name}
             onChange={handleChange}
-            className={`md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
+            className={`md:text-[1.1904761905em] xs:text-[2.5em] text-[3.8888888889em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
               }`}
           />
 
@@ -91,7 +91,7 @@ const BookFreeTrail = () => {
         <div className="flex flex-col mb-4">
         <label
             htmlFor="phone"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] text-base mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[3.8888888889em] mb-[0.3333333333em]"
           >
             Phone Number*
           </label>
@@ -100,14 +100,14 @@ const BookFreeTrail = () => {
             setFormData={setFormData}
             errors={errors}
             wrapperClassName="border-0"
-            inputClassName="w-full rounded-[0px] md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
+            inputClassName="w-full rounded-[0px] md:text-[1.1904761905em] xs:text-[2.5em] text-[3.8888888889em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
           />
         </div>
 
         <div className="flex flex-col mb-4">
           <label
             htmlFor="course"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] text-base mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[3.8888888889em] mb-[0.3333333333em]"
           >
             Course Interested in*
           </label>
@@ -118,7 +118,7 @@ const BookFreeTrail = () => {
               setFormData((prev) => ({ ...prev, course: value }))
             }
             error={errors.course}
-            buttonClassName="bg-white border-0 md:text-[1.1904761905em] text-base md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
+            buttonClassName="bg-white border-0 md:text-[1.1904761905em] xs:text-[2.5em] text-[3.8888888889em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
             listClassName="rounded-[0px]"
           />
 
@@ -143,7 +143,7 @@ const BookFreeTrail = () => {
           )}
         </div>
 
-        <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] md:leading-[1.5] text-sm py-[0.75em] block">
+        <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] md:leading-[1.5] xs:text-[2.5em] text-[3.3333333333em] py-[0.75em] block">
           Your information will be used to consider and fulfill your request and
           will be handled pursuant to our{" "}
           <a href="#" className="underline">
@@ -153,7 +153,7 @@ const BookFreeTrail = () => {
 
         <button
           type="submit"
-          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] py-[0.8em] w-full font-bold md:text-[1.3227513228em] md:leading-[1.4] text-lg relative z-10 mt-[0.8em]"
+          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] py-[0.8em] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[5em] relative z-10 mt-[0.8em]"
         >
           Get In Touch
         </button>

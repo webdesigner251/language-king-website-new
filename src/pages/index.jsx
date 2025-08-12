@@ -187,30 +187,33 @@ const Home = () => {
         <div className="custom-container mx-auto py-0 sm:px-[2.1164021164em] px-4  w-full z-10 relative ">
           <div className="lg:max-w-[54.8941798942em] max-w-full">
             <div className="flex flex-col 2xl:gap-6 gap-3">
-              <h2 className="text-gradient-primary font-bold lg:text-[1.5873015873em] sm:text-[2.34375em] text-2xl leading-[1.3333]">
+              <h2 className="text-gradient-primary font-bold lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.75em] text-[5em] leading-[1.3333]">
                 # Australia’s No.1
               </h2>
-              <h1 className="font-inter font-bold lg:text-[4.021em] sm:text-[4.688em] leading-[1.12] text-[36px] text-white">
+              <h1 className="font-inter font-bold lg:text-[4.021em] md:text-[4.6875em] sm:text-[6.25em] xs:text-[7.5em] text-[10em] leading-[1.12] text-white">
                 PTE, IELTS & NAATI CCL Coaching Institute
               </h1>
-              <p className="md:text-[1.1904761905em] md:leading-[1.5555555] text-base font-light md:max-w-[600px] text-white/75">
+              <p className="lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] md:leading-[1.5555555]  font-light md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
             </div>
-            <div className="md:mt-[3.175em] mt-[40px] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
+            <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
               <Link
                 to="/home2"
-                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold md:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
+                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] sm:w-[50%] w-full relative z-10"
               >
-                Get-a Callback
+                <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">
+                  Get-a Callback
+                </span>
+
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold relative z-10 "
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] sm:w-[50%] w-full relative z-10 "
               >
                 <svg
-                className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
+                  className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
                   viewBox="0 0 22 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,8 +236,8 @@ const Home = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="md:text-[1.3227513228em] text-lg leading-[1.2]">Watch FREE Lessons</span>
-                
+                <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">Watch FREE Lessons</span>
+
               </Link>
             </div>
           </div>
@@ -246,15 +249,15 @@ const Home = () => {
       <section className="mb-8 lg:scroll-mt-[90px]" id="courses">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] z-50 border-t border-[#252525]">
           <div className="">
-            <h2 className="text-white font-bold lg:text-[1.7453703704em] text-lg relative inline-block z-10 sm:my-[38px] mt-[30px] mb-[20px] stroke-heading">
+            <h2 className="text-white font-bold lg:text-[1.7453703704em] md:text-[2.5771484375em] sm:text-[2.8645833333em] xs:text-[3.125em] text-[5em] relative inline-block z-10 sm:my-[38px] mt-[30px] mb-[20px] stroke-heading">
               Our Courses
             </h2>
           </div>
-          <div className="flex flex-col gap-[32px]">
+          <div className="flex flex-col sm:gap-[2.1164021164em] gap-[8.8888888889em]">
             {courses.map((course, index) => (
               <div
                 key={index}
-                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 sm:gap-[2.5132275132em] gap-[32px] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] py-4 sm:py-[1.5873015873em] relative ${course.className}`}
+                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 xs:gap-[2.5132275132em] gap-[8.8888888889em] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] py-[4.4444444444em] sm:py-[1.5873015873em] relative ${course.className}`}
               >
                 {course.showRibbon && (
                   <div className="ribbon ribbon-top-left z-10">
@@ -272,16 +275,16 @@ const Home = () => {
                 </div>
 
                 {/* Content */}
-                <div className="lg:py-[16px]">
+                <div className="sm:py-[1.0582010582em]">
                   <h2
-                    className={`${course.textClass} font-bold inline-block lg:text-[1.5873015873em] sm:leading-[1.333] sm:text-[2.34375em] text-lg`}
+                    className={`${course.textClass} font-bold inline-block lg:text-[1.5873015873em] sm:leading-[1.333] sm:text-[2.34375em] xs:text-[3.75em] text-[5em]`}
                   >
                     {course.title}
                   </h2>
-                  <h2 className="font-bold lg:text-[2.6455026455em] md:leading-[1.12] md:text-[3.125em] sm:text-[3.9113428944em] text-2xl text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
+                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] xs:text-[5em] text-[6.6666666667em] md:leading-[1.12] text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
                     {course.subtitle}
                   </h2>
-                  <p className="lg:text-[1.1904761905em] sm:text-[1.953125em] sm:leading-[1.555] text-base font-light max-w-[800px] text-white/75 mb-0">
+                  <p className="lg:text-[1.1904761905em] md:text-[2.34375em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] sm:leading-[1.555] font-light max-w-[800px] text-white/75 mb-0">
                     {course.desc}
                   </p>
 
@@ -299,27 +302,33 @@ const Home = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="sm:pt-[0.7936507937em] pt-[12px] flex lg:flex-nowrap flex-wrap lg:gap-[2.0502645503em] gap-[16px] lg:max-w-[800px]">
+                  <div className="sm:pt-[0.7936507937em] pt-[3.3333333333em] flex lg:flex-nowrap flex-wrap lg:gap-[2.0502645503em] gap-[16px] lg:max-w-[800px]">
                     {course.btn1Link ? (
                       <Link
                         to={course.btn1Link}
-                        className={`primary-btn inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer transition-all duration-300 ease ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer transition-all duration-300 ease ${course.btnClass}`}
                       >
-                        {course.btn1Text}
+                        <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
+                          {course.btn1Text}
+                        </span>
                       </Link>
                     ) : (
                       <a
                         onClick={openPopup}
-                        className={`primary-btn inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease cursor-pointer ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease cursor-pointer ${course.btnClass}`}
                       >
-                        {course.btn1Text}
+                        <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
+                          {course.btn1Text}
+                        </span>
                       </a>
                     )}
                     <Link
                       to={course.btn2Link}
-                      className=" bg-transparent hover:bg-white/10 border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white sm:px-[0.7936507937em] px-3 sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] lg:w-[50%] w-full font-semibold lg:text-[1.3227513228em] text-lg leading-[1.2] relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease"
+                      className=" bg-transparent hover:bg-white/10 border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease"
                     >
-                      {course.btn2Text}
+                      <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
+                        {course.btn2Text}
+                      </span>
                     </Link>
                   </div>
                 </div>
@@ -333,9 +342,9 @@ const Home = () => {
 
       <section className="pb-[32px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
-          <div className="bg-[#252525] px-4 sm:px-8 ">
+          <div className="bg-[#252525] px-4 sm:px-[2.1164021164em] ">
             <div className="sm:py-[2.6455026455em] py-7">
-              <h2 className="lg:text-[1.5873015873em] text-[21px] leading-normal font-bold text-white text-left mb-4">
+              <h2 className="lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.5555555556em] leading-normal font-bold text-white text-left mb-4">
                 Try these FREE video lessons
               </h2>
 
@@ -370,10 +379,10 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <h3 className="text-white font-bold 2xl:text-[1.5873015873em] lg:text-[1.455026455em] text-[21px] sm:leading-[1.3] leading-[28px]">
+                    <h3 className="text-white font-bold 2xl:text-[1.5873015873em] lg:text-[1.455026455em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.5555555556em] leading-[1.3]">
                       {item.title}
                     </h3>
-                    <span className="text-white/60 sm:mt-[6px] mt-[4px] block lg:text-[1.0582010582em] text-base font-semibold">
+                    <span className="text-white/60 sm:mt-[6px] mt-[4px] block lg:text-[1.0582010582em] md:text-[1.5625em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.4444444444em] font-semibold">
                       PTE MasterClass
                     </span>
                   </div>
@@ -392,18 +401,18 @@ const Home = () => {
 
       <section className="pb-8">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
-          <div className="bg-black1 flex flex-col sm:gap-[3.7698412698em] gap-[42px] sm:leading-[auto] leading-[40px] border border-white/10 group md:px-[2.5132275132em] sm:px-6 px-4 md:pt-[3.9682539683em] md:pb-[5.6216931217em] pt-6 pb-7  relative">
-            <h2 className="lg:text-[2.7777777778em] sm:text-[2.6455026455em] text-[32px] leading-[1.2] font-bold text-white text-left">
+          <div className="bg-black1 flex flex-col sm:gap-[3.7698412698em] gap-[42px] border border-white/10 group md:px-[2.5132275132em] sm:px-6 px-4 md:pt-[3.9682539683em] md:pb-[5.6216931217em] pt-6 pb-7  relative">
+            <h2 className="lg:text-[2.7777777778em] md:text-[4.1015625em] sm:text-[5.46875em] xs:text-[5em] text-[8.8888888889em] leading-[1.2] font-bold text-white text-left">
               What’s included in every Course
             </h2>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around sm:gap-x-[1.3227513228em] gap-x-[20px] sm:gap-y-[3.9682539683em] gap-y-[60px]">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around sm:gap-x-[1.3227513228em] xs:gap-x-[4.1666666667em] gap-x-[5.5555555556em] sm:gap-y-[3.9682539683em] xs:gap-y-[12.5em] gap-y-[16.6666666667em]">
               <div className="text-center">
                 <img
                   src={Icon1}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Video Lectures -</span>{" "}
                   Basic to advance
                 </span>
@@ -412,9 +421,9 @@ const Home = () => {
                 <img
                   src={Icon2}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Study Material -</span>{" "}
                   Templates and prediction file
                 </span>
@@ -423,9 +432,9 @@ const Home = () => {
                 <img
                   src={Icon3}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">
                     Class Recordings -{" "}
                   </span>
@@ -436,9 +445,9 @@ const Home = () => {
                 <img
                   src={Icon4}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">AI Portal -</span>Mock
                   Test & 5000+ exam questions
                 </span>
@@ -447,9 +456,9 @@ const Home = () => {
                 <img
                   src={Icon5}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Feedback -</span>
                   Ask an Expert
                 </span>
@@ -458,9 +467,9 @@ const Home = () => {
                 <img
                   src={Icon6}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Live Classes - </span>
                   Learn with other students
                 </span>
@@ -469,9 +478,9 @@ const Home = () => {
                 <img
                   src={Icon7}
                   alt="Icon"
-                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] max-w-[78px]"
+                  className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] text-sm block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">
                     Expert Trainers -
                   </span>
@@ -488,7 +497,7 @@ const Home = () => {
           <div className="bg-[#212121] px-4 sm:px-8 sm:pb-[32px] pb-4 relative z-10">
             <div className="relative z-20">
               <div className="sm:py-[2.1164021164em] py-7 flex justify-between items-center">
-                <h2 className="sm:text-[1.9841269841em] text-2xl font-bold text-white text-left">
+                <h2 className="lg:text-[1.9841269841em] md:text-[2.9296875em] sm:text-[3.3854166667em] xs:text-[4.0625em] text-[6.6666666667em] font-bold text-white text-left">
                   Testimonials
                 </h2>
                 <div className="flex items-center justify-end">
@@ -521,17 +530,17 @@ const Home = () => {
                   alt="personImage"
                   className="w-full rounded-[11px] md:h-[26.455026455em] h-full object-fit-cover"
                 />
-                <h2 className="font-bold text-white lg:text-[2.6455026455em] text-3xl mt-[32px]">
+                <h2 className="font-bold text-white lg:text-[2.6455026455em] md:text-[3.125em] mt-[0.8em]">
                   What’s covered in class:
                 </h2>
-                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[2.7777777778em] gap-[1.8518518519em] ">
+                <div className="grid lg:grid-cols-2 grid-cols-1 lg:mt-[2.7777777778em] mt-[1.171875em] lg:gap-[1.8518518519em] gap-[1.5625em]">
                   <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
                       className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    <span className="lg:text-[1.455026455em] text-xl">
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
                       Basic Introduction
                     </span>
                   </div>
@@ -541,7 +550,7 @@ const Home = () => {
                       alt="checklist"
                       className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    <span className="lg:text-[1.455026455em] text-xl">
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
                       Test Format & Overview
                     </span>
                   </div>
@@ -551,7 +560,7 @@ const Home = () => {
                       alt="checklist"
                       className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    <span className="lg:text-[1.455026455em] text-xl">
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
                       Level of English
                     </span>
                   </div>
@@ -561,7 +570,7 @@ const Home = () => {
                       alt="checklist"
                       className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    <span className="lg:text-[1.455026455em] text-xl">
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
                       Scorecard Analysis
                     </span>
                   </div>
@@ -571,20 +580,20 @@ const Home = () => {
                       alt="checklist"
                       className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    <span className="lg:text-[1.455026455em] text-xl">
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
                       And more!
                     </span>
                   </div>
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[20px]">
+                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2222222222em] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[0.7692307692em]">
                   Book a FREE Trial Class
                 </h2>
-                <p className="font-normal text-white/75 lg:text-[1.455026455em] sm:text-xl text-base sm:pt-[1.2727272727em] pt-[28px]">
+                <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[3.3333333333em] sm:pt-[1.2727272727em] pt-[1.3333333333em]">
                   Please fill out the below form. Our team will be in touch shortly.
                 </p>
-                <div className="sm:pt-6 pt-4">
+                <div className="xs:pt-6 pt-[7.7777777778em]">
                   <BookFreeTrail />
                 </div>
               </div>

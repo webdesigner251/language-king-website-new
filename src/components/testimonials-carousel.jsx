@@ -31,18 +31,8 @@ const TestimonialCarousel = ({ testimonials }) => {
     >
       {testimonials.map((item, i) => (
         <SwiperSlide className="h-auto-swiper" key={i}>
-          <div className="flex flex-col justify-between h-full lg:gap-y-[3.3068783069em] gap-y-[50px]">
+          <div className="flex flex-col justify-between h-full lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[13.8888888889em]">
             <div>
-              {/* <div className="aspect-3/2 relative w-full h-auto overflow-hidden rounded-[10px] mb-[24px]">
-                <VideoPlayer
-                  videoSrc={item.reviewImg}
-                  thumbnail={item.thumbnail}
-                  wrapperClassName="rounded-[10px] h-auto"
-                  videoClassName="rounded-[10px] object-contain"
-                  thumbnailClassName="rounded-[10px] h-auto"
-                />
-              </div> */}
-
               <div className="rounded-[10px] w-full aspect-3/2 object-cover object-center relative z-10 mb-2">
                 <VideoPlayer
                   videoSrc={item.reviewImg}
@@ -53,7 +43,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                 />
               </div>
               <p
-                className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[2xl] text-lg leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
+                className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.34375em] xs:text-[2.8125em] text-[3.75em] leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
                 dangerouslySetInnerHTML={{ __html: item.text }}
               ></p>
             </div>
@@ -62,13 +52,13 @@ const TestimonialCarousel = ({ testimonials }) => {
                 <ImageWithToggle
                   src={item.avatar}
                   alt="Avatar"
-                  className="lg:w-[4.7619047619em] lg:h-[4.7619047619em] w-[62px] h-[62px] rounded-full object-cover"
+                  className="lg:w-[4.7619047619em] lg:h-[4.7619047619em] md:w-[7.03125em] md:h-[7.03125em] sm:w-[9.375em] xs:w-[9.6875em] sm:h-[9.375em] xs:h-[9.6875em] w-[17.2222222222em] h-[17.2222222222em] rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] text-lg 2xl:mb-2 mb-1">
+                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] md:text-[2.34375em] sm:text-[2.8125em] xs:text-[3.75em] text-[5em] xl:mb-2 mb-1">
                     {item.name}
                   </h4>
-                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em] lg:text-[1.0582010582em] text-base">
+                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em] lg:text-[1.0582010582em] md:text-[1.5625em] sm:text-[2.34375em] xs:text-[2.8125em] text-[3.75em]">
                     {item.subtitle}
                   </span>
                 </div>

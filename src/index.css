@@ -7,6 +7,7 @@
 }
 
 @theme {
+  --breakpoint-xs: 480px;
   --font-family: "Inter", sans-serif;
   --font-aileron: "Aileron";
   --color-green: #D7FF53;
@@ -580,7 +581,11 @@ header {
     width: 45px;
     height: 45px;
   }
+  .stroke-heading::before {
+    bottom: 15%;
+  }
 }
+
 
 @media (max-width: 400px) {
 
