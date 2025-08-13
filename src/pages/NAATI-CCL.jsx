@@ -446,7 +446,7 @@ const NAATICCL = () => {
 
               {courseData.map((course, index) => (
                 <div className="flex flex-col gap-4" key={index}>
-                  <div className="flex items-start gap-1">
+                  <div className="flex items-center gap-1">
                     <div className="border border-white/40 sm:px-[0.3968253968em] sm:py-[0.462962963em] px-[5px] py-[6px] sm:me-[0.5952380952em] me-1">
                       <svg
                         className="lg:w-[1.1904761905em] w-[16px] lg:h-[1.0582010582em] h-[16px]"
@@ -475,7 +475,7 @@ const NAATICCL = () => {
                         </defs>
                       </svg>
                     </div>
-                    <span className="font-bold 2xl:text-[1.5873015873em] lg:text-[1.3227513228em] text-xl text-white leading-[1.6]">
+                    <span className="font-bold 2xl:text-[1.5873015873em] lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.8em] text-white leading-[1.6]">
                       {course.title}
                     </span>
                   </div>
@@ -631,8 +631,8 @@ const NAATICCL = () => {
                   className="flex flex-col sm:gap-[1.0582010582em] gap-3"
                   key={index}
                 >
-                  <div className="flex items-start gap-1">
-                    <span className="font-semibold 2xl:text-[1.5873015873em] lg:text-[1.3227513228em] text-xl text-white leading-[1.6]">
+                  <div className="flex items-center gap-1">
+                    <span className="font-semibold 2xl:text-[1.5873015873em] lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.8em] text-white leading-[1.6]">
                       {course.title}
                     </span>
                   </div>
