@@ -50,11 +50,11 @@ const CallbackForm = ({ onClose }) => {
 
   return (
     <div
-      className="fixed h-full top-0 bottom-0 left-0 right-0 inset-0 z-[51] bg-black/90 flex items-center justify-center"
+      className="fixed h-full top-0 bottom-0 left-0 right-0 inset-0 z-[51] bg-black/[94.5%] flex items-center justify-center"
       onClick={onClose}
     >
       <div
-        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full sm:max-w-[38.0952380952em] max-w-[90%] relative max-h-[95%] sm:h-auto overflow-y-auto"
+        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full sm:max-w-[37em] max-w-[90%] relative max-h-[95%] sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] pb-[1.1904761905em]">
@@ -69,7 +69,7 @@ const CallbackForm = ({ onClose }) => {
           </button>
         </div>
         <p className="font-normal text-white/75 2xl:text-[1.3227513228em] md:text-[1.1904761905em] leading-[1.4] sm:text-base text-sm pt-[1.2em]">
-          Please fill out the below form. Our team will be in touch shortly.
+          Please fill out the below form. Our team will be in touch with you shortly.
         </p>
         <div className="sm:pt-[1.5873015873em] pt-4">
           <form onSubmit={handleSubmit} className="">

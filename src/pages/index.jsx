@@ -117,7 +117,7 @@ const videoItems = [
 const courses = [
   {
     title: "NAATI CCL Fast Track Course",
-    subtitle: "Need to clear the test in 3 days, we’ve got you covered!",
+    subtitle: "Need to clear the test in 7 days, we’ve got you covered!",
     desc:
       "This is a super fast-paced course. It’s geared for speed, designed for those who need to clear the test on urgent basis, and do whatever it takes to clear it.",
     image: CourseImg1,
@@ -134,7 +134,7 @@ const courses = [
   },
   {
     title: "PTE Master Class",
-    subtitle: "Missed your score by a few marks! Clear in 2 weeks",
+    subtitle: `Missed your score by a few marks!\nClear in 2 weeks`,
     desc:
       "This is literally the best advice that I give every student. My strategies will teach you how to get 90 in each module. I’ve helped students out for 5+ years as a super-friendly teacher to get their desired score, now it’s your turn.",
     image: CourseImg2,
@@ -187,13 +187,13 @@ const Home = () => {
         <div className="custom-container mx-auto py-0 sm:px-[2.1164021164em] px-4  w-full z-10 relative ">
           <div className="lg:max-w-[54.8941798942em] max-w-full">
             <div className="flex flex-col 2xl:gap-6 gap-3">
-              <h2 className="text-gradient-primary font-bold lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.75em] text-[5em] leading-[1.3333]">
+              <h2 className="text-gradient-primary font-bold lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.75em] text-[6.6666666667em] leading-[1.3333]">
                 # Australia’s No.1
               </h2>
-              <h1 className="font-inter font-bold lg:text-[4.021em] md:text-[4.6875em] sm:text-[6.25em] xs:text-[7.5em] text-[10em] leading-[1.12] text-white">
-                PTE, IELTS & NAATI CCL Coaching Institute
+              <h1 className="font-inter font-bold lg:text-[4.021em] md:text-[4.6875em] sm:text-[6.25em] xs:text-[7.5em] xxs:text-[10em] text-[9.9em] leading-[1.12] text-white">
+                PTE, IELTS & <br className="xs:hidden"/> NAATI CCL <br  className="xs:hidden"/> Coaching Institute
               </h1>
-              <p className="lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] md:leading-[1.5555555]  font-light md:max-w-[600px] text-white/75">
+              <p className="lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] md:leading-[1.5555555]  font-normal md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
                 Scores. Helped many students, now it's your turn!
               </p>
@@ -201,7 +201,7 @@ const Home = () => {
             <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
               <Link
                 to="/home2"
-                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] sm:w-[50%] w-full relative z-10"
+                className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] sm:w-[50%] w-full relative z-10"
               >
                 <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">
                   Get-a Callback
@@ -210,7 +210,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/free-e-book"
-                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] sm:w-[50%] w-full relative z-10 "
+                className="align-middle inline-flex items-center gap-[18px] justify-center text-center bg-transparent border-2 border-Cadmium-Orange text-white transition-all duration-300 ease hover:bg-white/10 lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] sm:w-[50%] w-full relative z-10 "
               >
                 <svg
                   className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
@@ -281,10 +281,10 @@ const Home = () => {
                   >
                     {course.title}
                   </h2>
-                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] xs:text-[5em] text-[6.6666666667em] md:leading-[1.12] text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
+                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] xs:text-[5em] text-[7em] md:leading-[1.12] text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
                     {course.subtitle}
                   </h2>
-                  <p className="lg:text-[1.1904761905em] md:text-[2.34375em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] sm:leading-[1.555] font-light max-w-[800px] text-white/75 mb-0">
+                  <p className="lg:text-[1.1904761905em] md:text-[1.953125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] sm:leading-[1.555] font-light lg:max-w-[800px] text-white/75 mb-0">
                     {course.desc}
                   </p>
 
@@ -306,7 +306,7 @@ const Home = () => {
                     {course.btn1Link ? (
                       <Link
                         to={course.btn1Link}
-                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer transition-all duration-300 ease ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] cursor-pointer transition-all duration-300 ease ${course.btnClass}`}
                       >
                         <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
                           {course.btn1Text}
@@ -315,7 +315,7 @@ const Home = () => {
                     ) : (
                       <a
                         onClick={openPopup}
-                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease cursor-pointer ${course.btnClass}`}
+                        className={`primary-btn inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease cursor-pointer ${course.btnClass}`}
                       >
                         <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
                           {course.btn1Text}
@@ -324,7 +324,7 @@ const Home = () => {
                     )}
                     <Link
                       to={course.btn2Link}
-                      className=" bg-transparent hover:bg-white/10 border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[2.9166666667em] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease"
+                      className=" bg-transparent hover:bg-white/10 border-[1.5px] border-white/20 inline-flex justify-center items-center text-center text-white lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] lg:w-[50%] w-full relative z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] transition-all duration-300 ease"
                     >
                       <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.4] leading-[1.856]">
                         {course.btn2Text}
@@ -449,7 +449,7 @@ const Home = () => {
                 />
                 <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">AI Portal -</span>Mock
-                  Test & 5000+ exam questions
+                  Test & 5000+ exam <br/>questions
                 </span>
               </div>
               <div className="text-center">
@@ -591,7 +591,7 @@ const Home = () => {
                   Book a FREE Trial Class
                 </h2>
                 <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[3.3333333333em] sm:pt-[1.2727272727em] pt-[1.3333333333em]">
-                  Please fill out the below form. Our team will be in touch shortly.
+                  Please fill out the below form. Our team will be in touch with you shortly.
                 </p>
                 <div className="xs:pt-6 pt-[7.7777777778em]">
                   <BookFreeTrail />

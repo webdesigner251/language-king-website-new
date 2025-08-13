@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="bg-[#1A1A1A] sm:py-[1.455026455em] sm:px-[2.5132275132em] p-4 border-b border-[#333434]">
               <div className="flex xl:flex-nowrap flex-wrap sm:gap-[2.1164021164em] gap-[33px]">
                 <div className="w-full flex lg:flex-nowrap flex-wrap justify-between sm:gap-[2.1164021164em] gap-[33px]">
-                  <div className="lg:w-auto w-full flex flex-col 2xl:gap-[2.6041666667em] lg:gap-[1.455026455em] gap-[22px]">
+                  <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">
                     <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
                       Contact Us{" "}
                     </h4>
@@ -68,7 +68,7 @@ const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col 2xl:gap-[2.6041666667em] lg:gap-[1.455026455em] gap-[22px]">
+                  <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col lg:gap-[1.455026455em] gap-[22px]">
                     <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
                       About Us{" "}
                     </h4>
@@ -115,7 +115,7 @@ const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col 2xl:gap-[2.6041666667em] lg:gap-[1.455026455em] gap-[22px]">
+                  <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col lg:gap-[1.455026455em] gap-[22px]">
                     <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
                       Courses
                     </h4>
@@ -147,7 +147,7 @@ const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="lg:w-auto w-full flex flex-col 2xl:gap-[2.6041666667em] lg:gap-[1.455026455em] gap-[22px]">
+                  <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">
                     <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
                       Devices Supported
                     </h4>

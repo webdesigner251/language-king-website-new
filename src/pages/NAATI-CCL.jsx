@@ -149,17 +149,17 @@ const NAATICCL = () => {
       description:
         "Author of popular book: NAATI CCL: Learn the Right Vocabulary",
     },
+        {
+      title: "2x NAATI CCL",
+      image: LandingTeacherImage5,
+      description:
+        "Ab has cleared the NAATI CCL Test twice with only 3 days preparation. Learn all the exam-related tricks from him.",
+    },
     {
       title: "PTE Certified Trainer",
       image: LandingTeacherImage6,
       description:
         "Successfully completed TRAIN THE TRAINER Workshop conducted by PTE Academic ULVI and PTE Home",
-    },
-    {
-      title: "2x NAATI CCL",
-      image: LandingTeacherImage5,
-      description:
-        "Ab has cleared the NAATI CCL Test twice with only 3 days preparation. Learn all the exam-related tricks from him.",
     },
     {
       title: "Need to Think",
@@ -449,7 +449,7 @@ const NAATICCL = () => {
                   <div className="flex items-start gap-1">
                     <div className="border border-white/40 sm:px-[0.3968253968em] sm:py-[0.462962963em] px-[5px] py-[6px] sm:me-[0.5952380952em] me-1">
                       <svg
-                        className="lg:w-[1.1904761905em] w-[12] lg:h-[1.0582010582em] h-[12]"
+                        className="lg:w-[1.1904761905em] w-[16px] lg:h-[1.0582010582em] h-[16px]"
                         width="18"
                         height="16"
                         viewBox="0 0 18 16"

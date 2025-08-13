@@ -439,7 +439,7 @@ const PTEMasterClass = () => {
 
         <section className="sm:py-[5.2700922266em] py-[80px]">
           <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[2.1080368906em] sm:gap-y-[3.8208168643em] gap-[42px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[2.1080368906em] sm:gap-y-[3.8208168643em] gap-[15.2777777778em]">
               <h2 className="text-gradient-secondary font-bold lg:text-[1.9841269841em] md:text-[2.9296875em] sm:text-[3.9113428944em] text-2xl sm:leading-[1.2] inline-block 2xl:max-w-[350px] lg:max-w-[300px]">
                 This course covers all 20 tasks with easy to understand video
                 lessons and more.
@@ -448,9 +448,9 @@ const PTEMasterClass = () => {
               {courseData.map((course, index) => (
                 <div className="flex flex-col gap-4" key={index}>
                   <div className="flex items-start gap-1">
-                    <div className="border border-white/40 sm:px-[0.3968253968em] sm:py-[0.462962963em] px-[5px] py-[6px] sm:me-[0.5952380952em] me-1">
+                    <div className="border-[1.2px] border-white/40 sm:px-[0.3968253968em] sm:py-[0.462962963em] px-[5px] py-[6px] sm:me-[0.5952380952em] me-1">
                       <svg
-                        className="lg:w-[1.1904761905em] w-[12] lg:h-[1.0582010582em] h-[12]"
+                        className="lg:w-[1.1904761905em] w-[16px] lg:h-[1.0582010582em] h-[16px]"
                         width="18"
                         height="16"
                         viewBox="0 0 18 16"

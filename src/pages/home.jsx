@@ -595,7 +595,7 @@ const Home = () => {
                   Book a FREE Trial Class
                 </h2>
                 <p className="font-normal text-white/75 lg:text-[22px] sm:text-xl text-base pt-7">
-                  Please fill out the below form. Our team will be in touch shortly.
+                  Please fill out the below form. Our team will be in touch with you shortly.
                 </p>
                 <div className="sm:pt-6 pt-4">
                   <BookFreeTrail />
