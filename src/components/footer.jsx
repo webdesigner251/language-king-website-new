@@ -23,21 +23,21 @@ const Footer = () => {
               <div className="flex xl:flex-nowrap flex-wrap sm:gap-[2.1164021164em] gap-[33px]">
                 <div className="w-full flex lg:flex-nowrap flex-wrap justify-between sm:gap-[2.1164021164em] gap-[33px]">
                   <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">
-                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
+                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       Contact Us{" "}
                     </h4>
                     <ul className="flex flex-col sm:gap-[1.1904761905em] gap-4">
                       <li>
                         <a
                           href="mailto:info@languageking.com.au"
-                          className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] "
+                          className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] "
                         >
                           <img src={Email} className="sm:w-[2em] sm:h-[2em] w-8 h-8 " />
                           info@languageking.com.au
                         </a>
                       </li>
                       <li>
-                        <span className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] ">
+                        <span className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] ">
                           <img src={Map} className="sm:w-[2em] sm:h-[2em] w-8 h-8 " />
                           Online
                         </span>
@@ -45,7 +45,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="tel:+61488876999"
-                          className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] "
+                          className="flex items-center sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] "
                         >
                           <img src={Phone} className="sm:w-[2em] sm:h-[2em] w-8 h-8 " />
                           +61 488 876 999
@@ -54,10 +54,10 @@ const Footer = () => {
                       <li>
                         <a
                           href="tel:+61488876999"
-                          className="flex items-start sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] "
+                          className="flex items-start sm:gap-[1.0582010582em] gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] "
                         >
                           <img src={Calender} className="sm:w-[2em] sm:h-[2em] w-8 h-8 " />
-                          <span>
+                          <span className="xs:pt-0 pt-[0.36em]">
                             10 A.M to 7 P.M <br />
                             <span className="italic font-light block">
                               (Mon - Sun | Melbourne Time)
@@ -69,21 +69,21 @@ const Footer = () => {
                   </div>
 
                   <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col lg:gap-[1.455026455em] gap-[22px]">
-                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
+                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       About Us{" "}
                     </h4>
                     <ul className="flex flex-col sm:gap-[0.9920634921em] gap-[14px]">
                       <li>
                         <Link
                           to="/Terms-of-Use"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           Terms of Use
                         </Link>
                       </li>
                       <li>
                         <Link to="/privacy-policy"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           Privacy Policy
                         </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           Refund Policy
                         </a>
@@ -99,7 +99,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           Careers
                         </a>
@@ -107,7 +107,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           FAQs
                         </a>
@@ -116,14 +116,14 @@ const Footer = () => {
                   </div>
 
                   <div className="lg:w-auto sm:w-[30%] w-[40%] flex flex-col lg:gap-[1.455026455em] gap-[22px]">
-                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
+                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       Courses
                     </h4>
                     <ul className="flex flex-col sm:gap-[0.9920634921em] gap-[14px]">
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           PTE
                         </a>
@@ -131,7 +131,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           NAATI CCL
                         </a>
@@ -139,7 +139,7 @@ const Footer = () => {
                       <li>
                         <a
                           href="#"
-                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[5em] transition-all duration-300 ease hover:text-white/80"
+                          className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           IELTS
                         </a>
@@ -148,7 +148,7 @@ const Footer = () => {
                   </div>
 
                   <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">
-                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
+                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       Devices Supported
                     </h4>
                     <ul className="flex sm:flex-col flex-wrap 2xl:gap-[1.4322916667em] sm:gap-[1.1904761905em] gap-[18px]">
@@ -207,7 +207,7 @@ const Footer = () => {
                   </div>
 
                   <div className="sm:hidden flex flex-col gap-[24px] w-full">
-                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[6.6666666667em] lg:leading-[1.5]">
+                    <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       Follow Us
                     </h4>
                     <ul className="flex gap-5 w-full justify-between">
@@ -319,7 +319,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className=" flex items-center sm:justify-between justify-center md:py-[1.1904761905em] sm:px-[2.5132275132em] p-4">
+            <div className=" flex items-center sm:justify-between justify-center md:py-[1.1904761905em] sm:px-[2.5132275132em] p-[5.7291666667em]">
               <span className="font-medium md:text-[1.0582010582em] xs:text-[3.3333333333em] text-[4.4444444444em] sm:text-start text-center text-white [text-shadow:0_0_16px_rgba(255,255,255,0.77)]">
                 Copyright @ 2025 Language King
               </span>
@@ -431,7 +431,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="sm:pb-[3.5714285714em] pb-6 sm:px-0 px-4">
+          <div className="sm:pb-[3.5714285714em] sm:pt-0 pt-[2.0833333333vw] pb-[6.25vw] sm:px-0 px-4">
             <h5 className="2xl:text-[1.3227513228em] 2xl:leading-[1.4] sm:text-[1.1904761905em] xs:text-[2.9166666667em] sm:leading-[1.56] text-[3.8888888889em] font-light text-[#8B8C8D] tracking-[0.3px]">
               Disclaimer - Language King is an independent coaching provider for
               the NAATI CCL and PTE tests. We are not affiliated with, endorsed

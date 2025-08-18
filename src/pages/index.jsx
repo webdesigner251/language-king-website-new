@@ -118,8 +118,7 @@ const courses = [
   {
     title: "NAATI CCL Fast Track Course",
     subtitle: "Need to clear the test in 7 days, we’ve got you covered!",
-    desc:
-      "This is a super fast-paced course. It’s geared for speed, designed for those who need to clear the test on urgent basis, and do whatever it takes to clear it.",
+    desc: "This is a super fast-paced course. It’s geared for speed, designed for those who need to clear the test on urgent basis, and do whatever it takes to clear it.",
     image: CourseImg1,
     avatar: avatar,
     showRibbon: true,
@@ -135,12 +134,12 @@ const courses = [
   {
     title: "PTE Master Class",
     subtitle: `Missed your score by a few marks!\nClear in 2 weeks`,
-    desc:
-      "This is literally the best advice that I give every student. My strategies will teach you how to get 90 in each module. I’ve helped students out for 5+ years as a super-friendly teacher to get their desired score, now it’s your turn.",
+    desc: "This is literally the best advice that I give every student. My strategies will teach you how to get 90 in each module. I’ve helped students out for 5+ years as a super-friendly teacher to get their desired score, now it’s your turn.",
     image: CourseImg2,
     avatar: avatar,
     showRibbon: false,
-    className: "course-drop-shadow bg-course-blue-bg hover:bg-course-blue-hover-bg",
+    className:
+      "course-drop-shadow bg-course-blue-bg hover:bg-course-blue-hover-bg",
     textClass: "text-gradient-secondary",
     btnClass: "bg-gradient-secondary",
     btn1Text: "Take the Course",
@@ -150,13 +149,19 @@ const courses = [
   },
   {
     title: "PTE Master Handbook",
-    subtitle: "PTE 79+ in 7 days\nCrack PTE in 1 attempt",
-    desc:
-      "Learn exactly what students did to achieve their desired band. This book explains the exam structure, target scores, key tasks to focus on, and the 7-day strategy you need to follow to go from 5 to 8 each as quickly as possible.",
+    subtitle: (
+      <>
+        PTE 79+ in 7 days <br />
+        Crack PTE in 1<sup className="ps-1">st</sup> attempt
+      </>
+    ),
+
+    desc: "Learn exactly what students did to achieve their desired band. This book explains the exam structure, target scores, key tasks to focus on, and the 7-day strategy you need to follow to go from 5 to 8 each as quickly as possible.",
     image: CourseImg3,
     avatar: avatar,
     showRibbon: false,
-    className: "course-drop-shadow bg-course-black-bg hover:bg-course-black-hover-bg border-[#333434]",
+    className:
+      "course-drop-shadow bg-course-black-bg hover:bg-course-black-hover-bg border-[#333434]",
     textClass: "dark-text-custom",
     btnClass: "bg-gradient-dark",
     btn1Text: "Free E-Book",
@@ -165,7 +170,6 @@ const courses = [
     btn2Link: "/free-e-book",
   },
 ];
-
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -191,7 +195,8 @@ const Home = () => {
                 # Australia’s No.1
               </h2>
               <h1 className="font-inter font-bold lg:text-[4.021em] md:text-[4.6875em] sm:text-[6.25em] xs:text-[7.5em] xxs:text-[10em] text-[9.9em] leading-[1.12] text-white">
-                PTE, IELTS & <br className="xs:hidden"/> NAATI CCL <br  className="xs:hidden"/> Coaching Institute
+                PTE, IELTS & <br className="xs:hidden" /> NAATI CCL{" "}
+                <br className="xs:hidden" /> Coaching Institute
               </h1>
               <p className="lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] md:leading-[1.5555555]  font-normal md:max-w-[600px] text-white/75">
                 Join 10,000+ satisfied students in achieving their desired Test
@@ -206,7 +211,6 @@ const Home = () => {
                 <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">
                   Get-a Callback
                 </span>
-
               </Link>
               <Link
                 to="/free-e-book"
@@ -236,8 +240,9 @@ const Home = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">Watch FREE Lessons</span>
-
+                <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">
+                  Watch FREE Lessons
+                </span>
               </Link>
             </div>
           </div>
@@ -257,7 +262,7 @@ const Home = () => {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 xs:gap-[2.5132275132em] gap-[8.8888888889em] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] py-[4.4444444444em] sm:py-[1.5873015873em] relative ${course.className}`}
+                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 xs:gap-[2.5132275132em] gap-[6em] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] py-[4.4444444444em] sm:py-[1.5873015873em] relative ${course.className}`}
               >
                 {course.showRibbon && (
                   <div className="ribbon ribbon-top-left z-10">
@@ -281,7 +286,7 @@ const Home = () => {
                   >
                     {course.title}
                   </h2>
-                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] xs:text-[5em] text-[7em] md:leading-[1.12] text-white sm:leading-[1.098] leading-[1.2] my-[12px] whitespace-pre-line">
+                  <h2 className="font-bold lg:text-[2.6455026455em] md:text-[3.125em] sm:text-[3.9113428944em] xs:text-[5em] text-[7vw] md:leading-[1.12] text-white sm:leading-[1.098] leading-[1.2] xs:my-[12px] my-0 xs:p-0 pt-[3vw] pb-[3.3333333333vw] whitespace-pre-line">
                     {course.subtitle}
                   </h2>
                   <p className="lg:text-[1.1904761905em] md:text-[1.953125em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4.4444444444em] sm:leading-[1.555] font-light lg:max-w-[800px] text-white/75 mb-0">
@@ -302,7 +307,7 @@ const Home = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="sm:pt-[0.7936507937em] pt-[3.3333333333em] flex lg:flex-nowrap flex-wrap lg:gap-[2.0502645503em] gap-[16px] lg:max-w-[800px]">
+                  <div className="sm:pt-[0.7936507937em] pt-[4vw] flex lg:flex-nowrap flex-wrap lg:gap-[2.0502645503em] sm:gap-[3.02734375em] gap-[4.4444444444vw] lg:max-w-[800px]">
                     {course.btn1Link ? (
                       <Link
                         to={course.btn1Link}
@@ -343,8 +348,8 @@ const Home = () => {
       <section className="pb-[32px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
           <div className="bg-[#252525] px-4 sm:px-[2.1164021164em] ">
-            <div className="sm:py-[2.6455026455em] py-7">
-              <h2 className="lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.5555555556em] leading-normal font-bold text-white text-left mb-4">
+            <div className="sm:py-[2.6455026455em] pt-[7.7777777778em] pb-[12.2222222222em]">
+              <h2 className="lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.8333333333em] leading-normal font-bold text-white text-left mb-4">
                 Try these FREE video lessons
               </h2>
 
@@ -401,9 +406,9 @@ const Home = () => {
 
       <section className="pb-8">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
-          <div className="bg-black1 flex flex-col sm:gap-[3.7698412698em] gap-[42px] border border-white/10 group md:px-[2.5132275132em] sm:px-6 px-4 md:pt-[3.9682539683em] md:pb-[5.6216931217em] pt-6 pb-7  relative">
+          <div className="bg-black1 flex flex-col sm:gap-[3.7698412698em] gap-[11.6666666667em] border-[1.5px] border-white/10 group md:px-[2.5132275132em] sm:px-6 px-4 md:pt-[3.9682539683em] md:pb-[5.6216931217em] pt-6 pb-7  relative">
             <h2 className="lg:text-[2.7777777778em] md:text-[4.1015625em] sm:text-[5.46875em] xs:text-[5em] text-[8.8888888889em] leading-[1.2] font-bold text-white text-left">
-              What’s included in every Course
+              What’s included in Every Course
             </h2>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-around sm:gap-x-[1.3227513228em] xs:gap-x-[4.1666666667em] gap-x-[5.5555555556em] sm:gap-y-[3.9682539683em] xs:gap-y-[12.5em] gap-y-[16.6666666667em]">
               <div className="text-center">
@@ -412,7 +417,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Video Lectures -</span>{" "}
                   Basic to advance
                 </span>
@@ -423,7 +428,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Study Material -</span>{" "}
                   Templates and prediction file
                 </span>
@@ -434,7 +439,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">
                     Class Recordings -{" "}
                   </span>
@@ -447,9 +452,10 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">AI Portal -</span>Mock
-                  Test & 5000+ exam <br/>questions
+                  Test & 5000+ exam <br />
+                  questions
                 </span>
               </div>
               <div className="text-center">
@@ -458,7 +464,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Feedback -</span>
                   Ask an Expert
                 </span>
@@ -469,7 +475,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">Live Classes - </span>
                   Learn with other students
                 </span>
@@ -480,7 +486,7 @@ const Home = () => {
                   alt="Icon"
                   className="mx-auto sm:mb-[1.6534391534em] mb-6 lg:max-w-[5.8201058201em] sm:max-w-[7.6171875em] xs:max-w-[16.25em] max-w-[21.6666666667em]"
                 />
-                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888888889em] block max-w-[17.8571428571em] mx-auto">
+                <span className="text-white/50 md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] block max-w-[17.8571428571em] mx-auto">
                   <span className="block text-[#E9E9E9]">
                     Expert Trainers -
                   </span>
@@ -587,13 +593,14 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2222222222em] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[0.7692307692em]">
+                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[3.125vw]">
                   Book a FREE Trial Class
                 </h2>
-                <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[3.3333333333em] sm:pt-[1.2727272727em] pt-[1.3333333333em]">
-                  Please fill out the below form. Our team will be in touch with you shortly.
+                <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[4.1666666667em] sm:pt-[1.2727272727em] pt-[5.7291666667vw]">
+                  Please fill out the below form. Our team will be in touch with
+                  you shortly.
                 </p>
-                <div className="xs:pt-6 pt-[7.7777777778em]">
+                <div className="xs:pt-6 pt-[4.6875vw]">
                   <BookFreeTrail />
                 </div>
               </div>
@@ -602,7 +609,6 @@ const Home = () => {
         </div>
       </section>
     </>
-
   );
 };
 

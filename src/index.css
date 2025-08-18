@@ -585,6 +585,10 @@ header {
   .stroke-heading::before {
     bottom: 15%;
   }
+
+  .bg-course-blue-bg {
+    background: #12161D !important;
+  }
 }
 
 

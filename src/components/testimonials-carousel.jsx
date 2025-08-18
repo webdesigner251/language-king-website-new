@@ -43,7 +43,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                 />
               </div>
               <p
-                className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.34375em] xs:text-[2.8125em] text-[3.75em] leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
+                className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.34375em] xs:text-[2.8125em] text-[4.6875em] leading-normal md:mb-[40px] sm:mb-[30px] mb-8"
                 dangerouslySetInnerHTML={{ __html: item.text }}
               ></p>
             </div>
@@ -55,16 +55,16 @@ const TestimonialCarousel = ({ testimonials }) => {
                   className="lg:w-[4.7619047619em] lg:h-[4.7619047619em] md:w-[7.03125em] md:h-[7.03125em] sm:w-[9.375em] xs:w-[9.6875em] sm:h-[9.375em] xs:h-[9.6875em] w-[17.2222222222em] h-[17.2222222222em] rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] md:text-[2.34375em] sm:text-[2.8125em] xs:text-[3.75em] text-[5em] xl:mb-2 mb-1">
+                  <h4 className="font-medium text-white/60 2xl:text-[1.5625em] lg:text-[1.455026455em] md:text-[2.34375em] sm:text-[2.8125em] xs:text-[3.75em] text-[5.7291666667em] xl:mb-2 mb-1">
                     {item.name}
                   </h4>
-                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em] lg:text-[1.0582010582em] md:text-[1.5625em] sm:text-[2.34375em] xs:text-[2.8125em] text-[3.75em]">
+                  <span className="font-normal text-[#D8D8D8] 2xl:text-[1.171875em] lg:text-[1.0582010582em] md:text-[1.5625em] sm:text-[2.34375em] xs:text-[2.8125em] text-[4.6875em]">
                     {item.subtitle}
                   </span>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                <div className="flex items-center 2xl:text-base text-sm font-light text-white gap-3">
+                <div className="flex items-center 2xl:text-base sm:text-base text-[3.6458333333em] font-light text-white gap-3">
                   <img
                     src={item.sourceIcon}
                     alt="source"
