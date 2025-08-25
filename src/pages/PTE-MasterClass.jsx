@@ -324,7 +324,7 @@ const PTEMasterClass = () => {
             <div className="grid lg:grid-cols-2 items-end">
               <div className="">
                 <div className="flex flex-col 2xl:gap-[1.0582010582em] sm:gap-[0.7936507937em] gap-3">
-                  <h2 className="text-[#0A8AF2] font-bold 2xl:text-[1.8229166667em] md:text-[1.5873015873em] text-2xl">
+                  <h2 className="text-[#0A8AF2] font-bold 2xl:text-[1.8229166667em] md:text-[1.5873015873em] sm:text-[3.1290743155em] xs:text-[3.75em] xxs:text-[5em] text-[6.6666666667em]">
                     PTE MasterClass
                   </h2>
                   <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.11] 2xl:mt-2 mt-0 text-white">

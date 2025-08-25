@@ -19,7 +19,7 @@ const Footer = () => {
       <footer className="bg-noise-pattern sm:pt-[2.1164021164em] pt-[32px]">
         <div className="custom-container mx-auto py-0 px-0 sm:px-[2.1164021164em]">
           <div className="border border-[#333434] sm:mb-[2.5132275132em] xs:mb-[4.375em] mb-[4.4444444444em] sm:border-x-1 border-x-0">
-            <div className="bg-[#1A1A1A] sm:py-[1.455026455em] sm:px-[2.5132275132em] p-4 border-b border-[#333434]">
+            <div className="bg-[#1A1A1A] sm:py-[1.455026455em] sm:px-[2.5132275132em] pb-[7.2916666667vw] pt-4 px-4 border-b border-[#333434]">
               <div className="flex xl:flex-nowrap flex-wrap sm:gap-[2.1164021164em] gap-[33px]">
                 <div className="w-full flex lg:flex-nowrap flex-wrap justify-between sm:gap-[2.1164021164em] gap-[33px]">
                   <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">

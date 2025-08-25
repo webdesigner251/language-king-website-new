@@ -262,7 +262,7 @@ const Home = () => {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 xs:gap-[2.5132275132em] gap-[6em] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] py-[4.4444444444em] sm:py-[1.5873015873em] relative ${course.className}`}
+                className={`border-[1.5px] border-white/10 grid items-center lg:grid-cols-2 xs:gap-[2.5132275132em] gap-[6em] transition-all duration-300 ease group px-4 sm:px-[1.5873015873em] pt-[4.4444444444em] pb-[7.777777777em] sm:pt-[1.5873015873em] sm:pb-[1.5873015873em] relative ${course.className}`}
               >
                 {course.showRibbon && (
                   <div className="ribbon ribbon-top-left z-10">
@@ -509,7 +509,7 @@ const Home = () => {
                 <div className="flex items-center justify-end">
                   <Link
                     to="/testimonials"
-                    className="bg-black2 sm:px-[1.9841269841em] sm:py-[0.7936507937em] p-[9px] text-center rounded-[6px] text-white sm:text-[1.1904761905em] text-base leading-[1.32] font-semibold sm:min-w-[auto] min-w-[100px]"
+                    className="bg-black2 sm:px-[1.9841269841em] sm:py-[0.7936507937em] p-[9px] text-center rounded-[6px] text-white lg:text-[1.1904761905em] md:text-[1.5625em] xs:text-[2.0860495437em] text-[4.1666666667em] leading-[1.32] font-semibold sm:min-w-[auto] min-w-[100px]"
                   >
                     View all
                   </Link>

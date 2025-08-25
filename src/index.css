@@ -7,8 +7,8 @@
 }
 
 @theme {
-  --breakpoint-xs: 480px;
-  --breakpoint-xxs: 360px;
+  --breakpoint-xs: 481px;
+  --breakpoint-xxs: 361px;
   --font-family: "Inter", sans-serif;
   --font-aileron: "Aileron";
   --color-green: #D7FF53;

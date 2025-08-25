@@ -50,7 +50,7 @@ const BookFreeTrail = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
           <label
             htmlFor="name"
             className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
@@ -88,7 +88,7 @@ const BookFreeTrail = () => {
           )}
         </div>
 
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
         <label
             htmlFor="phone"
             className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
@@ -104,7 +104,7 @@ const BookFreeTrail = () => {
           />
         </div>
 
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
           <label
             htmlFor="course"
             className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
