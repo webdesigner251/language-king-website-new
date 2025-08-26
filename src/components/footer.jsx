@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-noise-pattern sm:pt-[2.1164021164em] pt-[32px]">
+      <footer id="footer" className="bg-noise-pattern sm:pt-[2.1164021164em] pt-[13.8888888889vw]">
         <div className="custom-container mx-auto py-0 px-0 sm:px-[2.1164021164em]">
           <div className="border border-[#333434] sm:mb-[2.5132275132em] xs:mb-[4.375em] mb-[4.4444444444em] sm:border-x-1 border-x-0">
             <div className="bg-[#1A1A1A] sm:py-[1.455026455em] sm:px-[2.5132275132em] pb-[7.2916666667vw] pt-4 px-4 border-b border-[#333434]">

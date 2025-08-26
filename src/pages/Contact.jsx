@@ -17,7 +17,7 @@ import ImageWithToggle from "../components/ImageWithToggle";
 const faqs = [
   {
     question: "1. Do you offer refunds?",
-    answer: `We don’t offer any refund in any given circumstances. Nevertheless, a refund is possible, in case, you are charged extra due to a technical problem. The refund request should be initiated within 24 hours by sending an email with all the details on <strong class="text-white"><a href="mailto:info@languageking.com.au">info@languageking.com.au</a></strong>`,
+    answer: `We don’t offer any refund in any given circumstances. Nevertheless, a refund is possible, in case, you are charged extra due to a technical problem. The refund request should be initiated within 24 hours by sending an email with all the details on <strong className="text-white"><a href="mailto:info@languageking.com.au">info@languageking.com.au</a></strong>`,
   },
   {
     question:
@@ -84,7 +84,7 @@ const Contact = () => {
           <div className=" md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em] ">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
-                <h2 class="lg:text-[3.4391534392em] sm:text-[4.1015625em] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
+                <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
                 <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] leading-[1.556] text-base max-w-[33.3333333333em] my-[0.6666666667em]">

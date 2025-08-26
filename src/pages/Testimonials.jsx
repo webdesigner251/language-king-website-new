@@ -61,7 +61,7 @@ const slidesData = [
   },
   {
     id: 5,
-    title: "I thought it was not possible at I thought it was not possible at",
+    title: "I thought it was not possible at I thought it was not possible at I thought it was not possible at I thought it was not possible at",
     name: "Natalia",
     tag: "8 beach",
     image: PlaceholerImage,
@@ -84,12 +84,12 @@ const slidesData = [
 const Testimonials = () => {
   return (
     <>
-      <section className="md:pt-[14.5502645503em] pt-[180px] md:pb-[5.0925925926em] pb-8 md:mt-[-7.9365079365em] mt-[-120px]">
+      <section className="md:pt-[14.5502645503em] sm:pt-[28.125em] xs:pt-[37.5em] pt-[55vw] md:pb-[5.0925925926em] sm:pb-[12.03125em] xs:pb-[16.0416666667em] pb-[8.3333333333vw] md:mt-[-7.9365079365em] mt-[-120px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
           <div className="grid items-start lg:grid-cols-2 xl:gap-[7.9365079365em] gap-[5.9523809524em]">
             <div>
               <div className="2xl:max-w-[39.0211640212em] xl:max-w-[34.7222222222em] lg:max-w-[34.96875em]">
-                <h1 className="font-inter font-bold lg:text-[3.6375661376em] md:text-[4.1015625em] text-[38px] leading-[normal] inline-block 2xl:mt-2 mt-0 text-white">
+                <h1 className="font-inter font-bold lg:text-[3.6375661376em] md:text-[4.1015625em] sm:text-[6.5625em] xs:text-[8.75em] text-[10em] leading-[normal] inline-block 2xl:mt-2 mt-0 text-white">
                   Why Students Love Learning With Us
                 </h1>
 
@@ -104,8 +104,8 @@ const Testimonials = () => {
                 </div>
                 <hr className="border-1 border-y-[#252525] my-[2.6455026455em] lg:block hidden border-max-width" />
               </div>
-              <div className="relative ps-[1.6666666667em] text-[#B7B7B7] lg:text-[1.1904761905em] sm:text-base text-sm lg:max-w-[33.3333333333em] leading-[1.56]">
-                <img src={QuoteIcon} alt="QuoteIcon" className="-ml-[1.5555555556em]" />
+              <div className="relative xs:ps-[1.6666666667em] ps-[1.8em] text-[#B7B7B7] lg:text-[1.1904761905em] sm:text-base xs:text-sm text-[4.1666666667em] lg:max-w-[33.3333333333em] xs:leading-[1.56] leading-[1.3] ">
+                <img src={QuoteIcon} alt="QuoteIcon" className="xs:-ml-[1.5555555556em] ml-[-1.8em] xs:mb-0 mb-[-0.9em]" />
                 When I started my journey I really thought that it would be
                 impossible for me to clear he test due to my background.
                 xxxxxxxxxxxxx
@@ -114,10 +114,11 @@ const Testimonials = () => {
                 <ImageWithToggle
                   src={Mainavatar}
                   alt="Mainavatar"
-                  className="md:w-[4.0343915344em] md:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover rounded-[8px]"
+                  className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover rounded-[8px]"
                 />
-                <div className="md:text-[1.1904761905em] text-base">
-                  <span className="text-white me-[0.5em]">Natalia &#9679;</span>
+                <div className="md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em]">
+                  <span className="text-white">Natalia</span>
+                  <span className="text-white mx-[0.5em]">&#9679;</span>
                   <span className="text-white/40 uppercase">
                     PTE & NAATI CCL
                   </span>
@@ -137,14 +138,14 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <section className="sm:py-[1.9841269841em] pt-[25px]">
+      <section className="sm:py-[1.9841269841em] pt-[13vw]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] py-[16px]">
-            <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] sm:py-[2.5em] xs:py-[3.3333333333em] py-[2.7777777778vw]">
+            <h2 className="sm:text-[1.9841269841em]  xs:text-[6.25em] text-[6.1111111111em] leading-normal font-bold text-white text-left">
               PTE Hall of Fame
             </h2>
             <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-prev w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center xs:bg-[#1A1A1A] bg-[#262626] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
                   className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
@@ -162,7 +163,7 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center xs:bg-[#1A1A1A] bg-[#262626] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
                   className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
@@ -211,7 +212,7 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] my-2">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] my-2">
                       {item.title}
                     </p>
                     <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[20px]">
@@ -219,7 +220,7 @@ const Testimonials = () => {
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="md:w-[1.3227513228em] w-4 md:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-0"
                         />
                         <ImageWithToggle
                           src={item.avatar}
@@ -244,14 +245,14 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <section className="sm:py-[30px] pt-[25px]">
+      <section className="sm:py-[1.9841269841em] pt-[13vw]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] py-[16px]">
-            <h2 className="sm:text-[1.9841269841em] text-[22px] leading-normal font-bold text-white text-left">
+          <div className="flex gap-4 justify-between items-center border-b border-[#252525] md:py-[1.0582010582em] sm:py-[2.5em] xs:py-[3.3333333333em] py-[2.7777777778vw]">
+            <h2 className="sm:text-[1.9841269841em]  xs:text-[6.25em] text-[6.1111111111em] leading-normal font-bold text-white text-left">
               NAATI CCL Results
             </h2>
-            <div className="flex gap-3 justify-end items-center  relative">
-              <button className="custom-prev w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+            <div className="flex gap-3 justify-end items-center relative">
+              <button className="custom-prev-new w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center xs:bg-[#1A1A1A] bg-[#262626] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
                   className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
@@ -269,7 +270,7 @@ const Testimonials = () => {
                   />
                 </svg>
               </button>
-              <button className="custom-next w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
+              <button className="custom-next-new w-10 h-10 md:w-[2.6455026455em] md:h-[2.6455026455em] p-[0.9920634921em] cursor-pointer flex items-center justify-center xs:bg-[#1A1A1A] bg-[#262626] hover:bg-white/10 transition-all duration-300 ease-in-out border-none rounded">
                 <svg
                   className="md:w-[0.7936507937em] w-[10px]"
                   width="12"
@@ -316,29 +317,28 @@ const Testimonials = () => {
                           thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                         />
                       </div>
-                      {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="truncate text-white md:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-base my-[0.4em]">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] my-2">
                       {item.title}
                     </p>
-                    <div className="flex sm:gap-[1.3227513228em] gap-4 sm:items-end items-center md:mt-[1.3227513228em] mt-[20px]">
+                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[20px]">
                       <div className="relative">
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="sm:w-[1.3227513228em] w-4 sm:h-[1.3227513228em] h-4 rounded-sm absolute -top-1 -right-1 z-0"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-0"
                         />
                         <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
-                          className="sm:w-[4.0343915344em] sm:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
+                          className="md:w-[4.0343915344em] md:h-[4.0343915344em] w-[52px] h-[52px] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         />
                       </div>
-                      <div className="md:text-[1.0582010582em] text-base sm:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] text-base md:text-center text-start flex flex-col">
                         <span className="text-white/40 uppercase">
                           {item.name}
                         </span>
-                        <span className="text-white md:text-[0.9259259259em] text-xs block">
+                        <span className="text-white md:text-[0.9259259259em] text-sm block">
                           {item.tag}
                         </span>
                       </div>
@@ -351,27 +351,27 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <section className="sm:pt-[1.9841269841em] pt-[30px] sm:pb-0 pb-[1.9841269841em]">
+      <section className="sm:pt-[1.9841269841em] pt-[21.3333vw] sm:pb-0 pb-[1.9841269841em]">
         <div className="custom-container mx-auto  px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="border-t border-[#252525] md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em]">
+          <div className="border-t-[1.5px] border-[#252525] md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em]">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
-                <h2 class="lg:text-[3.4391534392em] sm:text-[4.1015625em] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
+                <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] xs:text-[8.75em] text-[8.8888888889em] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
-                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] leading-[1.556] text-base max-w-[33.3333333333em] my-[0.6666666667em]">
+                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.556] text-[3.8888888889em] max-w-[33.3333333333em] my-[0.6666666667em]">
                   Contact us on xxxxxxxxx/ xxxxxxxxx
                 </p>
                 {/* Mobile Form */}
                 <div className="md:hidden block pt-3">
                   <GetInTouch />
                 </div>
-                <div className="lg:my-[3.9682539683em] my-[50px]">
-                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-lg leading-[32px]">
+                <div className="md:py-[3.9682539683em] sm:py-[9.375em] xs:py-[12.5em] pt-[13.8888888889vw] pb-[6.9444444444vw]">
+                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-[5.5555em] leading-[32px]">
                     Why Language King?
                   </h3>
-                  <ul className="md:mt-[1.3227513228em] mt-[20px] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                  <ul className="md:mt-[1.3227513228em] mt-[2.7777777778vw] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -380,7 +380,7 @@ const Testimonials = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -390,7 +390,7 @@ const Testimonials = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -400,7 +400,7 @@ const Testimonials = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -418,7 +418,7 @@ const Testimonials = () => {
                     alt="PinkQuote"
                     className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
                   />
-                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[1.333333] text-lg text-white">
+                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] sm:text-[3.4375em] xs:text-[4.1666666667em] text-[4.8em] leading-[1.333333] text-lg text-white">
                     Language King is perfect for new or struggling students,
                     offering expert feedback and guidance to help achieve
                     desired scores.

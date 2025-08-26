@@ -65,7 +65,7 @@
 //               placeholder="Your first & last name"
 //               value={formData.name}
 //               onChange={handleChange}
-//               className={`border-2 rounded-md bg-white py-[16px] sm:px-[24px] px-4 sm:text-lg text-base ${
+//               className={`border-2 xs:rounded-md rounded-[3px] bg-white py-[16px] sm:px-[24px] px-4 sm:text-lg text-base ${
 //                 errors.name ? "border-red-500" : "border-[#949AA5]"
 //               }`}
 //             />
@@ -102,7 +102,7 @@
 //               formData={formData}
 //               setFormData={setFormData}
 //               errors={errors}
-//               inputClassName="w-full border-2 rounded-md bg-white sm:text-lg text-base"
+//               inputClassName="w-full border-2 xs:rounded-md rounded-[3px] bg-white sm:text-lg text-base"
 //             />
 //           </div>
 
@@ -120,7 +120,7 @@
 //                 setFormData((prev) => ({ ...prev, course: value }))
 //               }
 //               error={errors.course}
-//               buttonClassName="bg-white rounded-md"
+//               buttonClassName="bg-white xs:rounded-md rounded-[3px]"
 //             />
 
 //             {errors.course && (
@@ -157,7 +157,7 @@
 //           {/* Submit Button */}
 //           <button
 //             type="submit"
-//             className="align-middle inline-flex items-center justify-center text-center primary-btn bg-[#E42552] text-white px-3 py-4 w-full font-bold sm:text-xl text-lg relative z-10 mt-4 rounded-md"
+//             className="align-middle inline-flex items-center justify-center text-center primary-btn bg-[#E42552] text-white px-3 py-4 w-full font-bold sm:text-xl text-lg relative z-10 mt-4 xs:rounded-md rounded-[3px]"
 //           >
 //             Get In Touch
 //           </button>
@@ -189,16 +189,16 @@ const GetInTouch = () => {
   return (
     <>
       {!isSubmitted ? (
-        <div className="bg-white rounded-[9px] md:pt-[2.084em] md:px-[2.292em] md:pb-[2.292em] p-4">
+        <div className="bg-white xs:rounded-[9px] rounded-[4px] md:pt-[2.084em] md:px-[2.292em] md:pb-[2.292em] px-[15px] pt-[5.5555555556vw] pb-[6.6666666667vw]">
           <p
-            className="font-normal leading-[1.2] tracking-[0.011em] text-black lg:text-[1.1903em] md:text-[16px] text-[16px]"
-            style={{ textShadow: "1px 1px 0px rgba(0, 0, 0, 0.3)" }}
+            className="font-normal sm:leading-[1.2] leading-[1.42] tracking-[0.011em] text-black lg:text-[1.1903em] md:text-[2.0860495437em] sm:text-[2.5em] text-[3.8888888889em]"
+            style={{ textShadow: "rgba(0, 0, 0, 0.3) 0.485px 0.485px 0px" }}
           >
             Please fill out the below form. Our team will be in touch with you shortly.
           </p>
-          <form className="sm:pt-[2.116em] pt-4">
+          <form className="sm:pt-[2.116em] pt-[6.9444444444vw]">
             {/* Full Name */}
-            <div className="flex flex-col mb-[1.323em]">
+            <div className="flex flex-col lg:mb-[1.323em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
               <label
                 htmlFor="name"
                 className="text-black font-bold md:text-[0.926em] text-sm mb-[0.529em]"
@@ -213,12 +213,12 @@ const GetInTouch = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, [e.target.name]: e.target.value })
                 }
-                className="border-1 border-[#949AA5] rounded-md bg-white md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                className="border-1 border-[#949AA5] xs:rounded-md rounded-[3px] bg-white xs:py-[0.6666666667em] py-[4.4444444444vw] xs:px-[1em] px-[4.4444444444vw] md:text-[1.1904761905em] xs:text-[3.3333333333em] text-[4.16667em] leading-[1.556]"
               />
             </div>
 
             {/* Phone Number */}
-            <div className="flex flex-col mb-[1.323em]">
+            <div className="flex flex-col lg:mb-[1.323em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
               <label
                 htmlFor="phone"
                 className="text-black font-bold md:text-[0.926em] text-sm mb-[0.529em]"
@@ -230,13 +230,13 @@ const GetInTouch = () => {
                 setFormData={setFormData}
                 errors={{}} // no validation errors
                 flagwrapper="border-[#949AA5]"
-                wrapperClassName="w-full border-1 rounded-md bg-white border-[#949AA5]"
-                inputClassName="md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                wrapperClassName="w-full border-1 xs:rounded-md rounded-[3px] bg-white border-[#949AA5]"
+                inputClassName="xs:py-[0.6666666667em] py-[4.4444444444vw] xs:px-[1em] px-[4.4444444444vw] md:text-[1.1904761905em] xs:text-[3.3333333333em] text-[4.16667em] leading-[1.556]"
               />
             </div>
 
             {/* Course Interested In */}
-            <div className="flex flex-col mb-[1.323em]">
+            <div className="flex flex-col lg:mb-[1.323em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
               <label
                 htmlFor="course"
                 className="text-black font-bold md:text-[0.926em] text-sm mb-[0.529em]"
@@ -249,12 +249,12 @@ const GetInTouch = () => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={null}
-                buttonClassName="border-1 border-[#949AA5] rounded-md bg-white md:py-[0.6666666667em] py-[12px] sm:px-[1em] px-[18px] md:text-[1.1904761905em] text-[16px] leading-[1.556]"
+                buttonClassName="border-1 border-[#949AA5] xs:rounded-md rounded-[3px] bg-white xs:py-[0.6666666667em] py-[4.4444444444vw] xs:px-[1em] px-[4.4444444444vw] md:text-[1.1904761905em] xs:text-[3.3333333333em] text-[4.16667em] leading-[1.556]"
               />
             </div>
 
             {/* Privacy Notice */}
-            <span className="font-normal text-[#949AA4] md:text-[0.926em] text-sm leading-[1.3] py-[0.529em] block">
+            <span className="font-normal text-[#949AA4] md:text-[0.926em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.6458333333vw] leading-[1.3] py-[0.529em] block">
               Your information will be used to consider and fulfill your request
               and will be handled pursuant to our{" "}
               <a href="#" className="underline">
@@ -267,7 +267,7 @@ const GetInTouch = () => {
             <button
               type="button"
               onClick={() => setIsSubmitted(true)}
-              className="text-center primary-btn bg-[#E42552] text-white sm:px-[9.5em] px-[3.53em] md:py-[1.058em] py-4 w-full font-bold md:text-[1.1903em] text-base relative z-10 mt-[1.058em] rounded-md"
+              className="text-center primary-btn bg-[#E42552] text-white sm:px-[9.5em] px-[4.8vw] md:py-[1.058em] py-[4.8vw] w-full font-bold md:text-[1.1903em] sm:text-[2.8125em] xs:text-[3.75em] text-[4.4444444444em] relative z-10 xs:mt-[1.058em] mt-[3.3vw] xs:rounded-md rounded-[3px]"
             >
               Get In Touch
             </button>
