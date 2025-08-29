@@ -601,3 +601,7 @@ header {
     height: auto !important;
   }
 }
+
+.swiper-pagination {
+  display: none;
+}

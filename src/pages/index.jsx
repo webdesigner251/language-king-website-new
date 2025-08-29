@@ -68,7 +68,11 @@ const testimonials = [
   {
     reviewImg: Video3,
     thumbnail: ReviewImg3,
-    text: `All of our hiring team said that it saves them hours. <span className="text-white/50">We’re getting feedback within 20-30 minutes from interviews now, which is ideal for recruiting team that works with time to hire targets.</span>`,
+    text: (
+      <>
+        All of our hiring team said that it saves them hours. <span className="text-white/50">We’re getting feedback within 20-30 minutes from interviews now, which is ideal for recruiting team that works with time to hire targets.</span>
+      </>
+    ),
     avatar: Avatar3,
     name: "Mark",
     subtitle: "PTE - 8 Each",
@@ -80,7 +84,11 @@ const testimonials = [
   {
     reviewImg: Video4,
     thumbnail: ReviewImg4,
-    text: `There is a clear impact on time saved. <span className="text-white/50">We saved 53 hours per month across our recruiting team.</span>`,
+    text: (
+      <>
+        There is a clear impact on time saved. <span className="text-white/50">We saved 53 hours per month across our recruiting team.</span>
+      </>
+    ),
     avatar: Avatar4,
     name: "Priyanka",
     subtitle: "NAATI CCL - 78/90",

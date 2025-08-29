@@ -95,13 +95,13 @@ const Testimonials = () => {
                   Why Students Love Learning With Us
                 </h1>
 
-                <div className="lg:hidden aspect-16/9 block w-full py-[50px]">
+                <div className="lg:hidden aspect-1/1 block w-full py-[50px]">
                   <VideoPlayer
                     videoSrc={TestVideo}
                     thumbnail={TestPlaceholder}
-                    wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
-                    videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
-                    thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
+                    wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                    videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                    thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full object-cover object-center"
                   />
                 </div>
                 <hr className="border-1 border-y-[#252525] my-[2.6455026455em] lg:block hidden border-max-width" />

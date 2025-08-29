@@ -173,8 +173,9 @@ const TestimonialCarousel = ({ testimonials }) => {
                 </div>
                 <p
                   className="text-paraGray font-light lg:text-[1.1904761905em] md:text-[1.7578125em] sm:text-[2.34375em] xs:text-[2.8125em] text-[4.6875em] leading-normal"
-                  dangerouslySetInnerHTML={{ __html: item.text }}
-                ></p>
+                  // dangerouslySetInnerHTML={{ __html: item.text }}
+                  
+                >{item.text}</p>
               </div>
 
               <div className="lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[13.8888888889em] flex justify-content-between flex-col">
