@@ -6,6 +6,8 @@ import Avatarnew from "../assets/avatar6.png";
 import CheckmarkGray from "../assets/icons/checkmark-gray.svg";
 import PinkQuote from "../assets/icons/pink-quote.svg";
 import VideoPlayer from "../components/videoPlayer";
+import TestVideo from "../assets/videos/testimonial-video.mp4";
+import TestPlaceholder from "../assets/videos/0001.jpg";
 import Video1 from "../assets/videos/placeholder-video.mp4";
 import Video2 from "../assets/videos/placeholder-video.mp4";
 import Video3 from "../assets/videos/placeholder-video.mp4";
@@ -95,8 +97,8 @@ const Testimonials = () => {
 
                 <div className="lg:hidden aspect-16/9 block w-full py-[50px]">
                   <VideoPlayer
-                    videoSrc={Video1}
-                    thumbnail={PlaceholerImage}
+                    videoSrc={TestVideo}
+                    thumbnail={TestPlaceholder}
                     wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
                     videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
                     thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
@@ -127,8 +129,8 @@ const Testimonials = () => {
             </div>
             <div className="lg:block hidden aspect-16/9">
               <VideoPlayer
-                videoSrc={Video1}
-                thumbnail={PlaceholerImage}
+                videoSrc={TestVideo}
+                thumbnail={TestPlaceholder}
                 wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                 videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                 thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"

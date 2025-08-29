@@ -147,7 +147,7 @@ const Footer = () => {
                     </ul>
                   </div>
 
-                  <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]">
+                  <div className="lg:w-auto w-full flex flex-col lg:gap-[1.455026455em] gap-[22px]" id="app-icon">
                     <h4 className="text-white font-bold lg:text-[1.455026455em] md:text-[2.1484375em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5.7291666667em] lg:leading-[1.5]">
                       Devices Supported
                     </h4>
