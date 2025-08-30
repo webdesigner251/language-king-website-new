@@ -94,15 +94,16 @@ const Testimonials = () => {
                 <h1 className="font-inter font-bold lg:text-[3.6375661376em] md:text-[4.1015625em] sm:text-[6.5625em] xs:text-[8.75em] text-[10em] leading-[normal] inline-block 2xl:mt-2 mt-0 text-white">
                   Why Students Love Learning With Us
                 </h1>
-
-                <div className="lg:hidden aspect-3/2 block w-full py-[50px]">
-                  <VideoPlayer
-                    videoSrc={TestVideo}
-                    thumbnail={TestPlaceholder}
-                    wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
-                    videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto"
-                    thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-auto object-cover object-center"
-                  />
+                <div className="lg:py-[4.8828125em] md:py-[6.518904824em] sm:py-[7.8125em] xs:py-[10.4166666667em] py-[13.8888888889em] lg:hidden w-full">
+                  <div className=" aspect-3/2 block">
+                    <VideoPlayer
+                      videoSrc={TestVideo}
+                      thumbnail={TestPlaceholder}
+                      wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                      videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                      thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full object-cover object-center"
+                    />
+                  </div>
                 </div>
                 <hr className="border-1 border-y-[#252525] my-[2.6455026455em] lg:block hidden border-max-width" />
               </div>
