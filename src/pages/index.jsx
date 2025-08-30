@@ -211,7 +211,7 @@ const Home = () => {
                 Scores. Helped many students, now it's your turn!
               </p>
             </div>
-            <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
+            {/* <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
               <Link
                 to="/home2"
                 className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black lg:p-[0.7936507937em] md:p-[1.171875em] sm:p-[1.5625em] xs:p-[1.875em] p-[3.4vw] sm:w-[50%] w-full relative z-10"
@@ -249,6 +249,49 @@ const Home = () => {
                   </defs>
                 </svg>
                 <span className="sm:font-semibold font-bold lg:text-[1.3227513228em] md:text-[1.953125em] sm:text-[2.6041666667em] xs:text-[3.125em] text-[5em] relative z-10 xs:leading-[1.242] leading-[1.767]">
+                  Watch FREE Lessons
+                </span>
+              </Link>
+            </div> */}
+
+            <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
+              <Link
+                to="/home2"
+                className="primary-btn bg-gradient-primary md:p-[0.7936507937em] sm:p-[1.5645371578em] xs:p-[1.875em] p-[4.2vw] md:w-[50%] w-full relative z-10 text-center"
+              >
+                <span className="font-semibold md:text-[1.3227513228em] sm:text-[3.125em] xs:text-[4.1666666667em] md:leading-[1.4] text-[5.55555555em] text-black">
+                  Get-a Callback
+                </span>
+              </Link>
+              <Link
+                to="/free-e-book"
+                className=" align-middle inline-flex items-center gap-[18px] justify-center md:p-[0.7936507937em] sm:p-[1.5645371578em] xs:p-[1.875em] p-[4.2vw] sm:w-[50%] w-full relative z-10 transition-all duration-300 ease bg-transparent border-2 border-Cadmium-Orange hover:bg-white/10"
+              >
+                <svg
+                  className="md:w-[1.3227513228em] md:h-[1.3227513228em] w-5 h-5"
+                  viewBox="0 0 22 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.93 11.9998L0 23.9253V0.0742188L21.93 11.9998Z"
+                    fill="url(#paint0_linear_702_4078)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_702_4078"
+                      x1="0"
+                      y1="11.9997"
+                      x2="21.93"
+                      y2="11.9997"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#D7FF53" />
+                      <stop offset="1" stopColor="#FD4F2B" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span className="font-semibold md:text-[1.3227513228em] sm:text-[3.125em] xs:text-[4.1666666667em] md:leading-[1.4] text-[5.55555555em] align-middle inline-flex items-center gap-[18px] justify-center text-center text-white">
                   Watch FREE Lessons
                 </span>
               </Link>
@@ -542,7 +585,7 @@ const Home = () => {
                 <ImageWithToggle
                   src={personImage}
                   alt="personImage"
-                  className="w-full rounded-[11px] md:h-[26.455026455em] h-full object-fit-cover"
+                  className="w-full rounded-[11px] md:h-[24.353em] h-full object-cover"
                 />
                 <h2 className="font-bold text-white lg:text-[2.6455026455em] md:text-[3.125em] mt-[0.8em]">
                   What’s covered in class:

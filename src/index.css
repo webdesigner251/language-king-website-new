@@ -514,6 +514,10 @@ header {
   .middle-border::before {
     display: none;
   }
+
+  .swiper {
+        padding-bottom: 30px !important;
+    }
 }
 
 @media (max-width: 640px) {
