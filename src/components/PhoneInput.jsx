@@ -151,7 +151,7 @@ const PhoneInput = ({
     >
       {/* Country flag selector */}
       <div
-        className={`flex items-center md:px-[1.058em] md:py-[1.058em] sm:p-[2.8125em] xs:p-[3.75em] p-[5em] cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[88px] shrink-0 grow-0 justify-between border-r ${flagwrapper}`}
+        className={`flex items-center md:px-[1.058em] md:py-[1.058em] sm:p-[2.8125em] xs:p-[3.75em] p-[5em] pe-[3.90625vw] cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[88px] shrink-0 grow-0 justify-between border-r ${flagwrapper}`}
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         <img
@@ -201,7 +201,7 @@ const PhoneInput = ({
               onClick={() => handleSelect(country)}
               className="flex items-center gap-2 sm:px-[1.058em] sm:py-[0.794em] px-[0.794em] xs:py-[0.529em] py-[3.8888888889vw] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] xs:text-[2.5em] text-[4.16667vw] leading-normal cursor-pointer"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center xs:gap-4 gap-2">
                 <img
                   src={country.flag}
                   alt={country.name}

@@ -254,7 +254,7 @@ const GetInTouch = () => {
             </div>
 
             {/* Privacy Notice */}
-            <span className="font-normal text-[#949AA4] md:text-[0.926em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.6458333333vw] leading-[1.3] py-[0.529em] block">
+            <span className="font-normal text-[#949AA4] md:text-[0.926em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.33vw] leading-[1.3] xs:py-[0.529em] pb-[0.329em] block ">
               Your information will be used to consider and fulfill your request
               and will be handled pursuant to our{" "}
               <a href="#" className="underline">
@@ -267,7 +267,7 @@ const GetInTouch = () => {
             <button
               type="button"
               onClick={() => setIsSubmitted(true)}
-              className="text-center primary-btn bg-[#E42552] text-white sm:px-[9.5em] px-[4.8vw] md:py-[1.058em] py-[4.8vw] w-full font-bold md:text-[1.1903em] sm:text-[2.8125em] xs:text-[3.75em] text-[4.4444444444em] relative z-10 xs:mt-[1.058em] mt-[3.3vw] xs:rounded-md rounded-[3px]"
+              className="text-center primary-btn bg-[#E42552] text-white sm:px-[9.5em] px-[4.8vw] md:py-[1.058em] py-[4.8vw] w-full font-bold md:text-[1.1903em] sm:text-[2.8125em] xs:text-[3.75em] text-[4.4444444444em] relative z-10 xs:mt-[1.058em] mt-[6.3vw] xs:rounded-md rounded-[3px]"
             >
               Get In Touch
             </button>
