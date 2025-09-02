@@ -203,6 +203,7 @@ const Testimonials = () => {
                 nextEl: ".custom-next",
                 prevEl: ".custom-prev",
               }}
+              loop={true}
               spaceBetween={"22.5"}
               slidesPerView={1.2}
               breakpoints={{
@@ -310,6 +311,7 @@ const Testimonials = () => {
                 nextEl: ".custom-next-new",
                 prevEl: ".custom-prev-new",
               }}
+              loop={true}
               spaceBetween={"22.5"}
               slidesPerView={1.2}
               breakpoints={{
