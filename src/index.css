@@ -515,9 +515,9 @@ header {
     display: none;
   }
 
-  .swiper {
-        padding-bottom: 30px !important;
-    }
+  .home-swiper {
+    padding-bottom: 30px !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -586,6 +586,7 @@ header {
     width: 45px;
     height: 45px;
   }
+
   .stroke-heading::before {
     bottom: 15%;
   }

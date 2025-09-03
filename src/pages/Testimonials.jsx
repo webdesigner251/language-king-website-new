@@ -18,6 +18,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import GetInTouch from "../components/Get-in-touch";
 import ImageWithToggle from "../components/ImageWithToggle";
+import Eclipse from "../assets/icons/ellipse.svg";
 
 // Testimonials slides Data array
 const slidesData = [
@@ -129,10 +130,10 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
-                  <span className="text-white">Natalia</span>
-                  <span className="text-white mx-[0.5em]">&#9679;</span>
-                  <span className="text-white/40 uppercase">
+                <div className="flex items-center">
+                  <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">Natalia</span>
+                  <img src={Eclipse} alt="Eclipse" className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[1.6666666667em] mx-[2.2222222222em] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.6666666667em] xxs:h-[1.6666666667em] w-[1.1111111111em] h-[1.1111111111em]" />
+                  <span className="text-white/40 uppercase md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
                     PTE & NAATI CCL
                   </span>
                 </div>
@@ -226,7 +227,7 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[3vw]">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                       {item.title}
                     </p>
                     <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
@@ -334,7 +335,7 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[3vw]">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                       {item.title}
                     </p>
                     <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
@@ -369,13 +370,13 @@ const Testimonials = () => {
 
       <section className="sm:pt-[1.9841269841em] pt-[21.3333vw] sm:pb-0 pb-[1.9841269841em]">
         <div className="custom-container mx-auto  px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className="border-t-[1.5px] border-[#252525] md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em]">
+          <div className="border-t-[1.5px] border-[#252525] md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[21.3333vw] sm:pb-[3.5714285714em]">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
                 <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] xs:text-[8.75em] text-[8.8888888889em] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
-                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.556] text-[3.8888888889em] max-w-[33.3333333333em] my-[0.6666666667em] xs:pb-0 pb-[0.7vw] xs:ps-0 ps-[0.2777777778vw]">
+                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.556] text-[3.8888888889em] max-w-[33.3333333333em] sm:my-[0.6666666667em] mt-[-5.5px] xs:pb-0 pb-[0.7vw] xs:ps-0 ps-[0.2777777778vw]">
                   Contact us on xxxxxxxxx/ xxxxxxxxx
                 </p>
                 {/* Mobile Form */}

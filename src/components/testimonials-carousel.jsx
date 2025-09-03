@@ -157,6 +157,7 @@ const TestimonialCarousel = ({ testimonials }) => {
             spaceBetween: 30,
           },
         }}
+        className="home-swiper"
       >
         {testimonials.map((item, i) => (
           <SwiperSlide className="h-auto-swiper" key={i}>
