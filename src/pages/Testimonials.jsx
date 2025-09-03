@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import QuoteIcon from "../assets/icons/quote-icon.svg";
 import PlaceholerImage from "../assets/placeholder.png";
 import Mainavatar from "../assets/avatar6.png";
@@ -85,7 +86,27 @@ const slidesData = [
   },
 ];
 
+
 const Testimonials = () => {
+  const [space, setSpace] = useState(30); // default for desktop
+
+  useEffect(() => {
+    const updateSpace = () => {
+      if (window.innerWidth < 480) {
+        // For mobile: 6.25vw
+        setSpace((window.innerWidth * 6.25) / 100);
+      } else {
+        // For desktop: 30px
+        setSpace(30);
+      }
+    };
+
+    updateSpace();
+    window.addEventListener("resize", updateSpace);
+
+    return () => window.removeEventListener("resize", updateSpace);
+  }, []);
+
   return (
     <>
       <section className="md:pt-[14.5502645503em] sm:pt-[28.125em] xs:pt-[37.5em] pt-[55vw] sm:pb-[5.0925925926em] md:mt-[-7.9365079365em] sm:mt-[-15.6453715776em] mt-[-33.33vw]">
@@ -205,7 +226,7 @@ const Testimonials = () => {
                 prevEl: ".custom-prev",
               }}
               loop={true}
-              spaceBetween={"22.5"}
+              spaceBetween={space}
               slidesPerView={1.2}
               breakpoints={{
                 640: { slidesPerView: 2 },
@@ -313,7 +334,7 @@ const Testimonials = () => {
                 prevEl: ".custom-prev-new",
               }}
               loop={true}
-              spaceBetween={"22.5"}
+              spaceBetween={space}
               slidesPerView={1.2}
               breakpoints={{
                 640: { slidesPerView: 2 },
