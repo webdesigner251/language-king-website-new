@@ -274,7 +274,7 @@ const GetInTouch = () => {
           </form>
         </div>
       ) : (
-        <div className="bg-[#121211] rounded-[1.042em] px-[1.3227513228em] py-[1.5873015873em] shadow-[0_0_44px_5px_rgba(255,176,193,0.7)]">
+        <div className="bg-[#121211] rounded-[1.042em] xs:px-[1.3227513228em] xs:py-[1.5873015873em] py-[3vw] pt-[6vw] px-[3vw] shadow-[0_0_11px_3px_rgba(255,176,193,0.7)]">
           <ContactThankyou />
         </div>
       )}

@@ -20,7 +20,7 @@ const ContactThankyou = () => {
           We’ve received your information.
         </h3>
 
-        <div className="bg-[#252525] rounded-[1.124em] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em] p-4 mt-[1.587em]">
+        <div className="bg-[#252525] xs:rounded-[1.124em] rounded-[3px] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em] p-[3vw] xs:mt-[1.587em] mt-[4vw]">
           <div className="inline-flex items-center justify-center">
             <h3 className="font-bold xl:text-[2.1164021164em] md:text-[1.984em] text-2xl inline mx-auto tracking-[1px] relative text-white border-text text-center">
               What Happens Next?
@@ -28,7 +28,7 @@ const ContactThankyou = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:gap-[1.323em] gap-4 md:mt-[1.852em] mt-7 text-start">
-            <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
+            <div className="flex items-start sm:gap-[1.587em] gap-[3.3vw] text-white xs:font-medium font-normal md:text-[1.0582010582em] xs:text-[2.5em] text-[4em] xs:leading-[22px] leading-[1.375]">
               <img
                 src={CallIcon}
                 alt="checklist"
@@ -36,7 +36,7 @@ const ContactThankyou = () => {
               />
               We’ll call you within 24 hours to discuss your preferred course, target score, and learning needs.
             </div>
-            <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
+            <div className="flex items-start sm:gap-[1.587em] gap-[3.3vw] text-white xs:font-medium font-normal md:text-[1.0582010582em] xs:text-[2.5em] text-[4em] xs:leading-[22px] leading-[1.375]">
               <img
                 src={MemberIcon}
                 alt="checklist"
@@ -45,16 +45,19 @@ const ContactThankyou = () => {
               Our team will review your course interest and create a personalized plan tailored to your goals.
             </div>
 
-            <div className="bg-[#121212] rounded-2xl md:p-[0.794em] p-3 w-full mx-auto flex flex-col justify-center">
-              <h4 className="font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-xl text-white  mx-auto pb-[0.6669em] text-center">
+            <div className="bg-[#121212] sm:rounded-2xl rounded-[4px] xs:mt-0 mt-[1vw] sm:p-[0.794em] p-[3.3333333333vw] w-full mx-auto flex flex-col justify-center">
+              <h4 className="sm:block hidden font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5.96em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
                 Need immediate assistance?{" "}
               </h4>
+              <h4 className="sm:hidden block font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5.96em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
+                Need urgent assistance?{" "}
+              </h4>
 
-              <ul className="flex flex-col gap-[1.0582010582em] max-w-auto mx-auto">
+              <ul className="flex flex-col xs:gap-[1.0582010582em] gap-[2vw] max-w-auto mx-auto">
                 <li>
                   <a
                     href="tel:+61488876999"
-                    className="flex items-center gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
+                    className="flex items-center gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-[3.8vw]"
                   >
                     <img src={PhoneICon} className="w-[2.646em]" />
                     +61 488 877 999 &nbsp; / &nbsp; +61 444 876 555
@@ -63,14 +66,14 @@ const ContactThankyou = () => {
                 <li>
                   <a
                     href="tel:+61488876999"
-                    className="flex items-start gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
+                    className="flex items-start gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-[3.8vw]"
                   >
                     <div className="w-[2.646em] flex items-center justify-center">
                       <img src={CalenderIcon} className="w-[1.852em]" />
                     </div>
                     <span>
                       10 A.M to 7 P.M <br />
-                      <span className="italic text-[#abaaa6] font-normal block text-sm">
+                      <span className="italic text-[#abaaa6] font-normal block">
                         (Mon - Sun | Melbourne Time)
                       </span>
                     </span>

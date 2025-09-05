@@ -26,10 +26,10 @@ const slidesData = [
   {
     id: 1,
     title: "I thought it was not possible at I thought it was not possible at",
-    name: "Natalia",
+    name: "NATALIA",
     tag: "8 beach",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video1,
   },
@@ -39,7 +39,7 @@ const slidesData = [
     name: "Alex",
     tag: "9 overall",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video2,
   },
@@ -49,7 +49,7 @@ const slidesData = [
     name: "Sophia",
     tag: "8.5 band",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video3,
   },
@@ -59,7 +59,7 @@ const slidesData = [
     name: "Daniel",
     tag: "9 band",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video4,
   },
@@ -67,20 +67,20 @@ const slidesData = [
     id: 5,
     title:
       "I thought it was not possible at I thought it was not possible at I thought it was not possible at I thought it was not possible at",
-    name: "Natalia",
+    name: "NATALIA",
     tag: "8 beach",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video1,
   },
   {
     id: 6,
     title: "I thought it was not possible at I thought it was not possible at",
-    name: "Natalia",
+    name: "NATALIA",
     tag: "8 beach",
     image: PlaceholerImage,
-    avatar: Avatarnew,
+    avatar: Mainavatar,
     flag: Russia1,
     video: Video2,
   },
@@ -142,18 +142,16 @@ const Testimonials = () => {
               </div>
               <div className="flex sm:gap-[1.3227513228em] gap-4 items-center sm:mt-[3.3068783069em] mt-[9.3333333333vw]">
                 <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
-                  <div class="xs:rounded-[8px] rounded-[3.771px] bg-white">
-                    <ImageWithToggle
-                      src={Mainavatar}
-                      alt="Mainavatar"
-                      className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
-                    />
-                  </div>
+                  <ImageWithToggle
+                    src={Mainavatar}
+                    alt="Mainavatar"
+                    className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
+                  />
                 </div>
 
                 <div className="flex items-center">
-                  <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">Natalia</span>
-                  <img src={Eclipse} alt="Eclipse" className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[1.6666666667em] mx-[2.2222222222em] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.6666666667em] xxs:h-[1.6666666667em] w-[1.1111111111em] h-[1.1111111111em]" />
+                  <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">NATALIA</span>
+                  <img src={Eclipse} alt="Eclipse" className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]" />
                   <span className="text-white/40 uppercase md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
                     PTE & NAATI CCL
                   </span>
@@ -256,16 +254,25 @@ const Testimonials = () => {
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-0"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-1"
                         />
-                        <ImageWithToggle
+                        {/* <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
                           className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
-                        />
+                        /> */}
+                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                          <div class="xs:rounded-[8px] rounded-[3.771px]">
+                            <ImageWithToggle
+                              src={item.avatar}
+                              alt="Mainavatar"
+                              className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
+                            />
+                          </div>
+                        </div>
                       </div>
-                      <div className="md:text-[1.0582010582em] text-base md:text-center text-start flex flex-col">
-                        <span className="text-white/40 uppercase">
+                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                        <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
                         <span className="text-white md:text-[0.9259259259em] text-sm block">
@@ -364,16 +371,26 @@ const Testimonials = () => {
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-0"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-1"
                         />
-                        <ImageWithToggle
+
+                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                          <div class="xs:rounded-[8px] rounded-[3.771px]">
+                            <ImageWithToggle
+                              src={item.avatar}
+                              alt="Mainavatar"
+                              className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
+                            />
+                          </div>
+                        </div>
+                        {/* <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
                           className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
-                        />
+                        /> */}
                       </div>
-                      <div className="md:text-[1.0582010582em] text-base md:text-center text-start flex flex-col">
-                        <span className="text-white/40 uppercase">
+                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                        <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
                         <span className="text-white md:text-[0.9259259259em] text-sm block">
