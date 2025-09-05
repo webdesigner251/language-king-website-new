@@ -141,13 +141,15 @@ const Testimonials = () => {
                 xxxxxxxxxxxxx
               </div>
               <div className="flex sm:gap-[1.3227513228em] gap-4 items-center sm:mt-[3.3068783069em] mt-[9.3333333333vw]">
-                <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
                   <ImageWithToggle
                     src={Mainavatar}
                     alt="Mainavatar"
-                    className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
+                    className="object-fit-cover w-full h-full relative z-10"
                   />
                 </div>
+                {/* <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                </div> */}
 
                 <div className="flex items-center">
                   <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">NATALIA</span>
@@ -254,21 +256,19 @@ const Testimonials = () => {
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-1"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
                         />
                         {/* <ImageWithToggle
                           src={item.avatar}
                           alt="avatar"
                           className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         /> */}
-                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-[#ffcd2e]">
-                          <div class="xs:rounded-[8px] rounded-[3.771px]">
-                            <ImageWithToggle
-                              src={item.avatar}
-                              alt="Mainavatar"
-                              className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
-                            />
-                          </div>
+                        <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
+                          <ImageWithToggle
+                            src={Mainavatar}
+                            alt="Mainavatar"
+                            className="object-fit-cover w-full h-full relative z-10"
+                          />
                         </div>
                       </div>
                       <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
@@ -371,17 +371,15 @@ const Testimonials = () => {
                         <img
                           src={item.flag}
                           alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-1"
+                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
                         />
 
-                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-[#ffcd2e]">
-                          <div class="xs:rounded-[8px] rounded-[3.771px]">
-                            <ImageWithToggle
-                              src={item.avatar}
-                              alt="Mainavatar"
-                              className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw] object-fit-cover xs:rounded-[8px] rounded-[3.771px]"
-                            />
-                          </div>
+                        <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
+                          <ImageWithToggle
+                            src={Mainavatar}
+                            alt="Mainavatar"
+                            className="object-fit-cover w-full h-full relative z-10"
+                          />
                         </div>
                         {/* <ImageWithToggle
                           src={item.avatar}

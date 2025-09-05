@@ -476,6 +476,32 @@ header {
 }
 
 
+
+.gradient-border {
+  position: relative;
+  display: inline-block;
+  padding: 2.2px;
+  /* border thickness */
+  border-radius: 3.771px;
+  background: linear-gradient(90deg, #D7FF53 0%, #FD4F2B 100%);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 2.2px;
+  /* matches border thickness */
+  /* background: #F47B9A; */
+  /* inner background color (pink like your design) */
+  border-radius: calc(3.771px - 2.2px);
+  /* adjust for inner radius */
+  z-index: 1;
+}
+
+  .gradient-border img {
+    border-radius: calc(3.771px - 2.2px);
+  }
+
 @media (max-width: 1600px) {
   .main-heading {
     font-size: 3.8rem;
