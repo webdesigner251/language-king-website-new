@@ -261,7 +261,7 @@ const Testimonials = () => {
                           alt="avatar"
                           className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         /> */}
-                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-[#ffcd2e]">
                           <div class="xs:rounded-[8px] rounded-[3.771px]">
                             <ImageWithToggle
                               src={item.avatar}
@@ -374,7 +374,7 @@ const Testimonials = () => {
                           className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-1"
                         />
 
-                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
+                        <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-[#ffcd2e]">
                           <div class="xs:rounded-[8px] rounded-[3.771px]">
                             <ImageWithToggle
                               src={item.avatar}
