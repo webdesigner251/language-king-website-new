@@ -22,22 +22,22 @@ import LandingTeacherImage5 from "../assets/course/landing-teacher-5.png";
 import LandingTeacherImage6 from "../assets/course/landing-teacher-6.png";
 import LandingTeacherImage7 from "../assets/course/landing-teacher-7.png";
 import PTEResponse1 from "../assets/course/major-mistakes.png";
-import Russia from "../assets/students/Russia.png";
-import Spain from "../assets/students/Spain.png";
-import India from "../assets/students/India.png";
-import China from "../assets/students/China.png";
-import Philippines from "../assets/students/Philippines.png";
-import Vietnam from "../assets/students/Vietnam.png";
-import Pakistan from "../assets/students/Pakistan.png";
-import Malaysia from "../assets/students/Malaysia.png";
-import Indonesia from "../assets/students/Indonesia.png";
-import SriLanka from "../assets/students/SriLanka.png";
-import Bangladesh from "../assets/students/Bangaladesh.png";
-import Nepal from "../assets/students/Nepal.png";
-import SKorea from "../assets/students/SKorea.png";
-import Iran from "../assets/students/Iran.png";
-import Thailand from "../assets/students/Thailand.png";
-import Brazil from "../assets/students/Brazil.png";
+import Russia from "../assets/students/1.png";
+import Spain from "../assets/students/2.png";
+import India from "../assets/students/3.png";
+import China from "../assets/students/4.png";
+import Philippines from "../assets/students/4.png";
+import Vietnam from "../assets/students/6.png";
+import Pakistan from "../assets/students/7.png";
+import Malaysia from "../assets/students/8.png";
+import Indonesia from "../assets/students/9.png";
+import SriLanka from "../assets/students/10.png";
+import Bangladesh from "../assets/students/11.png";
+import Nepal from "../assets/students/12.png";
+import SKorea from "../assets/students/13.png";
+import Iran from "../assets/students/1.png";
+import Thailand from "../assets/students/1.png";
+import Brazil from "../assets/students/1.png";
 
 import Russia1 from "../assets/flags/Russia1.png";
 import Spain1 from "../assets/flags/Spain1.png";
@@ -149,7 +149,7 @@ const NAATICCL = () => {
       description:
         "Author of popular book: NAATI CCL: Learn the Right Vocabulary",
     },
-        {
+    {
       title: "2x NAATI CCL",
       image: LandingTeacherImage5,
       description:
@@ -273,23 +273,23 @@ const NAATICCL = () => {
   }
 
   const courses = [
-      {
-        title: "PTE Master Class",
-        subtitle: "Missed your score by a few marks! Clear in 2 weeks",
-        desc:
-          "This is literally the best advice that I give every student. My strategies will teach you how to get 90 in each module. I’ve helped students out for 5+ years as a super-friendly teacher to get their desired score, now it’s your turn.",
-        image: CourseImg2,
-        avatar: avatar,
-        showRibbon: false,
-        className: "course-drop-shadow bg-course-blue-bg hover:bg-course-blue-hover-bg",
-        textClass: "text-gradient-secondary",
-        btnClass: "bg-gradient-secondary",
-        btn1Text: "Take the Course",
-        btn2Text: "View Details",
-        btn1Link: null,
-        btn2Link: "/pte-masterclass",
-      },
-     {
+    {
+      title: "PTE Master Class",
+      subtitle: "Missed your score by a few marks! Clear in 2 weeks",
+      desc: "This is literally the best advice that I give every student. My strategies will teach you how to get 90 in each module. I’ve helped students out for 5+ years as a super-friendly teacher to get their desired score, now it’s your turn.",
+      image: CourseImg2,
+      avatar: avatar,
+      showRibbon: false,
+      className:
+        "course-drop-shadow bg-course-blue-bg hover:bg-course-blue-hover-bg",
+      textClass: "text-gradient-secondary",
+      btnClass: "bg-gradient-secondary",
+      btn1Text: "Take the Course",
+      btn2Text: "View Details",
+      btn1Link: null,
+      btn2Link: "/pte-masterclass",
+    },
+    {
       title: "PTE Master Handbook",
       subtitle: "PTE 79+ in 7 days\nCrack PTE in 1 attempt",
       desc: "Learn exactly what students did to achieve their desired band. This book explains the exam structure, target scores, key tasks to focus on, and the 7-day strategy you need to follow to go from 5 to 8 each as quickly as possible.",
@@ -530,20 +530,21 @@ const NAATICCL = () => {
                           className="sm:w-[1.3227513228em] w-4"
                         />
                         <span
-                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-sm cursor-pointer transition-all duration-300 ease-in-out ${activeTab === tab
-                            ? "text-white"
-                            : "text-white/60 group-hover:text-white"
-                            }`}
+                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-sm cursor-pointer transition-all duration-300 ease-in-out ${
+                            activeTab === tab
+                              ? "text-white"
+                              : "text-white/60 group-hover:text-white"
+                          }`}
                         >
                           {tab === "tab1"
                             ? "Major Mistakes"
                             : tab === "tab2"
-                              ? "Minor Mistakes"
-                              : tab === "tab3"
-                                ? "How to avoid them"
-                                : tab === "tab4"
-                                  ? "Repeat Policy Pro Tip!"
-                                  : "and much more!"}
+                            ? "Minor Mistakes"
+                            : tab === "tab3"
+                            ? "How to avoid them"
+                            : tab === "tab4"
+                            ? "Repeat Policy Pro Tip!"
+                            : "and much more!"}
                         </span>
                       </button>
                     </li>

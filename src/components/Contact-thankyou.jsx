@@ -46,10 +46,10 @@ const ContactThankyou = () => {
             </div>
 
             <div className="bg-[#121212] sm:rounded-2xl rounded-[4px] xs:mt-0 mt-[1vw] sm:p-[0.794em] p-[3.3333333333vw] w-full mx-auto flex flex-col justify-center">
-              <h4 className="sm:block hidden font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5.96em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
+              <h4 className="sm:block hidden font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[6em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
                 Need immediate assistance?{" "}
               </h4>
-              <h4 className="sm:hidden block font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5.96em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
+              <h4 className="sm:hidden block font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[6em] text-white  mx-auto xs:pb-[0.6669em] pb-[2vw] text-center">
                 Need urgent assistance?{" "}
               </h4>
 

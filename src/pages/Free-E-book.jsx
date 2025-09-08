@@ -148,7 +148,7 @@ const FreeEBook = () => {
     <>
       {/* black space for header */}
       <div className="bg-black w-full lg:h-[7.9365079365em] h-[120px] lg:mt-[-7.9365079365em] mt-[-120px]"></div>
-      <section className="banner-wrapper 2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
+      <section className="banner-wrapper 2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[24vw] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
         <div className="sm:bg-transparent bg-gradient-FadetoBlack h-full w-full absolute top-0 z-10 lg:hidden block"></div>
         <ImageWithToggle
           src={BannerBg}
@@ -163,7 +163,7 @@ const FreeEBook = () => {
                 alt="NewTipsImage"
                 className="h-auto xl:max-w-[16.5343915344em]  md:max-w-[13.2275132275em] max-w-[200px] -mt-[20px] sm:mx-0 mx-auto"
               />
-              <span className="uppercase md:text-[1.0582010582em] text-base font-semibold text-white/50 sm:block hidden">
+              <span className="uppercase md:text-[1.0582010582em] xs:text-[2.5em] text-[4.4444444444em] font-semibold text-white/50 sm:block hidden">
                 LEARN FROM THE EXPERT + MORE:
               </span>
               <div className="sm:flex items-center gap-3 mt-[2.1164021164em] hidden">
@@ -183,14 +183,14 @@ const FreeEBook = () => {
               </div>
             </div>
             <div className="sm:w-[80%]">
-              <div className="flex flex-col justify-between sm:gap-y-[3.3068783069em] gap-y-[50px] h-full">
+              <div className="flex flex-col justify-between sm:gap-y-[3.3068783069em] gap-y-[7vw] h-full">
                 <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[1.9841269841em]">
                   <div className="lg:max-w-[70%] max-w-full">
-                    <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.1022] 2xl:mt-2 mt-0 text-white">
+                    <h1 className="font-inter font-bold md:text-[4.0211640212em] xs:text-[6.258148631em] text-[9em] sm:leading-[1.1022] leading-[1.25] 2xl:mt-2 mt-0 text-white xs:pt-0 pt-[7.8125vw]">
                       PTE Reading Blanks{" "}
                       <span className="text-[#F1CD5A] block">Free E-book</span>
                     </h1>
-                    <p className="font-light md:text-[1.1904761905em] leading-[1.55555555] sm:text-base max-w-[800px] text-sm text-white mt-3">
+                    <p className="font-light md:text-[1.1904761905em] leading-[1.55555555] xs:text-[2.5em] max-w-[800px] text-[4.0364583333em] text-white xs:mt-3 mt-[6.25vw]">
                       Learn how to solve PTE Reading Blanks with confidence,
                       master linkers, starters, and connectors, test your skills
                       with an interactive quiz, and boost your score
@@ -233,9 +233,9 @@ const FreeEBook = () => {
                   <div className="relative rounded-lg sm:w-auto w-full ">
                     <a
                       href="#"
-                      className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] sm:py-[0.6em] py-[14px] font-normal sm:text-[1.3227513228em] text-lg leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
+                      className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
-                      Start 7-Day Trial
+                      Start 7-Day Free Trial
                     </a>
                   </div>
                   <div>
@@ -251,12 +251,12 @@ const FreeEBook = () => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between">
-                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[20px]">
-                    <div className="sm:w-[25%] w-full">
-                      <span className="text-white sm:text-[1.1904761905em] sm:text-base text-sm font-semibold">
+                  <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[5.5555vw]">
+                    <div className="sm:w-[25%] w-full flex flex-col xs:gap-0 gap-[0.7vw]">
+                      <span className="text-white sm:text-[1.1904761905em] xs:text-[2.5em] text-[4.44444444em] font-semibold">
                         Other Books
                       </span>
-                      <h3 className="sm:text-[1.0582010582em] text-sm font-light text-white/60 leading-[1.2]">
+                      <h3 className="sm:text-[1.0582010582em] xs:text-[2.5em] text-[4.1666666667em] font-light text-white/60 leading-[1.2]">
                         PTE Study Material
                       </h3>
                     </div>
@@ -264,22 +264,22 @@ const FreeEBook = () => {
                       <ImageWithToggle
                         src={Book1}
                         alt="Book1"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
                         src={Book2}
                         alt="Book2"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
                         src={Book3}
                         alt="Book3"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
                         src={Book4}
                         alt="Book4"
-                        className="w-auto sm:h-[4.0343915344em] h-[61px] sm:max-w-[3.3068783069em] max-w-[50px]"
+                        className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                     </div>
                   </div>
@@ -303,10 +303,11 @@ const FreeEBook = () => {
             <div className="lg:w-[60%] w-full sm:inline hidden">
               <div
                 onClick={() => setSelectedBox("ebook")}
-                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${selectedBox === "ebook"
-                  ? "border-[#F18C2D]"
-                  : "border-[#1B1B1B]"
-                  }`}
+                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${
+                  selectedBox === "ebook"
+                    ? "border-[#F18C2D]"
+                    : "border-[#1B1B1B]"
+                }`}
               >
                 {/* E-Book Box content here */}
                 <div className="xl:py-[2.2486772487em] sm:py-[2.1164021164em] py-8 sm:px-[2.5132275132em] px-6 flex items-center justify-between">
@@ -328,10 +329,11 @@ const FreeEBook = () => {
 
               <div
                 onClick={() => setSelectedBox("aiportal")}
-                className={`cursor-pointer border-4 ${selectedBox === "aiportal"
-                  ? "border-[#F18C2D]"
-                  : "border-[#1B1B1B]"
-                  } rounded-[6px] bg-[#1B1B1B]`}
+                className={`cursor-pointer border-4 ${
+                  selectedBox === "aiportal"
+                    ? "border-[#F18C2D]"
+                    : "border-[#1B1B1B]"
+                } rounded-[6px] bg-[#1B1B1B]`}
               >
                 {/* AI Portal Box content here */}
                 <div className=" ">
@@ -378,7 +380,11 @@ const FreeEBook = () => {
                       <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px] items-center">
                         <button className="flex items-center gap-[0.6666666667em] bg-[#45595A] rounded-[0.5555555556em] sm:px-4 px-[0.8888888889em] sm:py-2 py-[0.4444444444em] text-white font-semibold text-[1.1904761905em] leading-[1.5555555] cursor-pointer">
                           Add
-                          <img src={Plus} alt="plus-icon" className="h-[1.1111111111em]" />
+                          <img
+                            src={Plus}
+                            alt="plus-icon"
+                            className="h-[1.1111111111em]"
+                          />
                         </button>
                         <h4 className="text-[#00FEFC] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px]  font-bold ">
                           + $9
@@ -443,11 +449,12 @@ const FreeEBook = () => {
                   {/* E-Book Only Box */}
                   <div
                     onClick={() => setSelected("ebook")}
-                    className={`mb-4 border-4 rounded-[6px] py-[24px] px-[12px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-          ${selected === "ebook"
+                    className={`mb-4 border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
+                    ${
+                      selected === "ebook"
                         ? "border-[#F18C2D] bg-[#0A0A09]"
                         : "border-[#707070] bg-[#1B1B1B]"
-                      }`}
+                    }`}
                   >
                     <div className="flex gap-2 items-start">
                       {selected === "ebook" && (
@@ -458,10 +465,10 @@ const FreeEBook = () => {
                         />
                       )}
                       <div className="flex flex-col">
-                        <h3 className="text-[#F3F2F3] mb-0 2xl:text-[50px] xl:text-[46px] md:text-[38px] sm:text-[26px] text-lg font-bold">
+                        <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
                           E-Book Only
                         </h3>
-                        <p className="text-sm text-[#B8B8B8] font-normal my-0">
+                        <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
                           Get 7-days Free Trial
                         </p>
                       </div>
@@ -469,10 +476,11 @@ const FreeEBook = () => {
                     <div>
                       <button
                         type="button"
-                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-2 font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
-              ${selected === "ebook"
-                            ? "bg-gradient-GreenBlue text-black"
-                            : "bg-[#3E3E3D] text-[#BFDF6A]"
+                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
+                          ${
+                            selected === "ebook"
+                              ? "bg-gradient-GreenBlue text-black"
+                              : "bg-[#3E3E3D] text-[#BFDF6A]"
                           }`}
                       >
                         $0.99
@@ -484,10 +492,11 @@ const FreeEBook = () => {
                   <div
                     onClick={() => setSelected("portal")}
                     className={`border-4 rounded-[6px] py-[24px] px-[12px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-          ${selected === "portal"
-                        ? "border-[#F18C2D] bg-[#0A0A09]"
-                        : "border-[#707070] bg-[#1B1B1B]"
-                      }`}
+          ${
+            selected === "portal"
+              ? "border-[#F18C2D] bg-[#0A0A09]"
+              : "border-[#707070] bg-[#1B1B1B]"
+          }`}
                   >
                     <div className="flex gap-2 items-start">
                       {selected === "portal" && (
@@ -509,11 +518,12 @@ const FreeEBook = () => {
                     <div>
                       <button
                         type="button"
-                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-2 font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
-              ${selected === "portal"
-                            ? "bg-gradient-GreenBlue text-black"
-                            : "bg-[#3E3E3D] text-[#BFDF6A]"
-                          }`}
+                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
+                           ${
+                             selected === "portal"
+                               ? "bg-gradient-GreenBlue text-black"
+                               : "bg-[#3E3E3D] text-[#BFDF6A]"
+                           }`}
                       >
                         $119
                       </button>
@@ -527,7 +537,7 @@ const FreeEBook = () => {
                       name="name"
                       id=""
                       placeholder="Full Name"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                     />
                   </div>
                   <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
@@ -536,7 +546,7 @@ const FreeEBook = () => {
                       name="email"
                       id=""
                       placeholder="Email Address"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                     />
                   </div>
                   <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
@@ -545,7 +555,7 @@ const FreeEBook = () => {
                       name="tel"
                       id=""
                       placeholder="Mobile number e.g: 0444786999"
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                     />
                   </div>
                   <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
@@ -554,7 +564,7 @@ const FreeEBook = () => {
                       name="ccn"
                       id=""
                       placeholder="Card Number "
-                      className="rounded-md placeholder:text-[#707070] bg-white py-[0.8888888889em] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                     />
                   </div>
                   <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] sm:text-sm text-xs sm:py-3  block">
@@ -568,7 +578,7 @@ const FreeEBook = () => {
                   <Link
                     // type="submit"
                     to="/ebook-submit"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] px-3 py-4 w-full font-bold sm:text-[1.3227513228em] text-base relative z-10 leading-[1.4] rounded-sm"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] xs:py-[0.5em] px-3 py-[5.2vw] w-full font-bold sm:text-[1.3227513228em] text-[4.444444em] relative z-10 leading-[1.4] rounded-sm"
                   >
                     Buy Now - $119
                   </Link>
@@ -653,23 +663,24 @@ const FreeEBook = () => {
           </div> */}
         </div>
 
-        <div className="border-y border-[#707070] relative z-10 sm:mb-[0] mb-[-32px]">
+        <div className="border-y border-[#707070] relative z-10 sm:mb-[0] mb-[-13.8888888889vw]">
           <div className="custom-container mx-auto md:py-[6.6137566138em] sm:py-[4.6296296296em] py-[40px] px-4 sm:px-[2.1164021164em] w-full z-10 relative">
-            <h2 className="font-inter font-normal md:text-[4.0211640212em] sm:text-[6.258148631em] text-[36px] leading-[1.11] 2xl:mt-[0.1315789474em] mt-0 text-white text-center sm:mb-[0.6578947368em] mb-5">
+            <h2 className="font-inter font-normal md:text-[4.0211640212em] sm:text-[6.258148631em] text-[11em] leading-[1.11] 2xl:mt-[0.1315789474em] xs:mt-0 mt-[3.125vw] text-white text-center sm:mb-[0.6578947368em] mb-[7.8125vw] xs:tracking-normal tracking-[2.2px]">
               FAQ
             </h2>
             <div className="md:max-w-[59.2592592593em] mx-auto sm:p-[1.5873015873em]">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`py-4 md:py-[1.0582010582em] ${index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
-                    }`}
+                  className={`py-[4.6875vw] xs:py-[1.0582010582em] ${
+                    index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
+                  }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="flex justify-between items-center w-full text-left gap-[1.0582010582em]"
                   >
-                    <span className="md:text-[1.455026455em] sm:text-[1.3227513228em] text-lg font-bold sm:leading-[1.273] leading-[1.55555555] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
+                    <span className="md:text-[1.455026455em] sm:text-[2.6041666667em] xs:text-[2.8125em] text-[4.4444444em] xs:font-bold font-semibold sm:leading-[1.273] leading-[1.55555555] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
                       {faq.question}
                     </span>
                     <span className="w-[28px] sm:w-[2.3148148148em] basis-[28px] sm:basis-[2.3148148148em] flex items-center justify-center">
@@ -678,7 +689,7 @@ const FreeEBook = () => {
                   </button>
 
                   {openIndex === index && faq.answer && (
-                    <div className="sm:mt-[0.8888888889em] mt-2 md:text-[1.1904761905em] sm:text-[1.0582010582em] leading-[1.556] font-medium text-base text-white/50 max-w-[93%]">
+                    <div className="xs:mt-[0.8888888889em] mt-[4.6875vw] xs:mb-0 mb-[1.5625vw] md:text-[1.1904761905em] sm:text-[2.0833333333em] xs:text-[2.1875em] text-[3.8888888889em] leading-[1.556] font-medium  text-white/50">
                       {faq.answer}
                     </div>
                   )}
