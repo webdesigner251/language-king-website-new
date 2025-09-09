@@ -77,29 +77,28 @@ const faqs = [
 
 const Contact = () => {
   return (
-
     <>
       <section className="md:pt-[4.6296296296em] pt-[100px] sm:mt-[-7.9365079365em] mt-[-80px]">
         <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full relative z-10">
           <div className=" md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em] ">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
-                <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] text-[32px] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
+                <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] xs:text-[8.75em] text-[8.8888888889em] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
                   Get in touch with us
                 </h2>
-                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] leading-[1.556] text-base max-w-[33.3333333333em] my-[0.6666666667em]">
+                <p className="relative text-[#B7B7B7] md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.556] text-[3.8888888889em] max-w-[33.3333333333em] sm:my-[0.6666666667em] mt-[-5.5px] xs:pb-0 pb-[0.7vw] xs:ps-0 ps-[0.2777777778vw]">
                   Contact us on xxxxxxxxx/ xxxxxxxxx
                 </p>
                 {/* Mobile Form */}
                 <div className="md:hidden block pt-3">
                   <GetInTouch />
                 </div>
-                <div className="lg:my-[3.9682539683em] my-[50px]">
-                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-lg leading-[32px]">
+                <div className="md:py-[3.9682539683em] sm:py-[9.375em] xs:py-[12.5em] pt-[13.8888888889vw] pb-[6.9444444444vw]">
+                  <h3 className="text-white font-bold md:text-[1.5873015873em] sm:text-xl text-[5.5555em] leading-[32px]">
                     Why Language King?
                   </h3>
-                  <ul className="mt-[1.3227513228em] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                  <ul className="md:mt-[1.3227513228em] mt-[2.7777777778vw] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -108,7 +107,7 @@ const Contact = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -118,7 +117,7 @@ const Contact = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -128,7 +127,7 @@ const Contact = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] text-sm text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -146,7 +145,7 @@ const Contact = () => {
                     alt="PinkQuote"
                     className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
                   />
-                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] leading-[1.333333] text-lg text-white">
+                  <p className="lg:text-[1.5873015873em] md:text-[1.323em] sm:text-[3.4375em] xs:text-[4.1666666667em] text-[4.8em] leading-[1.333333] text-lg text-white">
                     Language King is perfect for new or struggling students,
                     offering expert feedback and guidance to help achieve
                     desired scores.
@@ -203,7 +202,9 @@ const Contact = () => {
               <div className="mt-[1.587em]">
                 {faqs.map((faq, idx) => (
                   <div key={idx} className="mb-[16px]">
-                    <h3 className="text-white font-bold text-[1.1904761905em] leading-[1.55555]">{faq.question}</h3>
+                    <h3 className="text-white font-bold text-[1.1904761905em] leading-[1.55555]">
+                      {faq.question}
+                    </h3>
                     <p
                       className="pt-1 text-[#cacaca] md:text-[1.0582010582em] text-base font-normal leading-[1.5]"
                       dangerouslySetInnerHTML={{ __html: faq.answer }}

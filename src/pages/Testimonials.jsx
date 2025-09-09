@@ -424,7 +424,7 @@ const Testimonials = () => {
                     Why Language King?
                   </h3>
                   <ul className="md:mt-[1.3227513228em] mt-[2.7777777778vw] sm:ps-[1.3227513228em] gap-5 md:max-w-[45.6349206349em]">
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -433,7 +433,7 @@ const Testimonials = () => {
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -443,7 +443,7 @@ const Testimonials = () => {
                       strategies from carefully designed video lectures by
                       Abhishek, PTE & NAATI Master Trainer.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
@@ -453,7 +453,7 @@ const Testimonials = () => {
                       fit your busy schedule, learn from the comfort of your
                       home while sipping coffee.
                     </li>
-                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:py-[0.75em] p-[3.3vw]">
+                    <li className="flex items-start md:leading-[1.2] leading-[1.4] md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.888889em] text-[#ACACAC] md:gap-[1.8518518519em] gap-4 sm:px-0 sm:py-[0.75em] p-[3.3vw]">
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
