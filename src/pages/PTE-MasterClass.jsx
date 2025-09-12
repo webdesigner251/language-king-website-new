@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import PTEBanner from "../assets/pte-banner.png";
 import HomeBanner from "../assets/Homepage-banner.png";
@@ -65,7 +65,7 @@ import Support3 from "../assets/course/support-3.png";
 import Support4 from "../assets/course/support-4.png";
 import Support5 from "../assets/course/support-5.png";
 import Support6 from "../assets/course/support-6.png";
-import divider3 from "../assets/course/Group.png";
+// import divider3 from "../assets/course/Group.png";
 import CourseImg1 from "../assets/course-img1.png";
 import CourseImg3 from "../assets/course-img3.png";
 import CallbackForm from "../components/callback-popup";
@@ -405,6 +405,21 @@ const PTEMasterClass = () => {
     },
   ];
 
+  const studentsSectionRef = useRef(null);
+  const [showMobileCTA, setShowMobileCTA] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!studentsSectionRef.current) return;
+      const rect = studentsSectionRef.current.getBoundingClientRect();
+      // Show button if the bottom of the section is above or at the top of the viewport
+      setShowMobileCTA(rect.bottom <= 0);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div className="bg-gradient-to-b from-black/20 to-transparent relative h-full">
@@ -520,7 +535,7 @@ const PTEMasterClass = () => {
           </div>
         </section>
 
-        <section className="">
+        <section ref={studentsSectionRef} >
           <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full">
             <div className="flex justify-between items-center relative">
               <div className="text-center w-auto mx-auto z-10 relative bg-[#0c0c0c]/80 px-3">
@@ -634,19 +649,18 @@ const PTEMasterClass = () => {
                           className="sm:w-[1.3227513228em] w-4"
                         />
                         <span
-                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-[4.2em] cursor-pointer transition-all duration-300 ease-in-out ${
-                            activeTab === tab
-                              ? "text-white"
-                              : "text-white/60 group-hover:text-white"
-                          }`}
+                          className={`font-medium 2xl:text-[1.3227513228em] sm:leading-[1.55] lg:text-[1.1904761905em] sm:text-[1.5625em] text-[4.2em] cursor-pointer transition-all duration-300 ease-in-out ${activeTab === tab
+                            ? "text-white"
+                            : "text-white/60 group-hover:text-white"
+                            }`}
                         >
                           {tab === "band8"
                             ? "Band 8"
                             : tab === "band7"
-                            ? "Band 7"
-                            : tab === "band65"
-                            ? "Band 6.5"
-                            : "And others!"}
+                              ? "Band 7"
+                              : tab === "band65"
+                                ? "Band 6.5"
+                                : "And others!"}
                         </span>
                       </button>
                     </li>
@@ -768,7 +782,7 @@ const PTEMasterClass = () => {
                     <ImageWithToggle
                       src={student.image}
                       alt={student.name}
-                      className="w-full h-full rounded-full object-cover bg-white"
+                      className="w-full h-full rounded-full object-cover"
                     />
                     <img
                       src={student.flag}
@@ -897,16 +911,26 @@ const PTEMasterClass = () => {
               {grouped.map((row, rowIndex) => (
                 <div className="" key={rowIndex}>
                   {rowIndex !== 0 && (
-                    <div className="relative">
-                      <img
-                        src={divider3}
-                        alt="Divider"
-                        className="w-full sm:opacity-30 opacity-40 absolute left-0 right-0 bottom-0"
-                      />
-                    </div>
+                    // <div className="relative">
+                    //   <img
+                    //     src={divider3}
+                    //     alt="Divider"
+                    //     className="w-full sm:opacity-30 opacity-40 absolute left-0 right-0 bottom-0"
+                    //   />
+                    // </div>
+
+                    <div
+                      className="h-[8px] w-full"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(90deg, rgba(43,43,43,0.00) 0%, #000 51.44%, rgba(102,102,102,0.00) 100%)",
+                        filter: " blur(7.900000095367432px)",
+                      }}
+                    ></div>
+
                   )}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[3.3068783069em] sm:gap-[7.8125em] xs:gap-[10.4166666667em]  gap-[16vw] sm:pt-[3.9682539683em] sm:pb-[5.9523809524em] py-[12.3333333333vw]">
+                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[3.3068783069em] sm:gap-[7.8125em] xs:gap-[10.4166666667em]  gap-[16vw] sm:pt-[3.9682539683em] sm:pb-[5.9523809524em] py-[12.3333333333vw] bg-[#FFDD74] relative">
                     {row.map((item, index) => (
                       <div key={index}>
                         <ImageWithToggle
@@ -930,11 +954,11 @@ const PTEMasterClass = () => {
         </section>
 
         <section
-          className="sm:pt-[3.835978836em] xs:pt-[12.0833333333em] pt-[16.1111111111em] lg:scroll-mt-[90px]"
+          className="sm:pt-[3.835978836em] xs:pt-[12.0833333333em]  pt-[16.1111111111em] lg:scroll-mt-[90px]"
           id="courses"
         >
           <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] z-50">
-            <div className="md:pb-[3.9113428944em] sm:pb-[4.6875em] xs:pb-[6.25em] pb-[8.3333333333em]">
+            <div className="md:pb-[2vw] sm:pb-[4.6875em] xs:pb-[6.25em] pb-[8.3333333333em]">
               <h2 className="md:text-[1.9841269841em] text-2xl leading-[1.2] font-semibold text-white text-left">
                 Check out some other courses
               </h2>
@@ -1030,12 +1054,14 @@ const PTEMasterClass = () => {
       </div>
 
       {/* Mobile CTA button */}
-      <a
-        href="#"
-        className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white p-[5.5vw] w-full font-semibold sm:text-xl text-lg z-10 fixed bottom-0 left-0 right-0 md:hidden"
-      >
-        Take the Course
-      </a>
+      {showMobileCTA && (
+        <a
+          href="#"
+          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white p-[5.5vw] w-full font-semibold sm:text-xl text-lg z-10 fixed bottom-0 left-0 right-0 md:hidden"
+        >
+          Take the Course
+        </a>
+      )}
     </>
   );
 };

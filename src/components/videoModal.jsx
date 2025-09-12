@@ -5,10 +5,10 @@ const VideoModal = ({ isOpen, onClose, videoSrc }) => {
 
   return (
     <div className="fixed h-full top-0 bottom-0 left-0 right-0 inset-0 z-[51] bg-black/90 flex items-center justify-center">
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center px-3">
         <button
           onClick={onClose}
-          className="uppercase text-white text-[15px] font-bold absolute top-20 right-20 z-[51] cursor-pointer"
+          className="uppercase text-white text-[15px] font-bold absolute lg:top-20 lg:right-20 right-3 top-5 z-[51] cursor-pointer"
         >
           close
         </button>

@@ -54,21 +54,21 @@ const CallbackForm = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full sm:max-w-[37em] max-w-[90%] relative max-h-[95%] sm:h-auto overflow-y-auto"
+        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full md:max-w-[37em] xs:max-w-[73.0117340287em] max-w-[92%] relative max-h-[95%] sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] pb-[1.1904761905em]">
-          <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] text-2xl font-bold">
+        <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px]">
+          <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
             Get-a-Callback
           </h2>
           <button
             onClick={onClose}
-            className="flex items-center justify-center sm:p-[0.7936507937em] p-2 sm:w-[3.1084656085em] sm:h-[3.1084656085em] w-[30px] h-[30px] bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer shadow-[0px_4px_0px_#000000] text-white"
+            className="flex items-center justify-center sm:p-[0.7936507937em] p-2 sm:w-[3.1084656085em] sm:h-[3.1084656085em] w-[10.23em] h-[10.23em] bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer shadow-[0px_4px_0px_#000000] text-white"
           >
             <img src={CloseIcon} alt="CloseIcon" className="sm:w-[1.8518518519em] sm:h-[1.8518518519em] w-7 h-7" />
           </button>
         </div>
-        <p className="font-normal text-white/75 2xl:text-[1.3227513228em] md:text-[1.1904761905em] leading-[1.4] sm:text-base text-sm pt-[1.2em]">
+        <p className="font-normal text-white/75 2xl:text-[1.3227513228em] md:text-[1.1904761905em] sm:text-[2.1875em] xs:text-[2.9166666667em] text-[3.88889em] leading-[1.4] pt-[1.2em]">
           Please fill out the below form. Our team will be in touch with you shortly.
         </p>
         <div className="sm:pt-[1.5873015873em] pt-4">
@@ -76,7 +76,7 @@ const CallbackForm = ({ onClose }) => {
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="name"
-                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
               >
                 Full Name*
               </label>
@@ -86,7 +86,7 @@ const CallbackForm = ({ onClose }) => {
                 placeholder="Your first & last name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`placeholder:text-[#919191] bg-white py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base ${errors.name ? "border-red-500 border" : "border-[#949AA5] border-0"
+                className={`placeholder:text-[#919191] bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw] ${errors.name ? "border-red-500 border" : "border-[#949AA5] border-0"
                   }`}
               />
 
@@ -114,7 +114,7 @@ const CallbackForm = ({ onClose }) => {
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="phone"
-                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
               >
                 Phone Number*
               </label>
@@ -123,14 +123,14 @@ const CallbackForm = ({ onClose }) => {
                 setFormData={setFormData}
                 errors={errors}
                 wrapperClassName="border-0"
-                inputClassName="w-full rounded-[0px] py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base"
+                inputClassName="w-full rounded-[0px] md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
               />
             </div>
 
             <div className="flex flex-col mb-4">
               <label
                 htmlFor="course"
-                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] text-base mb-[0.3333333333em]"
+                className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
               >
                 Course Interested in*
               </label>
@@ -141,7 +141,7 @@ const CallbackForm = ({ onClose }) => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={errors.course}
-                buttonClassName="bg-white py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-base"
+                buttonClassName="bg-white border-0 md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
                 listClassName="rounded-[0px]"
               />
 
@@ -166,9 +166,9 @@ const CallbackForm = ({ onClose }) => {
               )}
             </div>
 
-            <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] text-sm py-[0.7142857143em] block">
-              Your information will be used to consider and fulfill your request
-              and will be handled pursuant to our{" "}
+            <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.6458333333em] py-[0.75em] block">
+              Your information will be used to consider and fulfill your request and
+              will be handled pursuant to our{" "}
               <a href="#" className="underline">
                 Privacy Policy.
               </a>
@@ -176,7 +176,7 @@ const CallbackForm = ({ onClose }) => {
 
             <button
               type="submit"
-              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white md:px-[0.6em] md:py-[0.8em] px-3 py-4  w-full font-bold 2xl:text-[1.3227513228em] md:text-[1.1904761905em] text-lg leading-[1.734] relative z-10 mt-[0.6em] mb-[0.6em]"
+              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] py-[4.6vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.6875em] relative z-10 mt-[0.8em]"
             >
               Get In Touch
             </button>

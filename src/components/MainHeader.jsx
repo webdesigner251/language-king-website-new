@@ -12,22 +12,30 @@ const MainHeader = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 5);
+      if (window.innerWidth > 1023) {
+        setIsSticky(window.scrollY > 5);
+      } else {
+        setIsSticky(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll); // Also handle resize
 
-    // Cleanup
+    // Initial check
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, []);
 
   return (
     <header
       className={`text-white xl:py-[2.116em] py-[32px] z-50 active-header ${isSticky
-          ? "lg:sticky lg:top-0 lg:bg-black lg:shadow-md"
-          : "lg:bg-noise-pattern relative"
+        ? "lg:sticky lg:top-0 lg:bg-black lg:shadow-md"
+        : "lg:bg-noise-pattern relative"
         }`}
     >
       <div className="custom-container mx-auto py-0 px-4 sm:px-[2.116em]">

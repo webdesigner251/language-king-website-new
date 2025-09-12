@@ -179,7 +179,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                 >{item.text}</p>
               </div>
 
-              <div className="lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[13.8888888889em] flex justify-content-between flex-col">
+              <div className="lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[10em] flex justify-content-between flex-col">
                 <div className="flex justify-center gap-2 md:hidden">
                   {testimonials.map((_, index) => (
                     <button

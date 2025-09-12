@@ -188,6 +188,17 @@ const Home = () => {
   const openPopup = () => setShowPopup(true);
   const closePopup = () => setShowPopup(false);
 
+  // Prevent body scroll when popup is open
+  React.useEffect(() => {
+    if (showPopup) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    // Cleanup on unmount
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [showPopup]);
+
   return (
     <>
       <section className="banner-wrapper  min-h-[110vh] sm:pt-[17.857em] pt-[450px] sm:pb-[6.614em] pb-[60px] mt-[-150px] relative flex items-center overflow-hidden">
@@ -257,7 +268,7 @@ const Home = () => {
             <div className="sm:mt-[3.175em] mt-[11.1111111111em] flex sm:flex-nowrap flex-wrap sm:gap-[2.050em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
               <Link
                 to="/home2"
-                className="primary-btn bg-gradient-primary md:p-[0.7936507937em] sm:p-[1.5645371578em] xs:p-[1.875em] p-[4.2vw] md:w-[50%] w-full relative z-10 text-center"
+                className="primary-btn bg-gradient-primary md:p-[0.7936507937em] sm:p-[1.5645371578em] xs:p-[1.875em] p-[4.2vw] sm:w-[50%] w-full relative z-10 text-center"
               >
                 <span className="font-semibold md:text-[1.3227513228em] sm:text-[3.125em] xs:text-[4.1666666667em] md:leading-[1.4] text-[5.55555555em] text-black">
                   Get-a Callback

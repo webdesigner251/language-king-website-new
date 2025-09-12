@@ -80,7 +80,7 @@ const Contact = () => {
     <>
       <section className="md:pt-[4.6296296296em] pt-[100px] sm:mt-[-7.9365079365em] mt-[-80px]">
         <div className="custom-container mx-auto px-4 sm:px-[2.1164021164em] w-full relative z-10">
-          <div className=" md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[60px] sm:pb-[3.5714285714em] ">
+          <div className="md:pt-[6.6137566138em] sm:pt-[4.6296296296em] pt-[16.6666666666667vw] sm:pb-[3.5714285714em] ">
             <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
               <div className="md:w-[50%] w-full">
                 <h2 className="lg:text-[3.4391534392em] sm:text-[4.1015625em] xs:text-[8.75em] text-[8.8888888889em] leading-[1.2] -mt-[10px] font-bold text-white text-left lg:max-w-full">
@@ -161,7 +161,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="sm:pt-[4.630em] md:pb-[6.614em] sm:pb-[5.291em] ">
+      <section className="sm:pt-[4.630em] md:pb-[6.614em] sm:pb-[5.291em]">
         <div className="custom-container mx-auto px-0 sm:px-[2.1164021164em] w-full relative z-10">
           <div className="flex md:flex-nowrap justify-between flex-wrap gap-[8.856em]">
             <div className="md:w-[50%] w-full md:flex hidden ps-8 flex-col gap-[9.921em] sm:pt-[1.720em]">
@@ -280,7 +280,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-redBlack md:hidden pt-[50px] sm:-mb-[2.1164021164em] -mb-[32px]">
+      <section className="bg-gradient-redBlack md:hidden pt-[50px] sm:-mb-[2.1164021164em] -mb-[13.8888888889vw]">
         <ImageWithToggle
           src={ContactMobileImage}
           alt="contactMobile"

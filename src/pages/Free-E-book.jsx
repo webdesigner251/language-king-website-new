@@ -303,11 +303,10 @@ const FreeEBook = () => {
             <div className="lg:w-[60%] w-full sm:inline hidden">
               <div
                 onClick={() => setSelectedBox("ebook")}
-                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${
-                  selectedBox === "ebook"
-                    ? "border-[#F18C2D]"
-                    : "border-[#1B1B1B]"
-                }`}
+                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${selectedBox === "ebook"
+                  ? "border-[#F18C2D]"
+                  : "border-[#1B1B1B]"
+                  }`}
               >
                 {/* E-Book Box content here */}
                 <div className="xl:py-[2.2486772487em] sm:py-[2.1164021164em] py-8 sm:px-[2.5132275132em] px-6 flex items-center justify-between">
@@ -329,11 +328,10 @@ const FreeEBook = () => {
 
               <div
                 onClick={() => setSelectedBox("aiportal")}
-                className={`cursor-pointer border-4 ${
-                  selectedBox === "aiportal"
-                    ? "border-[#F18C2D]"
-                    : "border-[#1B1B1B]"
-                } rounded-[6px] bg-[#1B1B1B]`}
+                className={`cursor-pointer border-4 ${selectedBox === "aiportal"
+                  ? "border-[#F18C2D]"
+                  : "border-[#1B1B1B]"
+                  } rounded-[6px] bg-[#1B1B1B]`}
               >
                 {/* AI Portal Box content here */}
                 <div className=" ">
@@ -448,129 +446,168 @@ const FreeEBook = () => {
                 {/* Mobile Box */}
                 <div className="sm:hidden block">
                   {/* E-Book Only Box */}
+
                   <div
-                    onClick={() => setSelected("ebook")}
-                    className={`mb-4 border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-                    ${
-                      selected === "ebook"
-                        ? "border-[#F18C2D] bg-[#0A0A09]"
-                        : "border-[#707070] bg-[#1B1B1B]"
-                    }`}
+                    className={`mb-4 rounded-[3px] py-[2px] px-[2px] transition-all duration-300
+                      ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
-                    <div className="flex gap-2 items-start">
-                      {selected === "ebook" && (
-                        <img
-                          src={badge}
-                          alt="Selected Badge"
-                          className="object-contain w-7 h-7"
-                        />
-                      )}
-                      <div className="flex flex-col">
-                        <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
-                          E-Book Only
-                        </h3>
-                        <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                          Get 7-days Free Trial
-                        </p>
+                    <div
+                      onClick={() => setSelected("ebook")}
+                      className={`rounded-[3px] py-[22px] px-[8px] flex gap-[10px] justify-between items-center cursor-pointer w-full ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B] border border-[#707070]"} `}
+                    >
+                      <div className="flex gap-2 items-start">
+                        {selected === "ebook" && (
+                          <img
+                            src={badge}
+                            alt="Selected Badge"
+                            className="object-contain w-7 h-7"
+                          />
+                        )}
+                        <div className="flex flex-col">
+                          <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
+                            E-Book Only
+                          </h3>
+                          <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
+                            Get 7-days Free Trial
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <button
-                        type="button"
-                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
-                          ${
-                            selected === "ebook"
+                      <div>
+                        <button
+                          type="button"
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
+                          ${selected === "ebook"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
-                          }`}
-                      >
-                        $0.99
-                      </button>
+                            }`}
+                        >
+                          $0.99
+                        </button>
+                      </div>
                     </div>
                   </div>
+                  {/* <div
+                    onClick={() => setSelected("ebook")}
+                    className={`mb-4 border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
+                    ${selected === "ebook"
+                        ? "border-[#F18C2D] bg-[#0A0A09]"
+                        : "border-[#707070] bg-[#1B1B1B]"
+                      }`}
+                  >
+                    
+                  </div> */}
 
                   {/* 6 Month AI Portal Box */}
                   <div
-                    onClick={() => setSelected("portal")}
-                    className={`border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-                    ${
-                      selected === "portal"
-                        ? "border-[#F18C2D] bg-[#0A0A09]"
-                        : "border-[#707070] bg-[#1B1B1B]"
-                    }`}
+                    className={`rounded-[3px] py-[2px] px-[2px] transition-all duration-300
+                      ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
-                    <div className="flex gap-2 items-start">
-                      {selected === "portal" && (
-                        <img
-                          src={badge}
-                          alt="Selected Badge"
-                          className="object-contain w-7 h-7"
-                        />
-                      )}
-                      <div className="flex flex-col">
-                        <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
-                          6 Month AI Portal
-                        </h3>
-                        <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                          Prediction File + 5 Books
-                        </p>
+                    <div
+                      onClick={() => setSelected("portal")}
+                      className={`rounded-[3px] py-[22px] px-[8px] flex gap-[10px] justify-between items-center cursor-pointer w-full ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B] border border-[#707070]"} `}
+                    >
+                      <div className="flex gap-2 items-start">
+                        {selected === "portal" && (
+                          <img
+                            src={badge}
+                            alt="Selected Badge"
+                            className="object-contain w-7 h-7"
+                          />
+                        )}
+                        <div className="flex flex-col">
+                          <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
+                            6 Month AI Portal
+                          </h3>
+                          <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
+                            Prediction File + 5 Books
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
+                          ${selected === "portal"
+                              ? "bg-gradient-GreenBlue text-black"
+                              : "bg-[#3E3E3D] text-[#BFDF6A]"
+                            }`}
+                        >
+                          $119
+                        </button>
                       </div>
                     </div>
-                    <div>
-                      <button
-                        type="button"
-                        className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn
-                           ${
-                             selected === "portal"
-                               ? "bg-gradient-GreenBlue text-black"
-                               : "bg-[#3E3E3D] text-[#BFDF6A]"
-                           }`}
-                      >
-                        $119
-                      </button>
-                    </div>
                   </div>
+
                 </div>
-                <form className="sm:pt-[1.5873015873em] pt-4">
-                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
+                <form className="sm:pt-[1.5873015873em] pt-[12px]">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-3">
                     <input
                       type="text"
                       name="name"
                       id=""
                       placeholder="Full Name"
-                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em]"
                     />
                   </div>
-                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-3">
                     <input
                       type="email"
                       name="email"
                       id=""
                       placeholder="Email Address"
-                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em]"
                     />
                   </div>
-                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-3">
                     <input
                       type="tel"
                       name="tel"
                       id=""
                       placeholder="Mobile number e.g: 0444786999"
-                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em]"
                     />
                   </div>
-                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-4">
-                    <input
+                  <div className="flex flex-col sm:mb-[1.0582010582em] mb-3">
+                    {/* <input
                       type="tel"
                       name="ccn"
                       id=""
-                      placeholder="Card Number "
+                      placeholder="Card Number  "
                       className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
-                    />
+                    /> */}
+                    <div className="rounded-[3px] flex items-center justify-between bg-white">
+                      <input
+                        type="tel"
+                        name="ccn"
+                        id=""
+                        placeholder="Card Number "
+                        className="placeholder:text-[#707070] outline-none w-[55%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                      />
+                      <div className="flex gap-2 w-[45%] justify-end">
+
+                        {/* Expiry Date */}
+                        <input
+                          type="text"
+                          name="expiry_date"
+                          placeholder="MM / YY"
+                          required
+                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
+                        />
+
+                        {/* CVC */}
+                        <input
+                          type="text"
+                          name="cvc"
+                          placeholder="CVC"
+                          required
+                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[3.5em]"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] sm:text-sm text-xs sm:py-3  block">
                     Secure Checkout Powered by
-                    <a href="#" className="underline">
+                    <a href="#" className="underline ps-1">
                       Stripe
                     </a>
                   </span>
@@ -673,9 +710,8 @@ const FreeEBook = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`py-[4.6875vw] xs:py-[1.0582010582em] ${
-                    index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
-                  }`}
+                  className={`py-[4.6875vw] xs:py-[1.0582010582em] ${index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
+                    }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}

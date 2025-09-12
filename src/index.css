@@ -115,7 +115,9 @@
   will-change: opacity;
 }
 
-
+.overflow-hidden {
+  overflow: hidden !important;
+}
 
 * {
   font-family: "Inter", sans-serif;
@@ -604,8 +606,9 @@ header {
   header.active-header .desktop-logo,
   .desktop-logo {
     transform: scale(1.2);
-    top: -60px !important;
+    top: -12.5em !important;
     left: -21%;
+    height: 29.1666666667em !important;
   }
 
   .menu-icon {
@@ -623,7 +626,7 @@ header {
 }
 
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
 
   header.active-header .desktop-logo,
   .desktop-logo {
@@ -631,7 +634,7 @@ header {
     top: -30px !important;
     height: auto !important;
   }
-}
+} */
 
 .swiper-pagination {
   display: none;
