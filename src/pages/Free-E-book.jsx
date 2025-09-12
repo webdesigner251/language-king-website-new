@@ -10,7 +10,7 @@ import Book4 from "../assets/ebook/book4.png";
 // import video from "../assets/videos/placeholder-video.mp4";
 import BGgradient from "../assets/ebook/gradient.png";
 import Rectangle from "../assets/ebook/rectangle.png";
-import badge from "../assets/ebook/badge.png";
+import badge from "../assets/ebook/badge.svg";
 import Plus from "../assets/icons/plus.svg";
 import { Link } from "react-router-dom";
 
@@ -444,6 +444,7 @@ const FreeEBook = () => {
                     </span>
                   </div>
                 </div>
+
                 {/* Mobile Box */}
                 <div className="sm:hidden block">
                   {/* E-Book Only Box */}
@@ -491,12 +492,12 @@ const FreeEBook = () => {
                   {/* 6 Month AI Portal Box */}
                   <div
                     onClick={() => setSelected("portal")}
-                    className={`border-4 rounded-[6px] py-[24px] px-[12px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-          ${
-            selected === "portal"
-              ? "border-[#F18C2D] bg-[#0A0A09]"
-              : "border-[#707070] bg-[#1B1B1B]"
-          }`}
+                    className={`border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
+                    ${
+                      selected === "portal"
+                        ? "border-[#F18C2D] bg-[#0A0A09]"
+                        : "border-[#707070] bg-[#1B1B1B]"
+                    }`}
                   >
                     <div className="flex gap-2 items-start">
                       {selected === "portal" && (
@@ -507,10 +508,10 @@ const FreeEBook = () => {
                         />
                       )}
                       <div className="flex flex-col">
-                        <h3 className="text-[#F3F2F3] mb-0 2xl:text-[50px] xl:text-[46px] md:text-[38px] sm:text-[26px] text-lg font-bold">
+                        <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
                           6 Month AI Portal
                         </h3>
-                        <p className="text-sm text-[#B8B8B8] font-normal my-0">
+                        <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
                           Prediction File + 5 Books
                         </p>
                       </div>
