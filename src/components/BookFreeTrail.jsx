@@ -89,7 +89,7 @@ const BookFreeTrail = () => {
         </div>
 
         <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
-        <label
+          <label
             htmlFor="phone"
             className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
           >
@@ -119,7 +119,7 @@ const BookFreeTrail = () => {
             }
             error={errors.course}
             buttonClassName="bg-white border-0 md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
-            listClassName="rounded-[0px]"
+            listClassName="rounded-0 xs:max-h-60 max-h-40"
           />
 
           {errors.course && (

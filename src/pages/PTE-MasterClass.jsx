@@ -899,7 +899,7 @@ const PTEMasterClass = () => {
 
         <section className="custom-container sm:px-[2.1164021164em] px-4">
           <div className="sm:pb-[5.291005291em] xs:pb-[16.6666666667em] pb-[22.2222222222em] border-y-2 border-[#252525]">
-            <div className="mx-auto 2xl:px-[8.9285714286em] md:px-[6.6137566138em] sm:px-[3.3068783069em] px-4 w-full bg-[#FFDD74] pb-[1.9841269841em]">
+            <div className="mx-auto 2xl:px-[8.9285714286em] md:px-[6.6137566138em] sm:px-[3.3068783069em] px-4 w-full bg-[#FFDD74] pb-[1.9841269841em] support-grid">
               <div className="sm:pt-[3.4391534392em] pt-[7.7777777778vw]">
                 <h2 className="text-black lg:text-[3.1746031746em] md:text-[3.1746031746em] sm:text-[5.625em] xs:text-[7.5em] text-[7.7777777778em] sm:font-bold font-extrabold xs:leading-normal  leading-[1.2]">
                   Support{" "}
@@ -909,28 +909,21 @@ const PTEMasterClass = () => {
                 </p>
               </div>
               {grouped.map((row, rowIndex) => (
-                <div className="" key={rowIndex}>
+                <div className="grid-block" key={rowIndex}>
                   {rowIndex !== 0 && (
-                    // <div className="relative">
-                    //   <img
-                    //     src={divider3}
-                    //     alt="Divider"
-                    //     className="w-full sm:opacity-30 opacity-40 absolute left-0 right-0 bottom-0"
-                    //   />
-                    // </div>
-
                     <div
-                      className="h-[8px] w-full"
+                      className="h-[4px] w-full"
                       style={{
                         backgroundImage:
                           "linear-gradient(90deg, rgba(43,43,43,0.00) 0%, #000 51.44%, rgba(102,102,102,0.00) 100%)",
                         filter: " blur(7.900000095367432px)",
                       }}
                     ></div>
-
                   )}
+                  <div
+                    className={`inner grid grid-cols-1 md:grid-cols-2 md:gap-[3.3068783069em] sm:gap-[7.8125em] xs:gap-[10.4166666667em] gap-[16vw] sm:pt-[3.9682539683em] sm:pb-[5.9523809524em] pb-[16vw] bg-[#FFDD74] relative ${rowIndex === 0 ? "pt-[12.3333vw]" : "pt-[18vw]"}`}
+                  >
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[3.3068783069em] sm:gap-[7.8125em] xs:gap-[10.4166666667em]  gap-[16vw] sm:pt-[3.9682539683em] sm:pb-[5.9523809524em] py-[12.3333333333vw] bg-[#FFDD74] relative">
                     {row.map((item, index) => (
                       <div key={index}>
                         <ImageWithToggle

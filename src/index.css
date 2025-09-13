@@ -500,9 +500,14 @@ header {
   z-index: 1;
 }
 
-  .gradient-border img {
-    border-radius: calc(3.771px - 2.2px);
-  }
+.gradient-border img {
+  border-radius: calc(3.771px - 2.2px);
+}
+
+.support-grid>.grid-block:first-of-type>.inner {
+  padding-top: 0 !important;
+}
+
 
 @media (max-width: 1600px) {
   .main-heading {
@@ -601,15 +606,23 @@ header {
   }
 }
 
+
 @media (max-width: 480px) {
 
   header.active-header .desktop-logo,
+  .desktop-logo {
+    top: -60px;
+    left: -21%;
+    transform: scale(1.2);
+  }
+
+  /* header.active-header .desktop-logo,
   .desktop-logo {
     transform: scale(1.2);
     top: -12.5em !important;
     left: -21%;
     height: 29.1666666667em !important;
-  }
+  } */
 
   .menu-icon {
     width: 45px;
@@ -626,7 +639,7 @@ header {
 }
 
 
-/* @media (max-width: 400px) {
+@media (max-width: 400px) {
 
   header.active-header .desktop-logo,
   .desktop-logo {
@@ -634,7 +647,16 @@ header {
     top: -30px !important;
     height: auto !important;
   }
-} */
+}
+
+@media (max-width: 360px) {
+
+  header.active-header .desktop-logo,
+  .desktop-logo {
+    transform: scale(1.4);
+  }
+
+}
 
 .swiper-pagination {
   display: none;

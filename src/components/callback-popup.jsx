@@ -122,12 +122,12 @@ const CallbackForm = ({ onClose }) => {
                 formData={formData}
                 setFormData={setFormData}
                 errors={errors}
-                wrapperClassName="border-0"
-                inputClassName="w-full rounded-[0px] md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
+                wrapperClassName="border-0 "
+                inputClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
               />
             </div>
 
-            <div className="flex flex-col mb-4">
+            <div className="flex flex-col xs:mb-4 mb-[3.75em]">
               <label
                 htmlFor="course"
                 className="text-white font-semibold 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
@@ -141,8 +141,9 @@ const CallbackForm = ({ onClose }) => {
                   setFormData((prev) => ({ ...prev, course: value }))
                 }
                 error={errors.course}
-                buttonClassName="bg-white border-0 md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
-                listClassName="rounded-[0px]"
+                buttonClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
+                wrapperClassName="border-0"
+                listClassName="rounded-[0px] max-h-35"
               />
 
               {errors.course && (

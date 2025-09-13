@@ -250,6 +250,7 @@ const GetInTouch = () => {
                 }
                 error={null}
                 buttonClassName="border-1 border-[#949AA5] xs:rounded-md rounded-[3px] bg-white xs:py-[0.6666666667em] py-[4.4444444444vw] xs:px-[1em] px-[4.4444444444vw] md:text-[1.1904761905em] xs:text-[3.3333333333em] text-[4.16667em] leading-[1.556]"
+                listClassName="xs:max-h-60 max-h-40"
               />
             </div>
 

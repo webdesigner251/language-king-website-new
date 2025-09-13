@@ -27,7 +27,7 @@ const CustomDropdown = ({
 
       {isOpen && (
         <ul
-          className={`absolute left-0 z-20 mt-0 w-full bg-white border border-gray-300 shadow-lg max-h-60 overflow-y-auto ${listClassName}`}
+          className={`absolute left-0 z-20 mt-0 w-full bg-white border border-gray-300 shadow-lg overflow-y-auto ${listClassName}`}
         >
           {courses.map((course) => (
             <li
