@@ -177,7 +177,7 @@ const CallbackForm = ({ onClose }) => {
 
             <button
               type="submit"
-              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[0.8em] py-[4.6vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.6875em] relative z-10 mt-[0.8em]"
+              className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[0.8em] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
             >
               Get In Touch
             </button>
