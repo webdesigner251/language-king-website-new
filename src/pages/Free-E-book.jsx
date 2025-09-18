@@ -301,6 +301,7 @@ const FreeEBook = () => {
           <div className="flex lg:flex-nowrap flex-wrap 2xl:gap-[9.9206349206em] lg:gap-[5.291005291em] gap-[2.6455026455em]">
             {/* Desktop Box */}
             <div className="lg:w-[60%] w-full sm:inline hidden">
+              {/* E-Book Box content here */}
               <div
                 onClick={() => setSelectedBox("ebook")}
                 className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${selectedBox === "ebook"
@@ -308,7 +309,6 @@ const FreeEBook = () => {
                   : "border-[#1B1B1B]"
                   }`}
               >
-                {/* E-Book Box content here */}
                 <div className="xl:py-[2.2486772487em] sm:py-[2.1164021164em] py-8 sm:px-[2.5132275132em] px-6 flex items-center justify-between">
                   <div>
                     <h3 className="text-white font-bold lg:text-[2.380952381em] sm:text-[2.1164021164em] text-3xl leading-[1.167] mb-[0.1111111111em]">
@@ -326,6 +326,7 @@ const FreeEBook = () => {
                 </div>
               </div>
 
+              {/* AI Portal Box content here */}
               <div
                 onClick={() => setSelectedBox("aiportal")}
                 className={`cursor-pointer border-4 ${selectedBox === "aiportal"
@@ -333,7 +334,6 @@ const FreeEBook = () => {
                   : "border-[#1B1B1B]"
                   } rounded-[6px] bg-[#1B1B1B]`}
               >
-                {/* AI Portal Box content here */}
                 <div className=" ">
                   <div className="flex xl:p-[2.1164021164em] sm:p-[1.5873015873em] p-6 xl:gap-[2.7777777778em] sm:gap-[1.8518518519em] gap-[28px] border-b-2 border-white border-dashed">
                     <img
@@ -393,6 +393,8 @@ const FreeEBook = () => {
                 </div>
               </div>
             </div>
+
+            
             <div className="lg:w-[40%] w-full">
               <div className="bg-[#1B1B1B] xl:p-[2.7777777778em] sm:p-[2.1164021164em] px-4 sm:py-[1.5873015873em] py-6 rounded-[0.6613756614em]">
                 <div className="sm:block hidden">
@@ -448,12 +450,12 @@ const FreeEBook = () => {
                   {/* E-Book Only Box */}
 
                   <div
-                    className={`mb-4 rounded-[3px] py-[2px] px-[2px] transition-all duration-300
+                    className={`mb-4 rounded-[5px] p-[2px] transition-all duration-300
                       ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
                       onClick={() => setSelected("ebook")}
-                      className={`rounded-[3px] py-[22px] px-[8px] flex gap-[10px] justify-between items-center cursor-pointer w-full ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B] border border-[#707070]"} `}
+                      className={`rounded-[3px] w-full py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
                     >
                       <div className="flex gap-2 items-start">
                         {selected === "ebook" && (
@@ -499,12 +501,12 @@ const FreeEBook = () => {
 
                   {/* 6 Month AI Portal Box */}
                   <div
-                    className={`rounded-[3px] py-[2px] px-[2px] transition-all duration-300
+                    className={`rounded-[5px] p-[2px] transition-all duration-300
                       ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
                       onClick={() => setSelected("portal")}
-                      className={`rounded-[3px] py-[22px] px-[8px] flex gap-[10px] justify-between items-center cursor-pointer w-full ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B] border border-[#707070]"} `}
+                      className={`rounded-[3px] py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
                     >
                       <div className="flex gap-2 items-start">
                         {selected === "portal" && (
@@ -581,9 +583,9 @@ const FreeEBook = () => {
                         name="ccn"
                         id=""
                         placeholder="Card Number "
-                        className="placeholder:text-[#707070] outline-none w-[55%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                        className="placeholder:text-[#707070] outline-none w-[54%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                       />
-                      <div className="flex gap-2 w-[45%] justify-end">
+                      <div className="flex gap-0 w-[46%] justify-end">
 
                         {/* Expiry Date */}
                         <input
@@ -598,9 +600,9 @@ const FreeEBook = () => {
                         <input
                           type="text"
                           name="cvc"
-                          placeholder="CVC"
+                          placeholder="/ CVC"
                           required
-                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[3.5em]"
+                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
                         />
                       </div>
                     </div>

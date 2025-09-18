@@ -453,7 +453,7 @@ const PTEMasterClass = () => {
                     <ImageWithToggle
                       src={avatar}
                       alt="avatar"
-                      className="md:w-[3.3068783069em] md:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
+                      className="md:w-[3.3068783069em] md:h-[3.3068783069em] xs:w-[7.8125em] xs:h-[7.8125em] w-[13.8888888889vw] h-[13.8888888889vw] rounded-full border-4 border-white/10"
                     />
                     <h3 className="md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[5em] font-light text-white/60">
                       Taught by{" "}
@@ -478,7 +478,7 @@ const PTEMasterClass = () => {
                   >
                     <span className="font-semibold md:text-[1.3227513228em] sm:text-[3.125em] xs:text-[4.1666666667em] md:leading-[1.4] text-[5.55555555em] align-middle inline-flex items-center gap-[18px] justify-center text-center text-white">
                       <svg
-                        className="w-[1.05em] h-[1.15em]"
+                        className="sm:w-[1.05em] sm:h-[1.15em] xs:w-[3.4375em] xs:h-[3.4375em] w-[5.8333333333vw] h-[6.3888888889vw]"
                         width="21"
                         height="23"
                         viewBox="0 0 21 23"
@@ -1050,7 +1050,7 @@ const PTEMasterClass = () => {
       {showMobileCTA && (
         <a
           href="#"
-          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-secondary text-white p-[5.5vw] w-full font-semibold sm:text-xl text-lg z-10 fixed bottom-0 left-0 right-0 md:hidden"
+          className="primary-btn bg-gradient-secondary align-middle inline-flex items-center justify-center text-center text-white p-[5.2vw] w-full font-semibold sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.55em] z-10 fixed bottom-0 left-0 right-0 md:hidden"
         >
           Take the Course
         </a>

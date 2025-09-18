@@ -199,7 +199,7 @@ const PhoneInput = ({
             <li
               key={country.code}
               onClick={() => handleSelect(country)}
-              className="flex items-center sm:gap-2 gap-[3.5vw] sm:px-[1.058em] sm:py-[0.794em] px-[1.2em] xs:py-[0.529em] py-[4.44444444vw] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] xs:text-[2.5em] text-[4.16667vw] leading-normal cursor-pointer"
+              className="flex items-center sm:gap-2 gap-[3.5vw] sm:px-[1.058em] sm:py-[0.794em] px-[1.0666666667em] xs:py-[0.529em] py-[4.2vw] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] xs:text-[2.5em] text-[4.16667vw] leading-normal cursor-pointer text-black"
             >
               <div className="flex items-center xs:gap-4 gap-[3.5vw]">
                 <img

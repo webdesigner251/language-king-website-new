@@ -426,9 +426,8 @@ const NAATICCL = () => {
             <div className="grid lg:grid-cols-2 items-end">
               <div className="">
                 <div className="flex flex-col 2xl:gap-[1.0582010582em] sm:gap-[0.7936507937em] xs:gap-[2.5em] gap-[4.8vw]">
-                  <h2 className="text-white font-bold 2xl:text-[1.8229166667em] md:text-[1.5873015873em] sm:text-[3.1290743155em] xs:text-[3.75em] text-[6.6666666667em] xs:mb-0 mb-[-1.5625vw]">
-                    <span className="text-[#FFEE00]">NAATI CCL</span> FAST{" "}
-                    <span className="text-[#52D34E]">TRACK COURSE</span>
+                  <h2 className="text-[#52D34E] font-bold 2xl:text-[1.8229166667em] md:text-[1.5873015873em] sm:text-[3.1290743155em] xs:text-[3.75em] text-[6.6666666667em] xs:mb-0 mb-[-1.5625vw]">
+                    NAATI CCL FAST COURSE
                   </h2>
                   <h1 className="font-inter font-bold md:text-[4.0211640212em] sm:text-[6.258148631em] xs:text-[7.5em] text-[10em] leading-[1.11] 2xl:mt-2 mt-0 text-white">
                     Exam in 7 days? <br />
@@ -443,9 +442,9 @@ const NAATICCL = () => {
                     <ImageWithToggle
                       src={avatar}
                       alt="avatar"
-                      className="md:w-[3.3068783069em] md:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
+                      className="md:w-[3.3068783069em] md:h-[3.3068783069em] xs:w-[7.8125em] xs:h-[7.8125em] w-[13.8888888889vw] h-[13.8888888889vw] rounded-full border-4 border-white/10"
                     />
-                    <h3 className="md:text-[1.1904761905em] text-base font-light text-white/60">
+                    <h3 className="md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[5em] font-light text-white/60">
                       Taught by{" "}
                       <span className="text-white font-size: font-semibold">
                         Abhishek
@@ -453,7 +452,7 @@ const NAATICCL = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="sm:mt-[2.5132275132em] mt-3 flex sm:flex-nowrap flex-wrap sm:gap-[2.0502645503em] gap-[16px] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
+                <div className="sm:mt-[2.5132275132em] mt-[4.8vw] flex sm:flex-nowrap flex-wrap sm:gap-[2.0502645503em] gap-[4.2vw] xl:max-w-[39.6825396825em] lg:max-w-[46.875em] md:max-w-[58.59375em]">
                   <a
                     href="#"
                     className="primary-btn bg-gradient-GreenBtn md:p-[0.7936507937em] sm:p-[1.5645371578em] xs:p-[1.875em] p-[4.2vw] md:w-[50%] w-full relative z-10 text-center"
@@ -468,7 +467,7 @@ const NAATICCL = () => {
                   >
                     <span className="font-semibold md:text-[1.3227513228em] sm:text-[3.125em] xs:text-[4.1666666667em] md:leading-[1.4] text-[5.55555555em] align-middle inline-flex items-center gap-[18px] justify-center text-center text-white">
                       <svg
-                        className="w-[1.05em] h-[1.15em]"
+                        className="sm:w-[1.05em] sm:h-[1.15em] xs:w-[3.4375em] xs:h-[3.4375em] w-[5.8333333333vw] h-[6.3888888889vw]"
                         width="21"
                         height="23"
                         viewBox="0 0 21 23"
@@ -1039,7 +1038,7 @@ const NAATICCL = () => {
       {showMobileCTA && (
         <a
           href="#"
-          className="primary-btn bg-gradient-GreenBtn inline-flex justify-center items-center text-center text-white px-3 sm:py-3 py-[14px] w-full font-semibold sm:text-xl text-lg  z-10 shadow-[0px_4px_0px_rgba(0,0,0,0.25),_0px_3px_0px_rgba(0,0,0,0.25)] fixed bottom-0 left-0 right-0 md:hidden"
+          className="primary-btn bg-gradient-GreenBtn align-middle inline-flex items-center justify-center text-center text-white p-[5.2vw] w-full font-semibold sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.55em] z-10 fixed bottom-0 left-0 right-0 md:hidden"
         >
           Take the Course
         </a>

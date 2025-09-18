@@ -161,7 +161,7 @@ const TestimonialCarousel = ({ testimonials }) => {
       >
         {testimonials.map((item, i) => (
           <SwiperSlide className="h-auto-swiper" key={i}>
-            <div className="flex flex-col justify-between h-full lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[13.8888888889em]">
+            <div className="flex flex-col justify-between h-full lg:gap-y-[3.3068783069em] md:gap-y-[6.5104166667em] sm:gap-y-[7.8125em] xs:gap-y-[10.4166666667em] gap-y-[10em]">
               <div>
                 <div className="rounded-[10px] w-full aspect-3/2 object-cover object-center relative z-10 mb-2">
                   <VideoPlayer

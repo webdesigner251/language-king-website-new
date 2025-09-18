@@ -54,7 +54,7 @@ const CallbackForm = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[28px] py-[18px] w-full md:max-w-[37em] xs:max-w-[73.0117340287em] max-w-[92%] relative max-h-[95%] sm:h-auto overflow-y-auto"
+        className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[18px] py-[18px] w-full md:max-w-[37em] xs:max-w-[73.0117340287em] max-w-[92%] relative max-h-[95%] sm:h-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px]">
@@ -143,7 +143,7 @@ const CallbackForm = ({ onClose }) => {
                 error={errors.course}
                 buttonClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
                 wrapperClassName="border-0"
-                listClassName="rounded-[0px] max-h-35"
+                listClassName="rounded-[0px] max-h-[190px]"
               />
 
               {errors.course && (

@@ -36,7 +36,7 @@ const CustomDropdown = ({
                 onChange(course);
                 setIsOpen(false);
               }}
-              className={`sm:px-[1.058em] sm:py-[0.794em] px-[1.0666666667em] xs:py-[0.529em] py-[3.8888888889vw] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] xs:text-[2.5em] text-[4.16667vw] leading-normal cursor-pointer text-black ${itemClassName}`}
+              className={`sm:px-[1.058em] sm:py-[0.794em] px-[1.0666666667em] xs:py-[0.529em] py-[4.2vw] bg-white hover:bg-[#F2F2F2] sm:text-[1.058em] xs:text-[2.5em] text-[4.16667vw] leading-normal cursor-pointer text-black ${itemClassName}`}
             >
               {course}
             </li>

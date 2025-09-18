@@ -292,7 +292,7 @@ const FreeEBooksubmit = () => {
           className="w-full h-full object-cover absolute top-0 left-0 right-0"
         />
         <div className="custom-container mx-auto sm:py-[64px] py-[40px] px-4 sm:px-[32px] w-full z-10 relative ">
-          <div className="max-w-[550px] mx-auto bg-black rounded-xl md:px-[1.8518518519em] sm:px-[4.375em] xs:px-[5.8333333333em] md:py-[1.8518518519em] sm:py-[4.375em] xs:py-[5.8333333333em] p-[20px]">
+          <div className="max-w-[550px] mx-auto bg-black xs:rounded-xl rounded-[4px] md:px-[1.8518518519em] sm:px-[4.375em] xs:px-[5.8333333333em] md:py-[1.8518518519em] sm:py-[4.375em] xs:py-[5.8333333333em] p-[20px]">
             <div className="text-center">
               <img
                 src={checkmark}
