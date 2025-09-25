@@ -105,12 +105,12 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <Link
+                          to="/faq"
                           className="flex items-center gap-4 text-[#919191] font-semibold md:text-[1.0582010582em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.1666666667em] transition-all duration-300 ease hover:text-white/80"
                         >
                           FAQs
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

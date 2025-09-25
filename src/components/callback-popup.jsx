@@ -167,7 +167,7 @@ const CallbackForm = ({ onClose }) => {
               )}
             </div>
 
-            <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.6458333333em] py-[0.75em] block">
+            <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
               Your information will be used to consider and fulfill your request and
               will be handled pursuant to our{" "}
               <a href="#" className="underline">

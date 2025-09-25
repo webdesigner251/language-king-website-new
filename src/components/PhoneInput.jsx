@@ -151,7 +151,7 @@ const PhoneInput = ({
     >
       {/* Country flag selector */}
       <div
-        className={`flex items-center md:px-[1.058em] md:py-[1.058em] sm:p-[2.8125em] xs:p-[3.75em] p-[5em] pe-[3.90625vw] cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[88px] shrink-0 grow-0 justify-between border-r ${flagwrapper}`}
+        className={`flex items-center md:px-[1.058em] md:py-[1.058em] sm:p-[2.8125em] xs:p-[3.75em] p-[5em] pe-[3.90625vw] cursor-pointer md:w-[6.349em] md:basis-[6.349em] basis-[22.9166666667vw] shrink-0 grow-0 justify-between border-r ${flagwrapper}`}
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         <img

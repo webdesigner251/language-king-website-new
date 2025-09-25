@@ -18,6 +18,7 @@ import Home2 from "./pages/thankyou"; // This page is for view purpose only to s
 import FreeEBooksubmit from "./pages/e-book-submit";
 import PrivacyPolicy from "./pages/privacy-policy"; // Importing Privacy Policy page
 import TermsOfUse from './pages/Terms-of-Use'; // Importing Terms of use page
+import Faq from "./pages/faq";
 function App() {
   const location = useLocation();
   const isHomePage =
@@ -41,6 +42,7 @@ function App() {
           <Route path="/ebook-submit" element={<FreeEBooksubmit />}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/Terms-of-Use" element={<TermsOfUse />} />
+          <Route path="/faq" element={<Faq />} />
         </Routes>
       </main>
       <Footer />
