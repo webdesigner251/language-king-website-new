@@ -450,14 +450,14 @@ const FreeEBook = () => {
                   {/* E-Book Only Box */}
 
                   <div
-                    className={`mb-4 rounded-[5px] p-[2px] transition-all duration-300
+                    className={`mb-4 rounded-[5px] p-[2.34px] transition-all duration-300
                       ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
                       onClick={() => setSelected("ebook")}
-                      className={`rounded-[3px] w-full py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
+                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
                     >
-                      <div className="flex gap-2 items-start">
+                      <div className="flex gap-[10px] items-start">
                         {selected === "ebook" && (
                           <img
                             src={badge}
@@ -477,7 +477,7 @@ const FreeEBook = () => {
                       <div>
                         <button
                           type="button"
-                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
                           ${selected === "ebook"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
@@ -501,14 +501,14 @@ const FreeEBook = () => {
 
                   {/* 6 Month AI Portal Box */}
                   <div
-                    className={`rounded-[5px] p-[2px] transition-all duration-300
+                    className={`rounded-[5px] p-[2.34px] transition-all duration-300
                       ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
                       onClick={() => setSelected("portal")}
-                      className={`rounded-[3px] py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
+                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
                     >
-                      <div className="flex gap-2 items-start">
+                      <div className="flex gap-[10px] items-start">
                         {selected === "portal" && (
                           <img
                             src={badge}
@@ -528,7 +528,7 @@ const FreeEBook = () => {
                       <div>
                         <button
                           type="button"
-                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold  text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
                           ${selected === "portal"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
@@ -575,7 +575,7 @@ const FreeEBook = () => {
                       name="ccn"
                       id=""
                       placeholder="Card Number  "
-                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                      className="rounded-[3px] placeholder:text-[#707070] bg-white sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] px-[1.3333333333em] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em]"
                     /> */}
                     <div className="rounded-[3px] flex items-center justify-between bg-white">
                       <input
@@ -583,7 +583,7 @@ const FreeEBook = () => {
                         name="ccn"
                         id=""
                         placeholder="Card Number "
-                        className="placeholder:text-[#707070] outline-none w-[54%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
+                        className="placeholder:text-[#707070] outline-none w-[54%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em]"
                       />
                       <div className="flex gap-0 w-[46%] justify-end">
 
@@ -593,7 +593,7 @@ const FreeEBook = () => {
                           name="expiry_date"
                           placeholder="MM / YY"
                           required
-                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
+                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em] max-w-[4.2em]"
                         />
 
                         {/* CVC */}
@@ -602,7 +602,7 @@ const FreeEBook = () => {
                           name="cvc"
                           placeholder="/ CVC"
                           required
-                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
+                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em] max-w-[4.2em]"
                         />
                       </div>
                     </div>

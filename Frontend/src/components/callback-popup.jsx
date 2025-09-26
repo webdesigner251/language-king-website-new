@@ -391,7 +391,7 @@ const CallbackForm = ({ onClose }) => {
               </div>
             </>
           ) : (
-            <div className="sm:pt-[1.5873015873em] pt-4">
+            <div className="">
               <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] mb-6">
                 <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
                   Get-a-Callback

@@ -345,15 +345,15 @@ const FreeEBooksubmit = () => {
                 Download Receipt
               </a>
 
-              <div className="bg-[#252525] rounded-[20px] sm:pt-5 sm:px-7 sm:pb-7 p-4 mt-6">
+              <div className="bg-[#252525] xs:rounded-[20px] rounded-[3px] xs:pt-5 xs:px-7 xs:pb-7 p-[2.2222222222vw] mt-6">
                 <div className="inline-flex items-center justify-center">
                   <h3 className="font-bold md:text-[2.1164021164em] sm:text-[5em] xs:text-[6.6666666667em] text-[6.5em] inline mx-auto tracking-[1px] relative  text-white border-text text-center">
                     What Happens Next?
                   </h3>
                 </div>
 
-                <div className="grid grid-cols-1 sm:gap-6 gap-4 md:mt-[1.3227513228em] sm:mt-[3.125em] xs:mt-[4.1666666667em] mt-[20px] text-start">
-                  <div className="flex items-start sm:gap-6 gap-[16px] text-white font-medium md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[3.8888889em] 2xl:leading-[24px] leading-[22px]">
+                <div className="grid grid-cols-1 sm:gap-6 gap-4 md:mt-[1.3227513228em] sm:mt-[3.125em] xs:mt-[4.1666666667em] mt-[20px] text-start max-w-[93%] mx-auto">
+                  <div className="flex items-start sm:gap-6 gap-[2.2222222222vw] text-white xs:font-medium font-normal md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.3333333333em] text-[4em] 2xl:leading-[24px] xs:leading-[22px] leading-[1.375]">
                     <img
                       src={EmailIcon}
                       alt="checklist"
