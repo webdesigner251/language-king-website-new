@@ -53,7 +53,7 @@ const BookFreeTrail = () => {
         <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
           <label
             htmlFor="name"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
           >
             Full Name*
           </label>
@@ -63,7 +63,7 @@ const BookFreeTrail = () => {
             placeholder="Your first & last name"
             value={formData.name}
             onChange={handleChange}
-            className={`md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
+            className={`md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] xs:py-[0.7222222222em] py-[4.223vw] md:px-[1.3333333333em] px-4 leading-[1.778] placeholder:text-[#919191] bg-white border ${errors.name ? "border-red-500" : "border-transparent"
               }`}
           />
 
@@ -91,7 +91,7 @@ const BookFreeTrail = () => {
         <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
           <label
             htmlFor="phone"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
           >
             Phone Number*
           </label>
@@ -99,15 +99,15 @@ const BookFreeTrail = () => {
             formData={formData}
             setFormData={setFormData}
             errors={errors}
-            wrapperClassName="border-0"
-            inputClassName="w-full rounded-[0px] md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-4 leading-[1.778]"
+            wrapperClassName="border"
+            inputClassName="w-full rounded-[0px] border border-transparent md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] xs:py-[0.7222222222em] py-[4.223vw] md:px-[1.3333333333em] px-4 leading-[1.778] placeholder:text-[#919191] bg-white"
           />
         </div>
 
         <div className="flex flex-col lg:mb-[1.0582010582em] md:mb-[1.5625em] sm:mb-[2.0860495437em] xs:mb-[2.5em] mb-[4.6875vw]">
           <label
             htmlFor="course"
-            className="text-white font-semibold md:text-[1.1904761905em] md:leading-[1.555] xs:text-[2.5em] text-[4.1666666667em] mb-[0.3333333333em]"
+            className="text-white font-semibold md:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.9166666667em]  text-[3.8888888888889em] mb-[0.3333333333em]"
           >
             Course Interested in*
           </label>
@@ -118,7 +118,7 @@ const BookFreeTrail = () => {
               setFormData((prev) => ({ ...prev, course: value }))
             }
             error={errors.course}
-            buttonClassName="bg-white border-0 md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] py-[14px] md:px-[1.3333333333em] px-6 leading-[1.778]"
+            buttonClassName="md:text-[1.1904761905em] xs:text-[2.5em] text-[4.1666666667em] md:py:[0.8888888889em] xs:py-[0.7222222222em] py-[4.223vw] md:px-[1.3333333333em] px-4 leading-[1.778] placeholder:text-[#919191] bg-white border"
             listClassName="rounded-0 xs:max-h-60 max-h-40"
           />
 
@@ -143,7 +143,7 @@ const BookFreeTrail = () => {
           )}
         </div>
 
-        <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] md:leading-[1.5] xs:text-[2.5em] text-[3.6458333333em] py-[0.75em] block">
+        <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] md:leading-[1.5] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
           Your information will be used to consider and fulfill your request and
           will be handled pursuant to our{" "}
           <a href="#" className="underline">
@@ -153,7 +153,7 @@ const BookFreeTrail = () => {
 
         <button
           type="submit"
-          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] py-[0.8em] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[5em] relative z-10 mt-[0.8em]"
+          className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[0.8em] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
         >
           Get In Touch
         </button>

@@ -31,7 +31,7 @@ const CallbackForm = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:gap-[1.323em] gap-4 md:mt-[1.852em] mt-7 text-start">
-                    <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
+                    <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-normal md:text-[1.0582010582em] text-[3.8888888889em] xs:leading-[22px] leading-[1.3]">
                         <img
                             src={CallIcon}
                             alt="checklist"
@@ -39,7 +39,7 @@ const CallbackForm = () => {
                         />
                         We’ll call you within 24 hours to discuss your preferred course, target score, and learning needs.
                     </div>
-                    <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-medium md:text-[1.0582010582em] text-base leading-[22px]">
+                    <div className="flex items-start sm:gap-[1.587em] gap-5 text-white font-normal md:text-[1.0582010582em] text-[3.8888888889em] xs:leading-[22px] leading-[1.3]">
                         <img
                             src={MemberIcon}
                             alt="checklist"
@@ -48,16 +48,16 @@ const CallbackForm = () => {
                         Our team will review your course interest and create a personalized plan tailored to your goals.
                     </div>
 
-                    <div className="bg-[#121212] rounded-2xl md:p-[0.794em] p-3 w-full mx-auto flex flex-col justify-center">
-                        <h4 className="font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-xl text-white  mx-auto pb-[0.6669em] text-center">
-                            Need immediate assistance?{" "}
+                    <div className="bg-[#121212] xs:rounded-[20px] rounded-[4px]  md:p-[0.794em] p-3 w-full mx-auto flex flex-col justify-center">
+                        <h4 className="font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5em] text-white mx-auto pb-[0.6669em] text-center">
+                            Need urgent assistance?{" "}
                         </h4>
 
-                        <ul className="flex flex-col gap-[1.0582010582em] max-w-auto mx-auto">
+                        <ul className="flex flex-col xs:gap-[1.0582010582em] gap-[2.7777777778em] max-w-auto mx-auto">
                             <li>
                                 <a
                                     href="tel:+61488876999"
-                                    className="flex items-center gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
+                                    className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-semibold md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                                 >
                                     <img src={PhoneICon} className="w-[2.646em]" />
                                     +61 488 877 999 &nbsp; / &nbsp; +61 444 876 555
@@ -66,7 +66,7 @@ const CallbackForm = () => {
                             <li>
                                 <a
                                     href="tel:+61488876999"
-                                    className="flex items-start gap-[1.058em] text-white font-semibold md:text-[1.0582010582em] sm:text-base text-sm"
+                                    className="flex items-start xs:gap-[1.058em]  gap-[0.7142857143em] text-white font-semibold md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                                 >
                                     <div className="w-[2.646em] flex items-center justify-center">
                                         <img src={CalenderIcon} className="w-[1.852em]" />
