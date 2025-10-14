@@ -1,5 +1,7 @@
 import { useState } from "react";
-import faqImage from '../assets/faq-image.png'
+import faqImage1 from '../assets/faq-img1.png'
+import faqImage2 from '../assets/faq-img2.png'
+import faqImage3 from '../assets/faq-img3.png'
 import { Link } from "react-router-dom";
 
 const faqs = [
@@ -191,8 +193,13 @@ const Faq = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="md:pt-[5.2604166667em] sm:pt-[6.875em] xs:pt-[9.1666666667em] pt-[12.2222222222em]">
-                        <img src={faqImage} alt="image" className="mx-auto md:w-[12.8854166667em] sm:w-[28.90625em] xs:w-[38.5416666667em] w-[51.3888888889em]" />
+                    <div className="md:mt-[5.2604166667em] sm:mt-[6.875em] xs:mt-[9.1666666667em] mt-[12.2222222222em] md:pt-[5.2604166667em] sm:pt-[6.875em] xs:pt-[9.1666666667em] pt-[12.2222222222em]">
+                        <div className="flex items-start justify-center">
+                            <img src={faqImage2} alt="faq img" className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[6.1507936508em] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"/>
+                            <img src={faqImage1} alt="faq img" className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[7.208994709em] xs:max-w-[12.8125em] max-w-[22.7777777778em] h-auto sm:mt-[-3.5714285714em] xs:mt-[-7.8125em] mt-[-13.8888888889em] sm:mx-[-1.9841269841em] xs:mx-[-3.125em] mx-[-8.3333333333em] z-1"/>
+                            <img src={faqImage3} alt="faq img" className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[6.1507936508em] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"/>
+                            {/* <img src={faqImage} alt="image" className="mx-auto md:w-[12.8854166667em] sm:w-[28.90625em] xs:w-[38.5416666667em] w-[51.3888888889em]" /> */}
+                        </div>
                         <div className="mt-[1.71875em] text-center">
 
                             <h3 className="text-white text-center font-semibold mb-[0.5916666667vw] leading-[1.4] md:text-[1.4583333333em] sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.5555555556em]">Still have questions?</h3>

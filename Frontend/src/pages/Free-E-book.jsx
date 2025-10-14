@@ -235,11 +235,11 @@ const FreeEBook = () => {
                       href="#"
                       className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
-                      Start 7-Day Free Trial
+                      Start 7-Day <span className="xs:hidden">Free</span> Trial
                     </a>
                   </div>
                   <div>
-                    <h4 className="text-[#F1CD5A] sm:text-[1.1904761905em] text-base leading-[1.55555555] font-semibold sm:text-start text-center">
+                    <h4 className="text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
                       Save $33 by using AI Portal{" "}
                       <span className="sm:inline hidden">
                         + Prediction File + 6 Books
@@ -448,9 +448,8 @@ const FreeEBook = () => {
                 {/* Mobile Box */}
                 <div className="sm:hidden block">
                   {/* E-Book Only Box */}
-
                   <div
-                    className={`mb-4 rounded-[5px] p-[2.34px] transition-all duration-300
+                    className={`mb-3 rounded-[5px] p-[2.34px] transition-all duration-300
                       ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
@@ -488,16 +487,6 @@ const FreeEBook = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div
-                    onClick={() => setSelected("ebook")}
-                    className={`mb-4 border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
-                    ${selected === "ebook"
-                        ? "border-[#F18C2D] bg-[#0A0A09]"
-                        : "border-[#707070] bg-[#1B1B1B]"
-                      }`}
-                  >
-                    
-                  </div> */}
 
                   {/* 6 Month AI Portal Box */}
                   <div

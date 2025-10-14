@@ -148,8 +148,6 @@ const Testimonials = () => {
                     className="object-fit-cover w-full h-full relative z-10"
                   />
                 </div>
-                {/* <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
-                </div> */}
 
                 <div className="flex items-center">
                   <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">NATALIA</span>
@@ -248,7 +246,7 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] xs:text-[2.3468057366em] text-[4.5801526718em] leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                       {item.title}
                     </p>
                     <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
@@ -271,11 +269,11 @@ const Testimonials = () => {
                           />
                         </div>
                       </div>
-                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.5801526718em] md:text-center text-start flex flex-col">
                         <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
-                        <span className="text-white md:text-[0.9259259259em] text-sm block">
+                        <span className="text-white md:text-[0.9259259259em]  text-[3.33333333vw] block">
                           {item.tag}
                         </span>
                       </div>
@@ -363,7 +361,7 @@ const Testimonials = () => {
                       </div>
                       {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
                     </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] xs:text-[2.3468057366em] text-[4.5801526718em] leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                       {item.title}
                     </p>
                     <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
@@ -387,11 +385,11 @@ const Testimonials = () => {
                           className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
                         /> */}
                       </div>
-                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.5801526718em] md:text-center text-start flex flex-col">
                         <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
-                        <span className="text-white md:text-[0.9259259259em] text-sm block">
+                        <span className="text-white md:text-[0.9259259259em]  text-[3.33333333vw] block">
                           {item.tag}
                         </span>
                       </div>
