@@ -151,6 +151,7 @@ const Home = () => {
                 className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold md:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
               >
                 Get-a Callback
+                
               </Link>
               <Link
                 to="/free-e-book"

@@ -17,6 +17,17 @@ import { Link } from "react-router-dom";
 // import checkmark from "../assets/icons/green-checkmark.svg";
 // import EmailIcon from "../assets/icons/green-email-icon.svg";
 import ImageWithToggle from "../components/ImageWithToggle";
+import useFreeEbookBanner from "../hooks/useFreeEbookBanner";
+import useFAQs from "../hooks/useFAQs";
+import useBookBox from "../hooks/useBookBox";
+
+// Helper function to get image URL
+const getImageUrl = (imageName, fallback) => {
+  if (imageName) {
+    return `http://localhost:3000/uploads/${imageName}`;
+  }
+  return fallback;
+};
 
 const faqs = [
   {
@@ -77,25 +88,25 @@ const PlusIcon = () => (
       height="41"
       rx="10"
       stroke="white"
-      stroke-opacity="0.5"
-      stroke-width="4"
-      stroke-linejoin="round"
+      strokeOpacity="0.5"
+      strokeWidth="4"
+      strokeLinejoin="round"
     />
     <path
       d="M15 23.8718H30"
       stroke="white"
-      stroke-opacity="0.5"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeOpacity="0.5"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M22.5 31.3718V16.3718"
       stroke="white"
-      stroke-opacity="0.5"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeOpacity="0.5"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -115,24 +126,33 @@ const MinusIcon = () => (
       height="41"
       rx="10"
       stroke="white"
-      stroke-width="4"
-      stroke-linejoin="round"
+      strokeWidth="4"
+      strokeLinejoin="round"
     />
     <path
       d="M15 23.8718H30"
       stroke="white"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
 
 const FreeEBook = () => {
-  // const [count, setCount] = useState(0);
-
-  // const increment = () => setCount((prev) => prev + 1);
-  // const decrement = () => setCount((prev) => (prev > 0 ? prev - 1 : 0));
+  const { bannerData, loading, error, refetch } = useFreeEbookBanner();
+  const {
+    faqs: dynamicFaqs,
+    loading: faqsLoading,
+    error: faqsError,
+    clearCache,
+  } = useFAQs();
+  const {
+    bookBoxData,
+    loading: bookBoxLoading,
+    error: bookBoxError,
+    clearCache: clearBookBoxCache,
+  } = useBookBox();
 
   // FAq section
   const [openIndex, setOpenIndex] = useState(0);
@@ -142,7 +162,44 @@ const FreeEBook = () => {
   };
 
   const [selected, setSelected] = useState("ebook");
-  const [selectedBox, setSelectedBox] = useState("aiportal");
+  const [selectedBox, setSelectedBox] = useState("ebook");
+  const [addPredictionFile, setAddPredictionFile] = useState(false);
+
+  if (loading || faqsLoading || bookBoxLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Manual refresh function for development/testing
+  const handleRefresh = () => {
+    if (refetch) {
+      refetch();
+    }
+    if (clearCache) {
+      clearCache();
+    }
+    if (clearBookBoxCache) {
+      clearBookBoxCache();
+    }
+  };
+
+  if (error) {
+    console.error("Banner data error:", error);
+  }
+
+  if (faqsError) {
+    console.error("FAQs data error:", faqsError);
+  }
+
+  if (bookBoxError) {
+    console.error("Book Box data error:", bookBoxError);
+  }
+
+  // Use dynamic FAQs if available, otherwise fallback to static FAQs
+  const faqsToDisplay = dynamicFaqs.length > 0 ? dynamicFaqs : faqs;
 
   return (
     <>
@@ -151,7 +208,7 @@ const FreeEBook = () => {
       <section className="banner-wrapper 2xl:pt-[5.291005291em] sm:pt-[4.6296296296em] pt-[24vw] sm:pb-[3.9682539683em] pb-[40px] relative flex flex-column justify-center items-center lg:mt-0 mt-0 min-h-[90vh] border-b border-[#707070]">
         <div className="sm:bg-transparent bg-gradient-FadetoBlack h-full w-full absolute top-0 z-10 lg:hidden block"></div>
         <ImageWithToggle
-          src={BannerBg}
+          src={getImageUrl(bannerData?.banner_bg_image, BannerBg)}
           alt="BannerBg"
           className="absolute w-full h-full top-0 left-0 right-0 bottom-0 object-cover"
         />
@@ -159,25 +216,25 @@ const FreeEBook = () => {
           <div className="flex lg:gap-x-[6.6137566138em] sm:gap-x-[13.671875em] gap-x-[140px] sm:flex-nowrap flex-wrap">
             <div className="sm:w-[20%] w-full flex flex-col justify-between">
               <img
-                src={NewTipsImage}
+                src={getImageUrl(bannerData?.new_tips_image, NewTipsImage)}
                 alt="NewTipsImage"
                 className="h-auto xl:max-w-[16.5343915344em]  md:max-w-[13.2275132275em] max-w-[200px] -mt-[20px] sm:mx-0 mx-auto"
               />
               <span className="uppercase md:text-[1.0582010582em] xs:text-[2.5em] text-[4.4444444444em] font-semibold text-white/50 sm:block hidden">
-                LEARN FROM THE EXPERT + MORE:
+                {bannerData?.expert_text || "LEARN FROM THE EXPERT + MORE:"}
               </span>
               <div className="sm:flex items-center gap-3 mt-[2.1164021164em] hidden">
                 <ImageWithToggle
-                  src={avatar}
+                  src={getImageUrl(bannerData?.expert_avatar, avatar)}
                   alt="avatar"
                   className="sm:w-[3.3068783069em] sm:h-[3.3068783069em] w-[50px] h-[50px] rounded-full border-4 border-white/10"
                 />
                 <div>
                   <span className="text-white sm:text-[1.1904761905em] text-lg font-semibold">
-                    Abhishek
+                    {bannerData?.expert_name || "Abhishek"}
                   </span>
                   <h3 className="sm:text-[1.0582010582em] text-base font-light text-white/60 leading-[1.2]">
-                    PTE Master Trainer
+                    {bannerData?.expert_title || "PTE Master Trainer"}
                   </h3>
                 </div>
               </div>
@@ -187,14 +244,20 @@ const FreeEBook = () => {
                 <div className="flex lg:flex-nowrap flex-wrap gap-5 justify-between lg:pe-[1.9841269841em]">
                   <div className="lg:max-w-[70%] max-w-full">
                     <h1 className="font-inter font-bold md:text-[4.0211640212em] xs:text-[6.258148631em] text-[9em] sm:leading-[1.1022] leading-[1.25] 2xl:mt-2 mt-0 text-white xs:pt-0 pt-[7.8125vw]">
-                      PTE Reading Blanks{" "}
-                      <span className="text-[#F1CD5A] block">Free E-book</span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            bannerData?.main_heading?.replace(
+                              "Free E-book",
+                              '<span class="text-[#F1CD5A] block">Free E-book</span>'
+                            ) ||
+                            'PTE Reading Blanks <span class="text-[#F1CD5A] block">Free E-book</span>',
+                        }}
+                      />
                     </h1>
                     <p className="font-light md:text-[1.1904761905em] leading-[1.55555555] xs:text-[2.5em] max-w-[800px] text-[4.0364583333em] text-white xs:mt-3 mt-[6.25vw]">
-                      Learn how to solve PTE Reading Blanks with confidence,
-                      master linkers, starters, and connectors, test your skills
-                      with an interactive quiz, and boost your score
-                      effortlessly
+                      {bannerData?.main_description ||
+                        "Learn how to solve PTE Reading Blanks with confidence, master linkers, starters, and connectors, test your skills with an interactive quiz, and boost your score effortlessly"}
                     </p>
                   </div>
                   <div className="lg:max-w-[30%] max-w-full lg:block hidden">
@@ -208,7 +271,7 @@ const FreeEBook = () => {
                           alt="CheckmarkYellow"
                           className="w-4"
                         />
-                        Attempt R&W blanks
+                        {bannerData?.learn_point_1 || "Attempt R&W blanks"}
                       </li>
                       <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
                         <img
@@ -216,7 +279,8 @@ const FreeEBook = () => {
                           alt="CheckmarkYellow"
                           className="w-4"
                         />
-                        Difference b/w linkers, <br /> starters and connectors
+                        {bannerData?.learn_point_2 ||
+                          "Difference b/w linkers, starters and connectors"}
                       </li>
                       <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
                         <img
@@ -224,10 +288,11 @@ const FreeEBook = () => {
                           alt="CheckmarkYellow"
                           className="w-4"
                         />
-                        Quiz to test your learning
+                        {bannerData?.learn_point_3 ||
+                          "Quiz to test your learning"}
                       </li>
                     </ul>
-                  </div>
+                  </div> 
                 </div>
                 <div className="lg:max-w-[70%] max-w-full flex lg:flex-nowrap flex-wrap items-center sm:justify-start justify-center lg:gap-[2.6455026455em] sm:gap-7 gap-4 sm:order-0 -order-1 ">
                   <div className="relative rounded-lg sm:w-auto w-full ">
@@ -235,15 +300,13 @@ const FreeEBook = () => {
                       href="#"
                       className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
-                      Start 7-Day Free Trial
+                      {bannerData?.cta_button_text || "Start 7-Day Free Trial"}
                     </a>
                   </div>
                   <div>
                     <h4 className="text-[#F1CD5A] sm:text-[1.1904761905em] text-base leading-[1.55555555] font-semibold sm:text-start text-center">
-                      Save $33 by using AI Portal{" "}
-                      <span className="sm:inline hidden">
-                        + Prediction File + 6 Books
-                      </span>
+                      {bannerData?.save_text ||
+                        "Save $33 by using AI Portal + Prediction File + 6 Books"}
                     </h4>
                     <span className="uppercase font-semibold text-white/50 text-[0.8597883598em] mt-[0.3846153846em] leading-[1.462] sm:inline hidden">
                       See below
@@ -254,30 +317,31 @@ const FreeEBook = () => {
                   <div className="flex sm:flex-nowrap flex-wrap sm:mt-0 mt-[1.6534391534em] items-end sm:gap-0 gap-[5.5555vw]">
                     <div className="sm:w-[25%] w-full flex flex-col xs:gap-0 gap-[0.7vw]">
                       <span className="text-white sm:text-[1.1904761905em] xs:text-[2.5em] text-[4.44444444em] font-semibold">
-                        Other Books
+                        {bannerData?.other_books_heading || "Other Books"}
                       </span>
                       <h3 className="sm:text-[1.0582010582em] xs:text-[2.5em] text-[4.1666666667em] font-light text-white/60 leading-[1.2]">
-                        PTE Study Material
+                        {bannerData?.other_books_subheading ||
+                          "PTE Study Material"}
                       </h3>
                     </div>
                     <div className="sm:w-[75%] w-full sm:grid grid-cols-4 flex justify-between gap-[1.3227513228em]">
                       <ImageWithToggle
-                        src={Book1}
+                        src={getImageUrl(bannerData?.book_1_image, Book1)}
                         alt="Book1"
                         className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
-                        src={Book2}
+                        src={getImageUrl(bannerData?.book_2_image, Book2)}
                         alt="Book2"
                         className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
-                        src={Book3}
+                        src={getImageUrl(bannerData?.book_3_image, Book3)}
                         alt="Book3"
                         className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
                       <ImageWithToggle
-                        src={Book4}
+                        src={getImageUrl(bannerData?.book_4_image, Book4)}
                         alt="Book4"
                         className="w-auto sm:h-[4.0343915344em] h-[16.9444444444vw] sm:max-w-[3.3068783069em] max-w-[11.6666666667vw]"
                       />
@@ -304,23 +368,24 @@ const FreeEBook = () => {
               {/* E-Book Box content here */}
               <div
                 onClick={() => setSelectedBox("ebook")}
-                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${selectedBox === "ebook"
-                  ? "border-[#F18C2D]"
-                  : "border-[#1B1B1B]"
-                  }`}
+                className={`cursor-pointer border-4 bg-[#1B1B1B] mb-[2.1825396825em] rounded-[0.6613756614em] ${
+                  selectedBox === "ebook"
+                    ? "border-[#F18C2D]"
+                    : "border-[#1B1B1B]"
+                }`}
               >
                 <div className="xl:py-[2.2486772487em] sm:py-[2.1164021164em] py-8 sm:px-[2.5132275132em] px-6 flex items-center justify-between">
                   <div>
                     <h3 className="text-white font-bold lg:text-[2.380952381em] sm:text-[2.1164021164em] text-3xl leading-[1.167] mb-[0.1111111111em]">
-                      E-Book Only
+                      {bookBoxData?.ebook_title || "E-Book Only"}
                     </h3>
                     <span className="text-[#B8B8B8] font-normal lg:text-[1.3227513228em] leading-[1.4] text-lg">
-                      Get 7-days Free Trial
+                      {bookBoxData?.ebook_subtitle || "Get 7-days Free Trial"}
                     </span>
                   </div>
-                  <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px">
+                  <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px]">
                     <h4 className="text-[#00FEFC] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-3xl leading-[1.5] font-bold ">
-                      $0.99
+                      {bookBoxData?.ebook_price || "$0.99"}
                     </h4>
                   </div>
                 </div>
@@ -329,37 +394,45 @@ const FreeEBook = () => {
               {/* AI Portal Box content here */}
               <div
                 onClick={() => setSelectedBox("aiportal")}
-                className={`cursor-pointer border-4 ${selectedBox === "aiportal"
-                  ? "border-[#F18C2D]"
-                  : "border-[#1B1B1B]"
-                  } rounded-[6px] bg-[#1B1B1B]`}
+                className={`cursor-pointer border-4 ${
+                  selectedBox === "aiportal"
+                    ? "border-[#F18C2D]"
+                    : "border-[#1B1B1B]"
+                } rounded-[6px] bg-[#1B1B1B]`}
               >
                 <div className=" ">
                   <div className="flex xl:p-[2.1164021164em] sm:p-[1.5873015873em] p-6 xl:gap-[2.7777777778em] sm:gap-[1.8518518519em] gap-[28px] border-b-2 border-white border-dashed">
                     <img
-                      src={Rectangle}
-                      alt="Rectangle"
+                      src={getImageUrl(bookBoxData?.aiportal_image, Rectangle)}
+                      alt="AI Portal"
                       className="w-3xl:w-[27%] w-[32%] object-cover"
                     />
                     <div className="w-3xl:w-[70%] w-[68%] flex flex-col justify-between">
                       <div>
                         <h3 className="text-[#F3F2F3] lg:text-[2.380952381em] sm:text-[2.1164021164em] text-[32px] leading-[1.167] font-bold">
-                          6 Month AI Portal
+                          {bookBoxData?.aiportal_title || "6 Month AI Portal"}
                         </h3>
                         <ul className="sm:text-[1.3227513228em] text-lg leading-[1.4] text-[#B8B8B8] font-normal mt-[0.2em]">
-                          <li className="py-[0.1em]">- 10 Full Mock Tests</li>
-                          <li className="py-[0.1em]">- 20 Sectional Tests</li>
-                          <li className="py-[0.1em]">- 5000+ Exam Questions</li>
-                          <li className="py-[0.1em]">- 5 Books Included</li>
+                          {bookBoxData?.aiportal_features ? 
+                            bookBoxData.aiportal_features.split('\n').map((feature, index) => (
+                              <li key={index} className="py-[0.1em]">{feature}</li>
+                            )) : 
+                            [
+                              <li key="1" className="py-[0.1em]">- 10 Full Mock Tests</li>,
+                              <li key="2" className="py-[0.1em]">- 20 Sectional Tests</li>,
+                              <li key="3" className="py-[0.1em]">- 5000+ Exam Questions</li>,
+                              <li key="4" className="py-[0.1em]">- 5 Books Included</li>
+                            ]
+                          }
                         </ul>
                       </div>
                       <div className="flex justify-end items-center 2xl:gap-[3.9682539683em] sm:gap-[1.9841269841em] gap-[30px] mt-[1.6534391534em]">
                         <h4 className="text-[#B0B0B0] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px] font-bold line-through">
-                          $129
+                          {bookBoxData?.aiportal_original_price || "$129"}
                         </h4>
                         <div className="flex items-center gap-[2.9761904762em] justify-between">
                           <h4 className="text-[#F0AB0F] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px] font-bold ">
-                            $99
+                            {bookBoxData?.aiportal_price || "$99"}
                           </h4>
                         </div>
                       </div>
@@ -369,15 +442,20 @@ const FreeEBook = () => {
                     <div className="flex justify-between items-center md:gap-[2.7777777778em] gap-[1.8518518519em]">
                       <div>
                         <h3 className="text-white font-bold sm:text-[2.5132275132em] text-[2.1164021164em] leading-[1.2]">
-                          + Prediction File{" "}
+                          + {bookBoxData?.prediction_file_title || "Prediction File"}{" "}
                         </h3>
                         <span className="text-[#B8B8B8] font-normal 2xl:text-[1.3227513228em] xl:text-[1.1904761905em] text-base">
-                          Get monthly updates for 6 months
+                          {bookBoxData?.prediction_file_subtitle || "Get monthly updates for 6 months"}
                         </span>
                       </div>
                       <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px] items-center">
-                        <button className="flex items-center gap-[0.6666666667em] bg-[#45595A] rounded-[0.5555555556em] sm:px-4 px-[0.8888888889em] sm:py-2 py-[0.4444444444em] text-white font-semibold text-[1.1904761905em] leading-[1.5555555] cursor-pointer">
-                          Add
+                        <button
+                          onClick={() =>
+                            setAddPredictionFile(!addPredictionFile)
+                          }
+                          className="flex items-center gap-[0.6666666667em] bg-[#45595A] rounded-[0.5555555556em] sm:px-4 px-[0.8888888889em] sm:py-2 py-[0.4444444444em] text-white font-semibold text-[1.1904761905em] leading-[1.5555555] cursor-pointer"
+                        >
+                          {addPredictionFile ? "Remove" : "Add"}
                           <img
                             src={Plus}
                             alt="plus-icon"
@@ -385,7 +463,7 @@ const FreeEBook = () => {
                           />
                         </button>
                         <h4 className="text-[#00FEFC] 2xl:text-[2.7777777778em] xl:text-[2.380952381em] sm:text-[1.9841269841em] text-[30px]  font-bold ">
-                          + $9
+                          + {bookBoxData?.prediction_file_price || "$9"}
                         </h4>
                       </div>
                     </div>
@@ -394,55 +472,85 @@ const FreeEBook = () => {
               </div>
             </div>
 
-            
             <div className="lg:w-[40%] w-full">
               <div className="bg-[#1B1B1B] xl:p-[2.7777777778em] sm:p-[2.1164021164em] px-4 sm:py-[1.5873015873em] py-6 rounded-[0.6613756614em]">
                 <div className="sm:block hidden">
-                  <div className="flex justify-between gap-[1.0582010582em]">
-                    <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
-                      6 Month AI Portal
-                    </h4>
-                    <div className="">
-                      <span className="text-[#B0B0B0] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg me-8">
-                        $129
-                      </span>
-                      <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
-                        $99
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex justify-between gap-4">
-                    <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
-                      Prediction File
-                    </h4>
-                    <div className="">
-                      <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
-                        $9
-                      </span>
-                    </div>
-                  </div>
-                  <hr className="border-[#3D3D3D] my-[1.9841269841em]" />
-                  <div className="max-w-[26.455026455em]">
-                    <div className="flex justify-between gap-[1.0582010582em] items-center">
-                      <div className="w-auto flex-auto">
-                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
-                          Your total:{" "}
+                  {selectedBox === "ebook" ? (
+                    // E-Book Only Details
+                    <div>
+                      <div className="flex justify-between gap-[1.0582010582em]">
+                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
+                          {bookBoxData?.ebook_title || "E-Book Only"}
                         </h4>
-                        <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
-                          $152
-                        </span>
                       </div>
-                      <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
-                        Saving $33!
-                      </span>
+                      <div className="flex justify-between gap-4">
+                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
+                          {bookBoxData?.ebook_subtitle || "Get 7-days Free Trial"}
+                        </h4>
+                        <div className="">
+                          <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
+                            {bookBoxData?.ebook_price || "$0.99"}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <h4 className="text-[#B0B0B0] font-bold xl:text-[4.7619047619em] text-[3.9682539683em] leading-[1.1]">
-                      $119
-                    </h4>
-                    <span className="text-[#B0B0B0] font-bold text-[1.0582010582em] sm:text-base">
-                      (GST Included)
-                    </span>
-                  </div>
+                  ) : (
+                    // AI Portal Details
+                    <div>
+                      <div className="flex justify-between gap-[1.0582010582em]">
+                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
+                          {bookBoxData?.aiportal_title || "6 Month AI Portal"}
+                        </h4>
+                        <div className="">
+                          <span className="text-[#B0B0B0] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg me-8 line-through">
+                            {bookBoxData?.aiportal_original_price || "$129"}
+                          </span>
+                          <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
+                            {bookBoxData?.aiportal_price || "$99"}
+                          </span>
+                        </div>
+                      </div>
+
+                      {addPredictionFile && (
+                        <div className="flex justify-between gap-4">
+                          <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
+                            {bookBoxData?.prediction_file_title || "Prediction File"}
+                          </h4>
+                          <div className="">
+                            <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
+                              {bookBoxData?.prediction_file_price || "$9"}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                      {addPredictionFile && (
+                        <>
+                          <hr className="border-[#3D3D3D] my-[1.9841269841em]" />
+                          <div className="max-w-[26.455026455em]">
+                            <div className="flex justify-between gap-[1.0582010582em] items-center">
+                              <div className="w-auto flex-auto">
+                                <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
+                                  Your total:{" "}
+                                </h4>
+                                <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
+                                  $152
+                                </span>
+                              </div>
+                              <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
+                                Saving $33!
+                              </span>
+                            </div>
+                            <h4 className="text-[#B0B0B0] font-bold xl:text-[4.7619047619em] text-[3.9682539683em] leading-[1.1]">
+                              $119
+                            </h4>
+                            <span className="text-[#B0B0B0] font-bold text-[1.0582010582em] sm:text-base">
+                              (GST Included)
+                            </span>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Mobile Box */}
@@ -451,11 +559,21 @@ const FreeEBook = () => {
 
                   <div
                     className={`mb-4 rounded-[5px] p-[2px] transition-all duration-300
-                      ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
+                      ${
+                        selected === "ebook"
+                          ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]"
+                          : "bg-[#707070]"
+                      }  `}
                   >
                     <div
-                      onClick={() => setSelected("ebook")}
-                      className={`rounded-[3px] w-full py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
+                      onClick={() => {
+                        setSelected("ebook");
+                        setSelectedBox("ebook");
+                        setAddPredictionFile(false);
+                      }}
+                      className={`rounded-[3px] w-full py-[22px] px-[8px] flex justify-between items-center cursor-pointer  border-0 ${
+                        selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"
+                      } `}
                     >
                       <div className="flex gap-2 items-start">
                         {selected === "ebook" && (
@@ -467,10 +585,10 @@ const FreeEBook = () => {
                         )}
                         <div className="flex flex-col">
                           <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
-                            E-Book Only
+                            {bookBoxData?.ebook_title || "E-Book Only"}
                           </h3>
                           <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                            Get 7-days Free Trial
+                            {bookBoxData?.ebook_subtitle || "Get 7-days Free Trial"}
                           </p>
                         </div>
                       </div>
@@ -478,12 +596,13 @@ const FreeEBook = () => {
                         <button
                           type="button"
                           className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
-                          ${selected === "ebook"
+                          ${
+                            selected === "ebook"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
-                            }`}
+                          }`}
                         >
-                          $0.99
+                          {bookBoxData?.ebook_price || "$0.99"}
                         </button>
                       </div>
                     </div>
@@ -492,7 +611,7 @@ const FreeEBook = () => {
                     onClick={() => setSelected("ebook")}
                     className={`mb-4 border-[2.34px] rounded-[3px] py-[24px] px-[10px] flex gap-5 justify-between items-center cursor-pointer transition-all duration-300
                     ${selected === "ebook"
-                        ? "border-[#F18C2D] bg-[#0A0A09]"
+                        ? "border-[#F18C2D] bg-[#0A0A09]""
                         : "border-[#707070] bg-[#1B1B1B]"
                       }`}
                   >
@@ -502,11 +621,21 @@ const FreeEBook = () => {
                   {/* 6 Month AI Portal Box */}
                   <div
                     className={`rounded-[5px] p-[2px] transition-all duration-300
-                      ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
+                      ${
+                        selected === "portal"
+                          ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]"
+                          : "bg-[#707070]"
+                      }  `}
                   >
                     <div
-                      onClick={() => setSelected("portal")}
-                      className={`rounded-[3px] py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
+                      onClick={() => {
+                        setSelected("portal");
+                        setSelectedBox("aiportal");
+                        setAddPredictionFile(false);
+                      }}
+                      className={`rounded-[3px] py-[22px] px-[8px] flex justify-between items-center cursor-pointer w-full border-0 ${
+                        selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"
+                      } `}
                     >
                       <div className="flex gap-2 items-start">
                         {selected === "portal" && (
@@ -518,10 +647,10 @@ const FreeEBook = () => {
                         )}
                         <div className="flex flex-col">
                           <h3 className="text-[#F3F2F3] mb-0 xs:text-[2.8125em] text-[5em] font-bold">
-                            6 Month AI Portal
+                            {bookBoxData?.aiportal_title || "6 Month AI Portal"}
                           </h3>
                           <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                            Prediction File + 5 Books
+                            {bookBoxData?.aiportal_subtitle || "Prediction File + 5 Books"}
                           </p>
                         </div>
                       </div>
@@ -529,17 +658,17 @@ const FreeEBook = () => {
                         <button
                           type="button"
                           className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold sm:text-xl text-base relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
-                          ${selected === "portal"
+                          ${
+                            selected === "portal"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
-                            }`}
+                          }`}
                         >
                           $119
                         </button>
                       </div>
                     </div>
                   </div>
-
                 </div>
                 <form className="sm:pt-[1.5873015873em] pt-[12px]">
                   <div className="flex flex-col sm:mb-[1.0582010582em] mb-3">
@@ -586,14 +715,13 @@ const FreeEBook = () => {
                         className="placeholder:text-[#707070] outline-none w-[54%] px-[1.3333333333em] sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em]"
                       />
                       <div className="flex gap-0 w-[46%] justify-end">
-
                         {/* Expiry Date */}
                         <input
                           type="text"
                           name="expiry_date"
                           placeholder="MM / YY"
                           required
-                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
+                          className="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
                         />
 
                         {/* CVC */}
@@ -602,7 +730,7 @@ const FreeEBook = () => {
                           name="cvc"
                           placeholder="/ CVC"
                           required
-                          class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
+                          className="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.4444444444em] max-w-[4.2em]"
                         />
                       </div>
                     </div>
@@ -620,7 +748,11 @@ const FreeEBook = () => {
                     to="/ebook-submit"
                     className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white sm:px-[0.6em] sm:py-[0.8em] xs:py-[0.5em] px-3 py-[5.2vw] w-full font-bold sm:text-[1.3227513228em] text-[4.444444em] relative z-10 leading-[1.4] rounded-sm"
                   >
-                    Buy Now - $119
+                    {selectedBox === "ebook"
+                      ? `Buy Now - ${bookBoxData?.ebook_price || "$0.99"}`
+                      : addPredictionFile
+                      ? "Buy Now - $119"
+                      : `Buy Now - ${bookBoxData?.aiportal_price || "$99"}`}
                   </Link>
                 </form>
               </div>
@@ -709,11 +841,14 @@ const FreeEBook = () => {
               FAQ
             </h2>
             <div className="md:max-w-[59.2592592593em] mx-auto sm:p-[1.5873015873em]">
-              {faqs.map((faq, index) => (
+              {faqsToDisplay.map((faq, index) => (
                 <div
                   key={index}
-                  className={`py-[4.6875vw] xs:py-[1.0582010582em] ${index !== faqs.length - 1 ? "border-b border-[#9D9B9B]" : ""
-                    }`}
+                  className={`py-[4.6875vw] xs:py-[1.0582010582em] ${
+                    index !== faqsToDisplay.length - 1
+                      ? "border-b border-[#9D9B9B]"
+                      : ""
+                  }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}

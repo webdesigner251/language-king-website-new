@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import QuoteIcon from "../assets/icons/quote-icon.svg";
 import PlaceholerImage from "../assets/placeholder.png";
 import Mainavatar from "../assets/avatar6.png";
@@ -86,9 +87,16 @@ const slidesData = [
   },
 ];
 
-
 const Testimonials = () => {
   const [space, setSpace] = useState(30); // default for desktop
+  const [pteFameData, setPteFameData] = useState([]);
+  const [naatiCclResultsData, setNaatiCclResultsData] = useState([]);
+  const [testimonialVideo, setTestimonialVideo] = useState({
+    video_url: TestVideo,
+    video_placeholder_img: TestPlaceholder,
+  });
+  const [loading, setLoading] = useState(true);
+  const [naatiLoading, setNaatiLoading] = useState(true);
 
   useEffect(() => {
     const updateSpace = () => {
@@ -107,6 +115,61 @@ const Testimonials = () => {
     return () => window.removeEventListener("resize", updateSpace);
   }, []);
 
+  useEffect(() => {
+    fetchPTEFameData();
+    fetchNAATICCLResultsData();
+    fetchTestimonialVideo();
+  }, []);
+
+  const fetchPTEFameData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/frontend/pte-fame"
+      );
+      setPteFameData(response.data);
+    } catch (error) {
+      console.error("Error fetching PTE Fame data:", error);
+      // Fallback to static data if API fails
+      setPteFameData(slidesData);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchNAATICCLResultsData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/frontend/naati-ccl-results"
+      );
+      setNaatiCclResultsData(response.data);
+    } catch (error) {
+      console.error("Error fetching NAATI CCL Results data:", error);
+      // Fallback to static data if API fails
+      setNaatiCclResultsData(slidesData);
+    } finally {
+      setNaatiLoading(false);
+    }
+  };
+
+  const fetchTestimonialVideo = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/testimonial-video"
+      );
+      if (response.data && response.data.video_url) {
+        setTestimonialVideo({
+          video_url: `http://localhost:3000/uploads/${response.data.video_url}`,
+          video_placeholder_img: response.data.video_placeholder_img
+            ? `http://localhost:3000/uploads/${response.data.video_placeholder_img}`
+            : TestPlaceholder,
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching testimonial video:", error);
+      // Keep default values if API fails
+    }
+  };
+
   return (
     <>
       <section className="md:pt-[14.5502645503em] sm:pt-[28.125em] xs:pt-[37.5em] pt-[55vw] sm:pb-[5.0925925926em] md:mt-[-7.9365079365em] sm:mt-[-15.6453715776em] mt-[-33.33vw]">
@@ -120,8 +183,8 @@ const Testimonials = () => {
                 <div className="lg:py-[4.8828125em] md:py-[6.518904824em] sm:py-[7.8125em] xs:py-[10.4166666667em] py-[9.3333333333vw] lg:hidden w-full">
                   <div className=" aspect-16/10 block">
                     <VideoPlayer
-                      videoSrc={TestVideo}
-                      thumbnail={TestPlaceholder}
+                      videoSrc={testimonialVideo.video_url}
+                      thumbnail={testimonialVideo.video_placeholder_img}
                       wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                       videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                       thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full object-cover object-center"
@@ -152,8 +215,14 @@ const Testimonials = () => {
                 </div> */}
 
                 <div className="flex items-center">
-                  <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">NATALIA</span>
-                  <img src={Eclipse} alt="Eclipse" className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]" />
+                  <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
+                    NATALIA
+                  </span>
+                  <img
+                    src={Eclipse}
+                    alt="Eclipse"
+                    className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]"
+                  />
                   <span className="text-white/40 uppercase md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
                     PTE & NAATI CCL
                   </span>
@@ -162,8 +231,8 @@ const Testimonials = () => {
             </div>
             <div className="lg:block hidden aspect-16/9">
               <VideoPlayer
-                videoSrc={TestVideo}
-                thumbnail={TestPlaceholder}
+                videoSrc={testimonialVideo.video_url}
+                thumbnail={testimonialVideo.video_placeholder_img}
                 wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                 videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                 thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
@@ -233,56 +302,68 @@ const Testimonials = () => {
                 1024: { slidesPerView: 4 },
               }}
             >
-              {slidesData.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div>
-                    <div className="relative">
-                      <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
-                        <VideoPlayer
-                          videoSrc={item.video}
-                          thumbnail={item.image}
-                          wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
-                          videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
-                          thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
-                        />
-                      </div>
-                      {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
-                    </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
-                      {item.title}
-                    </p>
-                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
+              {loading ? (
+                <SwiperSlide>
+                  <div className="animate-pulse">
+                    <div className="bg-gray-300 rounded-lg aspect-3/2 mb-4"></div>
+                    <div className="h-4 bg-gray-300 rounded mb-2"></div>
+                    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+                  </div>
+                </SwiperSlide>
+              ) : pteFameData.length > 0 ? (
+                pteFameData.map((item) => (
+                  <SwiperSlide key={item.id}>
+                    <div>
                       <div className="relative">
-                        <img
-                          src={item.flag}
-                          alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
-                        />
-                        {/* <ImageWithToggle
-                          src={item.avatar}
-                          alt="avatar"
-                          className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
-                        /> */}
-                        <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
-                          <ImageWithToggle
-                            src={Mainavatar}
-                            alt="Mainavatar"
-                            className="object-fit-cover w-full h-full relative z-10"
+                        <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
+                          <VideoPlayer
+                            videoSrc={item.video || Video1}
+                            thumbnail={item.image || PlaceholerImage}
+                            wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                            videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
+                            thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
                           />
                         </div>
                       </div>
-                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
-                        <span className="text-white/40 font-medium">
-                          {item.name}
-                        </span>
-                        <span className="text-white md:text-[0.9259259259em] text-sm block">
-                          {item.tag}
-                        </span>
+                      <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
+                        {item.title}
+                      </p>
+                      <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
+                        <div className="relative">
+                          {(item.flag || Russia1) && (
+                            <img
+                              src={item.flag || Russia1}
+                              alt="flag"
+                              className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
+                            />
+                          )}
+                          <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
+                            <ImageWithToggle
+                              src={item.avatar || Mainavatar}
+                              alt="Student Avatar"
+                              className="object-fit-cover w-full h-full relative z-10"
+                            />
+                          </div>
+                        </div>
+                        <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                          <span className="text-white/40 font-medium">
+                            {item.name}
+                          </span>
+                          <span className="text-white md:text-[0.9259259259em] text-sm block">
+                            {item.tag}
+                          </span>
+                        </div>
                       </div>
                     </div>
+                  </SwiperSlide>
+                ))
+              ) : (
+                <SwiperSlide>
+                  <div className="text-center p-8">
+                    <p className="text-white">No PTE Fame entries available</p>
                   </div>
                 </SwiperSlide>
-              ))}
+              )}
             </Swiper>
           </div>
         </div>
@@ -348,57 +429,70 @@ const Testimonials = () => {
                 1024: { slidesPerView: 4 },
               }}
             >
-              {slidesData.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div>
-                    <div className="relative">
-                      <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
-                        <VideoPlayer
-                          videoSrc={item.video}
-                          thumbnail={item.image}
-                          wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
-                          videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
-                          thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
-                        />
-                      </div>
-                      {/* <div className="absolute inset-0 bg-black opacity-35 md:rounded-[0.6613756614em] rounded-[10px] "></div> */}
-                    </div>
-                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
-                      {item.title}
-                    </p>
-                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
-                      <div className="relative">
-                        <img
-                          src={item.flag}
-                          alt="flag"
-                          className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-sm absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
-                        />
-
-                        <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
-                          <ImageWithToggle
-                            src={Mainavatar}
-                            alt="Mainavatar"
-                            className="object-fit-cover w-full h-full relative z-10"
-                          />
-                        </div>
-                        {/* <ImageWithToggle
-                          src={item.avatar}
-                          alt="avatar"
-                          className="md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[6.5625em] sm:h-[6.5625em] w-[16.2vw] h-[16.2vw] object-fit-cover md:rounded-[0.5291005291em] rounded-[8px] border-2 border-[#D66D11]"
-                        /> */}
-                      </div>
-                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
-                        <span className="text-white/40 font-medium">
-                          {item.name}
-                        </span>
-                        <span className="text-white md:text-[0.9259259259em] text-sm block">
-                          {item.tag}
-                        </span>
-                      </div>
-                    </div>
+              {naatiLoading ? (
+                <SwiperSlide>
+                  <div className="animate-pulse">
+                    <div className="bg-gray-300 rounded-lg aspect-3/2 mb-4"></div>
+                    <div className="h-4 bg-gray-300 rounded mb-2"></div>
+                    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
                   </div>
                 </SwiperSlide>
-              ))}
+              ) : naatiCclResultsData.length > 0 ? (
+                naatiCclResultsData.map((item) => (
+                  <SwiperSlide key={item.id}>
+                    <div>
+                      <div className="relative">
+                        <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
+                          <VideoPlayer
+                            videoSrc={item.video || Video1}
+                            thumbnail={item.image || PlaceholerImage}
+                            wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                            videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
+                            thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                          />
+                        </div>
+                      </div>
+                      <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
+                        {item.title}
+                      </p>
+                      <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
+                        <div className="relative">
+                          {(item.flag || Russia1) && (
+                            <img
+                              src={item.flag || Russia1}
+                              alt="flag"
+                              className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
+                            />
+                          )}
+                          <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
+                            <ImageWithToggle
+                              src={item.avatar || Mainavatar}
+                              alt="Student Avatar"
+                              className="object-fit-cover w-full h-full relative z-10"
+                            />
+                          </div>
+                        </div>
+                        <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                          <span className="text-white/40 font-medium">
+                            {item.name}
+                          </span>
+                          <span className="text-white md:text-[0.9259259259em] text-sm block">
+                            {item.tag}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))
+              ) : (
+                <SwiperSlide>
+                  <div className="text-center p-8">
+                    <p className="text-white">
+                      No NAATI CCL Results entries available
+                    </p>
+                  </div>
+                </SwiperSlide>
+              )}
             </Swiper>
           </div>
         </div>
