@@ -211,8 +211,6 @@ const Testimonials = () => {
                     className="object-fit-cover w-full h-full relative z-10"
                   />
                 </div>
-                {/* <div class="relative p-[2px] xs:rounded-[8px] rounded-[3.771px] bg-gradient-to-r from-[#D7FF53] to-[#FD4F2B]">
-                </div> */}
 
                 <div className="flex items-center">
                   <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
@@ -313,46 +311,45 @@ const Testimonials = () => {
               ) : pteFameData.length > 0 ? (
                 pteFameData.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <div>
+                    <div className="relative">
+                      <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
+                        <VideoPlayer
+                          videoSrc={item.video || Video1}
+                          thumbnail={item.image || PlaceholerImage}
+                          wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                          videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
+                          thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                        />
+                      </div>
+                    </div>
+
+                    <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
+                      {item.title}
+                    </p>
+                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
                       <div className="relative">
-                        <div className="md:rounded-[0.6613756614em] rounded-[10px]  w-full aspect-3/2 h-auto object-cover object-center relative z-10">
-                          <VideoPlayer
-                            videoSrc={item.video || Video1}
-                            thumbnail={item.image || PlaceholerImage}
-                            wrapperClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
-                            videoClassName="md:rounded-[0.6613756614em] rounded-[10px]  object-contain h-full"
-                            thumbnailClassName="md:rounded-[0.6613756614em] rounded-[10px]  h-full"
+                        {(item.flag || Russia1) && (
+                          <img
+                            src={item.flag || Russia1}
+                            alt="flag"
+                            className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
+                          />
+                        )}
+                        <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
+                          <ImageWithToggle
+                            src={item.avatar || Mainavatar}
+                            alt="Student Avatar"
+                            className="object-fit-cover w-full h-full relative z-10"
                           />
                         </div>
                       </div>
-                      <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
-                        {item.title}
-                      </p>
-                      <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
-                        <div className="relative">
-                          {(item.flag || Russia1) && (
-                            <img
-                              src={item.flag || Russia1}
-                              alt="flag"
-                              className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
-                            />
-                          )}
-                          <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
-                            <ImageWithToggle
-                              src={item.avatar || Mainavatar}
-                              alt="Student Avatar"
-                              className="object-fit-cover w-full h-full relative z-10"
-                            />
-                          </div>
-                        </div>
-                        <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
-                          <span className="text-white/40 font-medium">
-                            {item.name}
-                          </span>
-                          <span className="text-white md:text-[0.9259259259em] text-sm block">
-                            {item.tag}
-                          </span>
-                        </div>
+                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                        <span className="text-white/40 font-medium">
+                          {item.name}
+                        </span>
+                        <span className="text-white md:text-[0.9259259259em] text-sm block">
+                          {item.tag}
+                        </span>
                       </div>
                     </div>
                   </SwiperSlide>

@@ -949,7 +949,7 @@ const PTEMasterClass = () => {
                 <h2 className="text-black lg:text-[3.1746031746em] md:text-[3.1746031746em] sm:text-[5.625em] xs:text-[7.5em] text-[7.7777777778em] sm:font-bold font-extrabold xs:leading-normal  leading-[1.2]">
                   Support{" "}
                 </h2>
-                <p className="text-black lg:text-[2.9100529101em] md:text-[1.9841269841em] sm:text-[5.625em] xs:text-[7.5em] text-[7.7777777778em] font-light xs:mt-2 mt-0  xs:leading-7 leading-[1.2]">
+                <p className="relative z-1 text-black lg:text-[2.9100529101em] md:text-[1.9841269841em] sm:text-[5.625em] xs:text-[7.5em] text-[7.7777777778em] font-light xs:mt-2 mt-0  xs:leading-7 leading-[1.2]">
                   In Every Possible Way
                 </p>
               </div>
