@@ -133,7 +133,7 @@ const Faq = () => {
       : faqs.filter((faq) => faq.category === activeTab);
 
   return (
-    <section className="md:pt-[14.5502645503em] sm:pt-[28.125em] xs:pt-[37.5em] pt-[55vw] sm:pb-[5.0925925926em] lg:mt-[-7.9365079365em] md:mt-[-12.936508em] sm:mt-[-15.6453715776em] mt-[-33.33vw]">
+    <section className="md:pt-[14.5502645503em] sm:pt-[28.125em] xs:pt-[37.5em] pt-[55vw] sm:pb-[3.4371693122vw] lg:mt-[-7.9365079365em] md:mt-[-12.936508em] sm:mt-[-15.6453715776em] mt-[-33.33vw]">
       <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em] w-full relative z-10">
         <div className="lg:max-w-[53.3333333333em] max-w-[100em] mx-auto">
           <h1 className="md:text-[5.3645833333em] sm:text-[12.5em] xs:text-[14.5833333333em] text-[17.7777777778em] text-white tracking-[4.4px] leading-[1.203125] text-center font-normal">
@@ -144,7 +144,7 @@ const Faq = () => {
           </p>
 
           {/* Tabs */}
-          <div className="flex flex-wrap sm:justify-between justify-center 2xl:gap-[1.3020833333em] sm:gap-[0.2em] xs:gap-[5.2083333333em] gap-[3.0555555556em] md:mt-[3.90625em] sm:mt-[7.8125em] xs:mt-[10.4166666667em] mt-[9.7222222222em] md:mb-[5.2604166667em] sm:mb-[10.9375em] xs:mb-[12.5em] mb-[7.534722222em]">
+          <div className="flex flex-wrap sm:justify-between justify-center 2xl:gap-[1.3020833333em] sm:gap-[0.2em] xs:gap-[5.2083333333em] gap-[3.0555555556em] md:mt-[3.90625em] sm:mt-[7.8125em] xs:mt-[10.4166666667em] mt-[9.7222222222em] md:mb-[3.59375vw] sm:mb-[10.9375em] xs:mb-[12.5em] mb-[7.534722222em]">
             {tabs.map((tab, index) => (
               <button
                 key={tab}
@@ -155,7 +155,7 @@ const Faq = () => {
                                     ? "md:px-[2.9761904762em] sm:px-[3.125em] xs:px-[4.1666666667em] px-[7.7777777778vw]"
                                     : "md:px-[1.3020833333em] sm:px-[3.125em] xs:px-[4.1666666667em] px-[5.5555555556vw]"
                                 }
-                                md:py-[0.6613756614em] xs:py-[0.8333333333em] py-0 xs:h-auto h-[10.8333333333vw] border md:rounded-[0.78125em] rounded-[6px]
+                                md:py-[0.274vw] xs:py-[0.8333333333em] py-0 xs:min-h-[3.9021164021em] xs:h-auto h-[10.8333333333vw] border-[1.575px] md:rounded-[0.78125em] rounded-[6px]
                                 ${
                                   activeTab === tab
                                     ? "bg-white text-black"
@@ -163,10 +163,10 @@ const Faq = () => {
                                 }
                                 ${
                                   index === 2 ? "order-last md:order-none" : ""
-                                }  // 👈 Move 2nd tab to last on mobile
+                                }  // Move 2nd tab to last on mobile
                                 `}
               >
-                <span className="md:text-[1.8229166667em] sm:text-[3.125em] xs:text-[4.1666666667em] leading-[1] text-[5.5555555556em]">
+                <span className="md:text-[1.8229166667em] sm:text-[3.125em] xs:text-[4.1666666667em] leading-[1.2142] text-[5.5555555556em]">
                   {tab}
                 </span>
               </button>
@@ -188,7 +188,7 @@ const Faq = () => {
                   onClick={() => toggleFAQ(index)}
                   className="flex justify-between items-center w-full text-left gap-[1.0582010582em]"
                 >
-                  <span className="md:text-[1.455026455em] sm:text-[2.6041666667em] xs:text-[2.8125em] text-[4.7222222222em] xs:font-bold font-medium sm:leading-[1.273] leading-[1.55555555] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
+                  <span className="md:text-[1.455026455em] sm:text-[2.6041666667em] xs:text-[2.8125em] text-[4.7222222222em] xs:font-semibold font-medium sm:leading-[1.273] leading-[1.55555555] text-white w-[calc(100%-28px)] sm:w-[calc(100%-35px)]">
                     {faq.question}
                   </span>
                   <span className="w-[28px] sm:w-[2.3148148148em] basis-[28px] sm:basis-[2.3148148148em] flex items-center justify-center">
@@ -204,30 +204,30 @@ const Faq = () => {
               </div>
             ))}
           </div>
-          <div className="md:mt-[5.2604166667em] sm:mt-[6.875em] xs:mt-[9.1666666667em] mt-[12.2222222222em] md:pt-[5.2604166667em] sm:pt-[6.875em] xs:pt-[9.1666666667em] pt-[12.2222222222em]">
+          <div className="md:mt-[5.2604166667em] sm:mt-[6.875em] xs:mt-[9.1666666667em] mt-[12.2222222222em] md:pt-[2.7vw] sm:pt-[6.875em] xs:pt-[9.1666666667em] pt-[12.2222222222em]">
             <div className="flex items-start justify-center">
               <img
                 src={faqImage2}
                 alt="faq img"
-                className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[6.1507936508em] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"
+                className="border-[#E7E7E7] sm:border-[0.2083333333vw] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[4.8802248677vw] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"
               />
               <img
                 src={faqImage1}
                 alt="faq img"
-                className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[7.208994709em] xs:max-w-[12.8125em] max-w-[22.7777777778em] h-auto sm:mt-[-3.5714285714em] xs:mt-[-7.8125em] mt-[-13.8888888889em] sm:mx-[-1.9841269841em] xs:mx-[-3.125em] mx-[-8.3333333333em] z-1"
+                className="border-[#E7E7E7] sm:border-[0.2083333333vw] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[5.6771164021vw] xs:max-w-[12.8125em] max-w-[22.7777777778em] h-auto sm:mt-[-3.5714285714em] xs:mt-[-7.8125em] mt-[-13.8888888889em] sm:mx-[-1.9841269841em] xs:mx-[-3.125em] mx-[-8.3333333333em] z-1"
               />
               <img
                 src={faqImage3}
                 alt="faq img"
-                className="border-[#E7E7E7] sm:border-[0.2645502646em] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[6.1507936508em] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"
+                className="border-[#E7E7E7] sm:border-[0.2083333333vw] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[4.8802248677vw] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"
               />
               {/* <img src={faqImage} alt="image" className="mx-auto md:w-[12.8854166667em] sm:w-[28.90625em] xs:w-[38.5416666667em] w-[51.3888888889em]" /> */}
             </div>
-            <div className="mt-[1.71875em] text-center">
-              <h3 className="text-white text-center font-semibold mb-[0.5916666667vw] leading-[1.4] md:text-[1.4583333333em] sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.5555555556em]">
+            <div className="xs:mt-[1.875vw] mt-[2.71875em] text-center">
+              <h3 className="text-white text-center font-semibold mb-[0.3645502646vw] leading-[1.14286] md:text-[1.4583333333em] sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.5555555556em]">
                 Still have questions?
               </h3>
-              <p className="text-[#B7B7B7] md:text-[1.25em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.2] text-[4.4444444444em] text-center xs:mb-4 mb-[5.925vw]">
+              <p className="text-[#B7B7B7] md:text-[1.25em] sm:text-[2.5em] xs:text-[3.3333333333em] leading-[1.2] text-[4.4444444444em] text-center xs:mb-[1.875vw] mb-[5.925vw]">
                 Please talk to our friendly team
               </p>
               <Link

@@ -590,7 +590,7 @@ const Home = () => {
 
       <section>
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
-          <div className="bg-[#121212] px-4 py-6 sm:px-[2.1164021164em] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
+          <div className="bg-[#121212] sm:px-[2.1164021164em] sm:py-[44px] px-4 pt-[7.5vw] pb-6 border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
             <div className="flex md:flex-nowrap flex-wrap gap-[8.5978835979em] items-stretch justify-between middle-border">
               <div className="md:block hidden md:w-[50%] w-full">
                 <ImageWithToggle
@@ -655,7 +655,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[3.125vw]">
+                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed border-b-[1.5px] border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[3.125vw] leading-[1.176]">
                   Book a FREE Trial Class
                 </h2>
                 <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[4.1666666667em] sm:pt-[1.2727272727em] pt-[5.7291666667vw]">

@@ -11,7 +11,7 @@ const CallbackForm = () => {
       <img
         src={checkmark}
         alt="checkmark"
-        className="mx-auto sm:w-[3.505em] w-[50px] mb-2 h-auto zoom-pulse"
+        className="mx-auto sm:w-[3.8vw] w-[13.8888888889vw] xs:mb-2 mb-[5vw] h-auto zoom-pulse"
       />
       <h2 className="font-bold 2xl:text-[2.778em] md:text-[2.249em] text-3xl text-center text-gradient-OrangeRed">
         Thank You!

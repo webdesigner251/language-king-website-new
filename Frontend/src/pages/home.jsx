@@ -536,69 +536,80 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px]">
-          <div className="bg-[#121212] px-4 py-6 sm:px-[32px] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
-            <div className="flex md:flex-nowrap flex-wrap gap-[130px] items-stretch justify-between middle-border">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
+          <div className="bg-[#121212] sm:px-[2.1164021164em] sm:py-[44px] px-4 pt-[7.5vw] pb-6 border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
+            <div className="flex md:flex-nowrap flex-wrap gap-[8.5978835979em] items-stretch justify-between middle-border">
               <div className="md:block hidden md:w-[50%] w-full">
                 <ImageWithToggle
                   src={personImage}
                   alt="personImage"
-                  className="w-full rounded-[11px]"
+                  className="w-full rounded-[11px] md:h-[24.353em] h-full object-cover"
                 />
-                <h2 className="font-bold text-white lg:text-[40px] text-3xl mt-[32px]">
+                <h2 className="font-bold text-white lg:text-[2.6455026455em] md:text-[3.125em] mt-[0.8em]">
                   What’s covered in class:
                 </h2>
-                <div className="grid lg:grid-cols-2 grid-cols-1 mt-[42px] gap-7 ">
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                <div className="grid lg:grid-cols-2 grid-cols-1 lg:mt-[2.7777777778em] mt-[1.171875em] lg:gap-[1.8518518519em] gap-[1.5625em]">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Basic Introduction
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
+                      Basic Introduction
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Test Format & Overview
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
+                      Test Format & Overview
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Level of English
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
+                      Level of English
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    Scorecard Analysis
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
+                      Scorecard Analysis
+                    </span>
                   </div>
-                  <div className="flex items-center gap-4 text-white font-medium lg:text-[22px] text-xl">
+                  <div className="flex items-center gap-4 text-white font-medium">
                     <img
                       src={checklist}
                       alt="checklist"
-                      className="w-[26px] h-[26px]"
+                      className="w-[1.7195767196em] h-[1.7195767196em]"
                     />
-                    And more!
+                    <span className="lg:text-[1.455026455em] md:text-[1.953125em]">
+                      And more!
+                    </span>
                   </div>
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[42px] sm:text-4xl text-[26px] text-gradient-OrangeRed border-b-2 border-[#2A2A2A] pb-5">
+                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed border-b-[1.5px] border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[3.125vw] leading-[1.176]">
                   Book a FREE Trial Class
                 </h2>
-                <p className="font-normal text-white/75 lg:text-[22px] sm:text-xl text-base pt-7">
-                  Please fill out the below form. Our team will be in touch with you shortly.
+                <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[4.1666666667em] sm:pt-[1.2727272727em] pt-[5.7291666667vw]">
+                  Please fill out the below form. Our team will be in touch with
+                  you shortly.
                 </p>
-                <div className="sm:pt-6 pt-4">
+                <div className="xs:pt-6 pt-[4.6875vw]">
                   <BookFreeTrail />
                 </div>
               </div>

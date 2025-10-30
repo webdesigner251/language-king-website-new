@@ -219,7 +219,7 @@ const Testimonials = () => {
                   <img
                     src={Eclipse}
                     alt="Eclipse"
-                    className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.5291005291em] md:h-[0.5291005291em] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]"
+                    className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.4166666667vw] md:h-[0.4166666667vw] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]"
                   />
                   <span className="text-white/40 uppercase md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
                     PTE & NAATI CCL
@@ -326,13 +326,13 @@ const Testimonials = () => {
                     <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                       {item.title}
                     </p>
-                    <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
-                      <div className="relative">
+                    <div className="flex md:gap-[1.3227513228em] gap-4 items-center md:mt-[1.3227513228em] mt-[5.5vw]">
+                      <div className="relative flex items-center justify-center">
                         {(item.flag || Russia1) && (
                           <img
                             src={item.flag || Russia1}
                             alt="flag"
-                            className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
+                            className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-[8.43px] xs:-right-[8.43px] -top-[8.43px] -right-[8.43px] z-50"
                           />
                         )}
                         <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
@@ -343,7 +343,7 @@ const Testimonials = () => {
                           />
                         </div>
                       </div>
-                      <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                      <div className="md:text-[1.1904761905vw] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
                         <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
@@ -452,13 +452,13 @@ const Testimonials = () => {
                       <p className="line-clamp-2 text-white md:text-[1.3227513228em] sm:text-[2.3468057366em] text-lg leading-[1.4] md:my-[0.4em] xs:my-2 mb-[2.2222222222vw] xs:pt-0 pt-[5.5vw]">
                         {item.title}
                       </p>
-                      <div className="flex md:gap-[1.3227513228em] gap-4 md:items-end items-center md:mt-[1.3227513228em] mt-[5.5vw]">
-                        <div className="relative">
+                      <div className="flex md:gap-[1.3227513228em] gap-4 items-center md:mt-[1.3227513228em] mt-[5.5vw]">
+                        <div className="relative flex items-center justify-center">
                           {(item.flag || Russia1) && (
                             <img
                               src={item.flag || Russia1}
                               alt="flag"
-                              className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-1 xs:-right-1 -top-2 -right-2 z-50"
+                              className="md:w-[1.3227513228em] md:h-[1.3227513228em] sm:w-[2.5em] sm:h-[2.5em] xs:w-[3.3333333333em] xs:h-[3.3333333333em] w-[5.7291666667vw] h-[5.7291666667vw] rounded-full absolute xs:-top-[8.43px] xs:-right-[8.43px] -top-[8.43px] -right-[8.43px] z-50"
                             />
                           )}
                           <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">

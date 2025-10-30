@@ -160,12 +160,12 @@ const Footer = () => {
                           <img
                             src={AppleImg}
                             alt="Image"
-                            className="group-hover:hidden flex md:max-w-[8.5978835979em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="group-hover:hidden flex md:max-w-[8.5978835979em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                           <img
                             src={AppleImg1}
                             alt="Image"
-                            className="hidden group-hover:flex md:max-w-[8.5978835979em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="hidden group-hover:flex md:max-w-[8.5978835979em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                         </a>
                       </li>
@@ -177,12 +177,12 @@ const Footer = () => {
                           <img
                             src={GoogleImg}
                             alt="Image"
-                            className="group-hover:hidden flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="group-hover:hidden flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                           <img
                             src={GoogleImg1}
                             alt="Image"
-                            className="hidden group-hover:flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="hidden group-hover:flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                         </a>
                       </li>
@@ -194,12 +194,12 @@ const Footer = () => {
                           <img
                             src={WindowsImg}
                             alt="Image"
-                            className="group-hover:hidden flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="group-hover:hidden flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                           <img
                             src={WindowsImg1}
                             alt="Image"
-                            className="hidden group-hover:flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] max-w-[36.1111111111em] transition-all duration-300 ease"
+                            className="hidden group-hover:flex md:max-w-[9.2592592593em] sm:max-w-[16.9270833333em] xs:max-w-[20.3125em] xs:h-auto h-[42.55px] max-w-[36.1111111111em] transition-all duration-300 ease"
                           />
                         </a>
                       </li>

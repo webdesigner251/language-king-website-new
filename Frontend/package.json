@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
-    "axios": "^1.12.2",
+    "axios": "^1.13.0",
     "axois": "^0.0.1-security",
     "intl-tel-input": "^18.1.1",
     "react": "^19.0.0",

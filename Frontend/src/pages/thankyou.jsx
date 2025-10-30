@@ -36,7 +36,8 @@ import checklist from "../assets/icons/checkmark.svg";
 import video from "../assets/videos/placeholder-video.mp4";
 import VideoModal from "../components/videoModal";
 import CallbackForm from "../components/callback-popup";
-import Thankyou from "../components/Thankyou";
+import CallbackThankyou from '../components/Callback-thankyou'
+// import Thankyou from "../components/Thankyou"; Remove this file when website done
 import ImageWithToggle from "../components/ImageWithToggle";
 
 const testimonials = [
@@ -533,7 +534,7 @@ const Home2 = () => {
 
       <section>
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
-          <div className="bg-[#121212] px-4 py-6 sm:px-[2.1164021164em] sm:py-[44px] border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
+          <div className="bg-[#121212] sm:px-[2.1164021164em] sm:py-[44px] px-4 pt-[7.5vw] pb-6 border-[1.5px] border-white/10 transition-all duration-300 ease group relative">
             <div className="flex md:flex-nowrap flex-wrap gap-[8.5978835979em] items-stretch justify-between middle-border">
               <div className="md:block hidden md:w-[50%] w-full">
                 <ImageWithToggle
@@ -598,8 +599,8 @@ const Home2 = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <div className="sm:pt-6 pt-4">
-                  <Thankyou />
+                <div className="sm:pt-6 pt-0">
+                  <CallbackThankyou />
                 </div>
               </div>
             </div>
