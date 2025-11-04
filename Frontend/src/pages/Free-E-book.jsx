@@ -558,7 +558,7 @@ const FreeEBook = () => {
                 <div className="sm:hidden block">
                   {/* E-Book Only Box */}
                   <div
-                    className={`mb-3 rounded-[5px] p-[2.34px] transition-all duration-300
+                    className={`mb-3 rounded-[5px] p-[2.34px]
                       ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
@@ -589,7 +589,7 @@ const FreeEBook = () => {
                       <div>
                         <button
                           type="button"
-                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-semibold text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
                           ${selected === "ebook"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
@@ -614,7 +614,7 @@ const FreeEBook = () => {
 
                   {/* 6 Month AI Portal Box */}
                   <div
-                    className={`rounded-[5px] p-[2.34px] transition-all duration-300
+                    className={`rounded-[5px] p-[2.34px] 
                       ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
                   >
                     <div
@@ -646,7 +646,7 @@ const FreeEBook = () => {
                       <div>
                         <button
                           type="button"
-                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-bold  text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
+                          className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-semibold  text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
                           ${selected === "portal"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"

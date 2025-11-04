@@ -347,7 +347,7 @@ const Testimonials = () => {
                         <span className="text-white/40 font-medium">
                           {item.name}
                         </span>
-                        <span className="text-white md:text-[0.9259259259em] text-sm block">
+                        <span className="text-white md:text-[0.9259259259vw] text-sm block">
                           {item.tag}
                         </span>
                       </div>
@@ -469,14 +469,14 @@ const Testimonials = () => {
                             />
                           </div>
                         </div>
-                        <div className="md:text-[1.0582010582em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
-                          <span className="text-white/40 font-medium">
-                            {item.name}
-                          </span>
-                          <span className="text-white md:text-[0.9259259259em] text-sm block">
-                            {item.tag}
-                          </span>
-                        </div>
+                       <div className="md:text-[1.1904761905vw] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                        <span className="text-white/40 font-medium">
+                          {item.name}
+                        </span>
+                        <span className="text-white md:text-[0.9259259259vw] text-sm block">
+                          {item.tag}
+                        </span>
+                      </div>
                       </div>
                     </div>
                   </SwiperSlide>
