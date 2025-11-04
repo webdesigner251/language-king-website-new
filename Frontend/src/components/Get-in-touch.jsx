@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
 import ContactThankyou from "./Contact-thankyou";
+import { Link } from "react-router-dom";
  
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
@@ -270,9 +271,9 @@ const GetInTouch = () => {
             <span className="font-normal text-[#949AA4] md:text-[0.926em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[3.33vw] leading-[1.3] xs:py-[0.529em] pt-[1.5vw] pb-[0.329em] block ">
               Your information will be used to consider and fulfill your request
               and will be handled pursuant to our{" "}
-              <a href="#" className="underline">
+              <Link to="/privacy-policy" className="underline">
                 Privacy Policy
-              </a>
+              </Link>
               .
             </span>
  

@@ -2,6 +2,7 @@ import { useState } from "react";
 import CloseIcon from "../assets/close.svg"; // Custom close icon
 import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
+import { Link } from "react-router-dom";
 // import CallbackThankyou from "./callback-thankyou";
  
 const CallbackForm = ({ onClose }) => {
@@ -141,17 +142,17 @@ const CallbackForm = ({ onClose }) => {
   return (
     <>
       <div
-        className="fixed h-full top-0 bottom-0 left-0 right-0 inset-0 z-[51] bg-black/[94.5%] flex items-start justify-center"
+        className="fixed h-full top-0 bottom-0 left-0 right-0 inset-0 z-[51] bg-black/[94.5%] flex items-start justify-center xs:py-[1em] py-[3vw]"
         onClick={onClose}
       >
         <div
-          className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:py-[1.1904761905em] px-[18px] py-[18px] w-full md:max-w-[37em] xs:max-w-[73.0117340287em] max-w-[92%] relative max-h-[95%] sm:h-auto overflow-y-auto"
+          className="bg-[#121212] 2xl:p-[1.5873015873em] sm:px-[1.8518518519em] sm:pt-[1.1904761905em] sm:pb-[1.6792328042vw] px-[18px] py-[18px] w-full md:max-w-[34.1931216931vw] xs:max-w-[73.0117340287em] max-w-[92%] relative max-h-[99%] sm:h-auto overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           {!isSubmitted ? (
             <>
-              <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px]">
-                <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
+              <div className="flex justify-between items-center border-b-[0.1041666667vw] border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px]">
+                <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.9510582011vw] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
                   Get-a-Callback
                 </h2>
                 <button
@@ -277,9 +278,9 @@ const CallbackForm = ({ onClose }) => {
                   <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
                     Your information will be used to consider and fulfill your
                     request and will be handled pursuant to our{" "}
-                    <a href="#" className="underline">
+                    <Link to="/privacy-policy" className="underline">
                       Privacy Policy.
-                    </a>
+                    </Link>
                   </span>
  
                   <button
@@ -293,8 +294,8 @@ const CallbackForm = ({ onClose }) => {
             </>
           ) : (
             <div className="">
-              <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] mb-6">
-                <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
+              <div className="flex justify-between items-center border-b-[0.1041666667vw] border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] xs:mb-6 mb-[4.6875vw]">
+                <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.9510582011vw] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
                   Get-a-Callback
                 </h2>
                 <button

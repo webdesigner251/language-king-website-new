@@ -60,7 +60,7 @@ const MainHeader = () => {
           <div className="xl:w-[40%] sm:w-[35%] flex justify-end items-center">
             {/* Hamburger Menu - Visible on Mobile */}
             <button
-              className="lg:hidden flex items-center justify-center p-3 w-[60px] h-[60px] menu-icon bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer"
+              className="lg:hidden flex items-center justify-center p-3 w-[11.71875vw] h-[11.71875vw] menu-icon bg-chinese-Black border border-davys-Grey focus:outline-none cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
               <img

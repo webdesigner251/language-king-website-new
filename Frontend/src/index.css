@@ -624,10 +624,10 @@ header {
     height: 29.1666666667em !important;
   } */
 
-  .menu-icon {
+  /* .menu-icon {
     width: 45px;
     height: 45px;
-  }
+  } */
 
   .stroke-heading::before {
     bottom: 15%;

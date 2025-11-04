@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
 import CallbackThankyou from "./Callback-thankyou";
@@ -247,9 +248,9 @@ const BookFreeTrail = () => {
           <span className="font-normal text-[#949AA4] md:text-[1.0582010582em] md:leading-[1.5] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
             Your information will be used to consider and fulfill your request
             and will be handled pursuant to our{" "}
-            <a href="#" className="underline">
+            <Link to="/privacy-policy" className="underline">
               Privacy Policy.
-            </a>
+            </Link>
           </span>
 
           <button
