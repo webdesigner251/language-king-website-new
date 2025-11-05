@@ -122,13 +122,13 @@ const HomeHeader = () => {
               </button>
             </div>
 
-            <ul className="flex flex-col justify-center items-center gap-[34px] relative">
+            <ul className="flex flex-col justify-center items-center sm:gap-[4.1720990874em] sm:pt-[5vw] gap-[10vw] pt-[15vw] relative">
               <div className="menu-ellipse"></div>
               <li className="text-center inline-flex items-center">
                 <a
                   href="#courses"
                   onClick={() => setIsOpen(false)}
-                  className="text-white inline-flex items-center justify-center font-bold text-[32px] border-b-2 border-transparent hover:border-white transition-all duration-300"
+                  className="text-white inline-flex items-center justify-center font-bold sm:text-[4.1720990874em] text-[8.33333333em] border-b-2 border-transparent hover:border-white transition-all duration-300"
                 >
                   Courses
                 </a>
@@ -137,7 +137,7 @@ const HomeHeader = () => {
                 <Link
                   to="/testimonials"
                   onClick={() => setIsOpen(false)}
-                  className="text-white inline-flex items-center justify-center font-bold text-[32px] border-b-2 border-transparent hover:border-white transition-all duration-300"
+                  className="text-white inline-flex items-center justify-center font-bold sm:text-[4.1720990874em] text-[8.33333333em] border-b-2 border-transparent hover:border-white transition-all duration-300"
                 >
                   Testimonials
                 </Link>
@@ -146,9 +146,9 @@ const HomeHeader = () => {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="text-white inline-flex items-center justify-center font-medium text-[32px] border-b-2 border-transparent hover:border-white transition-all duration-300 [text-shadow:0px_4px_0px_#000000]"
+                  className="text-white inline-flex items-center justify-center font-medium sm:text-[4.1720990874em] text-[8.33333333em] border-b-2 border-transparent hover:border-white transition-all duration-300 [text-shadow:0px_4px_0px_#000000]"
                 >
-                  Contact us
+                  Contact Us
                 </Link>
               </li>
             </ul>

@@ -591,7 +591,7 @@ const CallbackForm = ({ onClose }) => {
                       placeholder="Your first & last name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`placeholder:text-[#919191] bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw] ${
+                      className={`placeholder:text-[#919191] bg-white py-[5vw] xs:py-[1.044973545vw] sm:px-[1.3333333333em] px-4 sm:text-[1.25vw] text-[4.2vw] ${
                         errors.name
                           ? "border-red-500 border"
                           : "border-[#949AA5] border-0"
@@ -631,7 +631,7 @@ const CallbackForm = ({ onClose }) => {
                       setFormData={setFormData}
                       errors={errors}
                       wrapperClassName="border-0 "
-                      inputClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
+                      inputClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[1.044973545vw] sm:px-[1.3333333333em] px-4 sm:text-[1.25vw] text-[4.2vw]"
                     />
                   </div>
  
@@ -649,7 +649,7 @@ const CallbackForm = ({ onClose }) => {
                         setFormData((prev) => ({ ...prev, course: value }))
                       }
                       error={errors.course}
-                      buttonClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
+                      buttonClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[1.044973545vw] sm:px-[1.3333333333em] px-4 sm:text-[1.25vw] text-[4.2vw]"
                       wrapperClassName="border-0"
                       listClassName="rounded-[0px] max-h-[190px]"
                     />
@@ -685,7 +685,7 @@ const CallbackForm = ({ onClose }) => {
  
                   <button
                     type="submit"
-                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[0.8em] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
+                    className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[1.1243386243vw] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
                   >
                     Get In Touch
                   </button>
