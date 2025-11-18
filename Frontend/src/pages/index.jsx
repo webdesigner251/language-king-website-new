@@ -70,7 +70,11 @@ const testimonials = [
     thumbnail: ReviewImg3,
     text: (
       <>
-        All of our hiring team said that it saves them hours. <span className="text-white/50">We’re getting feedback within 20-30 minutes from interviews now, which is ideal for recruiting team that works with time to hire targets.</span>
+        All of our hiring team said that it saves them hours.{" "}
+        <span className="text-white/50">
+          We’re getting feedback within 20-30 minutes from interviews now, which
+          is ideal for recruiting team that works with time to hire targets.
+        </span>
       </>
     ),
     avatar: Avatar3,
@@ -86,7 +90,10 @@ const testimonials = [
     thumbnail: ReviewImg4,
     text: (
       <>
-        There is a clear impact on time saved. <span className="text-white/50">We saved 53 hours per month across our recruiting team.</span>
+        There is a clear impact on time saved.{" "}
+        <span className="text-white/50">
+          We saved 53 hours per month across our recruiting team.
+        </span>
       </>
     ),
     avatar: Avatar4,
@@ -655,9 +662,11 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:w-[50%] w-full">
-                <h2 className="font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed border-b-[1.5px] border-[#2A2A2A] sm:pb-[0.4761904762em] pb-[3.125vw] leading-[1.176]">
-                  Book a FREE Trial Class
-                </h2>
+                <div className="border-b-[1.5px] border-[#2A2A2A]">
+                  <h2 className="inline-block font-bold lg:text-[2.7777777778em] md:text-[3.515625em] sm:text-[4.6875em] xs:text-[5.625em] text-[7.2916666667em] text-gradient-OrangeRed  leading-[1.176] sm:pb-[0.4761904762em] pb-[3.125vw] ">
+                    Book a FREE Trial Class
+                  </h2>
+                </div>
                 <p className="font-normal text-white/75 lg:text-[1.455026455em] md:text-[1.953125em] sm:text-[18px2.34375em] xs:text-[2.5em] text-[4.1666666667em] sm:pt-[1.2727272727em] pt-[5.7291666667vw]">
                   Please fill out the below form. Our team will be in touch with
                   you shortly.

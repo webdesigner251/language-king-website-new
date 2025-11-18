@@ -75,7 +75,7 @@ const CallbackPopupThankyou = () => {
     //                 <img src={CalenderIcon} className="lg:w-[1.7857142857vw] w-[1.545em]" />
     //               </div>
     //               <span>
-    //                 10 A.M to 7 P.M <br />
+    //                 10 A.M - 7 P.M <br />
     //                 <span className="italic text-[#abaaa6] font-normal block text-sm">
     //                   (Mon - Sun | Melbourne Time)
     //                 </span>
@@ -137,15 +137,21 @@ const CallbackPopupThankyou = () => {
               Need urgent assistance?{" "}
             </h4>
 
-            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] max-w-auto mx-auto">
+            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] ">
               <li>
                 <a
                   href="tel:+61488876999"
                   className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
-                  {/* <img src={PhoneICon} className="w-[2.646em]" /> */}
-                  <img src={PhoneICon} className="lg:w-[2.3148148148vw] w-[1.545em]" />
-                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61 444 876 555
+                  {/* <img src={PhoneICon} className="lg:w-[2.3148148148vw] w-[1.545em]" /> */}
+                  <div className="w-[2.646em] flex items-center justify-center">
+                    <img
+                      src={PhoneICon}
+                      className="xs:w-[1.4947089947vw] w-[2.2em]"
+                    />
+                  </div>
+                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61
+                  444 876 555
                 </a>
               </li>
               <li>
@@ -154,12 +160,14 @@ const CallbackPopupThankyou = () => {
                   className="flex items-start xs:gap-[1.058em]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
                   <div className="w-[2.646em] flex items-center justify-center">
-                    {/* <img src={CalenderIcon} className="xs:w-[1.4947089947vw] w-[1.852em]" /> */}
-                    <img src={CalenderIcon} className="lg:w-[1.7857142857vw] w-[1.545em]" />
+                    <img
+                      src={CalenderIcon}
+                      className="xs:w-[1.4947089947vw] w-[1.545em]"
+                    />
                   </div>
                   <span>
-                    10 A.M to 7 P.M <br />
-                    <span className="italic text-[#abaaa6] font-normal block text-sm">
+                    10 A.M - 7 P.M <br />
+                    <span className="italic text-[#abaaa6] font-normal block xs:text-[0.9259259259vw] text-[3.3333333vw]">
                       (Mon - Sun | Melbourne Time)
                     </span>
                   </span>
