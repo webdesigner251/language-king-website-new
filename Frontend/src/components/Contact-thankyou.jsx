@@ -72,7 +72,7 @@ const ContactThankyou = () => {
                       <img src={CalenderIcon} className="w-[1.852em]" />
                     </div>
                     <span>
-                      10 A.M to 7 P.M <br />
+                      10 A.M - 7 P.M <br />
                       <span className="italic text-[#abaaa6] font-normal block">
                         (Mon - Sun | Melbourne Time)
                       </span>

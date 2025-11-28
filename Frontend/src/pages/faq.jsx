@@ -152,13 +152,13 @@ const Faq = () => {
                 className={`
                                 ${
                                   index === 0
-                                    ? "md:px-[2.9761904762em] sm:px-[3.125em] xs:px-[4.1666666667em] px-[7.7777777778vw]"
+                                    ? "md:px-[2.2486772487vw] sm:px-[3.125em] xs:px-[4.1666666667em] px-[7.7777777778vw]"
                                     : "md:px-[1.3020833333em] sm:px-[3.125em] xs:px-[4.1666666667em] px-[5.5555555556vw]"
                                 }
-                                md:py-[0.274vw] xs:py-[0.8333333333em] py-0 xs:min-h-[3.9021164021em] xs:h-auto h-[10.8333333333vw] border-[1.575px] md:rounded-[0.78125em] rounded-[6px]
+                                md:py-[0.274vw] xs:py-[0.8333333333em] py-0 xs:min-h-[3.28125vw] xs:h-auto h-[10.8333333333vw] border-[0.1652777778vw] md:rounded-[0.78125em] rounded-[6px] 
                                 ${
                                   activeTab === tab
-                                    ? "bg-white text-black"
+                                    ? "bg-white border-white text-black"
                                     : "border-white text-white"
                                 }
                                 ${
@@ -166,7 +166,7 @@ const Faq = () => {
                                 }  // Move 2nd tab to last on mobile
                                 `}
               >
-                <span className="md:text-[1.8229166667em] sm:text-[3.125em] xs:text-[4.1666666667em] leading-[1.2142] text-[5.5555555556em]">
+                <span className="md:text-[1.8849206349vw] sm:text-[3.125em] xs:text-[4.1666666667em] leading-[1.2142] text-[5.5555555556em]">
                   {tab}
                 </span>
               </button>
@@ -223,7 +223,7 @@ const Faq = () => {
               />
               {/* <img src={faqImage} alt="image" className="mx-auto md:w-[12.8854166667em] sm:w-[28.90625em] xs:w-[38.5416666667em] w-[51.3888888889em]" /> */}
             </div>
-            <div className="xs:mt-[1.875vw] mt-[2.71875em] text-center">
+            <div className="xs:mt-[1.875vw] mt-[5.46875vw] text-center">
               <h3 className="text-white text-center font-semibold mb-[0.3645502646vw] leading-[1.14286] md:text-[1.4583333333em] sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.5555555556em]">
                 Still have questions?
               </h3>

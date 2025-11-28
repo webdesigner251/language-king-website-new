@@ -287,7 +287,7 @@ const FreeEBook = () => {
                         "Learn how to solve PTE Reading Blanks with confidence, master linkers, starters, and connectors, test your skills with an interactive quiz, and boost your score effortlessly"}
                     </p>
                   </div>
-                  <div className="lg:max-w-[30%] max-w-full lg:block hidden">
+                  <div className="lg:max-w-[15.3604497354vw] max-w-full lg:block hidden">
                     <h2 className="text-white xl:text-[1.1904761905em] leading-[1.556] text-base font-bold my-[1.3888888889em]">
                       YOU’LL LEARN HOW TO:
                     </h2>
@@ -313,6 +313,7 @@ const FreeEBook = () => {
                     <a
                       href="#"
                       className="align-middle xs:inline-flex hidden items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
+
                     >
                       {bannerData?.cta_button_text || "Start 7-Day Trial"}
                     </a>
@@ -323,6 +324,15 @@ const FreeEBook = () => {
                     >
                       {bannerData?.cta_button_text_mobile ||
                         "Start 7-Day Free Trial"}
+                      {bannerData?.cta_button_text || "Start 7-Day Trial"}
+                    </a>
+
+                    <a
+                      href="#"
+                      className="xs:hidden align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
+                    >
+                      {bannerData?.cta_button_text || "Start 7-Day Free Trial"}
+
                     </a>
                   </div>
                   <div>
@@ -331,7 +341,9 @@ const FreeEBook = () => {
                         "Save $33 by using AI Portal + Prediction File + 6 Books"}
                     </h4>
                     <h4 className="xs:hidden block text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
+
                       {bannerData?.save_text_mobile ||
+
                         "Save $33 by using AI Portal"}
                     </h4>
                     <span className="uppercase font-semibold text-white/50 text-[0.8597883598em] mt-[0.3846153846em] leading-[1.462] sm:inline hidden">

@@ -58,7 +58,7 @@ const Footer = () => {
                         >
                           <img src={Calender} className="sm:w-[2em] sm:h-[2em] w-8 h-8 " />
                           <span className="xs:pt-0 pt-[0.36em]">
-                            10 A.M to 7 P.M <br />
+                            10 A.M - 7 P.M <br />
                             <span className="italic font-light block">
                               (Mon - Sun | Melbourne Time)
                             </span>
