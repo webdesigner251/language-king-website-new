@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
-<rect width="12" height="2" fill="#007a3d"/>
-<rect width="12" height="2" y="2" fill="#fff"/>
-<rect width="12" height="2" y="4" fill="#ce1126"/>
-<polygon points="0,0 3,2 3,4 0,6"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000px" height="667px" viewBox="0 0 1000 667" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,47.843137%,23.921569%);fill-opacity:1;" d="M 0 0 L 1000 0 L 1000 222.332031 L 0 222.332031 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 0 222.332031 L 1000 222.332031 L 1000 444.667969 L 0 444.667969 Z M 0 222.332031 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(80.784315%,6.666667%,14.901961%);fill-opacity:1;" d="M 0 444.667969 L 1000 444.667969 L 1000 667 L 0 667 Z M 0 444.667969 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 0 0 L 250 222.332031 L 250 444.667969 L 0 667 Z M 0 0 "/>
+</g>
 </svg>

@@ -77,6 +77,7 @@ import facebookIconLight from "../assets/icons/facebook-icon-light.svg";
 import InstaIconLight from "../assets/icons/instagram-icon-light.svg";
 import TiktokIconLight from "../assets/icons/tiktok-icon-light.svg";
 import ImageWithToggle from "../components/ImageWithToggle";
+import API_BASE_URL from "../config/api";
 
 const PTEMasterClass = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -326,13 +327,12 @@ const PTEMasterClass = () => {
     },
   ]);
 
-
   // Fetch students from API
   useEffect(() => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/frontend/pte-students"
+          `${API_BASE_URL}/frontend/pte-students`
         );
         if (response.data && response.data.length > 0) {
           setStudents(
@@ -340,10 +340,10 @@ const PTEMasterClass = () => {
               name: student.name,
               country: student.country,
               flag: student.flag
-                ? `http://localhost:3000${student.flag}`
+                ? `${API_BASE_URL.replace('/api','')}${student.flag}`
                 : Malaysia1,
               image: student.image
-                ? `http://localhost:3000${student.image}`
+                ? `${API_BASE_URL.replace('/api','')}${student.image}`
                 : Malaysia,
               gradient: student.gradient,
             }))

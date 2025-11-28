@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Toast from "./Toast";
+import API_BASE_URL from "../config/api"
 
 const BookBox = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const BookBox = () => {
   const fetchBookBoxData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/book-box?t=${Date.now()}`
+        `${API_BASE_URL}/book-box?t=${Date.now()}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -77,7 +78,7 @@ const BookBox = () => {
         formDataToSend.append('aiportal_image', formData.aiportal_image);
       }
 
-      const response = await fetch("http://localhost:3000/api/book-box", {
+      const response = await fetch(`${API_BASE_URL}/book-box`, {
         method: "PUT",
         body: formDataToSend,
       });

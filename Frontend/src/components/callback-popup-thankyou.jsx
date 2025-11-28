@@ -144,8 +144,12 @@ const CallbackPopupThankyou = () => {
                   className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
                   {/* <img src={PhoneICon} className="w-[2.646em]" /> */}
-                  <img src={PhoneICon} className="lg:w-[2.3148148148vw] w-[1.545em]" />
-                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61 444 876 555
+                  <img
+                    src={PhoneICon}
+                    className="lg:w-[2.3148148148vw] w-[1.545em]"
+                  />
+                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61
+                  444 876 555
                 </a>
               </li>
               <li>
@@ -153,13 +157,16 @@ const CallbackPopupThankyou = () => {
                   href="tel:+61488876999"
                   className="flex items-start xs:gap-[1.058em]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
-                  <div className="w-[2.646em] flex items-center justify-center">
+                  <div className="w-[2.646em] flex items-center justify-left">
                     {/* <img src={CalenderIcon} className="xs:w-[1.4947089947vw] w-[1.852em]" /> */}
-                    <img src={CalenderIcon} className="lg:w-[1.7857142857vw] w-[1.545em]" />
+                    <img
+                      src={CalenderIcon}
+                      className="lg:w-[1.7857142857vw] w-[1.545em]"
+                    />
                   </div>
                   <span>
                     10 A.M to 7 P.M <br />
-                    <span className="italic text-[#abaaa6] font-normal block text-sm">
+                    <span className="italic text-[#abaaa6] font-normal block ">
                       (Mon - Sun | Melbourne Time)
                     </span>
                   </span>

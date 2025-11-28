@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_BASE_URL from "../config/api";
 
 const useBookBox = () => {
   const [bookBoxData, setBookBoxData] = useState({});
@@ -8,7 +9,7 @@ const useBookBox = () => {
   const fetchBookBoxData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/api/book-box?t=${Date.now()}`);
+      const response = await fetch(`${API_BASE_URL}/book-box?t=${Date.now()}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

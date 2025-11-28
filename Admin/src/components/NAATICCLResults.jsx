@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api"
 
 const NAATICCLResults = ({ onAddNew, onEdit }) => {
   const [resultsEntries, setResultsEntries] = useState([]);
@@ -12,7 +13,7 @@ const NAATICCLResults = ({ onAddNew, onEdit }) => {
 
   const fetchResultsEntries = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/naati-ccl-results");
+      const response = await axios.get(`${API_BASE_URL}/naati-ccl-results`);
       setResultsEntries(response.data);
     } catch (error) {
       console.error("Error fetching NAATI CCL Results entries:", error);
@@ -28,7 +29,7 @@ const NAATICCLResults = ({ onAddNew, onEdit }) => {
     }
     if (window.confirm("Are you sure you want to delete this entry?")) {
       try {
-        await axios.delete(`http://localhost:3000/api/naati-ccl-results/${id}`);
+        await axios.delete(`${API_BASE_URL}/naati-ccl-results/${id}`);
         fetchResultsEntries();
       } catch (error) {
         console.error("Error deleting entry:", error);
@@ -135,7 +136,7 @@ const NAATICCLResults = ({ onAddNew, onEdit }) => {
                       <div className="flex items-center gap-3">
                         {entry.student_img ? (
                           <img
-                            src={`http://localhost:3000/uploads/${entry.student_img}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${entry.student_img}`}
                             alt={entry.student_name}
                             className="w-10 h-10 rounded-full object-cover border-2 border-gray-200"
                           />
@@ -158,7 +159,7 @@ const NAATICCLResults = ({ onAddNew, onEdit }) => {
                       {entry.video_placeholder_img ? (
                         <div className="w-16 h-12 rounded overflow-hidden border border-gray-200">
                           <img
-                            src={`http://localhost:3000/uploads/${entry.video_placeholder_img}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${entry.video_placeholder_img}`}
                             alt="Video thumbnail"
                             className="w-full h-full object-cover"
                           />

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import API_BASE_URL from "../config/api";
 
 const useFreeEbookBanner = () => {
   const [bannerData, setBannerData] = useState(null);
@@ -8,7 +9,7 @@ const useFreeEbookBanner = () => {
   const fetchBannerData = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/api/free-ebook/banner?t=${Date.now()}`);
+      const response = await fetch(`${API_BASE_URL}/free-ebook/banner?t=${Date.now()}`);
       if (response.ok) {
         const data = await response.json();
         setBannerData(data);

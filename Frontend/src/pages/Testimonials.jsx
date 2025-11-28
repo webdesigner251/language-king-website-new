@@ -21,6 +21,7 @@ import "swiper/css/navigation";
 import GetInTouch from "../components/Get-in-touch";
 import ImageWithToggle from "../components/ImageWithToggle";
 import Eclipse from "../assets/icons/ellipse.svg";
+import API_BASE_URL from "../config/api";
 
 // Testimonials slides Data array
 const slidesData = [
@@ -94,6 +95,12 @@ const Testimonials = () => {
   const [testimonialVideo, setTestimonialVideo] = useState({
     video_url: TestVideo,
     video_placeholder_img: TestPlaceholder,
+    heading: "Why Students Love Learning With Us",
+    description:
+      "When I started my journey I really thought that it would be impossible for me to clear he test due to my background. xxxxxxxxxxxxx",
+    student_name: "NATALIA",
+    student_tag: "PTE & NAATI CCL",
+    student_avatar: Mainavatar,
   });
   const [loading, setLoading] = useState(true);
   const [naatiLoading, setNaatiLoading] = useState(true);
@@ -123,9 +130,7 @@ const Testimonials = () => {
 
   const fetchPTEFameData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:3000/api/frontend/pte-fame"
-      );
+      const response = await axios.get(`${API_BASE_URL}/frontend/pte-fame`);
       setPteFameData(response.data);
     } catch (error) {
       console.error("Error fetching PTE Fame data:", error);
@@ -139,7 +144,7 @@ const Testimonials = () => {
   const fetchNAATICCLResultsData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/frontend/naati-ccl-results"
+        `${API_BASE_URL}/frontend/naati-ccl-results`
       );
       setNaatiCclResultsData(response.data);
     } catch (error) {
@@ -153,15 +158,32 @@ const Testimonials = () => {
 
   const fetchTestimonialVideo = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:3000/api/testimonial-video"
-      );
-      if (response.data && response.data.video_url) {
+      const response = await axios.get(`${API_BASE_URL}/testimonial-video`);
+      console.log("Fetched testimonial data:", response.data);
+      if (response.data && response.data.id) {
         setTestimonialVideo({
-          video_url: `http://localhost:3000/uploads/${response.data.video_url}`,
+          video_url: response.data.video_url
+            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
+                response.data.video_url
+              }`
+            : TestVideo,
           video_placeholder_img: response.data.video_placeholder_img
-            ? `http://localhost:3000/uploads/${response.data.video_placeholder_img}`
+            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
+                response.data.video_placeholder_img
+              }`
             : TestPlaceholder,
+          heading:
+            response.data.heading || "Why Students Love Learning With Us",
+          description:
+            response.data.description ||
+            "When I started my journey I really thought that it would be impossible for me to clear he test due to my background. xxxxxxxxxxxxx",
+          student_name: response.data.student_name || "NATALIA",
+          student_tag: response.data.student_tag || "PTE & NAATI CCL",
+          student_avatar: response.data.student_avatar
+            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
+                response.data.student_avatar
+              }`
+            : Mainavatar,
         });
       }
     } catch (error) {
@@ -178,7 +200,7 @@ const Testimonials = () => {
             <div>
               <div className="2xl:max-w-[39.0211640212em] xl:max-w-[34.7222222222em] lg:max-w-[34.96875em]">
                 <h1 className="font-inter font-bold lg:text-[3.6375661376em] md:text-[4.1015625em] sm:text-[6.5625em] xs:text-[8.75em] text-[10em] xs:leading-[normal] leading-[1.147] inline-block 2xl:mt-2 mt-0 text-white">
-                  Why Students Love Learning With Us
+                  {testimonialVideo.heading}
                 </h1>
                 <div className="lg:py-[4.8828125em] md:py-[6.518904824em] sm:py-[7.8125em] xs:py-[10.4166666667em] py-[9.3333333333vw] lg:hidden w-full">
                   <div className=" aspect-16/10 block">
@@ -199,22 +221,20 @@ const Testimonials = () => {
                   alt="QuoteIcon"
                   className="xs:-ml-[1.5555555556em] ml-[-1.8em] xs:mb-0 mb-[-0.9em]"
                 />
-                When I started my journey I really thought that it would be
-                impossible for me to clear he test due to my background.
-                xxxxxxxxxxxxx
+                {testimonialVideo.description}
               </div>
               <div className="flex sm:gap-[1.3227513228em] gap-4 items-center sm:mt-[3.3068783069em] mt-[9.3333333333vw]">
                 <div className="gradient-border xs:rounded-[8px] rounded-[3.771px] md:w-[4.0343915344em] md:h-[4.0343915344em] sm:w-[8.125em] xs:w-[10.8333333333em] w-[16.2vw] sm:h-[8.125em] xs:h-[10.8333333333em] h-[16.2vw]">
                   <ImageWithToggle
-                    src={Mainavatar}
-                    alt="Mainavatar"
+                    src={testimonialVideo.student_avatar}
+                    alt="Student Avatar"
                     className="object-fit-cover w-full h-full relative z-10"
                   />
                 </div>
 
                 <div className="flex items-center">
                   <span className="text-white md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
-                    NATALIA
+                    {testimonialVideo.student_name}
                   </span>
                   <img
                     src={Eclipse}
@@ -222,7 +242,7 @@ const Testimonials = () => {
                     className="md:mx-[0.5em] sm:mx-[1.0430247718em] xs:mx-[1.25em] xxs:mx-[2.7777777778vw] mx-[2.7777777778vw] md:w-[0.4166666667vw] md:h-[0.4166666667vw] sm:w-[1.0430247718em] sm:h-[1.0430247718em] xs:w-[1.25em] xs:h-[1.25em] xxs:w-[1.23em] xxs:h-[1.23em] w-[1.23em] h-[1.23em]"
                   />
                   <span className="text-white/40 uppercase md:text-[1.1904761905em] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.44444em] font-semibold">
-                    PTE & NAATI CCL
+                    {testimonialVideo.student_tag}
                   </span>
                 </div>
               </div>
@@ -469,14 +489,14 @@ const Testimonials = () => {
                             />
                           </div>
                         </div>
-                       <div className="md:text-[1.1904761905vw] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
-                        <span className="text-white/40 font-medium">
-                          {item.name}
-                        </span>
-                        <span className="text-white md:text-[0.9259259259vw] text-sm block">
-                          {item.tag}
-                        </span>
-                      </div>
+                        <div className="md:text-[1.1904761905vw] sm:text-[2.5em] xs:text-[3.3333333333em] text-[4.4444444444em] md:text-center text-start flex flex-col">
+                          <span className="text-white/40 font-medium">
+                            {item.name}
+                          </span>
+                          <span className="text-white md:text-[0.9259259259vw] text-sm block">
+                            {item.tag}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>

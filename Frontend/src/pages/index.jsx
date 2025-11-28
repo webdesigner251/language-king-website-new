@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "../components/testimonials-carousel";
 import BookFreeTrail from "../components/BookFreeTrail";
@@ -39,6 +39,8 @@ import Video2 from "../assets/videos/placeholder-video.mp4";
 import Video3 from "../assets/videos/placeholder-video.mp4";
 import Video4 from "../assets/videos/placeholder-video.mp4";
 import ImageWithToggle from "../components/ImageWithToggle";
+import axios from "axios";
+import API_BASE_URL from "../config/api";
 
 const testimonials = [
   {
@@ -70,7 +72,11 @@ const testimonials = [
     thumbnail: ReviewImg3,
     text: (
       <>
-        All of our hiring team said that it saves them hours. <span className="text-white/50">We’re getting feedback within 20-30 minutes from interviews now, which is ideal for recruiting team that works with time to hire targets.</span>
+        All of our hiring team said that it saves them hours.{" "}
+        <span className="text-white/50">
+          We’re getting feedback within 20-30 minutes from interviews now, which
+          is ideal for recruiting team that works with time to hire targets.
+        </span>
       </>
     ),
     avatar: Avatar3,
@@ -86,7 +92,10 @@ const testimonials = [
     thumbnail: ReviewImg4,
     text: (
       <>
-        There is a clear impact on time saved. <span className="text-white/50">We saved 53 hours per month across our recruiting team.</span>
+        There is a clear impact on time saved.{" "}
+        <span className="text-white/50">
+          We saved 53 hours per month across our recruiting team.
+        </span>
       </>
     ),
     avatar: Avatar4,
@@ -182,11 +191,46 @@ const courses = [
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [videoLessons, setVideoLessons] = useState([]);
+  const [currentVideoIndex] = useState(0);
+  const videoContainerRef = useRef(null);
 
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => setShowPopup(true);
   const closePopup = () => setShowPopup(false);
+
+  /* free lesson here */
+  useEffect(() => {
+    console.log(" Component mounted, calling fetchVideoLessons");
+    fetchVideoLessons();
+  }, []);
+
+  const fetchVideoLessons = async () => {
+    const response = await axios.get(`${API_BASE_URL}/video-lessons`);
+
+    if (response.data && response.data.length > 0) {
+      setVideoLessons(response.data);
+      console.log("Video lessons fetched successfully.");
+    } else {
+      console.log("No video lessons found.");
+    }
+  };
+
+  // const handlePrevVideo = () => {
+  //   setCurrentVideoIndex((prev) => Math.max(0, prev - 1));
+  // };
+
+  // const handleNextVideo = () => {
+  //   setCurrentVideoIndex((prev) => Math.min(videoLessons.length - 4, prev + 1));
+  // };
+
+  const displayedVideos =
+    videoLessons.length > 0
+      ? videoLessons.slice(currentVideoIndex, currentVideoIndex + 4)
+      : videoItems.slice(currentVideoIndex, currentVideoIndex + 4);
+
+  /* free lesson end */
 
   // Prevent body scroll when popup is open
   React.useEffect(() => {
@@ -198,6 +242,7 @@ const Home = () => {
     // Cleanup on unmount
     return () => document.body.classList.remove("overflow-hidden");
   }, [showPopup]);
+
 
   return (
     <>
@@ -407,7 +452,7 @@ const Home = () => {
 
       {showPopup && <CallbackForm onClose={closePopup} />}
 
-      <section className="pb-[32px]">
+      {/* <section className="pb-[32px]">
         <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
           <div className="bg-[#252525] px-4 sm:px-[2.1164021164em] ">
             <div className="sm:py-[2.6455026455em] pt-[7.7777777778em] pb-[12.2222222222em]">
@@ -454,6 +499,121 @@ const Home = () => {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="pb-[32px]">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px]">
+          <div className="bg-[#252525] px-4 sm:px-8 ">
+            <div className="sm:py-10 py-7">
+              <h2 className="sm:text-2xl text-[21px] leading-normal font-bold text-white text-left mb-4">
+                Try these FREE video lessons
+              </h2>
+
+              <div className="relative">
+                <div
+                  className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-[28px] gap-[52px]"
+                  ref={videoContainerRef}
+                >
+                  {displayedVideos.length > 0 ? (
+                    displayedVideos.map((item, index) => (
+                      <div key={index} className="relative">
+                        <div className="border-b-[8px] border-[#A6A6A6] mb-3 shadow-[0px_5.03162px_0px_#000000]">
+                          <div
+                            className="w-full aspect-16/9 cursor-pointer relative"
+                            onClick={() => {
+                              const videoSrc = item.video_url
+                                ? `${API_BASE_URL.replace('/api','')}/uploads/${item.video_url}`
+                                : item.videoSrc || video;
+                              setActiveVideo(videoSrc);
+                              setIsModalOpen(true);
+                            }}
+                          >
+                            <ImageWithToggle
+                              src={
+                                item.thumbnail_img
+                                  ? `${API_BASE_URL.replace('/api','')}/uploads/${item.thumbnail_img}`
+                                  : item.thumbnail || VideoImg1
+                              }
+                              alt={item.title}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center transition">
+                              <div
+                                className={`w-16 h-16 bg-black/40 rounded-full flex items-center justify-center`}
+                              >
+                                <svg
+                                  className="w-10 h-10 text-white"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M8 5v14l11-7z" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 className="text-white font-bold 2xl:text-[24px] text-[22px] sm:leading-[1.3] leading-[28px]">
+                          {item.title}
+                        </h3>
+                        <span className="text-white/60 sm:mt-[6px] mt-[4px] block text-base font-semibold">
+                          {item.description || "PTE MasterClass"}
+                        </span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="col-span-4 text-center text-white py-8">
+                      <p>Loading videos...</p>
+                    </div>
+                  )}
+                </div>
+                {/* {videoLessons.length > 4 && (
+                  <div className="flex gap-3 justify-center items-center mt-8">
+                    <button
+                      onClick={handlePrevVideo}
+                      disabled={currentVideoIndex === 0}
+                      className="w-12 h-12 bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out rounded flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10 18L2 10L10 2"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={handleNextVideo}
+                      disabled={currentVideoIndex >= videoLessons.length - 4}
+                      className="w-12 h-12 bg-[#1A1A1A] hover:bg-white/10 transition-all duration-300 ease-in-out rounded flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed"
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 2L10 10L2 18"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                )} */}
               </div>
             </div>
           </div>

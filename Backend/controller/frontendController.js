@@ -1,4 +1,5 @@
 import connection from '../db/connection.js';
+import API_BASE_URL from "../config/api.js";
 
 // Get PTE students for frontend display
 export const getPTEStudentsForFrontend = async (req, res) => {
@@ -62,10 +63,10 @@ export const getPTEFameForFrontend = async (req, res) => {
       title: entry.title,
       name: entry.student_name,
       tag: entry.band,
-      video: entry.video_url ? `http://localhost:3000/uploads/${entry.video_url}` : null,
-      image: entry.video_placeholder_img ? `http://localhost:3000/uploads/${entry.video_placeholder_img}` : null,
-      avatar: entry.student_img ? `http://localhost:3000/uploads/${entry.student_img}` : null,
-      flag: entry.flag_img ? `http://localhost:3000/uploads/${entry.flag_img}` : null
+      video: entry.video_url ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.video_url}` : null,
+      image: entry.video_placeholder_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.video_placeholder_img}` : null,
+      avatar: entry.student_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.student_img}` : null,
+      flag: entry.flag_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.flag_img}` : null
     }));
     
     res.json(fameEntries);
@@ -89,10 +90,10 @@ export const getNAATICCLResultsForFrontend = async (req, res) => {
       title: entry.title,
       name: entry.student_name,
       tag: entry.band,
-      video: entry.video_url ? `http://localhost:3000/uploads/${entry.video_url}` : null,
-      image: entry.video_placeholder_img ? `http://localhost:3000/uploads/${entry.video_placeholder_img}` : null,
-      avatar: entry.student_img ? `http://localhost:3000/uploads/${entry.student_img}` : null,
-      flag: entry.flag_img ? `http://localhost:3000/uploads/${entry.flag_img}` : null
+      video: entry.video_url ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.video_url}` : null,
+      image: entry.video_placeholder_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.video_placeholder_img}` : null,
+      avatar: entry.student_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.student_img}` : null,
+      flag: entry.flag_img ? `${API_BASE_URL.replace('/api','')}/uploads/${entry.flag_img}` : null
     }));
     
     res.json(resultsEntries);

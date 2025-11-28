@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import PTEFameForm from "./PTEFameForm";
 import TestimonialVideoForm from "./TestimonialVideoForm";
+import API_BASE_URL from "../config/api"
 
 const PTEFame = () => {
   const [fameEntries, setFameEntries] = useState([]);
@@ -16,7 +17,7 @@ const PTEFame = () => {
 
   const fetchFameEntries = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/pte-fame");
+      const response = await axios.get(`${API_BASE_URL}/pte-fame`);
       setFameEntries(response.data);
     } catch (error) {
       console.error("Error fetching PTE Fame entries:", error);
@@ -32,7 +33,7 @@ const PTEFame = () => {
     }
     if (window.confirm("Are you sure you want to delete this entry?")) {
       try {
-        await axios.delete(`http://localhost:3000/api/pte-fame/${id}`);
+        await axios.delete(`${API_BASE_URL}/pte-fame/${id}`);
         fetchFameEntries();
       } catch (error) {
         console.error("Error deleting entry:", error);
@@ -181,7 +182,7 @@ const PTEFame = () => {
                       <div className="flex items-center gap-3">
                         {entry.student_img ? (
                           <img
-                            src={`http://localhost:3000/uploads/${entry.student_img}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${entry.student_img}`}
                             alt={entry.student_name}
                             className="w-10 h-10 rounded-full object-cover border-2 border-gray-200"
                           />
@@ -204,7 +205,7 @@ const PTEFame = () => {
                       {entry.video_placeholder_img ? (
                         <div className="w-16 h-12 rounded overflow-hidden border border-gray-200">
                           <img
-                            src={`http://localhost:3000/uploads/${entry.video_placeholder_img}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${entry.video_placeholder_img}`}
                             alt="Video thumbnail"
                             className="w-full h-full object-cover"
                           />

@@ -20,7 +20,7 @@ const CallbackForm = () => {
         We’ve received your information.
       </h3>
 
-      <div className="bg-[#252525] rounded-[1.124em] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em] p-4 pb-[20px] xs:mt-[1.587em] mt-[5.2083333333vw]">
+      <div className="bg-[#252525] sm:py-[1.3227513228em]   rounded-[1.124em] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em]  pb-[20px] xs:mt-[1.587em] mt-[5.2083333333vw]">
         <div className="inline-flex items-center justify-center">
           <h3 className="font-bold xl:text-[2.1164021164em] md:text-[1.984em] xs:text-[2.2em] text-[6.1111111111em] inline mx-auto tracking-[1px] relative text-white border-text text-center">
             What Happens Next?
@@ -62,8 +62,12 @@ const CallbackForm = () => {
                   href="tel:+61488876999"
                   className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-medium md:text-[1.2566137566vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.92vw] leading-[1.375]"
                 >
-                  <img src={PhoneICon} className="lg:w-[2.7116402116vw] w-[1.545em]" />
-                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61 444 876 555
+                  <img
+                    src={PhoneICon}
+                    className="lg:w-[2.7116402116vw] w-[1.545em]"
+                  />
+                  +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61
+                  444 876 555
                 </a>
               </li>
               <li>
@@ -72,7 +76,10 @@ const CallbackForm = () => {
                   className="flex items-start xs:gap-[1.058em]  gap-[0.7142857143em] text-white font-medium md:text-[1.2566137566vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.92vw] leading-[1.375]"
                 >
                   <div className="w-[2.646em] flex items-center justify-center">
-                    <img src={CalenderIcon} className="lg:w-[1.7857142857vw] w-[1.545em]" />
+                    <img
+                      src={CalenderIcon}
+                      className="lg:w-[1.7857142857vw] w-[1.545em]"
+                    />
                   </div>
                   <span>
                     10 A.M to 7 P.M <br />

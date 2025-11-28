@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "../components/testimonials-carousel";
 import BookFreeTrail from "../components/BookFreeTrail";
@@ -39,6 +39,8 @@ import Video2 from "../assets/videos/placeholder-video.mp4";
 import Video3 from "../assets/videos/placeholder-video.mp4";
 import Video4 from "../assets/videos/placeholder-video.mp4";
 import ImageWithToggle from "../components/ImageWithToggle";
+
+
 
 const testimonials = [
   {
@@ -117,7 +119,6 @@ const videoItems = [
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
-
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => setShowPopup(true);
@@ -151,7 +152,6 @@ const Home = () => {
                 className="inline-flex justify-center items-center text-center primary-btn bg-gradient-primary text-black px-[0.7936507937em] sm:py-[clamp(12px, calc(-6.0000px + 100.0000vw), 14px)] py-[14px] sm:w-[50%] w-full sm:font-semibold font-bold md:text-[1.3227513228em] text-lg relative z-10 leading-[1.2]"
               >
                 Get-a Callback
-                
               </Link>
               <Link
                 to="/free-e-book"
@@ -181,8 +181,9 @@ const Home = () => {
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="md:text-[1.3227513228em] text-lg leading-[1.2]">Watch FREE Lessons</span>
-
+                <span className="md:text-[1.3227513228em] text-lg leading-[1.2]">
+                  Watch FREE Lessons
+                </span>
               </Link>
             </div>
           </div>
@@ -355,11 +356,11 @@ const Home = () => {
 
       {showPopup && <CallbackForm onClose={closePopup} />}
 
-      <section className="pb-[32px]">
-        <div className="custom-container mx-auto py-0 px-4 sm:px-[32px]">
-          <div className="bg-[#252525] px-4 sm:px-8 ">
-            <div className="sm:py-10 py-7">
-              <h2 className="sm:text-2xl text-[21px] leading-normal font-bold text-white text-left mb-4">
+     <section className="pb-[32px]">
+        <div className="custom-container mx-auto py-0 px-4 sm:px-[2.1164021164em]">
+          <div className="bg-[#252525] px-4 sm:px-[2.1164021164em] ">
+            <div className="sm:py-[2.6455026455em] pt-[7.7777777778em] pb-[12.2222222222em]">
+              <h2 className="lg:text-[1.5873015873em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.8333333333em] leading-normal font-bold text-white text-left mb-4">
                 Try these FREE video lessons
               </h2>
 
@@ -394,10 +395,10 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <h3 className="text-white font-bold 2xl:text-[24px] text-[22px] sm:leading-[1.3] leading-[28px]">
+                    <h3 className="text-white font-bold 2xl:text-[1.5873015873em] lg:text-[1.455026455em] md:text-[2.34375em] sm:text-[3.125em] xs:text-[3.4375em] text-[5.5555555556em] leading-[1.3]">
                       {item.title}
                     </h3>
-                    <span className="text-white/60 sm:mt-[6px] mt-[4px] block text-base font-semibold">
+                    <span className="text-white/60 sm:mt-[6px] mt-[4px] block lg:text-[1.0582010582em] md:text-[1.5625em] sm:text-[2.0833333333em] xs:text-[2.5em] text-[4.4444444444em] font-semibold">
                       PTE MasterClass
                     </span>
                   </div>
@@ -406,7 +407,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
 
       <VideoModal
         isOpen={isModalOpen}

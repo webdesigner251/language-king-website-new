@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Toast from './Toast'
+import API_BASE_URL from "../config/api"
 
 const FAQs = () => {
   const [faqs, setFaqs] = useState([])
@@ -23,7 +24,7 @@ const FAQs = () => {
 
   const fetchFAQs = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/faqs?t=${Date.now()}`)
+      const response = await fetch(`${API_BASE_URL}/faqs?t=${Date.now()}`)
       if (response.ok) {
         const data = await response.json()
         // Remove duplicates based on question text
@@ -78,8 +79,8 @@ const FAQs = () => {
 
     try {
       const url = editingFaq 
-        ? `http://localhost:3000/api/faqs/${editingFaq.id}`
-        : 'http://localhost:3000/api/faqs'
+        ? `${API_BASE_URL}/faqs/${editingFaq.id}`
+        : `${API_BASE_URL}/faqs`
       
       const method = editingFaq ? 'PUT' : 'POST'
       
@@ -121,7 +122,7 @@ const FAQs = () => {
     if (!confirm('Are you sure you want to delete this FAQ?')) return
 
     try {
-      const response = await fetch(`http://localhost:3000/api/faqs/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/faqs/${id}`, {
         method: 'DELETE'
       })
 
@@ -150,7 +151,7 @@ const FAQs = () => {
 
     setIsCleaningUp(true)
     try {
-      const response = await fetch('http://localhost:3000/api/faqs/cleanup', {
+      const response = await fetch(`${API_BASE_URL}/faqs/cleanup`, {
         method: 'POST'
       })
       

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import API_BASE_URL from "../config/api";
 
 // Cache to prevent multiple API calls
 let faqsCache = null
@@ -28,7 +29,7 @@ const useFAQs = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/api/faqs?t=${now}`)
+        const response = await fetch(`${API_BASE_URL}/faqs?t=${now}`)
         if (!response.ok) {
           throw new Error('Failed to fetch FAQs')
         }

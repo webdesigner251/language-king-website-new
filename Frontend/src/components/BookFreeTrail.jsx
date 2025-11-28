@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
 import CallbackThankyou from "./Callback-thankyou";
+import API_BASE_URL from "../config/api";
 
 const BookFreeTrail = () => {
   const [formData, setFormData] = useState({
@@ -92,7 +93,7 @@ const BookFreeTrail = () => {
 
     try {
       // Store in database
-      const dbRes = await fetch("http://localhost:3000/api/forms/booktrail", {
+      const dbRes = await fetch(`${API_BASE_URL}/forms/booktrail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +102,7 @@ const BookFreeTrail = () => {
       });
 
       // Send email
-      const emailRes = await fetch("http://localhost:3000/send-email", {
+      const emailRes = await fetch(`${API_BASE_URL.replace('/api','')}/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,11 +9,13 @@ const Sidebar = ({ activeMenu, setActiveMenu }) => {
     { id: "formDetails", name: "Form Details" },
     { id: "pteStudents", name: "PTE Students" },
     { id: "naatiCclStudents", name: "NAATI-CCL Students" },
+    { id: "videoLesson", name: "Video Lesson" },
   ];
 
   const testimonialsSubItems = [
     { id: "pteFame", name: "PTE Fame" },
     { id: "naatiCclResults", name: "NAATI CCL Results" },
+    { id: "testimonialMainSection", name: "Main Section" },
   ];
 
   const freeEbookSubItems = [

@@ -11,6 +11,8 @@ import NAATICCLResultsForm from './components/NAATICCLResultsForm'
 import FreeEbookBanner from './components/FreeEbookBanner'
 import FAQs from './components/FAQs'
 import BookBox from './components/BookBox'
+import VideoLesson from './components/VideoLesson'
+import TestimonialVideoForm from './components/TestimonialVideoForm'
  
 function App() {
   const [activeMenu, setActiveMenu] = useState('formDetails')
@@ -99,6 +101,10 @@ function App() {
         return <FAQs />
       case 'bookBox':
         return <BookBox />
+      case 'videoLesson':
+        return <VideoLesson />
+      case 'testimonialMainSection':
+        return <TestimonialVideoForm onBack={() => setActiveMenu('testimonialMainSection')} />
       default:
         return (
           <div className="p-6">

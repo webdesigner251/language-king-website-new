@@ -17,14 +17,14 @@ const addAiportalImageColumn = async () => {
       // Add the column if it doesn't exist
       const alterQuery = `ALTER TABLE book_box ADD COLUMN aiportal_image VARCHAR(255) DEFAULT NULL`;
       await db.execute(alterQuery);
-      console.log('✅ aiportal_image column added successfully to book_box table');
+      console.log(' aiportal_image column added successfully to book_box table');
     } else {
-      console.log('ℹ️ aiportal_image column already exists in book_box table');
+      console.log('ℹ aiportal_image column already exists in book_box table');
     }
     
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error adding aiportal_image column:', error);
+    console.error(' Error adding aiportal_image column:', error);
     process.exit(1);
   }
 };

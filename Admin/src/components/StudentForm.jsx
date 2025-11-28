@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Toast from "../components/Toast";
+import API_BASE_URL from "../config/api"
 
 const StudentForm = ({ type, studentId, onBack }) => {
   const isEdit = Boolean(studentId);
@@ -73,7 +74,7 @@ const StudentForm = ({ type, studentId, onBack }) => {
     try {
       const endpoint = isPTE ? "pte-students" : "naati-ccl-students";
       const response = await axios.get(
-        `http://localhost:3000/api/${endpoint}/${studentId}`
+        `${API_BASE_URL}/${endpoint}/${studentId}`
       );
       const student = response.data;
       
@@ -126,7 +127,7 @@ const StudentForm = ({ type, studentId, onBack }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/upload",
+        `${API_BASE_URL}/upload`,
         formDataUpload,
         {
           headers: {
@@ -181,11 +182,11 @@ const StudentForm = ({ type, studentId, onBack }) => {
 
       if (isEdit) {
         await axios.put(
-          `http://localhost:3000/api/${endpoint}/${studentId}`,
+          `${API_BASE_URL}/${endpoint}/${studentId}`,
           formData
         );
       } else {
-        await axios.post(`http://localhost:3000/api/${endpoint}`, formData);
+        await axios.post(`${API_BASE_URL}/${endpoint}`, formData);
       }
 
       setToast({
@@ -313,7 +314,7 @@ const StudentForm = ({ type, studentId, onBack }) => {
                     <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-2">Current flag:</p>
                       <img
-                        src={`http://localhost:3000/uploads/${formData.flag}`}
+                        src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.flag}`}
                         alt="Flag preview"
                         className="w-16 h-12 object-cover rounded border border-gray-200"
                       />
@@ -343,7 +344,7 @@ const StudentForm = ({ type, studentId, onBack }) => {
                     <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600 mb-2">Current image:</p>
                       <img
-                        src={`http://localhost:3000/uploads/${formData.image}`}
+                        src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.image}`}
                         alt="Profile preview"
                         className="w-20 h-20 object-cover rounded-lg border border-gray-200"
                       />

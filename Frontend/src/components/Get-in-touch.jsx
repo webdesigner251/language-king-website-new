@@ -3,6 +3,7 @@
 // import CustomDropdown from "./custom-dropdown";
 // import ContactThankyou from "./Contact-thankyou";
 // import { Link } from "react-router-dom";
+// import API_BASE_URL from "../config/api";
  
 // const GetInTouch = () => {
 //   const [formData, setFormData] = useState({
@@ -88,7 +89,7 @@
  
 //     try {
 //       // Store in database
-//       const dbRes = await fetch("http://localhost:3000/api/forms/contact", {
+//       const dbRes = await fetch(`${API_BASE_URL}/forms/contact`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -105,7 +106,7 @@
 //       if (dbResult.success) {
 //         // Send email after successful database save
 //         try {
-//           const emailRes = await fetch("http://localhost:3000/send-email", {
+//           const emailRes = await fetch(`${API_BASE_URL.replace('/api','')}/send-email`, {
 //             method: "POST",
 //             headers: {
 //               "Content-Type": "application/json",

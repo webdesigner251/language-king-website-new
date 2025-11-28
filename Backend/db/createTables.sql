@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS Contact (
     form_source VARCHAR(100) DEFAULT 'Contact Form',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
  
 -- Course table for course/callback form submissions  
 CREATE TABLE IF NOT EXISTS Course (
@@ -19,6 +20,7 @@ CREATE TABLE IF NOT EXISTS Course (
     form_source VARCHAR(100) DEFAULT 'Course Form',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
  
 -- BookTrail table for book free trail form submissions
 CREATE TABLE IF NOT EXISTS BookTrail (
@@ -29,6 +31,7 @@ CREATE TABLE IF NOT EXISTS BookTrail (
     form_source VARCHAR(100) DEFAULT 'BookTrail Form',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 -- PTE Students table
 CREATE TABLE IF NOT EXISTS pte_students (
@@ -42,6 +45,7 @@ CREATE TABLE IF NOT EXISTS pte_students (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 -- NAATI-CCL Students table
 CREATE TABLE IF NOT EXISTS naati_ccl_students (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,6 +57,7 @@ CREATE TABLE IF NOT EXISTS naati_ccl_students (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 -- PTE Fame table
 CREATE TABLE IF NOT EXISTS pte_fame (
@@ -68,6 +73,7 @@ CREATE TABLE IF NOT EXISTS pte_fame (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 -- NAATI CCL Results table
 CREATE TABLE IF NOT EXISTS naati_ccl_results (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -82,14 +88,21 @@ CREATE TABLE IF NOT EXISTS naati_ccl_results (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+
 -- Testimonial Video table for "Why Students Love Learning With Us" section
 CREATE TABLE IF NOT EXISTS testimonial_video (
     id INT AUTO_INCREMENT PRIMARY KEY,
     video_url VARCHAR(500) NOT NULL,
     video_placeholder_img VARCHAR(255),
+    heading TEXT,
+    description TEXT,
+    student_name VARCHAR(255),
+    student_tag VARCHAR(255),
+    student_avatar VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 
 -- Free E-book banner section table
 CREATE TABLE IF NOT EXISTS free_ebook_banner (
@@ -127,6 +140,8 @@ CREATE TABLE IF NOT EXISTS FAQs (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     UNIQUE KEY unique_question (question(500))
 );
+
+
 
 -- Insert default data for free ebook banner (only if no record exists)
 INSERT IGNORE INTO free_ebook_banner (
@@ -198,3 +213,14 @@ INSERT IGNORE INTO FAQs (question, answer) VALUES
 ('How do I cancel or delete my account after downloading the eBook?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maxime officia esse delectus dolore temporibus ad, repellendus aperiam iste provident veniam aut animi id impedit. Ipsa inventore tenetur dolorem ad?'),
 ('What happens after my free 1-week access ends?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maxime officia esse delectus dolore temporibus ad, repellendus aperiam iste provident veniam aut animi id impedit. Ipsa inventore tenetur dolorem ad?'),
 ('Is my information secure?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt maxime officia esse delectus dolore temporibus ad, repellendus aperiam iste provident veniam aut animi id impedit. Ipsa inventore tenetur dolorem ad?');
+
+-- Video Lessons table
+CREATE TABLE IF NOT EXISTS video_lessons (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  thumbnail_img VARCHAR(255),
+  video_url VARCHAR(255),
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

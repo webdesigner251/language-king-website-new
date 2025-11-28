@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import API_BASE_URL from "../config/api"
 
 const FormDetails = () => {
   const [activeTab, setActiveTab] = useState("contact");
@@ -16,9 +17,9 @@ const FormDetails = () => {
   const fetchData = async () => {
     try {
       const [contactRes, courseRes, booktrailRes] = await Promise.all([
-        fetch("http://localhost:3000/api/forms/contact"),
-        fetch("http://localhost:3000/api/forms/course"),
-        fetch("http://localhost:3000/api/forms/booktrail"),
+        fetch(`${API_BASE_URL}/forms/contact`),
+        fetch(`${API_BASE_URL}/forms/course`),
+        fetch(`${API_BASE_URL}/forms/booktrail`),
       ]);
 
       const [contactData, courseData, booktrailData] = await Promise.all([
@@ -41,7 +42,7 @@ const FormDetails = () => {
     if (window.confirm("Are you sure you want to delete this item?")) {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/forms/${type}/${id}`,
+          `${API_BASE_URL}/forms/${type}/${id}`,
           {
             method: "DELETE",
           }

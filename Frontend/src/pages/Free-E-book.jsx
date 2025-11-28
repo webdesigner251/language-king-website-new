@@ -20,11 +20,12 @@ import ImageWithToggle from "../components/ImageWithToggle";
 import useFreeEbookBanner from "../hooks/useFreeEbookBanner";
 import useFAQs from "../hooks/useFAQs";
 import useBookBox from "../hooks/useBookBox";
+import API_BASE_URL from "../config/api";
 
 // Helper function to get image URL
 const getImageUrl = (imageName, fallback) => {
   if (imageName) {
-    return `http://localhost:3000/uploads/${imageName}`;
+    return `${API_BASE_URL.replace("/api", "")}/uploads/${imageName}`;
   }
   return fallback;
 };
@@ -201,6 +202,32 @@ const FreeEBook = () => {
   // Use dynamic FAQs if available, otherwise fallback to static FAQs
   const faqsToDisplay = dynamicFaqs.length > 0 ? dynamicFaqs : faqs;
 
+  // Prepare learning points: prefer `learning_points` array from API,
+  // otherwise fall back to legacy `learn_point_1/2/3` or hardcoded defaults.
+  const _defaultLearningPoints = [
+    "Attempt R&W blanks",
+    "Difference b/w linkers, starters and connectors",
+    "Quiz to test your learning",
+  ];
+
+  const learningPoints = (() => {
+    if (
+      bannerData?.learning_points &&
+      Array.isArray(bannerData.learning_points) &&
+      bannerData.learning_points.length > 0
+    ) {
+      return bannerData.learning_points;
+    }
+
+    // fallback to legacy fields or defaults
+    const legacy = [
+      bannerData?.learn_point_1,
+      bannerData?.learn_point_2,
+      bannerData?.learn_point_3,
+    ];
+    return legacy.map((p, i) => p || _defaultLearningPoints[i]);
+  })();
+
   return (
     <>
       {/* black space for header */}
@@ -265,49 +292,47 @@ const FreeEBook = () => {
                       YOU’LL LEARN HOW TO:
                     </h2>
                     <ul className="">
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
-                        <img
-                          src={CheckmarkYellow}
-                          alt="CheckmarkYellow"
-                          className="w-4"
-                        />
-                        {bannerData?.learn_point_1 || "Attempt R&W blanks"}
-                      </li>
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
-                        <img
-                          src={CheckmarkYellow}
-                          alt="CheckmarkYellow"
-                          className="w-4"
-                        />
-                        {bannerData?.learn_point_2 ||
-                          "Difference b/w linkers, starters and connectors"}
-                      </li>
-                      <li className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]">
-                        <img
-                          src={CheckmarkYellow}
-                          alt="CheckmarkYellow"
-                          className="w-4"
-                        />
-                        {bannerData?.learn_point_3 ||
-                          "Quiz to test your learning"}
-                      </li>
+                      {learningPoints.map((point, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-center sm:leading-[1.5] leading-[1.4] sm:text-[1.0582010582em] text-sm text-white sm:gap-[1.75em] gap-4 py-[0.5em]"
+                        >
+                          <img
+                            src={CheckmarkYellow}
+                            alt="CheckmarkYellow"
+                            className="w-4"
+                          />
+                          {point}
+                        </li>
+                      ))}
                     </ul>
-                  </div> 
+                  </div>
                 </div>
                 <div className="lg:max-w-[70%] max-w-full flex lg:flex-nowrap flex-wrap items-center sm:justify-start justify-center lg:gap-[2.6455026455em] sm:gap-7 gap-4 sm:order-0 -order-1 ">
                   <div className="relative rounded-lg sm:w-auto w-full ">
                     <a
                       href="#"
-                      className="align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
+                      className="align-middle xs:inline-flex hidden items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
-                      {bannerData?.cta_button_text || "Start 7-Day Free Trial"}
-                      
+                      {bannerData?.cta_button_text || "Start 7-Day Trial"}
+                    </a>
+
+                    <a
+                      href="#"
+                      className="xs:hidden align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
+                    >
+                      {bannerData?.cta_button_text_mobile ||
+                        "Start 7-Day Free Trial"}
                     </a>
                   </div>
                   <div>
-                    <h4 className="text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
+                    <h4 className="xs:block hidden text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
                       {bannerData?.save_text ||
                         "Save $33 by using AI Portal + Prediction File + 6 Books"}
+                    </h4>
+                    <h4 className="xs:hidden block text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
+                      {bannerData?.save_text_mobile ||
+                        "Save $33 by using AI Portal"}
                     </h4>
                     <span className="uppercase font-semibold text-white/50 text-[0.8597883598em] mt-[0.3846153846em] leading-[1.462] sm:inline hidden">
                       See below
@@ -414,17 +439,28 @@ const FreeEBook = () => {
                           {bookBoxData?.aiportal_title || "6 Month AI Portal"}
                         </h3>
                         <ul className="sm:text-[1.3227513228em] text-lg leading-[1.4] text-[#B8B8B8] font-normal mt-[0.2em]">
-                          {bookBoxData?.aiportal_features ? 
-                            bookBoxData.aiportal_features.split('\n').map((feature, index) => (
-                              <li key={index} className="py-[0.1em]">{feature}</li>
-                            )) : 
-                            [
-                              <li key="1" className="py-[0.1em]">- 10 Full Mock Tests</li>,
-                              <li key="2" className="py-[0.1em]">- 20 Sectional Tests</li>,
-                              <li key="3" className="py-[0.1em]">- 5000+ Exam Questions</li>,
-                              <li key="4" className="py-[0.1em]">- 5 Books Included</li>
-                            ]
-                          }
+                          {bookBoxData?.aiportal_features
+                            ? bookBoxData.aiportal_features
+                                .split("\n")
+                                .map((feature, index) => (
+                                  <li key={index} className="py-[0.1em]">
+                                    {feature}
+                                  </li>
+                                ))
+                            : [
+                                <li key="1" className="py-[0.1em]">
+                                  - 10 Full Mock Tests
+                                </li>,
+                                <li key="2" className="py-[0.1em]">
+                                  - 20 Sectional Tests
+                                </li>,
+                                <li key="3" className="py-[0.1em]">
+                                  - 5000+ Exam Questions
+                                </li>,
+                                <li key="4" className="py-[0.1em]">
+                                  - 5 Books Included
+                                </li>,
+                              ]}
                         </ul>
                       </div>
                       <div className="flex justify-end items-center 2xl:gap-[3.9682539683em] sm:gap-[1.9841269841em] gap-[30px] mt-[1.6534391534em]">
@@ -443,10 +479,13 @@ const FreeEBook = () => {
                     <div className="flex justify-between items-center md:gap-[2.7777777778em] gap-[1.8518518519em]">
                       <div>
                         <h3 className="text-white font-bold sm:text-[2.5132275132em] text-[2.1164021164em] leading-[1.2]">
-                          + {bookBoxData?.prediction_file_title || "Prediction File"}{" "}
+                          +{" "}
+                          {bookBoxData?.prediction_file_title ||
+                            "Prediction File"}{" "}
                         </h3>
                         <span className="text-[#B8B8B8] font-normal 2xl:text-[1.3227513228em] xl:text-[1.1904761905em] text-base">
-                          {bookBoxData?.prediction_file_subtitle || "Get monthly updates for 6 months"}
+                          {bookBoxData?.prediction_file_subtitle ||
+                            "Get monthly updates for 6 months"}
                         </span>
                       </div>
                       <div className="flex 2xl:gap-[2.9761904762em] sm:gap-[2.1164021164em] gap-[32px] items-center">
@@ -486,7 +525,8 @@ const FreeEBook = () => {
                       </div>
                       <div className="flex justify-between gap-4">
                         <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
-                          {bookBoxData?.ebook_subtitle || "Get 7-days Free Trial"}
+                          {bookBoxData?.ebook_subtitle ||
+                            "Get 7-days Free Trial"}
                         </h4>
                         <div className="">
                           <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
@@ -494,57 +534,120 @@ const FreeEBook = () => {
                           </span>
                         </div>
                       </div>
+                      <hr className="border-[#3D3D3D] my-[1.9841269841em]" />
+                      <div className="max-w-[26.455026455em]">
+                        <div className="flex justify-between gap-[1.0582010582em] items-center">
+                          <div className="w-auto flex-auto">
+                            <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
+                              Your total:{" "}
+                            </h4>
+                            <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
+                              $150
+                            </span>
+                          </div>
+                          <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
+                            Saving $33!
+                          </span>
+                        </div>
+                        <h4 className="text-[#B0B0B0] font-bold xl:text-[4.7619047619em] text-[3.9682539683em] leading-[1.1]">
+                          $119
+                        </h4>
+                        <span className="text-[#B0B0B0] font-bold text-[1.0582010582em] sm:text-base">
+                          (GST Included)
+                        </span>
+                      </div>
                     </div>
                   ) : (
                     // AI Portal Details
                     <div>
-                      <div className="flex justify-between gap-[1.0582010582em]">
-                        <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
+                      {/* AI Portal Header */}
+                      <div className="flex justify-between">
+                        <h4 className="font-semibold text-white text-lg">
                           {bookBoxData?.aiportal_title || "6 Month AI Portal"}
                         </h4>
-                        <div className="">
-                          <span className="text-[#B0B0B0] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg me-8 line-through">
+
+                        <div>
+                          <span className="text-[#B0B0B0] line-through font-bold me-4">
                             {bookBoxData?.aiportal_original_price || "$129"}
                           </span>
-                          <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
+                          <span className="text-[#F0AB0F] font-bold">
                             {bookBoxData?.aiportal_price || "$99"}
                           </span>
                         </div>
                       </div>
 
-                      {addPredictionFile && (
-                        <div className="flex justify-between gap-4">
-                          <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.6] text-lg">
-                            {bookBoxData?.prediction_file_title || "Prediction File"}
-                          </h4>
-                          <div className="">
-                            <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
-                              {bookBoxData?.prediction_file_price || "$9"}
-                            </span>
-                          </div>
-                        </div>
-                      )}
-                      {addPredictionFile && (
+                      {/* (A) AI TOTAL WITHOUT Prediction File */}
+                      {!addPredictionFile && (
                         <>
-                          <hr className="border-[#3D3D3D] my-[1.9841269841em]" />
+                          <hr className="border-[#3D3D3D] my-6" />
+
                           <div className="max-w-[26.455026455em]">
-                            <div className="flex justify-between gap-[1.0582010582em] items-center">
-                              <div className="w-auto flex-auto">
-                                <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
-                                  Your total:{" "}
+                            <div className="flex justify-between items-center">
+                              <div className="flex-auto">
+                                <h4 className="font-semibold text-white text-lg inline">
+                                  Your total:
                                 </h4>
-                                <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
+                                <span className="text-[#B0B0B0] line-through font-bold ps-3">
                                   $152
                                 </span>
                               </div>
-                              <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
+
+                              <span className="text-[#F0AB0F] font-medium">
                                 Saving $33!
                               </span>
                             </div>
-                            <h4 className="text-[#B0B0B0] font-bold xl:text-[4.7619047619em] text-[3.9682539683em] leading-[1.1]">
+
+                            <h4 className="text-[#B0B0B0] font-bold text-[3.8em] leading-[1.1]">
                               $119
                             </h4>
-                            <span className="text-[#B0B0B0] font-bold text-[1.0582010582em] sm:text-base">
+
+                            <span className="text-[#B0B0B0] font-bold text-base">
+                              (GST Included)
+                            </span>
+                          </div>
+                        </>
+                      )}
+
+                      {/* AI TOTAL WITH Prediction File Added*/}
+                      {addPredictionFile && (
+                        <>
+                          {/* <hr className="border-[#3D3D3D] my-6" /> */}
+
+                          {/* Prediction File item */}
+                          <div className="flex justify-between mb-4">
+                            <h4 className="font-semibold text-white text-lg">
+                              {bookBoxData?.prediction_file_title ||
+                                "Prediction File 2"}
+                            </h4>
+                            <span className="text-[#F0AB0F] font-bold">
+                              {bookBoxData?.prediction_file_price || "$9"}
+                            </span>
+                          </div>
+
+                          <hr className="border-[#3D3D3D] my-6" />
+
+                          <div className="max-w-[26.455026455em]">
+                            <div className="flex justify-between items-center">
+                              <div className="flex-auto">
+                                <h4 className="font-semibold text-white text-lg inline">
+                                  Your total:
+                                </h4>
+
+                                <span className="text-[#B0B0B0] line-through font-bold ps-3">
+                                  $161
+                                </span>
+                              </div>
+
+                              <span className="text-[#F0AB0F] font-medium">
+                                Saving $33!
+                              </span>
+                            </div>
+
+                            <h4 className="text-[#B0B0B0] font-bold text-[3.8em] leading-[1.1]">
+                              $128
+                            </h4>
+
+                            <span className="text-[#B0B0B0] font-bold text-base">
                               (GST Included)
                             </span>
                           </div>
@@ -559,7 +662,11 @@ const FreeEBook = () => {
                   {/* E-Book Only Box */}
                   <div
                     className={`mb-3 rounded-[5px] p-[2.34px]
-                      ${selected === "ebook" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
+                      ${
+                        selected === "ebook"
+                          ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]"
+                          : "bg-[#707070]"
+                      }  `}
                   >
                     <div
                       onClick={() => {
@@ -567,7 +674,9 @@ const FreeEBook = () => {
                         setSelectedBox("ebook");
                         setAddPredictionFile(false);
                       }}
-                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
+                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${
+                        selected === "ebook" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"
+                      } `}
                     >
                       <div className="flex gap-[10px] items-start">
                         {selected === "ebook" && (
@@ -582,7 +691,8 @@ const FreeEBook = () => {
                             {bookBoxData?.ebook_title || "E-Book Only"}
                           </h3>
                           <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                            {bookBoxData?.ebook_subtitle || "Get 7-days Free Trial"}
+                            {bookBoxData?.ebook_subtitle ||
+                              "Get 7-days Free Trial"}
                           </p>
                         </div>
                       </div>
@@ -590,7 +700,8 @@ const FreeEBook = () => {
                         <button
                           type="button"
                           className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-semibold text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn  w-[21.6666666667vw]
-                          ${selected === "ebook"
+                          ${
+                            selected === "ebook"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
                           }`}
@@ -611,20 +722,24 @@ const FreeEBook = () => {
                     
                   </div> */}
 
-
                   {/* 6 Month AI Portal Box */}
                   <div
                     className={`rounded-[5px] p-[2.34px] 
-                      ${selected === "portal" ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]" : "bg-[#707070]"}  `}
+                      ${
+                        selected === "portal"
+                          ? "bg-gradient-to-r from-[#F69F19] via-[#F0AB0F] to-[#FF39D0]"
+                          : "bg-[#707070]"
+                      }  `}
                   >
                     <div
                       onClick={() => {
-                          setSelected("portal");
-                         setSelectedBox("aiportal");
-                         setAddPredictionFile(false);
+                        setSelected("portal");
+                        setSelectedBox("aiportal");
+                        setAddPredictionFile(false);
                       }}
-                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"} `}
-
+                      className={`rounded-[3px] py-[22px] px-[10px] flex justify-between items-center cursor-pointer w-full border-0 ${
+                        selected === "portal" ? "bg-[#0A0A09]" : "bg-[#1B1B1B]"
+                      } `}
                     >
                       <div className="flex gap-[10px] items-start">
                         {selected === "portal" && (
@@ -639,7 +754,8 @@ const FreeEBook = () => {
                             {bookBoxData?.aiportal_title || "6 Month AI Portal"}
                           </h3>
                           <p className="xs:text-[2.1875em] text-[3.6458333333em] text-[#B8B8B8] font-normal mt-[-4px]">
-                            {bookBoxData?.aiportal_subtitle || "Prediction File + 5 Books"}
+                            {bookBoxData?.aiportal_subtitle ||
+                              "Prediction File + 5 Books"}
                           </p>
                         </div>
                       </div>
@@ -647,12 +763,13 @@ const FreeEBook = () => {
                         <button
                           type="button"
                           className={`align-middle inline-flex items-center justify-center text-center primary-btn px-4 py-[2.2222222222vw] font-semibold  text-[4.1666666667em] relative z-10 rounded-[50px] hover-full-rounded-btn w-[21.6666666667vw]
-                          ${selected === "portal"
+                          ${
+                            selected === "portal"
                               ? "bg-gradient-GreenBlue text-black"
                               : "bg-[#3E3E3D] text-[#BFDF6A]"
                           }`}
                         >
-                          $119
+                          {bookBoxData?.aiportal_price || "$119"}
                         </button>
                       </div>
                     </div>
@@ -718,7 +835,6 @@ const FreeEBook = () => {
                           name="cvc"
                           placeholder="/ CVC"
                           required
-                         
                           class="placeholder:text-[#707070] outline-none sm:py-[0.8888888889em] xs:py-[0.9375em] py-[5vw] pe-[1.3333333333em]  leading-[1.723] 2xl:text-[1.1904761905em] sm:text-[1.0582010582em] xs:text-[2.34375em] text-[4.2em] max-w-[4.2em]"
                         />
                       </div>
@@ -741,7 +857,7 @@ const FreeEBook = () => {
                       ? `Buy Now - ${bookBoxData?.ebook_price || "$0.99"}`
                       : addPredictionFile
                       ? "Buy Now - $119"
-                      : `Buy Now - ${bookBoxData?.aiportal_price || "$99"}`}
+                      : `Buy Now - ${bookBoxData?.aiportal_price || "$119"}`}
                   </Link>
                 </form>
               </div>

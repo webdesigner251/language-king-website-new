@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Toast from "./Toast";
+import API_BASE_URL from "../config/api"
 
 const NAATICCLResultsForm = ({ entryId, onBack }) => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
   const fetchEntry = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/api/naati-ccl-results/${entryId}`);
+      const response = await axios.get(`${API_BASE_URL}/naati-ccl-results/${entryId}`);
       setFormData(response.data);
     } catch (error) {
       console.error("Error fetching entry:", error);
@@ -52,7 +53,7 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
     uploadFormData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/upload', uploadFormData, {
+      const response = await axios.post(`${API_BASE_URL}/upload`, uploadFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       
@@ -80,10 +81,10 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
 
     try {
       if (entryId) {
-        await axios.put(`http://localhost:3000/api/naati-ccl-results/${entryId}`, formData);
+        await axios.put(`${API_BASE_URL}/naati-ccl-results/${entryId}`, formData);
         setToast({ show: true, message: "Entry updated successfully!", type: "success" });
       } else {
-        await axios.post("http://localhost:3000/api/naati-ccl-results", formData);
+        await axios.post(`${API_BASE_URL}/naati-ccl-results`, formData);
         setToast({ show: true, message: "Entry created successfully!", type: "success" });
       }
       setTimeout(() => onBack(), 1500);
@@ -203,7 +204,7 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
                   {formData.video_placeholder_img && (
                     <div className="flex items-center gap-2">
                       <img
-                        src={`http://localhost:3000/uploads/${formData.video_placeholder_img}`}
+                        src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.video_placeholder_img}`}
                         alt="Video placeholder"
                         className="w-16 h-12 object-cover rounded border"
                       />
@@ -227,7 +228,7 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
                   {formData.student_img && (
                     <div className="flex items-center gap-2">
                       <img
-                        src={`http://localhost:3000/uploads/${formData.student_img}`}
+                        src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.student_img}`}
                         alt="Student"
                         className="w-12 h-12 object-cover rounded-full border"
                       />
@@ -251,7 +252,7 @@ const NAATICCLResultsForm = ({ entryId, onBack }) => {
                   {formData.flag_img && (
                     <div className="flex items-center gap-2">
                       <img
-                        src={`http://localhost:3000/uploads/${formData.flag_img}`}
+                        src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.flag_img}`}
                         alt="Flag"
                         className="w-8 h-6 object-cover rounded border"
                       />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Toast from "./Toast";
+import API_BASE_URL from "../config/api"
 
 const PTEFameForm = ({ entryId, onBack }) => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ const PTEFameForm = ({ entryId, onBack }) => {
     video_url: "",
     video_placeholder_img: "",
     student_img: "",
-    flag_img: ""
+    flag_img: "",
   });
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState({});
@@ -25,7 +26,9 @@ const PTEFameForm = ({ entryId, onBack }) => {
   const fetchEntry = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/api/pte-fame/${entryId}`);
+      const response = await axios.get(
+        `${API_BASE_URL}/pte-fame/${entryId}`
+      );
       setFormData(response.data);
     } catch (error) {
       console.error("Error fetching entry:", error);
@@ -37,40 +40,48 @@ const PTEFameForm = ({ entryId, onBack }) => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleFileUpload = async (file, fieldName) => {
     if (!file) return;
 
-    setUploading(prev => ({ ...prev, [fieldName]: true }));
-    
+    setUploading((prev) => ({ ...prev, [fieldName]: true }));
+
     const uploadFormData = new FormData();
-    uploadFormData.append('file', file);
+    uploadFormData.append("file", file);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/upload', uploadFormData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
-      
-      setFormData(prev => ({
+      const response = await axios.post(
+        `${API_BASE_URL}/upload`,
+        uploadFormData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
+
+      setFormData((prev) => ({
         ...prev,
-        [fieldName]: response.data.filename
+        [fieldName]: response.data.filename,
       }));
     } catch (error) {
-      console.error('Upload error:', error);
-      setToast({ show: true, message: 'Error uploading file. Please try again.', type: 'error' });
+      console.error("Upload error:", error);
+      setToast({
+        show: true,
+        message: "Error uploading file. Please try again.",
+        type: "error",
+      });
     } finally {
-      setUploading(prev => ({ ...prev, [fieldName]: false }));
+      setUploading((prev) => ({ ...prev, [fieldName]: false }));
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.title || !formData.student_name || !formData.band) {
       alert("Please fill in all required fields");
       return;
@@ -80,16 +91,31 @@ const PTEFameForm = ({ entryId, onBack }) => {
 
     try {
       if (entryId) {
-        await axios.put(`http://localhost:3000/api/pte-fame/${entryId}`, formData);
-        setToast({ show: true, message: "Entry updated successfully!", type: "success" });
+        await axios.put(
+          `${API_BASE_URL}/pte-fame/${entryId}`,
+          formData
+        );
+        setToast({
+          show: true,
+          message: "Entry updated successfully!",
+          type: "success",
+        });
       } else {
-        await axios.post("http://localhost:3000/api/pte-fame", formData);
-        setToast({ show: true, message: "Entry created successfully!", type: "success" });
+        await axios.post(`${API_BASE_URL}/pte-fame`, formData);
+        setToast({
+          show: true,
+          message: "Entry created successfully!",
+          type: "success",
+        });
       }
       setTimeout(() => onBack(), 1500);
     } catch (error) {
       console.error("Error saving entry:", error);
-      setToast({ show: true, message: "Error saving entry. Please try again.", type: "error" });
+      setToast({
+        show: true,
+        message: "Error saving entry. Please try again.",
+        type: "error",
+      });
     } finally {
       setLoading(false);
     }
@@ -100,7 +126,9 @@ const PTEFameForm = ({ entryId, onBack }) => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 text-lg font-medium">Loading entry data...</p>
+          <p className="text-gray-600 text-lg font-medium">
+            Loading entry data...
+          </p>
         </div>
       </div>
     );
@@ -108,12 +136,14 @@ const PTEFameForm = ({ entryId, onBack }) => {
 
   return (
     <>
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 max-w-4xl mx-auto">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             {entryId ? "Edit PTE Fame Entry" : "Add New PTE Fame Entry"}
           </h2>
-          <p className="text-gray-600">Fill in the details for the PTE Hall of Fame entry</p>
+          <p className="text-gray-600">
+            Fill in the details for the PTE Hall of Fame entry
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -128,7 +158,7 @@ const PTEFameForm = ({ entryId, onBack }) => {
                 onChange={handleInputChange}
                 rows={3}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                placeholder="Enter testimonial title..."
+                placeholder="Enter title..."
                 required
               />
             </div>
@@ -163,60 +193,29 @@ const PTEFameForm = ({ entryId, onBack }) => {
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Video File</label>
-              <div className="space-y-2">
-                <input
-                  type="file"
-                  accept="video/*"
-                  onChange={(e) => handleFileUpload(e.target.files[0], 'video_url')}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                  disabled={uploading.video_url}
-                />
-                {uploading.video_url && <p className="text-blue-600 text-sm">Uploading video...</p>}
-                {formData.video_url && <p className="text-green-600 text-sm">✓ Video uploaded: {formData.video_url}</p>}
-              </div>
-            </div>
+
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Video Placeholder Image</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Student Image
+              </label>
               <div className="space-y-2">
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={(e) => handleFileUpload(e.target.files[0], 'video_placeholder_img')}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                  disabled={uploading.video_placeholder_img}
-                />
-                {uploading.video_placeholder_img && <p className="text-blue-600 text-sm">Uploading image...</p>}
-                {formData.video_placeholder_img && (
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={`http://localhost:3000/uploads/${formData.video_placeholder_img}`}
-                      alt="Video placeholder"
-                      className="w-16 h-12 object-cover rounded border"
-                    />
-                    <p className="text-green-600 text-sm">✓ Image uploaded</p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Student Image</label>
-              <div className="space-y-2">
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleFileUpload(e.target.files[0], 'student_img')}
+                  onChange={(e) =>
+                    handleFileUpload(e.target.files[0], "student_img")
+                  }
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   disabled={uploading.student_img}
                 />
-                {uploading.student_img && <p className="text-blue-600 text-sm">Uploading image...</p>}
+                {uploading.student_img && (
+                  <p className="text-blue-600 text-sm">Uploading image...</p>
+                )}
                 {formData.student_img && (
                   <div className="flex items-center gap-2">
                     <img
-                      src={`http://localhost:3000/uploads/${formData.student_img}`}
+                      src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.student_img}`}
                       alt="Student"
                       className="w-12 h-12 object-cover rounded-full border"
                     />
@@ -227,20 +226,26 @@ const PTEFameForm = ({ entryId, onBack }) => {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Flag Image</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Flag Image
+              </label>
               <div className="space-y-2">
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={(e) => handleFileUpload(e.target.files[0], 'flag_img')}
+                  onChange={(e) =>
+                    handleFileUpload(e.target.files[0], "flag_img")
+                  }
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   disabled={uploading.flag_img}
                 />
-                {uploading.flag_img && <p className="text-blue-600 text-sm">Uploading image...</p>}
+                {uploading.flag_img && (
+                  <p className="text-blue-600 text-sm">Uploading image...</p>
+                )}
                 {formData.flag_img && (
                   <div className="flex items-center gap-2">
                     <img
-                      src={`http://localhost:3000/uploads/${formData.flag_img}`}
+                      src={`${API_BASE_URL.replace('/api','')}/uploads/${formData.flag_img}`}
                       alt="Flag"
                       className="w-8 h-6 object-cover rounded border"
                     />
@@ -272,7 +277,7 @@ const PTEFameForm = ({ entryId, onBack }) => {
           </div>
         </form>
       </div>
-      
+
       {toast.show && (
         <Toast
           message={toast.message}

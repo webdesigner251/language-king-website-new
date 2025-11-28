@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config/api"
 
 const PTEStudents = ({ onAddNew, onEdit }) => {
   const [students, setStudents] = useState([]);
@@ -13,7 +14,7 @@ const PTEStudents = ({ onAddNew, onEdit }) => {
   const fetchStudents = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/pte-students"
+        `${API_BASE_URL}/pte-students`
       );
       console.log("PTE Students data:", response.data);
       setStudents(response.data);
@@ -33,7 +34,7 @@ const PTEStudents = ({ onAddNew, onEdit }) => {
     }
     if (window.confirm("Are you sure you want to delete this student?")) {
       try {
-        await axios.delete(`http://localhost:3000/api/pte-students/${id}`);
+        await axios.delete(`${API_BASE_URL}/pte-students/${id}`);
         fetchStudents();
       } catch (error) {
         console.error("Error deleting student:", error);
@@ -211,7 +212,7 @@ const PTEStudents = ({ onAddNew, onEdit }) => {
                       <div className="flex items-center gap-3">
                         {student.image ? (
                           <img
-                            src={`http://localhost:3000/uploads/${student.image}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${student.image}`}
                             alt={student.name}
                             className="w-10 h-10 rounded-full object-cover border-2 border-gray-200"
                           />
@@ -246,7 +247,7 @@ const PTEStudents = ({ onAddNew, onEdit }) => {
                     <td className="py-4 px-6">
                       {student.flag ? (
                         <img
-                          src={`http://localhost:3000/uploads/${student.flag}`}
+                          src={`${API_BASE_URL.replace('/api','')}/uploads/${student.flag}`}
                           alt="Flag"
                           className="w-8 h-6 object-cover rounded border border-gray-200 shadow-sm"
                         />
@@ -260,7 +261,7 @@ const PTEStudents = ({ onAddNew, onEdit }) => {
                       {student.image ? (
                         <div className="w-12 h-12 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                           <img
-                            src={`http://localhost:3000/uploads/${student.image}`}
+                            src={`${API_BASE_URL.replace('/api','')}/uploads/${student.image}`}
                             alt="Profile"
                             className="w-full h-full object-cover"
                           />

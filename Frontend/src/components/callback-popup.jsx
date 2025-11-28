@@ -4,21 +4,22 @@
 // import CustomDropdown from "./custom-dropdown";
 // import { Link } from "react-router-dom";
 // // import CallbackThankyou from "./callback-thankyou";
- 
+// import API_BASE_URL from "../config/api";
+
 // const CallbackForm = ({ onClose }) => {
 //   const [formData, setFormData] = useState({
 //     name: "",
 //     phone: "",
 //     course: "default",
 //   });
- 
+
 //   const [errors, setErrors] = useState({});
 //   const [isSubmitted, setIsSubmitted] = useState(false);
 //   const [touched, setTouched] = useState({});
- 
+
 //   const validateField = (name, value) => {
 //     let error = "";
- 
+
 //     if (name === "name" && !value.trim()) {
 //       error = "Full name is required";
 //     } else if (name === "phone") {
@@ -34,91 +35,91 @@
 //     } else if (name === "course" && value === "default") {
 //       error = "Please select a course";
 //     }
- 
+
 //     return error;
 //   };
- 
+
 //   const validate = () => {
 //     const newErrors = {};
- 
+
 //     Object.keys(formData).forEach((key) => {
 //       const error = validateField(key, formData[key]);
 //       if (error) newErrors[key] = error;
 //     });
- 
+
 //     setErrors(newErrors);
 //     return Object.keys(newErrors).length === 0;
 //   };
- 
+
 //   const handleChange = (e) => {
 //     const { name, value } = e.target;
 //     setFormData((prev) => ({
 //       ...prev,
 //       [name]: value,
 //     }));
- 
+
 //     // Clear error when user starts typing
 //     if (errors[name]) {
 //       setErrors((prev) => ({ ...prev, [name]: "" }));
 //     }
 //   };
- 
+
 //   const handleBlur = (e) => {
 //     const { name, value } = e.target;
 //     setTouched((prev) => ({ ...prev, [name]: true }));
- 
+
 //     const error = validateField(name, value);
 //     setErrors((prev) => ({ ...prev, [name]: error }));
 //   };
- 
+
 //   const handleDropdownBlur = () => {
 //     setTouched((prev) => ({ ...prev, course: true }));
- 
+
 //     const error = validateField("course", formData.course);
 //     setErrors((prev) => ({ ...prev, course: error }));
 //   };
- 
+
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-   
+
 //     if (!validate()) {
 //       return;
 //     }
- 
+
 //     const submitData = {
 //       name: formData.name,
 //       phone: formData.phone,
 //       course: formData.course,
 //       form_source: "Course Form"
 //     };
- 
+
 //     try {
 //       // Store in database
-//       const dbRes = await fetch("http://localhost:3000/api/forms/course", {
+//       const dbRes = await fetch(`${API_BASE_URL}/forms/course`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
 //         },
 //         body: JSON.stringify(submitData),
 //       });
-     
+
 //       if (!dbRes.ok) {
 //         throw new Error(`Database request failed: ${dbRes.status}`);
 //       }
 
 //       const dbResult = await dbRes.json();
-     
+
 //       if (dbResult.success) {
 //         // Send email after successful database save
 //         try {
-//           const emailRes = await fetch("http://localhost:3000/send-email", {
+//           const emailRes = await fetch(`${API_BASE_URL.replace('/api','')}/send-email`, {
 //             method: "POST",
 //             headers: {
 //               "Content-Type": "application/json",
 //             },
 //             body: JSON.stringify(submitData),
 //           });
-          
+
 //           if (emailRes.ok) {
 //             const emailResult = await emailRes.json();
 //             console.log("Email sent:", emailResult);
@@ -126,7 +127,7 @@
 //         } catch (emailError) {
 //           console.error("Email failed but form saved:", emailError);
 //         }
-        
+
 //         console.log("Form submitted successfully", dbResult);
 //         setIsSubmitted(true);
 //       } else {
@@ -138,7 +139,7 @@
 //       alert("Network error. Please check your connection and try again.");
 //     }
 //   };
- 
+
 //   return (
 //     <>
 //       <div
@@ -192,7 +193,7 @@
 //                           : "border-[#949AA5] border-0"
 //                       }`}
 //                     />
- 
+
 //                     {errors.name && (
 //                       <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
 //                         <svg
@@ -213,7 +214,7 @@
 //                       </span>
 //                     )}
 //                   </div>
- 
+
 //                   <div className="flex flex-col mb-4">
 //                     <label
 //                       htmlFor="phone"
@@ -230,7 +231,7 @@
 //                       inputClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[0.7222222222em] sm:px-[1.3333333333em] px-4 sm:text-[1.1904761905em] text-[4.2vw]"
 //                     />
 //                   </div>
- 
+
 //                   <div className="flex flex-col xs:mb-4 mb-[3.75em]">
 //                     <label
 //                       htmlFor="course"
@@ -238,7 +239,7 @@
 //                     >
 //                       Course Interested in*
 //                     </label>
- 
+
 //                     <CustomDropdown
 //                       selected={formData.course}
 //                       onChange={(value) => {
@@ -253,7 +254,7 @@
 //                       wrapperClassName="border-0"
 //                       listClassName="rounded-[0px] max-h-[190px]"
 //                     />
- 
+
 //                     {errors.course && (
 //                       <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
 //                         <svg
@@ -274,7 +275,7 @@
 //                       </span>
 //                     )}
 //                   </div>
- 
+
 //                   <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
 //                     Your information will be used to consider and fulfill your
 //                     request and will be handled pursuant to our{" "}
@@ -282,7 +283,7 @@
 //                       Privacy Policy.
 //                     </Link>
 //                   </span>
- 
+
 //                   <button
 //                     type="submit"
 //                     className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[0.8em] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
@@ -317,9 +318,8 @@
 //     </>
 //   );
 // };
- 
-// export default CallbackForm;
 
+// export default CallbackForm;
 
 // import { useState } from "react";
 // import CloseIcon from "../assets/close.svg"; // Custom close icon
@@ -513,8 +513,6 @@
 
 // export default CallbackForm;
 
-
-
 // new code for callback form
 
 import { useState } from "react";
@@ -523,29 +521,29 @@ import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
 import CallbackPopupThankyou from "./callback-popup-thankyou";
 import { Link } from "react-router-dom";
- 
+
 const CallbackForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     course: "default",
   });
- 
+
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
- 
+
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
   };
- 
+
   return (
     <>
       <div
@@ -558,7 +556,7 @@ const CallbackForm = ({ onClose }) => {
         >
           {!isSubmitted ? (
             <>
-             <div className="flex justify-between items-center border-b-[0.1041666667vw] border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px]">
+              <div className="flex justify-between items-center border-b-[0.1041666667vw] border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] xs:mb-[4.6875vw]">
                 <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.9510582011vw] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
                   Get-a-Callback
                 </h2>
@@ -574,7 +572,8 @@ const CallbackForm = ({ onClose }) => {
                 </button>
               </div>
               <p className="font-normal text-white/75 2xl:text-[1.3227513228em] md:text-[1.1904761905em] sm:text-[2.1875em] xs:text-[2.9166666667em] text-[3.88889em] leading-[1.4] pt-[1.2em]">
-                Please fill out the below form. Our team will be in touch with you shortly.
+                Please fill out the below form. Our team will be in touch with
+                you shortly.
               </p>
               <div className="sm:pt-[1.5873015873em] pt-4">
                 <form onSubmit={handleSubmit} className="">
@@ -597,7 +596,7 @@ const CallbackForm = ({ onClose }) => {
                           : "border-[#949AA5] border-0"
                       }`}
                     />
- 
+
                     {errors.name && (
                       <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
                         <svg
@@ -618,7 +617,7 @@ const CallbackForm = ({ onClose }) => {
                       </span>
                     )}
                   </div>
- 
+
                   <div className="flex flex-col mb-4">
                     <label
                       htmlFor="phone"
@@ -634,7 +633,7 @@ const CallbackForm = ({ onClose }) => {
                       inputClassName="placeholder:text-[#919191] border-0 bg-white py-[5vw] xs:py-[1.044973545vw] sm:px-[1.3333333333em] px-4 sm:text-[1.25vw] text-[4.2vw]"
                     />
                   </div>
- 
+
                   <div className="flex flex-col xs:mb-4 mb-[3.75em]">
                     <label
                       htmlFor="course"
@@ -642,7 +641,7 @@ const CallbackForm = ({ onClose }) => {
                     >
                       Course Interested in*
                     </label>
- 
+
                     <CustomDropdown
                       selected={formData.course}
                       onChange={(value) =>
@@ -653,7 +652,7 @@ const CallbackForm = ({ onClose }) => {
                       wrapperClassName="border-0"
                       listClassName="rounded-[0px] max-h-[190px]"
                     />
- 
+
                     {errors.course && (
                       <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
                         <svg
@@ -674,15 +673,15 @@ const CallbackForm = ({ onClose }) => {
                       </span>
                     )}
                   </div>
- 
+
                   <span className="font-normal text-[#949AA4] md:text-[0.9259259259em] md:leading-[1.2] xs:text-[2.5em] text-[3.33vw] py-[0.75em] block">
                     Your information will be used to consider and fulfill your
                     request and will be handled pursuant to our{" "}
-                     <Link to="/privacy-policy" className="underline">
+                    <Link to="/privacy-policy" className="underline">
                       Privacy Policy.
                     </Link>
                   </span>
- 
+
                   <button
                     type="submit"
                     className="align-middle inline-flex items-center justify-center text-center primary-btn bg-gradient-OrangeRed text-white px-[0.6em] xs:py-[1.1243386243vw] py-[4.7vw] w-full font-bold md:text-[1.3227513228em] xs:text-[2.8125em] md:leading-[1.4] text-[4.8em] relative z-10 mt-[0.8em]"
@@ -694,7 +693,7 @@ const CallbackForm = ({ onClose }) => {
             </>
           ) : (
             <div className="">
-              <div className="flex justify-between items-center border-b-2 border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] mb-6">
+              <div className="flex justify-between items-center  border-b-[0.1041666667vw] border-[#2A2A2A] xs:pb-[1.1904761905em] pb-[14px] mb-6">
                 <h2 className="text-white 2xl:text-[1.9841269841em] md:text-[1.8518518519em] sm:text-[4.375em] xs:text-[5.8333333333em] text-[7.7777777778em] font-bold">
                   Get-a-Callback
                 </h2>
@@ -717,5 +716,5 @@ const CallbackForm = ({ onClose }) => {
     </>
   );
 };
- 
+
 export default CallbackForm;

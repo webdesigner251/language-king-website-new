@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 18">
-<rect fill="#CE1126" width="30" height="18"/>
-<polygon fill="#FFF" points="0,0 20.824734,18 30,18 9.175266,0"/>
-<polygon points="1.52921,0 22.353945,18 28.470789,18 7.646055,0"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000px" height="667px" viewBox="0 0 1000 667" version="1.1">
+<g id="surface1">
+<rect x="0" y="0" width="1000" height="667" style="fill:rgb(80.784315%,6.666667%,14.901961%);fill-opacity:1;stroke:none;"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 0 0 L 694.15625 667 L 1000 667 L 305.84375 0 Z M 0 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 50.972656 0 L 745.132812 667 L 949.027344 667 L 254.867188 0 Z M 50.972656 0 "/>
+</g>
 </svg>
