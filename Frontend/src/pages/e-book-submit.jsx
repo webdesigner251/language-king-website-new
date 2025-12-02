@@ -299,7 +299,7 @@ const FreeEBooksubmit = () => {
                 alt="checkmark"
                 className="mx-auto sm:w-[3.505em] w-[50px] mb-2 h-auto zoom-pulse"
               />
-              <h2 className="font-bold md:text-[2.5132275132vw] sm:text-[5em] xs:text-[6.6666666667em] text-[7.2916666667em] text-center text-[#00C360] pt-[0.5291005291vw] pb-[0.5291005291vw] mb-0">
+              <h2 className="font-bold md:text-[2.5132275132vw] sm:text-[5em] xs:text-[6.6666666667em] text-[7.2916666667em] text-center text-[#00C360] pt-[0.5291005291vw] mb-0">
                 Payment Successful
               </h2>
               <h3 className="font-medium md:text-[1.1904761905em] sm:text-[2.8125em] xs:text-[3.75em] text-[4.2em] text-white">

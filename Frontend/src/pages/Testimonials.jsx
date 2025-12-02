@@ -158,37 +158,28 @@ const Testimonials = () => {
 
   const fetchTestimonialVideo = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/testimonial-video`);
-      console.log("Fetched testimonial data:", response.data);
-      if (response.data && response.data.id) {
-        setTestimonialVideo({
-          video_url: response.data.video_url
-            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
-                response.data.video_url
-              }`
-            : TestVideo,
-          video_placeholder_img: response.data.video_placeholder_img
-            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
-                response.data.video_placeholder_img
-              }`
-            : TestPlaceholder,
-          heading:
-            response.data.heading || "Why Students Love Learning With Us",
-          description:
-            response.data.description ||
-            "When I started my journey I really thought that it would be impossible for me to clear he test due to my background. xxxxxxxxxxxxx",
-          student_name: response.data.student_name || "NATALIA",
-          student_tag: response.data.student_tag || "PTE & NAATI CCL",
-          student_avatar: response.data.student_avatar
-            ? `${API_BASE_URL.replace("/api", "")}/uploads/${
-                response.data.student_avatar
-              }`
-            : Mainavatar,
-        });
-      }
+      const [videoRes, heroRes] = await Promise.all([
+        axios.get(`${API_BASE_URL}/testimonial-video`),
+        axios.get(`${API_BASE_URL}/testimonial-hero-section`)
+      ]);
+
+      setTestimonialVideo({
+        video_url: videoRes.data?.video_url
+          ? `${API_BASE_URL.replace("/api", "")}/uploads/${videoRes.data.video_url}`
+          : TestVideo,
+        video_placeholder_img: videoRes.data?.video_placeholder_img
+          ? `${API_BASE_URL.replace("/api", "")}/uploads/${videoRes.data.video_placeholder_img}`
+          : TestPlaceholder,
+        heading: heroRes.data?.heading || "Why Students Love Learning With Us",
+        description: heroRes.data?.description || "When I started my journey I really thought that it would be impossible for me to clear he test due to my background. xxxxxxxxxxxxx",
+        student_name: heroRes.data?.student_name || "NATALIA",
+        student_tag: heroRes.data?.student_tag || "PTE & NAATI CCL",
+        student_avatar: heroRes.data?.student_avatar
+          ? `${API_BASE_URL.replace("/api", "")}/uploads/${heroRes.data.student_avatar}`
+          : Mainavatar,
+      });
     } catch (error) {
-      console.error("Error fetching testimonial video:", error);
-      // Keep default values if API fails
+      console.error("Error fetching testimonial data:", error);
     }
   };
 
@@ -539,7 +530,8 @@ const Testimonials = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
@@ -548,7 +540,8 @@ const Testimonials = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       Stay up-to-date with changes in exam, and learn the latest
                       strategies from carefully designed video lectures by
@@ -558,7 +551,8 @@ const Testimonials = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       1-to-1 feedback from experts & personalized timetable to
                       fit your busy schedule, learn from the comfort of your
@@ -568,7 +562,8 @@ const Testimonials = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       Access to AI based portal with real time scoring, 5000+
                       practice questions, including sectional and full mock
@@ -580,7 +575,8 @@ const Testimonials = () => {
                   <img
                     src={PinkQuote}
                     alt="PinkQuote"
-                    className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
+                    // className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
+                    className="mt-[-2em] sm:mt-[-1em] w-[8.3333333333vw] sm:w-[3.230em]"
                   />
                   <p className="lg:text-[1.5873015873em] md:text-[1.323em] sm:text-[3.4375em] xs:text-[4.1666666667em] text-[4.8em] leading-[1.333333] text-lg text-white">
                     Language King is perfect for new or struggling students,

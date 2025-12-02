@@ -155,7 +155,7 @@ const Faq = () => {
                                     ? "md:px-[2.2486772487vw] sm:px-[3.125em] xs:px-[4.1666666667em] px-[7.7777777778vw]"
                                     : "md:px-[1.3020833333em] sm:px-[3.125em] xs:px-[4.1666666667em] px-[5.5555555556vw]"
                                 }
-                                md:py-[0.274vw] xs:py-[0.8333333333em] py-0 xs:min-h-[3.28125vw] xs:h-auto h-[10.8333333333vw] border-[0.1652777778vw] md:rounded-[0.78125em] rounded-[6px] 
+                                md:py-[0.274vw] xs:py-[0.8333333333em] py-0 xs:min-h-[3.28125vw] xs:h-auto h-[10.8333333333vw] border-[0.1652777778vw] md:rounded-[0.78125em] rounded-[6px]   
                                 ${
                                   activeTab === tab
                                     ? "bg-white border-white text-black"

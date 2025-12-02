@@ -94,7 +94,14 @@ CREATE TABLE IF NOT EXISTS testimonial_video (
     id INT AUTO_INCREMENT PRIMARY KEY,
     video_url VARCHAR(500) NOT NULL,
     video_placeholder_img VARCHAR(255),
-    heading TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Testimonial Hero Section table
+CREATE TABLE IF NOT EXISTS testimonial_hero_section (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    heading TEXT NOT NULL,
     description TEXT,
     student_name VARCHAR(255),
     student_tag VARCHAR(255),
@@ -102,7 +109,6 @@ CREATE TABLE IF NOT EXISTS testimonial_video (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-
 
 -- Free E-book banner section table
 CREATE TABLE IF NOT EXISTS free_ebook_banner (

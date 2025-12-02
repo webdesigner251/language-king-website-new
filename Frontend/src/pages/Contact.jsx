@@ -102,7 +102,8 @@ const Contact = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       Learn from 8 each tutors. The best way to crack any exam
                       is to learn from the person who has cracked it.
@@ -111,7 +112,8 @@ const Contact = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       Stay up-to-date with changes in exam, and learn the latest
                       strategies from carefully designed video lectures by
@@ -121,7 +123,8 @@ const Contact = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
+
                       />
                       1-to-1 feedback from experts & personalized timetable to
                       fit your busy schedule, learn from the comfort of your
@@ -131,7 +134,7 @@ const Contact = () => {
                       <img
                         src={CheckmarkGray}
                         alt="CheckmarkGray"
-                        className="w-4 pt-1"
+                        className="w-[4.2vw] lg:w-[1.0582010582vw] pt-1"
                       />
                       Access to AI based portal with real time scoring, 5000+
                       practice questions, including sectional and full mock
@@ -143,7 +146,8 @@ const Contact = () => {
                   <img
                     src={PinkQuote}
                     alt="PinkQuote"
-                    className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
+                    // className="sm:mt-[-1em] mt-[-2em] sm:w-[3.230em] w-8"
+                    className="mt-[-2em] sm:mt-[-1em] w-[8.3333333333vw] sm:w-[3.230em]"
                   />
                   <p className="lg:text-[1.5873015873em] md:text-[1.323em] sm:text-[3.4375em] xs:text-[4.1666666667em] text-[4.8em] leading-[1.333333] text-lg text-white">
                     Language King is perfect for new or struggling students,

@@ -24,20 +24,22 @@ const TestimonialVideoForm = ({ onBack }) => {
   const fetchTestimonialVideo = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_BASE_URL}/testimonial-video`);
-      if (response.data && response.data.id) {
-        setFormData({
-          video_url: response.data.video_url || '',
-          video_placeholder_img: response.data.video_placeholder_img || '',
-          heading: response.data.heading || '',
-          description: response.data.description || '',
-          student_name: response.data.student_name || '',
-          student_tag: response.data.student_tag || '',
-          student_avatar: response.data.student_avatar || ''
-        });
-      }
+      const [videoRes, heroRes] = await Promise.all([
+        axios.get(`${API_BASE_URL}/testimonial-video`),
+        axios.get(`${API_BASE_URL}/testimonial-hero-section`)
+      ]);
+      
+      setFormData({
+        video_url: videoRes.data?.video_url || '',
+        video_placeholder_img: videoRes.data?.video_placeholder_img || '',
+        heading: heroRes.data?.heading || '',
+        description: heroRes.data?.description || '',
+        student_name: heroRes.data?.student_name || '',
+        student_tag: heroRes.data?.student_tag || '',
+        student_avatar: heroRes.data?.student_avatar || ''
+      });
     } catch (error) {
-      console.error("Error fetching testimonial video:", error);
+      console.error("Error fetching testimonial data:", error);
     } finally {
       setLoading(false);
     }
@@ -84,19 +86,29 @@ const TestimonialVideoForm = ({ onBack }) => {
       return;
     }
 
-    console.log('Submitting data:', formData);
     setLoading(true);
 
     try {
-      const response = await axios.post(`${API_BASE_URL}/testimonial-video`, formData);
-      console.log('Save response:', response.data);
+      await Promise.all([
+        axios.post(`${API_BASE_URL}/testimonial-video`, {
+          video_url: formData.video_url,
+          video_placeholder_img: formData.video_placeholder_img
+        }),
+        axios.post(`${API_BASE_URL}/testimonial-hero-section`, {
+          heading: formData.heading,
+          description: formData.description,
+          student_name: formData.student_name,
+          student_tag: formData.student_tag,
+          student_avatar: formData.student_avatar
+        })
+      ]);
+      
       setToast({ show: true, message: "Testimonial section updated successfully!", type: "success" });
       setTimeout(() => {
         fetchTestimonialVideo();
       }, 1500);
     } catch (error) {
-      console.error("Error saving testimonial video:", error);
-      console.error("Error details:", error.response?.data);
+      console.error("Error saving testimonial:", error);
       setToast({ show: true, message: "Error saving testimonial section. Please try again.", type: "error" });
     } finally {
       setLoading(false);

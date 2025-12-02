@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PhoneInput from "./PhoneInput";
 import CustomDropdown from "./custom-dropdown";
-import CallbackThankyou from "./Callback-thankyou";
+import CallbackThankyou from "./callback-thankyou";
 import API_BASE_URL from "../config/api";
 
 const BookFreeTrail = () => {
@@ -92,7 +92,6 @@ const BookFreeTrail = () => {
     };
 
     try {
-      // Store in database
       const dbRes = await fetch(`${API_BASE_URL}/forms/booktrail`, {
         method: "POST",
         headers: {
@@ -101,7 +100,6 @@ const BookFreeTrail = () => {
         body: JSON.stringify(submitData),
       });
 
-      // Send email
       const emailRes = await fetch(`${API_BASE_URL.replace('/api','')}/send-email`, {
         method: "POST",
         headers: {
@@ -119,7 +117,8 @@ const BookFreeTrail = () => {
         console.error("Form submission failed", dbResult);
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.log("Backend not connected. Form data:", submitData);
+      setIsSubmitted(true);
     }
   };
 
