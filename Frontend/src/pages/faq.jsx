@@ -221,7 +221,6 @@ const Faq = () => {
                 alt="faq img"
                 className="border-[#E7E7E7] sm:border-[0.2083333333vw] xs:border-[0.625em] border-[0.5555555556em] rounded-full sm:max-w-[4.8802248677vw] xs:max-w-[10.9375em] max-w-[19.4444444444em] h-auto"
               />
-              {/* <img src={faqImage} alt="image" className="mx-auto md:w-[12.8854166667em] sm:w-[28.90625em] xs:w-[38.5416666667em] w-[51.3888888889em]" /> */}
             </div>
             <div className="xs:mt-[1.875vw] mt-[5.46875vw] text-center">
               <h3 className="text-white text-center font-semibold mb-[0.3645502646vw] leading-[1.14286] md:text-[1.4583333333em] sm:text-[3.125em] xs:text-[4.1666666667em] text-[5.5555555556em]">

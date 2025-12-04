@@ -80,8 +80,7 @@ const CallbackForm = () => {
               <li>
                 <a
                   href="tel:+61488876999"
-                  className="flex items-start xs:gap-[0.7936507937vw]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
-                >
+                  className="flex items-start xs:gap-[0.7936507937vw]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]">
                   <div className="w-[2.646em] flex items-center justify-center">
                     <img
                       src={CalenderIcon}
