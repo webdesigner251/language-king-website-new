@@ -313,7 +313,6 @@ const FreeEBook = () => {
                     <a
                       href="#"
                       className="align-middle xs:inline-flex hidden items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
-
                     >
                       {bannerData?.cta_button_text || "Start 7-Day Trial"}
                     </a>
@@ -332,7 +331,6 @@ const FreeEBook = () => {
                       className="xs:hidden align-middle inline-flex items-center justify-center text-center primary-btn primary-btn-rounded bg-gradient-primary text-black sm:px-3 px-[0.6em] xs:py-[0.6em] py-[5vw] font-normal sm:text-[1.3227513228em] xs:text-[2.5em] text-[4.444444444444em] xs:mt-0 mt-[3vw] leading-[1.4] relative z-10 sm:min-w-[12.1em] sm:w-auto w-full rounded-lg "
                     >
                       {bannerData?.cta_button_text || "Start 7-Day Free Trial"}
-
                     </a>
                   </div>
                   <div>
@@ -341,9 +339,7 @@ const FreeEBook = () => {
                         "Save $33 by using AI Portal + Prediction File + 6 Books"}
                     </h4>
                     <h4 className="xs:hidden block text-[#F1CD5A] sm:text-[1.1904761905em] text-[4.16666666667em] leading-[1.55555555] font-semibold sm:text-start text-center">
-
                       {bannerData?.save_text_mobile ||
-
                         "Save $33 by using AI Portal"}
                     </h4>
                     <span className="uppercase font-semibold text-white/50 text-[0.8597883598em] mt-[0.3846153846em] leading-[1.462] sm:inline hidden">
@@ -582,7 +578,7 @@ const FreeEBook = () => {
                           <span className="text-[#B0B0B0] line-through font-bold me-4">
                             {bookBoxData?.aiportal_original_price || "$129"}
                           </span>
-                          <span className="text-[#F0AB0F] font-bold">
+                          <span className="text-[#F0AB0F] font-bold xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg">
                             {bookBoxData?.aiportal_price || "$99"}
                           </span>
                         </div>
@@ -596,15 +592,15 @@ const FreeEBook = () => {
                           <div className="max-w-[26.455026455em]">
                             <div className="flex justify-between items-center">
                               <div className="flex-auto">
-                                <h4 className="font-semibold text-white text-lg inline">
+                                <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
                                   Your total:
                                 </h4>
-                                <span className="text-[#B0B0B0] line-through font-bold ps-3">
+                                <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
                                   $152
                                 </span>
                               </div>
 
-                              <span className="text-[#F0AB0F] font-medium">
+                              <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
                                 Saving $33!
                               </span>
                             </div>
@@ -641,16 +637,16 @@ const FreeEBook = () => {
                           <div className="max-w-[26.455026455em]">
                             <div className="flex justify-between items-center">
                               <div className="flex-auto">
-                                <h4 className="font-semibold text-white text-lg inline">
+                                <h4 className="font-semibold text-white xl:text-[1.3227513228em] sm:text-[1.1904761905em] leading-[1.4] text-lg inline">
                                   Your total:
                                 </h4>
 
-                                <span className="text-[#B0B0B0] line-through font-bold ps-3">
+                                <span className="text-[#B0B0B0] line-through font-bold xl:text-[1.3227513228em] text-[1.1904761905em] ps-[0.8em]">
                                   $161
                                 </span>
                               </div>
 
-                              <span className="text-[#F0AB0F] font-medium">
+                              <span className="text-[#F0AB0F] font-medium xl:text-[1.3227513228em] text-[1.1904761905em]">
                                 Saving $33!
                               </span>
                             </div>

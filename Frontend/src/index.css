@@ -607,6 +607,9 @@ header {
 }
 
 
+
+
+
 @media (max-width: 480px) {
 
   header.active-header .desktop-logo,
@@ -638,8 +641,20 @@ header {
   }
 }
 
+@media (width <=480px) {
+
+  header.active-header .desktop-logo,
+  .desktop-logo {
+    left: -21%;
+    transform: scale(1.5);
+    height: auto !important;
+    top: -30px !important;
+  }
+}
+
 
 @media (max-width: 400px) {
+
   header.active-header .desktop-logo,
   .desktop-logo {
     transform: scale(1.5);

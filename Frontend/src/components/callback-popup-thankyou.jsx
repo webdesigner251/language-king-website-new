@@ -93,7 +93,7 @@ const CallbackPopupThankyou = () => {
         alt="checkmark"
         className="mx-auto sm:w-[3.505em] w-[50px] mb-2 h-auto zoom-pulse"
       />
-      <h2 className="font-bold 2xl:text-[2.778em] md:text-[2.1164021164vw] text-3xl text-center text-gradient-OrangeRed">
+      <h2 className="inline-block font-bold 2xl:text-[2.778em] md:text-[2.1164021164vw] text-3xl text-center text-gradient-OrangeRed">
         Thank You!
       </h2>
       <h3 className="font-medium sm:text-[1.1904761905em] text-base text-white">
@@ -112,7 +112,7 @@ const CallbackPopupThankyou = () => {
             <img
               src={CallIcon}
               alt="checklist"
-              className="sm:w-[1.8007936508vw] w-[28px] sm:h-[1.8007936508vw] h-[28px] mt-1"
+              className="sm:w-[1.8007936508vw] w-[6.7708333333vw] sm:h-[1.8007936508vw] h-[6.7708333333vw] mt-1"
             />
             We’ll call you within 24 hours to discuss your preferred course,
             target score, and learning needs.
@@ -121,13 +121,13 @@ const CallbackPopupThankyou = () => {
             <img
               src={MemberIcon}
               alt="checklist"
-              className="sm:w-[1.8007936508vw] w-[28px] sm:h-[1.8007936508vw] h-[28px] mt-1"
+              className="sm:w-[1.8007936508vw] w-[6.7708333333vw] sm:h-[1.8007936508vw] h-[6.7708333333vw] mt-1"
             />
             Our team will review your course interest and create a personalized
             plan tailored to your goals.
           </div>
 
-          <div className="bg-[#121212] xs:rounded-[0.78125vw] rounded-[4px]  md:p-[0.794em] p-3 w-full mx-auto flex flex-col justify-center">
+          <div className="bg-[#121212] xs:rounded-[0.78125vw] rounded-[4px] md:p-[0.794em] p-3 pb-[4.6875vw] w-full mx-auto flex flex-col justify-center xs:mt-0 mt-[1.703163017vw] ">
             {/* Desktop text */}
             <h4 className="xs:block hidden font-bold xl:text-[1.587em] lg:text-[1.455em] md:text-[1.323em] text-[5.5em] text-white mx-auto pb-[0.6613756614vw] text-center">
               Need immediate assistance?{" "}
@@ -137,17 +137,17 @@ const CallbackPopupThankyou = () => {
               Need urgent assistance?{" "}
             </h4>
 
-            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] ">
+            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] mx-auto">
               <li>
                 <a
                   href="tel:+61488876999"
                   className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
                   {/* <img src={PhoneICon} className="lg:w-[2.3148148148vw] w-[1.545em]" /> */}
-                  <div className="w-[2.646em] flex items-center justify-center">
+                  <div className="w-[2.646em] flex items-start justify-center">
                     <img
                       src={PhoneICon}
-                      className="xs:w-[1.4947089947vw] w-[2.2em]"
+                      className="xs:w-[1.4947089947vw] pt-[4px] w-[2.2em]"
                     />
                   </div>
                   +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61

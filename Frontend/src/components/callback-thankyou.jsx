@@ -11,16 +11,16 @@ const CallbackForm = () => {
       <img
         src={checkmark}
         alt="checkmark"
-        className="mx-auto sm:w-[3.8vw] w-[13.8888888889vw] xs:mb-2 mb-[5vw] h-auto zoom-pulse"
+        className="mx-auto sm:w-[3.8vw] w-[13.8888888889vw] mb-2 h-auto zoom-pulse"
       />
-      <h2 className="font-bold 2xl:text-[2.778em] sm:text-[2.6455026455vw] mt-[1.6534391534vw] text-[7.8125em] text-center leading-[1.11] inline-block text-gradient-OrangeRed">
+      <h2 className="font-bold 2xl:text-[2.778em] sm:text-[2.6455026455vw] mt-[0.9920634921vw] text-[7.8125em] text-center leading-[1.11] inline-block text-gradient-OrangeRed">
         Thank You!
       </h2>
       <h3 className="font-medium sm:text-[1.455026455vw] text-[4.1666666667vw] text-white">
         We’ve received your information.
       </h3>
 
-      <div className="bg-[#252525] sm:py-[1.3227513228em]   rounded-[1.124em] sm:pt-[1.058em] sm:px-[1.3227513228em] sm:pb-[1.587em]  pb-[20px] xs:mt-[1.587em] mt-[5.2083333333vw]">
+      <div className="bg-[#252525] rounded-[1.124em] sm:pt-[0.9259259259vw] sm:px-[1.8518518519vw] sm:pb-[1.19048vw] pb-4 px-[16px] pt-[5.2083333333vw] xs:mt-[0.9920634921vw] mt-[3.6458333333vw]">
         <div className="inline-flex items-center justify-center">
           <h3 className="font-bold xl:text-[2.1164021164em] md:text-[1.984em] xs:text-[2.2em] text-[6.1111111111em] inline mx-auto tracking-[1px] relative text-white border-text text-center">
             What Happens Next?
@@ -32,7 +32,7 @@ const CallbackForm = () => {
             <img
               src={CallIcon}
               alt="checklist"
-              className="sm:w-[1.7857142857vw] w-[28px] sm:h-[1.7857142857vw] h-[28px] mt-1"
+              className="sm:w-[1.7857142857vw] w-[6.7708333333vw] sm:h-[1.7857142857vw] h-[6.7708333333vw] mt-1"
             />
             We’ll call you within 24 hours to discuss available time slots and
             book your class.
@@ -41,7 +41,7 @@ const CallbackForm = () => {
             <img
               src={MemberIcon}
               alt="checklist"
-              className="sm:w-[1.7857142857vw] w-[28px] sm:h-[1.7857142857vw] h-[28px] mt-1"
+              className="sm:w-[1.7857142857vw] w-[6.7708333333vw] sm:h-[1.7857142857vw] h-[6.7708333333vw] mt-1"
             />
             Our team will review your course interest and prepare your
             personalized trial class.
@@ -57,22 +57,22 @@ const CallbackForm = () => {
               Need urgent assistance?{" "}
             </h4>
 
-            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] ">
+            <ul className="flex flex-col xs:gap-[0.8855820106vw] gap-[2.7777777778em] mx-auto">
               <li>
                 <a
                   href="tel:+61488876999"
-                  className="flex items-center xs:gap-[1.058em] gap-[0.7142857143em]  text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
+                  className="flex items-center xs:gap-[0.7936507937vw] gap-[0.7142857143em]  text-white font-medium md:text-[1.1904761905vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[4vw]"
                 >
-                  <img
+                  {/* <img
                     src={PhoneICon}
                     className="lg:w-[2.7116402116vw] w-[1.545em]"
-                  />
-                  {/* <div className="w-[2.646em] flex items-center justify-center">
+                  /> */}
+                  <div className="w-[2.7116402116vw] flex items-start justify-center">
                     <img
                       src={PhoneICon}
-                      className="xs:w-[1.4947089947vw] w-[2.2em]"
+                      className="xs:w-[1.4947089947vw] w-[2.2em] pt-[4px]"
                     />
-                  </div> */}
+                  </div>
                   +61 488 877 999 &nbsp; / &nbsp; <br class="xs:hidden" /> +61
                   444 876 555
                 </a>
@@ -80,7 +80,7 @@ const CallbackForm = () => {
               <li>
                 <a
                   href="tel:+61488876999"
-                  className="flex items-start xs:gap-[1.058em]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
+                  className="flex items-start xs:gap-[0.7936507937vw]  gap-[0.7142857143em] text-white font-medium md:text-[1.0416666667vw] sm:text-[2.5em] xs:text-[2.9166666667em] text-[3.8888888889em]"
                 >
                   <div className="w-[2.646em] flex items-center justify-center">
                     <img

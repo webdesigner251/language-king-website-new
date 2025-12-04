@@ -345,7 +345,7 @@ const FreeEBooksubmit = () => {
                 Download Receipt
               </a>
 
-              <div className="bg-[#252525] xs:rounded-[0.3125vw] rounded-[3px] xs:pt-[0.7936507937vw] xs:px-[1.3227513228vw] xs:pb-[1.455026455vw] p-[2.2222222222vw] pl-[1px] mt-6">
+              <div className="bg-[#252525] xs:rounded-[0.3125vw] rounded-[3px] xs:pt-[0.7936507937vw] xs:px-[0.2777777778vw] xs:pb-[1.455026455vw] p-[2.2222222222vw] pl-[1px] mt-6">
                 <div className="inline-flex items-center justify-center">
                   <h3 className="font-bold md:text-[2.1164021164em] sm:text-[5em] xs:text-[6.6666666667em] text-[6.5em] inline mx-auto tracking-[1px] relative  text-white border-text text-center">
                     What Happens Next?
