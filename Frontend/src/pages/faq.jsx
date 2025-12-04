@@ -143,7 +143,7 @@ const Faq = () => {
             Got questions? We’re here to help.
           </p>
 
-          {/* Tabs */}
+          {/* Tabs  */}
           <div className="flex flex-wrap sm:justify-between justify-center 2xl:gap-[1.3020833333em] sm:gap-[0.2em] xs:gap-[5.2083333333em] gap-[3.0555555556em] md:mt-[3.90625em] sm:mt-[7.8125em] xs:mt-[10.4166666667em] mt-[9.7222222222em] md:mb-[3.59375vw] sm:mb-[10.9375em] xs:mb-[12.5em] mb-[7.534722222em]">
             {tabs.map((tab, index) => (
               <button
