@@ -11,6 +11,7 @@ export const getContactSubmissions = async (req, res) => {
         res.status(500).json({ success: false, message: 'Database error' });
     }
 };
+
  
 // Get all course form submissions
 export const getCourseSubmissions = async (req, res) => {
@@ -23,7 +24,8 @@ export const getCourseSubmissions = async (req, res) => {
         res.status(500).json({ success: false, message: 'Database error' });
     }
 };
- 
+
+
 // Get all booktrail form submissions
 export const getBookTrailSubmissions = async (req, res) => {
     try {
@@ -35,6 +37,7 @@ export const getBookTrailSubmissions = async (req, res) => {
         res.status(500).json({ success: false, message: 'Database error' });
     }
 };
+
  
 // Create contact form submission
 export const createContactSubmission = async (req, res) => {
@@ -53,6 +56,7 @@ export const createContactSubmission = async (req, res) => {
         res.status(500).json({ success: false, message: 'Database error' });
     }
 };
+
  
 // Create course form submission
 export const createCourseSubmission = async (req, res) => {
