@@ -14,6 +14,7 @@ export const getAllPTEStudents = async (req, res) => {
   }
 };
 
+
 export const getPTEStudentById = async (req, res) => {
   try {
     const { id } = req.params;

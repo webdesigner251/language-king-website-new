@@ -148,7 +148,6 @@ CREATE TABLE IF NOT EXISTS FAQs (
 );
 
 
-
 -- Insert default data for free ebook banner (only if no record exists)
 INSERT IGNORE INTO free_ebook_banner (
     id, expert_text, expert_name, expert_title, main_heading, main_description,
