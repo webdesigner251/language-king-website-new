@@ -6,4 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/language-king-website-new/",
   plugins: [react(),tailwindcss()],
+  build: {
+    assetsDir: ""
+  }
 })
