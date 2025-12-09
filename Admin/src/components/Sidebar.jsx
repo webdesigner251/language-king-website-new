@@ -22,6 +22,7 @@ const Sidebar = ({ activeMenu, setActiveMenu }) => {
     { id: "faqs", name: "FAQs" },
     { id: "freeEbook", name: "Book-Banner" },
     { id: "bookBox", name: "Book-Box" },
+    { id: "dynamicEbookPages", name: "Dynamic Pages" },
   ];
 
   // Auto-open submenus if one of their items is active

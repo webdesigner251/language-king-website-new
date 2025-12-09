@@ -13,6 +13,8 @@ import FAQs from './components/FAQs'
 import BookBox from './components/BookBox'
 import VideoLesson from './components/VideoLesson'
 import TestimonialVideoForm from './components/TestimonialVideoForm'
+import DynamicEbookPages from './components/DynamicEbookPages'
+import DynamicEbookForm from './components/DynamicEbookForm'
  
 function App() {
   const [activeMenu, setActiveMenu] = useState('formDetails')
@@ -64,6 +66,19 @@ function App() {
       )
     }
 
+    // Handle Dynamic Ebook form views
+    if (currentView.type === 'dynamic-ebook-form') {
+      return (
+        <DynamicEbookForm 
+          pageId={currentView.pageId}
+          onBack={() => {
+            setCurrentView({ type: 'list', studentType: null, studentId: null })
+            setActiveMenu('dynamicEbookPages')
+          }}
+        />
+      )
+    }
+
     switch (activeMenu) {
       case 'formDetails':
         return <FormDetails />
@@ -105,6 +120,12 @@ function App() {
         return <VideoLesson />
       case 'testimonialMainSection':
         return <TestimonialVideoForm onBack={() => setActiveMenu('testimonialMainSection')} />
+      case 'dynamicEbookPages':
+        return (
+          <DynamicEbookPages 
+            onEdit={(id) => setCurrentView({ type: 'dynamic-ebook-form', pageId: id })}
+          />
+        )
       default:
         return (
           <div className="p-6">

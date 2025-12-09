@@ -14,6 +14,7 @@ import NAATICCL from "./pages/NAATI-CCL";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import FreeEBook from "./pages/Free-E-book";
+import DynamicEbookPage from "./pages/DynamicEbookPage";
 import Home2 from "./pages/thankyou"; // This page is for view purpose only to show the thankyou card design for client remove it when backend done.
 import FreeEBooksubmit from "./pages/e-book-submit";
 import PrivacyPolicy from "./pages/privacy-policy"; // Importing Privacy Policy page
@@ -38,6 +39,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/free-e-book" element={<FreeEBook />}></Route>
+          <Route path="/ebook/:slug" element={<DynamicEbookPage />}></Route>
           <Route path="/home2" element={<Home2 />}></Route>
           <Route path="/ebook-submit" element={<FreeEBooksubmit />}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
